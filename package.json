@@ -10,7 +10,7 @@
     "lint:fix": "next lint --fix",
     "format:check": "prettier --check .",
     "format:fix": "prettier --write .",
-    "tsc": "tsc --noEmit",
+    "typeCheck": "tsc --noEmit",
     "prepare": "husky install"
   },
   "dependencies": {
