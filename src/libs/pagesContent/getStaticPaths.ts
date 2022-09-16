@@ -1,11 +1,10 @@
-import fs from "fs";
+import fs from "fs/promises";
 import path from "path";
-import util from "util";
 import { isProduction } from "../common/env";
 import { rootDir } from "./constants";
 
-const readdir = util.promisify(fs.readdir);
-const fsStat = util.promisify(fs.stat);
+const readdir = fs.readdir;
+const fsStat = fs.stat;
 
 async function getFiles(dir: string): Promise<string[]> {
   const subdirs = await readdir(dir);
@@ -38,7 +37,7 @@ export async function getStaticPaths() {
   });
 
   return {
-    paths,
+    paths: isProduction ? paths : [],
     fallback: isProduction ? false : "blocking",
   };
 }
