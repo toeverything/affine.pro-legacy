@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "node scripts/script.js",
+    "start": "node script/script.js",
     "dev": "next dev",
     "build": "node script/copyfile.js && next build & next export",
     "lint": "next lint",
