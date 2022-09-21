@@ -4,6 +4,9 @@ author: Guozhu Liu, Ran Chen, Fanjing Zhang
 tags: LET'S MAKE XXXX, UX
 cover: ./cover.png
 description: As a fortnightly event, UX Open Day plays two roles...
+created: 2022-07-01
+updated: 2022-09-18
+layout: blog
 ---
 
 As a fortnightly event, UX Open Day plays two roles:

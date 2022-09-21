@@ -4,6 +4,9 @@ author: Chi Zhang, Yifeng Wang, Ran Chen
 tags: LET'S MAKE XXXX, Tech
 cover: ./cover.png
 description: As an editor supporting multi-user real-time collaboration, AFFiNE needed to address three challenges in terms of data availability...
+created: 2022-06-27
+updated: 2022-09-21
+layout: blog
 ---
 
 As an editor supporting multi-user real-time collaboration, AFFiNE needed to address three challenges in terms of data availability.

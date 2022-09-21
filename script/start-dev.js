@@ -1,6 +1,6 @@
 const { spawn } = require("node:child_process");
 const fileWatch = spawn("node", ["script/file-watch.js"]);
-const projectStart = spawn("npx", ["next", "start"]);
+const projectStart = spawn("npx", ["next", "dev"]);
 
 fileWatch.stderr.on("data", (data) => {
   console.error(`fileWatch stderr: ${data}`);

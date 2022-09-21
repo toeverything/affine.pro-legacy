@@ -1,0 +1,27 @@
+.header {
+  border-bottom: 1px solid #e4e7ec;
+  background-color: #fcfcfd;
+}
+
+.header_content {
+  max-width: 1280px;
+  padding: 128px 0;
+  margin: 0 auto;
+}
+
+.body {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 96px 30px;
+  display: flex;
+  flex-direction: row;
+}
+
+.body_left {
+  width: 25%;
+  flex: none;
+}
+
+.body_right {
+  width: 75%;
+}

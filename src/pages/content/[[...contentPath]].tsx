@@ -1,9 +1,15 @@
+import type { ContentFileMeta } from "@/libs/common/resolveContentFile";
+import { BlogLayout } from "@/libs/pagesContent/BlogLayout";
+import type { FC } from "react";
+
 export { getStaticPaths } from "@/libs/pagesContent/getStaticPaths";
 export { getStaticProps } from "@/libs/pagesContent/getStaticProps";
 
-export default function Post({ content }: { content: string }) {
-  let htmlObj = {
-    __html: content,
-  };
-  return <div dangerouslySetInnerHTML={htmlObj}></div>;
+const layouts: Record<string, FC<ContentFileMeta>> = {
+  blog: BlogLayout,
+};
+
+export default function Post(fileMeta: ContentFileMeta) {
+  const Layout = layouts[fileMeta.layout || "blog"] || layouts.blog;
+  return <Layout {...fileMeta} />;
 }
