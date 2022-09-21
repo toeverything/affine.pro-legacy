@@ -1,15 +1,15 @@
 const config = {
   nav: [
     {
-      title: "Welcome",
+      title: "欢迎",
       path: "/developer-docs/welcome",
     },
     {
-      title: "setup",
+      title: "安装",
       path: "/developer-docs/setup",
     },
     {
-      title: "working-with-our-code",
+      title: "参与贡献",
       path: "/developer-docs/working-with-our-code",
     },
   ],

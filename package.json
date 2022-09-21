@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "node script/script.js",
-    "dev": "next dev",
-    "build": "node script/copyfile.js && next build & next export",
+    "start": "node script/start-dev.js",
+    "dev": "npm run start",
+    "build": "node script/pre-build.js && next build & next export",
     "lint": "next lint",
     "lint:fix": "next lint --fix",
     "format:check": "prettier --check .",
