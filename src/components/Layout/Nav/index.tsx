@@ -13,7 +13,11 @@ export const HeaderNav = () => {
             <StyledImage src={AFFiNETextLogo.src} alt="affine" />
           </NextLink>
           <HeaderRight>
-            <a href="https://github.com/toeverything/AFFiNE">
+            <a
+              href="https://github.com/toeverything/AFFiNE"
+              target="_blank"
+              rel="noreferrer"
+            >
               <StyledImage src={githubSvg.src} alt="Github" />
             </a>
             <LinkText href="https://affine.pro/aboutus" title="About Us" />
