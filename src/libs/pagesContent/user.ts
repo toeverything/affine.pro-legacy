@@ -12,8 +12,7 @@ const USER_MAP: Record<string, { name: string; avatar: string; dec: string }> =
     },
     "Fanyuan Zhen": {
       name: "Fanyuan Zhen",
-      avatar:
-        "https://cdn.sanity.io/images/2ki4gve4/production/46a542e27e9995266a027658b47983eb237dafde-1080x1080.jpg?w=3840&q=75&fit=clip&auto=format",
+      avatar: "https://avatars.githubusercontent.com/u/63830919?s=96&v=4",
       dec: "Author, Operator of Community Support",
     },
     "Yifeng Wang": {
