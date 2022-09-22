@@ -1,12 +1,10 @@
 import type { NextPage } from "next";
-import Image from "next/image";
-import { Page } from "../components/Layout/Page";
-import styles from "../styles/Home.module.css";
 
 const Home: NextPage = () => {
   return (
     <>
-      <Page>
+      <div>AFFINE</div>
+      {/* <Page>
         <main className={styles.main}>
           <h1 className={styles.title}>
             Welcome to <a href="https://nextjs.org">Next.js!</a>
@@ -65,7 +63,7 @@ const Home: NextPage = () => {
             </span>
           </a>
         </footer>
-      </Page>
+      </Page> */}
     </>
   );
 };
