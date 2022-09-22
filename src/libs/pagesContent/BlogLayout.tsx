@@ -144,8 +144,9 @@ export const BlogLayout = ({
               {authors?.map((item: string) => {
                 return (
                   <Author key={item}>
-                    {/* @ts-ignore */}
-                    <img src={USER_MAP[item]?.avatar} alt="" />
+                    <picture>
+                      <img src={USER_MAP[item]?.avatar} alt="avatar" />
+                    </picture>
                     <div>
                       <p className="name">{item}</p>
                       {/* <div className='dec'>{item}</div> */}
