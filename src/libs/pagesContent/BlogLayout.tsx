@@ -27,6 +27,13 @@ const HeaderDec = styled.div`
   color: rgb(102, 112, 133);
   font-size: 20px;
 `;
+const HeaderTime = styled.div`
+  color: #4b32c3;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  margin-bottom: 1rem;
+`;
 const Slider = styled.div`
   width: 25%;
   flex: none;
@@ -42,6 +49,10 @@ const HeaderContent = styled.div`
   margin: 0 auto;
   h1 {
     width: 60%;
+    margin-top: 0;
+    font-size: 48px;
+    line-height: 58px;
+    margin-bottom: 1rem;
   }
   p {
     color: #4b32c3;
@@ -79,6 +90,8 @@ const Content = styled.div`
 
   img {
     max-width: 100%;
+    display: block;
+    margin: 0 auto;
   }
   p {
     font-size: 16px;
@@ -109,13 +122,17 @@ export const BlogLayout = ({
     <div>
       <Header>
         <HeaderContent>
+          {updated ? (
+            <HeaderTime>{`Updated: ${new Date(
+              updated
+            ).toLocaleDateString()}`}</HeaderTime>
+          ) : created ? (
+            <HeaderTime>{`Created: ${new Date(
+              created!
+            ).toLocaleDateString()}`}</HeaderTime>
+          ) : null}
           <h1>{title}</h1>
           <HeaderDec>{description}</HeaderDec>
-          {updated ? (
-            <p>{`Updated: ${new Date(updated).toLocaleDateString()}`}</p>
-          ) : created ? (
-            <p>{`Created: ${new Date(created!).toLocaleDateString()}`}</p>
-          ) : null}
         </HeaderContent>
       </Header>
       <Body>
