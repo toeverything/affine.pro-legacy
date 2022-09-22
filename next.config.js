@@ -13,8 +13,9 @@ const withMDX = require("@next/mdx")({
 const nextConfig = withMDX({
   pageExtensions: ["jsx", "js", "ts", "tsx", "md", "mdx"],
   reactStrictMode: true,
-  styledComponents: true,
-
+  compiler: {
+    styledComponents: true,
+  },
   swcMinify: true,
   images: {
     unoptimized: true,
