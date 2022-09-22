@@ -16,7 +16,7 @@
     "incremental": true,
     "importsNotUsedAsValues": "error",
     "paths": {
-      "@/libs/*": ["./src/libs/*"]
+      "@/*": ["./src/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

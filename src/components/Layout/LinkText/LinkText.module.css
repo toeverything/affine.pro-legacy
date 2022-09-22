@@ -1,0 +1,7 @@
+.link_text:hover {
+  color: #4832c3;
+}
+
+.link_text + .link_text {
+  margin-left: 20px;
+}
