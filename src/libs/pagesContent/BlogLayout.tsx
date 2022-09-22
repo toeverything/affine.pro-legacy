@@ -1,3 +1,4 @@
+import { Page } from "@/components/Layout/Page";
 import styled from "styled-components";
 import type { ContentFileMeta } from "../common/resolveContentFile";
 import USER_MAP from "./user";
@@ -119,7 +120,7 @@ export const BlogLayout = ({
   html,
 }: ContentFileMeta) => {
   return (
-    <div>
+    <Page>
       <Header>
         <HeaderContent>
           {updated ? (
@@ -169,6 +170,6 @@ export const BlogLayout = ({
         </Slider>
         <Content dangerouslySetInnerHTML={{ __html: html || "" }} />
       </Body>
-    </div>
+    </Page>
   );
 };
