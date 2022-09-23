@@ -44,7 +44,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           path: ./out
-  
+
   push_to_registry:
     # See https://docs.github.com/en/actions/publishing-packages/publishing-docker-images
     name: Push Docker image to Docker Hub
