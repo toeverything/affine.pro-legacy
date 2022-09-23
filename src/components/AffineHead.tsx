@@ -10,7 +10,6 @@ export const AffineHead = withRouter(
     <Head>
       <meta charSet="utf-8" />
       <title>AFFiNE - All In One Workos</title>
-      <base href="/" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
 
       <meta name="twitter:card" content="summary_large_image" />

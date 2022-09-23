@@ -1,101 +1,78 @@
 import NextLink from "next/link";
 import styled from "styled-components";
+import { LinkText } from "../LinkText";
 import AFFiNETextLogo from "./affine-text-logo.png";
+import githubSvg from "./github.svg";
 
-const Button = styled.button``;
-const ButtonLink = ({
-  href,
-  className,
-  children,
-  target,
-  label,
-  ...props
-}: JSX.IntrinsicElements["a"] & { label?: string }) => {
+export const HeaderNav = () => {
   return (
-    <Button>
-      <NextLink href={href as string}>
-        <a className={className} {...props} aria-label={label} target={target}>
-          {children}
-        </a>
-      </NextLink>
-    </Button>
-  );
-};
-
-export const AFFiNEHeader = () => {
-  return (
-    <Container>
-      <NextLink href={"/"}>
-        <StyledImage src={AFFiNETextLogo.src} alt="affine" />
-      </NextLink>
-
-      <ButtonLink
-        color="neutral"
-        href={"/about"}
-        style={{
-          fontSize: "16px",
-        }}
-      >
-        AboutUs
-      </ButtonLink>
-
-      <Button
-        onClick={() => window.open("https://blog.affine.pro")}
-        style={{
-          fontSize: "16px",
-        }}
-      >
-        Blog
-      </Button>
-      <Button
-        onClick={() => window.open("https://docs.affine.pro/")}
-        color="neutral"
-        style={{
-          fontSize: "16px",
-        }}
-      >
-        Docs
-      </Button>
-      <Button
-        onClick={() => window.open("https://feedback.affine.pro/")}
-        color="neutral"
-        style={{
-          fontSize: "16px",
-        }}
-      >
-        Feedback
-      </Button>
-
-      <Button
-        onClick={() => window.open("https://livedemo.affine.pro/")}
-        color="neutral"
-        style={{
-          fontSize: "16px",
-        }}
-      >
-        Try it Online
-      </Button>
-    </Container>
+    <>
+      <Container>
+        <Header>
+          <NextLink href={"/"}>
+            <StyledImage src={AFFiNETextLogo.src} alt="affine" />
+          </NextLink>
+          <HeaderRight>
+            <a
+              href="https://github.com/toeverything/AFFiNE"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <StyledImage src={githubSvg.src} alt="Github" />
+            </a>
+            <LinkText href="https://affine.pro/aboutus" title="About Us" />
+            <LinkText href="/blog" title="Blog" />
+            <LinkText href="https://docs.affine.pro/" title="Docs" />
+            <LinkText href="https://feedback.affine.pro/" title="Feedback" />
+            <LinkText
+              href="https://livedemo.affine.pro/"
+              title="Try it Online"
+            />
+          </HeaderRight>
+        </Header>
+      </Container>
+      <Placeholder />
+    </>
   );
 };
 
 const Container = styled.div({
   position: "fixed",
   top: 0,
-  left: "50%",
-  transform: "translateX(-50%)",
+  left: 0,
   width: "100%",
   paddingTop: "1em",
   paddingBottom: "1em",
   backgroundColor: "#fff",
   zIndex: 1500,
-  maxWidth: "1440px",
   margin: "auto",
   marginTop: "0 !important",
+  padding: "12px 0",
+  borderBottom: "1px solid #e4e7ec",
+});
+
+const Header = styled.div({
+  maxWidth: "1280px",
+  margin: "0 auto",
+  height: "48px",
+  display: "flex",
+  flexDirection: "row",
+  justifyContent: "space-between",
+  alignItems: "center",
+});
+
+const HeaderRight = styled.div({
+  display: "flex",
+  flexDirection: "row",
+  alignItems: "center",
 });
 
 const StyledImage = styled.img({
   height: "24px",
   marginRight: "16px",
   cursor: "pointer",
+});
+
+const Placeholder = styled.div({
+  height: "73px",
 });
