@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node script/start-dev.js",
     "dev": "npm run start",
-    "build": "node script/pre-build.js && next build & next export",
+    "build": "node script/pre-build.js && next build && next export",
     "lint": "next lint",
     "lint:fix": "next lint --fix",
     "format:check": "prettier --check .",
