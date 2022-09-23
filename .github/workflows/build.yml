@@ -73,7 +73,7 @@ jobs:
       - name: Create
         run: ls -R
       - name: Unarchive
-        run: tar xvf artifact.tar -C out
+        run: mkdir out && tar xvf artifact.tar -C out
       - name: Display structure of downloaded files
         run: ls -R
       - name: Log in to Docker Hub
