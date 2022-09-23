@@ -164,9 +164,9 @@ export const BlogLayout = ({
               }) || "Empty"}
             </div>
           </SliderModule>
-          <LastSliderModule>
+          {/* <LastSliderModule>
             <LeftTitle>Share</LeftTitle>
-          </LastSliderModule>
+          </LastSliderModule> */}
           <div></div>
         </Slider>
         <Content dangerouslySetInnerHTML={{ __html: html || "" }} />

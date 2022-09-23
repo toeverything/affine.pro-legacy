@@ -9,14 +9,13 @@ updated: 2022-09-21
 layout: blog
 ---
 
-<!-- **Thank you very much for your interest in AFFiNE! Some exciting changes are as follows:**
+**Thank you very much for your interest in AFFiNE! Some exciting changes are as follows:**
 
 #### Major news:
 
 **1\. Our official website is now in Spanish!**
 
 Thanks to Leonard, Mathematti, monika2401 and Edenilson LR, we have added our translation contributor list on Gitbook: [https://docs.affine.pro/affine/internationalization/contributors](https://docs.affine.pro/affine/internationalization/contributors)
-
 
 ![](./71095365c9cce338850ceb0945febcc23005f9e6-2880x1584.png)
 
@@ -38,18 +37,18 @@ The blog page previously had three category buttons at the top, but they didn't 
 
 #### **Bug Fixes**
 
-* Fixed: Enter the keyword '/' to search, then enter will keep the search term.
-* Fixed: Improve command+A user experience
-* Fixed: When the keyboard controls the cursor movement down and up, the cursor can switch to CodeBlock smoothly
-* Fixed: After the code block is created successfully, the cursor is automatically focused
+- Fixed: Enter the keyword '/' to search, then enter will keep the search term.
+- Fixed: Improve command+A user experience
+- Fixed: When the keyboard controls the cursor movement down and up, the cursor can switch to CodeBlock smoothly
+- Fixed: After the code block is created successfully, the cursor is automatically focused
 
 ![](./aa9b6ef087907d442f4c6f3947a2d890208b9782-1920x1080.gif)
 
-* Fixed: In paper mode, both Blocks & Block Groups can be selected by Ctrl+A and can be deleted by pressing Delete directly after selection.
+- Fixed: In paper mode, both Blocks & Block Groups can be selected by Ctrl+A and can be deleted by pressing Delete directly after selection.
 
 ![](./25cd800be5db9b6761de7e9f84c1b04a5a8d11b6-1920x1080.gif)
 
-* Fixed: Improve the logic of the operation: after pressing enter, whether to change the line or create a new block, each time you press the result is different.
+- Fixed: Improve the logic of the operation: after pressing enter, whether to change the line or create a new block, each time you press the result is different.
 
 #### Ambassador Progress
 
@@ -61,13 +60,13 @@ Let us know your interests, what you would like to do, and how we can help suppo
 
 AFFiNE is still in alpha, but we are continuing to build to a more feature-rich and stable build. Come and join us on our journey over on our media platforms.
 
-* Reddit: [https://www.reddit.com/r/Affine/](https://www.reddit.com/r/Affine/)
-* Discord: [https://discord.gg/Arn7TqJBvG](https://discord.gg/Arn7TqJBvG)
-* Telegram: [https://t.me/affineworkos](https://t.me/affineworkos)
-* Twitter: [https://twitter.com/AffineOfficial](https://twitter.com/AffineOfficial)
-* Medium: [https://medium.com/@affineworkos](https://medium.com/@affineworkos)
-* GitHub: [https://github.com/toeverything/AFFiNE]()
-* Official Website: [https://affine.pro/](https://affine.pro/)
-* Feedback: [https://feedback.affine.pro/boards/feature-requests]()
+- Reddit: [https://www.reddit.com/r/Affine/](https://www.reddit.com/r/Affine/)
+- Discord: [https://discord.gg/Arn7TqJBvG](https://discord.gg/Arn7TqJBvG)
+- Telegram: [https://t.me/affineworkos](https://t.me/affineworkos)
+- Twitter: [https://twitter.com/AffineOfficial](https://twitter.com/AffineOfficial)
+- Medium: [https://medium.com/@affineworkos](https://medium.com/@affineworkos)
+- GitHub: [https://github.com/toeverything/AFFiNE]()
+- Official Website: [https://affine.pro/](https://affine.pro/)
+- Feedback: [https://feedback.affine.pro/boards/feature-requests]()
 
-We hope to release a more stable version in October, and we always welcome any advice/feedback about us! -->
+We hope to release a more stable version in October, and we always welcome any advice/feedback about us!
