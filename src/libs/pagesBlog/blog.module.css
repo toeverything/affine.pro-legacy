@@ -95,3 +95,6 @@
 .body_right_list_item_right h2 {
   margin-top: 0;
 }
+.body_right_list_item_right p {
+  color: #666
+}

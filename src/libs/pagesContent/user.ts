@@ -2,7 +2,12 @@ const USER_MAP: Record<string, { name: string; avatar: string; dec: string }> =
   {
     "Fanjing Zhang": {
       name: "Fangyuan Zheng",
-      avatar: "https://avatars.githubusercontent.com/u/11530942?s=96&v=4",
+      avatar: "/FanyuanZhen.png",
+      dec: "decigner, Head of Product decign",
+    },
+    "Christopher Smolak": {
+      name: "Fangyuan Zheng",
+      avatar: "/FanyuanZhen.png",
       dec: "decigner, Head of Product decign",
     },
     "Chi Zhang": {
@@ -12,6 +17,11 @@ const USER_MAP: Record<string, { name: string; avatar: string; dec: string }> =
     },
     "Fanyuan Zhen": {
       name: "Fanyuan Zhen",
+      avatar: "/FanyuanZhen.png",
+      dec: "Author, Operator of Community Support",
+    },
+    "Fangyuan Zheng": {
+      name: "Fanyuan Zheng",
       avatar: "/FanyuanZhen.png",
       dec: "Author, Operator of Community Support",
     },

@@ -40,3 +40,17 @@ jobs:
 
       - name: Build
         run: pnpm build
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: ./out
+  
+  deploy:
+    if: github.ref == 'refs/heads/master'
+    runs-on: ubuntu-latest
+    needs: build
+
+    strategy:
+      matrix:
+        node-version: [18.x]
+        os: [ubuntu-latest]
