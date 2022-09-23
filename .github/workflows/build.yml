@@ -68,14 +68,10 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: github-pages
-      - name: Display structure of downloaded files
-        run: ls -R
-      - name: Create
-        run: ls -R
+
       - name: Unarchive
         run: mkdir out && tar xvf artifact.tar -C out
-      - name: Display structure of downloaded files
-        run: ls -R
+
       - name: Log in to Docker Hub
         uses: docker/login-action@v2
         with:
