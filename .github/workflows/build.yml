@@ -70,9 +70,10 @@ jobs:
           name: github-pages
       - name: Display structure of downloaded files
         run: ls -R
-
+      - name: Create
+        run: ls -R
       - name: Unarchive
-        run: tar cvf github-pages out
+        run: mkdir out && tar cvf github-pages out
       - name: Display structure of downloaded files
         run: ls -R
       - name: Log in to Docker Hub
