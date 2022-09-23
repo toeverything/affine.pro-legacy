@@ -41,7 +41,7 @@ jobs:
       - name: Build
         run: pnpm build
       - name: Upload artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-pages-artifact@v1
         with:
           path: ./out
 
@@ -67,9 +67,14 @@ jobs:
       - name: Download artifact
         uses: actions/download-artifact@v3
         with:
-          name: artifact
-          path: out/
+          name: github-pages
+      - name: Display structure of downloaded files
+        run: ls -R
 
+      - name: Unarchive
+        run: tar cvf github-pages out
+      - name: Display structure of downloaded files
+        run: ls -R
       - name: Log in to Docker Hub
         uses: docker/login-action@v2
         with:
