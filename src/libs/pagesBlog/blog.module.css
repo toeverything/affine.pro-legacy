@@ -9,6 +9,15 @@
   margin: 0 auto;
 }
 
+.header_content h1{
+  font-size: 48px;
+}
+
+.header_content p{
+  font-size: 20px;
+  color: rgb(102,112,133);
+}
+
 .body {
   max-width: 1280px;
   margin: 0 auto;

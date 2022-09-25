@@ -12,6 +12,7 @@ interface PageProps {
 const Container = styled.div`
   display: flex;
   flex-direction: column;
+  font-size: 16px;
 `;
 
 export function Page({ children }: PageProps) {
