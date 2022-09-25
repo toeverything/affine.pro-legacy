@@ -1,10 +1,13 @@
+import { useMatchMediaMaxWidth800 } from "@/libs/common/matchMedia";
 import NextLink from "next/link";
 import styled from "styled-components";
-import { LinkText } from "../LinkText";
 import AFFiNETextLogo from "./affine-text-logo.png";
 import githubSvg from "./github.svg";
+import { NormalHeader } from "./NormalHeader";
+import { SmallHeader } from "./SmallHeader";
 
 export const HeaderNav = () => {
+  const matchesMaxWidth800 = useMatchMediaMaxWidth800();
   return (
     <>
       <Container>
@@ -20,14 +23,7 @@ export const HeaderNav = () => {
             >
               <StyledImage src={githubSvg.src} alt="Github" />
             </a>
-            <LinkText href="https://affine.pro/aboutus" title="About Us" />
-            <LinkText href="/blog" title="Blog" />
-            <LinkText href="https://docs.affine.pro/" title="Docs" />
-            <LinkText href="https://feedback.affine.pro/" title="Feedback" />
-            <LinkText
-              href="https://livedemo.affine.pro/"
-              title="Try it Online"
-            />
+            {matchesMaxWidth800 ? <SmallHeader /> : <NormalHeader />}
           </HeaderRight>
         </Header>
       </Container>
@@ -55,6 +51,7 @@ const Header = styled.div({
   maxWidth: "1280px",
   margin: "0 auto",
   height: "48px",
+  padding: "0 30px",
   display: "flex",
   flexDirection: "row",
   justifyContent: "space-between",

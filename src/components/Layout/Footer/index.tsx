@@ -49,6 +49,7 @@ const ContactUsContainer = styled.div({
   justifyContent: "center",
   alignItems: "center",
   marginBottom: "20px",
+  flexWrap: "wrap",
 });
 
 const OpensourceTag = styled.span({
