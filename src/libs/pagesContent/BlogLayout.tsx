@@ -75,6 +75,11 @@ const HeaderContent = styled.div`
 
   @media (max-width: 800px) {
     padding: 52px 30px;
+
+    h1 {
+      font-size: 28px;
+      line-height: 1.2;
+    }
   }
 `;
 
