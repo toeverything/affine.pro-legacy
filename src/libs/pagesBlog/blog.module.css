@@ -9,13 +9,13 @@
   margin: 0 auto;
 }
 
-.header_content h1{
+.header_content h1 {
   font-size: 48px;
 }
 
-.header_content p{
+.header_content p {
   font-size: 20px;
-  color: rgb(102,112,133);
+  color: rgb(102, 112, 133);
 }
 
 .body {
@@ -108,11 +108,11 @@
   margin-bottom: 0;
 }
 .body_right_list_item_right p {
-  color: rgb(102,112,133);
+  color: rgb(102, 112, 133);
   margin-top: 5px;
   margin-bottom: 5px;
 }
-.body_right_list_item_right .tag{
+.body_right_list_item_right .tag {
   display: inline-block;
   padding: 4px;
   border-radius: 4px;
@@ -122,9 +122,8 @@
   font-size: 12px;
   margin-right: 5px;
 }
-.body_right_list_item_right .description{
+.body_right_list_item_right .description {
   font-size: 14px;
-
 }
 @media screen and (max-width: 800px) {
   .body {
