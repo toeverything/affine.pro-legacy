@@ -11,7 +11,8 @@
     "format:check": "prettier --check .",
     "format:fix": "prettier --write .",
     "typeCheck": "tsc --noEmit",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "publish-blog": "node script/publish-blog.js"
   },
   "dependencies": {
     "@mdx-js/loader": "^2.1.3",
