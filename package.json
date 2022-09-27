@@ -12,7 +12,7 @@
     "format:fix": "prettier --write .",
     "typeCheck": "tsc --noEmit",
     "prepare": "husky install",
-    "publish-blog": "sh github-publish.sh"
+    "publish-blog": "sh ./git-publish.sh"
   },
   "dependencies": {
     "@mdx-js/loader": "^2.1.3",
