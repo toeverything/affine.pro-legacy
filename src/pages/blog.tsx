@@ -62,7 +62,7 @@ export default function Blog(props: { blogMetas: ContentFileMeta[] }) {
           </div>
           <div className={styles.body_right}>
             <ul className={styles.body_right_list}>
-              {filteredMetas.map((meta) => {
+              {filteredMetas.reverse().map((meta) => {
                 return (
                   <li
                     key={meta.cover}
@@ -76,9 +76,22 @@ export default function Blog(props: { blogMetas: ContentFileMeta[] }) {
                     </div>
                     <div className={styles.body_right_list_item_right}>
                       <h2>{meta.title}</h2>
+                      <p>
+                        {new Date(
+                          meta.updated ? meta.updated : meta.created ?? ""
+                        ).toLocaleDateString()}
+                      </p>
                       <p>{meta.authors?.join(", ")}</p>
-                      <p>{meta.tags?.join(", ")}</p>
-                      <p>{meta.description}</p>
+                      <p>
+                        {meta.tags?.map((item) => {
+                          return (
+                            <span key={item} className={styles.tag}>
+                              {item}
+                            </span>
+                          );
+                        })}
+                      </p>
+                      <p className={styles.description}>{meta.description}</p>
                     </div>
                   </li>
                 );
