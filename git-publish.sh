@@ -1,8 +1,9 @@
-
+set -e
 function obtain_git_branch {
   br=`git branch | grep "*"`
   echo ${br/* /}
 }
+git checkout -b date-`date +%Y-%m-%d-%H`
 echo "####### add file #######"
 git add .
 echo "####### add commit #######"
