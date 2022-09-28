@@ -79,7 +79,7 @@ export default function Blog(props: { blogMetas: ContentFileMeta[] }) {
                       <p>
                         {new Date(
                           meta.updated ? meta.updated : meta.created ?? ""
-                        ).toLocaleDateString()}
+                        ).toLocaleDateString("en-US")}
                       </p>
                       <p>{meta.authors?.join(", ")}</p>
                       <p>
