@@ -1,6 +1,6 @@
 export const navLinks = [
   {
-    href: "https://affine.pro/aboutus",
+    href: "/aboutUs",
     title: "About Us",
   },
   {
