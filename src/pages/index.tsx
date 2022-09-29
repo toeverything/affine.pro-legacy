@@ -4,7 +4,9 @@ import Image from "next/image";
 import CollaborationImage from "../../public/content/homePage/collaboration.png";
 import LogoImage from "../../public/content/homePage/logo.png";
 import PageImage from "../../public/content/homePage/page.png";
+import GithubSvg from "../components/Layout/githubIcon";
 import HomepageTabs from "../components/Layout/HomepageTabs";
+import Logo from "../components/Layout/logo";
 import { Page } from "../components/Layout/Page";
 
 const Home: NextPage = () => {
@@ -27,8 +29,24 @@ const Home: NextPage = () => {
         </div>
 
         <div className={styles.button}>
-          <button className={styles.github}>Check GitHub</button>
-          <button className={styles.liveDemo}>Try it Online</button>
+          <button
+            className={styles.github}
+            onClick={() => {
+              window.open("https://github.com/toeverything/AFFiNE");
+            }}
+          >
+            <GithubSvg fill="#fff" stroke="#fff" width="30" height="30" />
+            {""} &nbsp;Check GitHub
+          </button>
+          <button
+            className={styles.liveDemo}
+            onClick={() => {
+              window.open("https://livedemo.affine.pro/");
+            }}
+          >
+            <Logo fill="#fff" stroke="#fff" width="30" height="30" />
+            {""} &nbsp;Try it Online
+          </button>
         </div>
         <div className={styles.image}>
           <Image src={PageImage} alt="AFFiNE main ui" />
@@ -72,7 +90,15 @@ const Home: NextPage = () => {
           <p>Build for an open and semantic future</p>
           <div className={styles.button}>
             <h2>Keep Updated on</h2>
-            <button className={styles.github2}>GitHub</button>
+            <button
+              className={styles.github2}
+              onClick={() => {
+                window.open("https://github.com/toeverything/AFFiNE");
+              }}
+            >
+              <GithubSvg fill="#fff" stroke="#fff" width="22" height="22" />
+              {""} &nbsp; GitHub
+            </button>
           </div>
         </div>
       </div>
