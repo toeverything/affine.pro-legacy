@@ -199,14 +199,13 @@ const Main = styled.div({
   minWidth: "500px",
   paddingLeft: "24px",
   paddingRight: "24px",
-  marginTop: "1em",
 });
 const Header = styled.div({
   display: "flex",
   flexDirection: "column",
   flexWrap: "wrap",
   justifyContent: "center",
-  margin: "2em auto",
+  marginTop: "5em",
   fontWeight: "bold",
   textAlign: "center",
 });
