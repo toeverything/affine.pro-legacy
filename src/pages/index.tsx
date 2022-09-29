@@ -75,9 +75,6 @@ const Home: NextPage = () => {
             <button className={styles.github2}>GitHub</button>
           </div>
         </div>
-        <div className={styles.join}>
-          <h2>Join Our Community</h2>
-        </div>
       </div>
     </Page>
   );
