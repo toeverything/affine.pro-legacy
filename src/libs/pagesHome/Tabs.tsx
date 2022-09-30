@@ -180,7 +180,7 @@ const StyledP = styled.p`
   line-height: 1.5;
   margin-bottom: 0;
 `;
-const StyledImage = styled.image<{ active?: number }>`
+const StyledImage = styled.div<{ active?: number }>`
   max-width: 100%;
   object-fit: contain;
   display: flex;

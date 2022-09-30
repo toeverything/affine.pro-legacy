@@ -85,7 +85,7 @@ const StyledGithub = styled.button({
   margin: "auto 16px",
   padding: "12px 24px",
 });
-const StyledImage = styled.image({
+const StyledImage = styled.div({
   maxWidth: "1200px",
   width: "100%",
   objectFit: "contain",
@@ -101,7 +101,7 @@ const StyledImage = styled.image({
     boxShadow: "2px 2px 40px #0004",
   },
 });
-const StyledLoge = styled.image({
+const StyledLoge = styled.div({
   display: "flex",
   margin: "auto",
   justifyContent: "center",
