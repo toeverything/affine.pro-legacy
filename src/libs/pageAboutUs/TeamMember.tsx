@@ -2,7 +2,6 @@ import styled from "styled-components";
 const TeamMember = () => {
   return (
     <>
-      {" "}
       <StyledTitle>Team Member</StyledTitle>
       <StyledTitle2>Founder & Co-founders</StyledTitle2>
       <StyledContent>
@@ -13,7 +12,7 @@ const TeamMember = () => {
         >
           Jiachen He
         </StyledLink>
-        {""} | Founder & Product Owner
+        &nbsp;| Founder & Product Owner
       </StyledContent>
       <StyledDes>The PM and CEO guy.</StyledDes>
       <StyledContent>
@@ -24,7 +23,7 @@ const TeamMember = () => {
         >
           Chi Zhang
         </StyledLink>
-        {""} | Co-founder & Head of Engineering
+        &nbsp;| Co-founder & Head of Engineering
       </StyledContent>
       <StyledDes>He builds AFFiNE.</StyledDes>
       <StyledContent>
@@ -35,7 +34,7 @@ const TeamMember = () => {
         >
           Xiang Wang
         </StyledLink>
-        {""} | Co-founder & Head of Machine Learning Algorithms
+        &nbsp;| Co-founder & Head of Machine Learning Algorithms
       </StyledContent>
       <StyledDes>
         Making everyone&apos;s life easier by embracing the power of AI.
@@ -48,7 +47,7 @@ const TeamMember = () => {
         >
           Yipei Wei
         </StyledLink>
-        {""} | Co-founder & Head of Community Support
+        &nbsp;| Co-founder & Head of Community Support
       </StyledContent>
       <StyledDes>
         She talks to people so that AFFiNE is something people want.
@@ -62,7 +61,7 @@ const TeamMember = () => {
         >
           Yifeng Wang
         </StyledLink>
-        {""} | Head of Graphics Architecture
+        &nbsp;| Head of Graphics Architecture
       </StyledContent>
       <StyledContent>
         <StyledLink
@@ -72,7 +71,7 @@ const TeamMember = () => {
         >
           Xiaodong Zuo
         </StyledLink>
-        {""} | Head of Software Architecture
+        &nbsp;| Head of Software Architecture
       </StyledContent>
       <StyledContent>
         <StyledLink
@@ -82,7 +81,7 @@ const TeamMember = () => {
         >
           Wenhao Tan
         </StyledLink>
-        {""} | Director of Performance and Security
+        &nbsp;| Director of Performance and Security
       </StyledContent>
       <StyledContent>
         <StyledLink
@@ -92,7 +91,7 @@ const TeamMember = () => {
         >
           Xinglong Wang
         </StyledLink>
-        {""} | Head of Collaboration and Creativity
+        &nbsp;| Head of Collaboration and Creativity
       </StyledContent>
       <StyledContent>
         <StyledLink
@@ -102,7 +101,7 @@ const TeamMember = () => {
         >
           Mingliang Wang
         </StyledLink>
-        {""} | Head of Structural Editing
+        &nbsp;| Head of Structural Editing
       </StyledContent>
     </>
   );
