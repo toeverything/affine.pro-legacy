@@ -1,5 +1,5 @@
 ---
-title: AFFiNE Local User Guide  Keep Your Data In Your Hands - 2022.09
+title: "AFFiNE Local User Guide: Keep Your Data In Your Hands - 2022.09"
 author: Wenhao Tan, Christopher Smolak, Fangyuan Zheng, Fanjing Zhang
 tags: User Guide
 cover: ./cover.jpg
