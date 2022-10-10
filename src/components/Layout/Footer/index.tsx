@@ -5,6 +5,7 @@ export const Footer = () => {
   return (
     <>
       <Container>
+        <JoinOur>Join Our Community</JoinOur>
         <Content>
           <ContactUsContainer>
             <LinkText
@@ -58,4 +59,15 @@ const OpensourceTag = styled.span({
 
 const Copyright = styled.div({
   marginTop: "20px",
+});
+const JoinOur = styled.div({
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  justifyContent: "center",
+  marginTop: "1em",
+
+  fontSize: "2.25rem",
+  lineHeight: "1.25",
+  fontWeight: "600",
 });
