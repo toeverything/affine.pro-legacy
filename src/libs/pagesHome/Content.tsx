@@ -39,12 +39,12 @@ const Content = () => {
           setup.
         </StyledContent>
       </StyledText>
-      <StyledImage>
+      <StyledPrivacyImage>
         <Image
           src={CollaborationImage}
           alt="AFFiNE Privacy-first, and collaborative"
         />
-      </StyledImage>
+      </StyledPrivacyImage>
       <StyledLoge>
         <Image src={LogoImage} alt="AFFiNE Logo" />
       </StyledLoge>
@@ -93,6 +93,7 @@ const StyledImage = styled.div({
   justifyContent: "center",
   margin: "auto",
   marginBottom: "96px",
+  marginTop: "200px",
   transition: "all 0.5s",
   transform: "scale(0.98)",
   boxShadow: "2px 2px 40px #0002",
@@ -159,4 +160,17 @@ const StyledMessage = styled.p({
   margin: 0,
   fontSize: " 24px",
   lineHeight: 1.25,
+});
+const StyledPrivacyImage = styled.div({
+  maxWidth: "1400px",
+  width: "100%",
+  objectFit: "contain",
+  display: "flex",
+  justifyContent: "center",
+  margin: "auto",
+  transition: "all 0.5s",
+  transform: "scale(0.98)",
+  ":hover": {
+    transform: "scale(1)",
+  },
 });
