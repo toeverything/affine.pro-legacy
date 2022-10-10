@@ -10,10 +10,7 @@ const Title = () => {
           <StyledH1>Open Source,</StyledH1>
           <StyledH1>Privacy First</StyledH1>
         </StyledTitle>
-        <StyledTitle>
-          <Alternatives />
-        </StyledTitle>
-
+        <Alternatives />
         <StyledDes>
           Affine is the next-generation collaborative knowledge base for
           professionals.
@@ -26,8 +23,8 @@ const Title = () => {
             target="_blank"
             rel="noreferrer"
           >
-            <GithubSvg fill="#fff" stroke="#fff" width="30" height="30" />
-            {""} &nbsp;Check GitHub
+            <GithubSvg fill="#fff" stroke="#fff" width="20" height="20" />
+            &nbsp;Check GitHub
           </a>
         </StyledGithub>
         <StyledLogo>
@@ -36,8 +33,8 @@ const Title = () => {
             target="_blank"
             rel="noreferrer"
           >
-            <Logo fill="#fff" stroke="#fff" width="30" height="30" />
-            {""} &nbsp;Try it Online
+            <Logo fill="#fff" stroke="#fff" width="20" height="20" />
+            &nbsp;Try it Online
           </a>
         </StyledLogo>
       </StyledButton>
@@ -59,15 +56,26 @@ const StyledTitle = styled.div({
   textAlign: "center",
   justifyContent: "center",
 });
-const StyledH1 = styled.div({
-  display: "inline-flex",
-  flexWrap: "wrap",
-  textAlign: "center",
-  fontSize: "96px",
-  fontWeight: 900,
-  marginRight: "16px",
-});
-
+const StyledH1 = styled.div`
+  display: inline-flex;
+  flex-wrap: wrap;
+  text-align: center;
+  font-size: 96px;
+  font-weight: 900;
+  margin-right: 16px;
+  @media (max-width: 1300px) {
+    font-size: 80px;
+  }
+  @media (max-width: 1100px) {
+    font-size: 64px;
+  }
+  @media (max-width: 900px) {
+    font-size: 48px;
+  }
+  @media (max-width: 600px) {
+    font-size: 36px;
+  }
+`;
 const StyledDes = styled.div({
   display: "flex",
   flexWrap: "wrap",
@@ -80,40 +88,49 @@ const StyledDes = styled.div({
   color: "#888",
   fontSize: "30px",
 });
-const StyledButton = styled.div({
-  marginTop: "16px",
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  marginBottom: "96px",
-});
+
+const StyledButton = styled.div`
+  margin-top: 16px;
+  flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 96px;
+  font-size: 30px;
+  @media (max-width: 1300px) {
+    font-size: 24px;
+  }
+  @media (max-width: 900px) {
+    font-size: 20px;
+  }
+`;
 const StyledGithub = styled.button({
   borderRadius: "8px",
-  display: "inline-flex",
+  display: "flex",
   flexWrap: "wrap",
   textAlign: "center",
-  fontSize: "30px",
+  fontSize: "inherit",
   lineHeight: 1,
   fontWeight: "bolder",
   color: "#fff",
   backgroundColor: "#096bde",
   cursor: "pointer",
   border: "none",
-  margin: "auto 16px",
+  margin: "auto 24px",
   padding: "16px 28px",
 });
 const StyledLogo = styled.button({
   borderRadius: "8px",
-  display: "inline-flex",
+  display: "flex",
   flexWrap: "wrap",
   textAlign: "center",
-  fontSize: "30px",
+  fontSize: "inherit",
   lineHeight: 1,
   fontWeight: "bolder",
   color: "#fff",
   backgroundColor: "#000",
   cursor: "pointer",
   border: "none",
-  margin: "auto 48px",
+  margin: "auto 24px",
   padding: "16px 28px",
 });
