@@ -115,13 +115,16 @@ const StyledText = styled.div({
   flexWrap: "wrap",
   margin: "128px auto",
 });
-const StyledH1 = styled.h1({
-  fontSize: "48px",
-  fontWeight: "bold",
-  margin: "auto",
-  marginTop: "96px",
-  marginBottom: "16px",
-});
+const StyledH1 = styled.h1`
+  font-size: 48px;
+  font-weight: bold;
+  margin: auto;
+  margin-top: 96px;
+  margin-bottom: 16px;
+  @media (max-width: 1000px) {
+    font-size: 36px;
+  }
+`;
 const StyledH2 = styled.h2({
   fontSize: "32px",
   fontWeight: "bold",
@@ -142,14 +145,17 @@ const StyledFooter = styled.div({
   margin: "auto",
   marginTop: "24px",
 });
-const StyledKeepUpdate = styled.div({
-  display: "flex",
-  alignItems: "center",
-  flexWrap: "wrap",
-  margin: " auto",
-  marginTop: "24px",
-  marginBottom: "64px",
-});
+const StyledKeepUpdate = styled.div`
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: auto;
+  margin-top: 24px;
+  margin-bottom: 64px;
+  @media (max-width: 500px) {
+    flex-direction: column;
+  }
+`;
 const StyledKeepUpdateContent = styled.div({
   margin: 0,
   fontSize: " 32px",

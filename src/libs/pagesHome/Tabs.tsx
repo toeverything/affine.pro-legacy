@@ -84,12 +84,9 @@ const StyledTabsPaper = styled.div({
 
 const StyledTabs = styled.li<{ active?: number }>`
   display: inline-flex;
-
   align-items: center;
-
   justify-content: center;
   box-sizing: border-box;
-
   background-color: transparent;
   outline: 0px;
   border: 0px;
@@ -116,6 +113,7 @@ const StyledTabs = styled.li<{ active?: number }>`
   white-space: normal;
   text-align: center;
   flex-direction: column;
+  z-index: 100;
 
   color: ${(props) => (props.active === 0 ? "#000" : "#1976d2")};
   &::after {
@@ -157,6 +155,9 @@ const StyledSlides = styled.div<{ active?: number }>`
   transition: ${(props) =>
     props.active === 0 ? "all 0.2s ease" : "all 0.5s ease-in"};
   opacity: ${(props) => (props.active === 0 ? "0" : "1")};
+  @media (max-width: 1000px) {
+    flex-direction: column;
+  }
 `;
 const StyledText = styled.div`
   display: flex;
@@ -166,6 +167,11 @@ const StyledText = styled.div`
   width: 100%;
   flex: 1;
   text-align: left;
+  @media (max-width: 1000px) {
+    align-items: center;
+    justify-content: center;
+    margin: 36px auto;
+  }
 `;
 const StyledH2 = styled.h2`
   font-size: 36px;
@@ -189,6 +195,9 @@ const StyledImage = styled.div<{ active?: number }>`
   transition: all 0.5s;
   transform: scale(0.98);
   box-shadow: 2px 2px 40px #0002;
+  @media (max-width: 1000px) {
+    margin: 36px auto;
+  }
   &:hover {
     transform: scale(1);
     box-shadow: 2px 2px 40px #0004;

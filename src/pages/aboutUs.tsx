@@ -38,10 +38,8 @@ const StyledMain = styled.div({
   display: "flex",
   justifyContent: "center",
   flexDirection: "column",
-
   margin: "16px auto",
   maxWidth: "720px",
-  minWidth: "500px",
   paddingLeft: "24px",
   paddingRight: "24px",
 });

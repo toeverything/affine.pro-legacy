@@ -23,14 +23,29 @@ const StyledMain = styled.div({
   fontWeight: "bold",
   textAlign: "center",
 });
-const StyledTitle = styled.div({
-  fontSize: "64px",
-  fontWeight: "900",
-  marginRight: "8px",
-});
-const StyledDes = styled.div({
-  fontSize: "24px",
-  fontWeight: "400",
-  margin: "24px auto",
-  color: "#888",
-});
+const StyledTitle = styled.div`
+  font-size: 64px;
+  font-weight: 900;
+  margin-right: 8px;
+  @media (max-width: 1000px) {
+    font-size: 56px;
+  }
+  @media (max-width: 800px) {
+    font-size: 48px;
+  }
+  @media (max-width: 600px) {
+    font-size: 36px;
+  }
+  @media (max-width: 500px) {
+    font-size: 28px;
+  }
+`;
+const StyledDes = styled.div`
+  font-size: 24px;
+  font-weight: 400;
+  margin: 24px auto;
+  color: #888;
+  @media (max-width: 500px) {
+    font-size: 18px;
+  }
+`;
