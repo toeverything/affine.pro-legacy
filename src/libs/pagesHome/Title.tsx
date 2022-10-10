@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Alternatives from "./Alternatives";
 import GithubSvg from "./GithubIcon";
 import Logo from "./Logo";
 const Title = () => {
@@ -10,7 +11,7 @@ const Title = () => {
           <StyledH1>Privacy First</StyledH1>
         </StyledTitle>
         <StyledTitle>
-          <StyledBlue>Notion Alternative</StyledBlue>
+          <Alternatives />
         </StyledTitle>
 
         <StyledDes>
@@ -66,16 +67,7 @@ const StyledH1 = styled.div({
   fontWeight: 900,
   marginRight: "16px",
 });
-const StyledBlue = styled.div({
-  display: "inline-flex",
-  flexWrap: "wrap",
-  textAlign: "center",
-  fontSize: "96px",
-  fontWeight: 900,
-  marginRight: "9px",
-  marginTop: "16px",
-  color: "#06449d",
-});
+
 const StyledDes = styled.div({
   display: "flex",
   flexWrap: "wrap",
