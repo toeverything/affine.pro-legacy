@@ -8,6 +8,7 @@ export { getStaticProps } from "@/libs/pagesBlog/getStaticProps";
 
 export default function Blog(props: { blogMetas: ContentFileMeta[] }) {
   const router = useRouter();
+
   const { tags, blogMetas, filteredMetas } = useBlogMetas(props.blogMetas, {
     tag: router.query.tag as string,
   });

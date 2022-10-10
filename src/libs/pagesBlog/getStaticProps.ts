@@ -1,35 +1,51 @@
-import fs from "fs";
 import fsPromise from "fs/promises";
 import path from "path";
 
-import { resolveFile } from "../common/resolveContentFile";
-
 import type { ContentFileMeta } from "../common/resolveContentFile";
+import { resolveFile } from "../common/resolveContentFile";
+import { blogRootDir } from "./constants";
 
 const readdir = fsPromise.readdir;
 const readFile = fsPromise.readFile;
+const fsStat = fsPromise.stat;
 
-const rootDir = path.resolve(process.cwd(), "./src/content/blog");
-
-async function getBlogMetas(): Promise<ContentFileMeta[]> {
-  const subdirs = await readdir(rootDir);
-
-  const blogMetas = await Promise.all(
+async function getFiles(dir: string): Promise<ContentFileMeta[]> {
+  const subdirs = await readdir(dir);
+  const files = await Promise.all(
     subdirs.map(async (subdir) => {
-      const filepath = path.resolve(rootDir, subdir, "./index.md");
-      if (!fs.existsSync(filepath)) {
+      const res = path.resolve(dir, subdir);
+      if ((await fsStat(res)).isDirectory()) {
+        return await getFiles(res);
+      } else {
+        if (res.endsWith(".md")) {
+          return await resolveFile(res);
+        }
         return null;
       }
-
-      return await resolveFile(filepath);
     })
   );
-
-  return blogMetas.filter((meta) => !!meta) as ContentFileMeta[];
+  return files.flat().filter((f) => !!f) as ContentFileMeta[];
 }
 
+// async function getBlogMetas(): Promise<ContentFileMeta[]> {
+//   const subdirs = await readdir(rootDir);
+
+//   const blogMetas = await Promise.all(
+//     subdirs.map(async (subdir) => {
+//       const filepath = path.resolve(rootDir, subdir, "./index.md");
+//       if (!fs.existsSync(filepath)) {
+//         return null;
+//       }
+
+//       return await resolveFile(filepath);
+//     })
+//   );
+
+//   return blogMetas.filter((meta) => !!meta) as ContentFileMeta[];
+// }
+
 export async function getStaticProps() {
-  const blogMetas = await getBlogMetas();
+  const blogMetas = await getFiles(blogRootDir);
 
   return {
     props: {

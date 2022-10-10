@@ -1,5 +1,5 @@
 ---
-title: Why you should try AFFiNE Tag-app system
+title: "Why you should try AFFiNE: Tag-app system"
 author: Jiachen He, Fangyuan Zheng, Christopher Smolak, Yipei Wei, Fanjing Zhang
 tags: User Guide
 cover: ./cover.jpg
