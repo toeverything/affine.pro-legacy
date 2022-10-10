@@ -10,7 +10,7 @@ const HomepageTabs = () => {
   return (
     <StyledTabsPaper>
       <div>
-        <ul>
+        <StyledTabsUl>
           <StyledTabs
             active={tab1}
             onClick={() => {
@@ -29,7 +29,7 @@ const HomepageTabs = () => {
           >
             Plan Your Task
           </StyledTabs>
-        </ul>
+        </StyledTabsUl>
       </div>
       <StyledSlides active={tab1}>
         <StyledText>
@@ -80,6 +80,10 @@ const StyledTabsPaper = styled.div({
   textAlign: "center",
   margin: "96px auto",
   padding: "10px",
+});
+const StyledTabsUl = styled.ul({
+  margin: "0",
+  padding: "0",
 });
 
 const StyledTabs = styled.li<{ active?: number }>`

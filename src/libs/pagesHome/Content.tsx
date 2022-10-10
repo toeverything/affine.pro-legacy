@@ -121,16 +121,21 @@ const StyledH1 = styled.h1`
   margin: auto;
   margin-top: 96px;
   margin-bottom: 16px;
+  text-align: center;
   @media (max-width: 1000px) {
     font-size: 36px;
   }
 `;
-const StyledH2 = styled.h2({
-  fontSize: "32px",
-  fontWeight: "bold",
-  margin: "auto",
-  marginBottom: "16px",
-});
+const StyledH2 = styled.h2`
+  font-size: 32px;
+  font-weight: bold;
+  margin: auto;
+  margin-bottom: 16px;
+  text-align: center;
+  @media (max-width: 500px) {
+    font-size: 26px;
+  }
+`;
 const StyledContent = styled.p({
   fontSize: "20px",
   lineHeight: 1.5,
@@ -156,17 +161,23 @@ const StyledKeepUpdate = styled.div`
     flex-direction: column;
   }
 `;
-const StyledKeepUpdateContent = styled.div({
-  margin: 0,
-  fontSize: " 32px",
-  fontWeight: "500",
-  lineHeight: 1.25,
-});
-const StyledMessage = styled.p({
-  margin: 0,
-  fontSize: " 24px",
-  lineHeight: 1.25,
-});
+const StyledKeepUpdateContent = styled.div`
+  margin: 0;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1.25;
+  @media (max-width: 500px) {
+    margin-bottom: 20px;
+  }
+`;
+const StyledMessage = styled.p`
+  margin: 0;
+  font-size: 24px;
+  line-height: 1.25;
+  @media (max-width: 500px) {
+    font-size: 16px;
+  }
+`;
 const StyledPrivacyImage = styled.div({
   maxWidth: "1400px",
   width: "100%",
