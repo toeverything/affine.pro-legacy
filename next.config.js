@@ -19,6 +19,7 @@ const withTM = require("next-transpile-modules")([
 const nextConfig = withMDX(
   withTM({
     pageExtensions: ["jsx", "js", "ts", "tsx", "md", "mdx"],
+    trailingSlash: true,
     reactStrictMode: true,
     compiler: {
       styledComponents: true,
