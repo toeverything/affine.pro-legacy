@@ -1,5 +1,10 @@
+import GithubIcon from "@mui/icons-material/GitHub";
 import styled from "styled-components";
 import { LinkText } from "../LinkText";
+
+const Github = styled(GithubIcon)({
+  fontSize: "12px",
+});
 
 export const Footer = () => {
   return (
@@ -7,6 +12,7 @@ export const Footer = () => {
       <Container>
         <JoinOur>Join Our Community</JoinOur>
         <Content>
+          <Github />
           <ContactUsContainer>
             <LinkText
               href="https://github.com/toeverything/AFFiNE/"
