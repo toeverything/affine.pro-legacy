@@ -1,3 +1,4 @@
+import { useTranslation } from "next-i18next";
 import Image from "next/image";
 import { useState } from "react";
 import styled from "styled-components";
@@ -7,6 +8,7 @@ import TaskImage from "./images/task.png";
 const HomepageTabs = () => {
   const [tab1, selectTab1] = useState(1);
   const [tab2, selectTab2] = useState(0);
+  const { t } = useTranslation();
   return (
     <StyledTabsPaper>
       <div>
@@ -18,7 +20,7 @@ const HomepageTabs = () => {
               selectTab2(0);
             }}
           >
-            Shape Your Page
+            {t("description2.part1")}
           </StyledTabs>
           <StyledTabs
             active={tab2}
@@ -27,22 +29,15 @@ const HomepageTabs = () => {
               selectTab2(1);
             }}
           >
-            Plan Your Task
+            {t("description3.part1")}
           </StyledTabs>
         </StyledTabsUl>
       </div>
       <StyledSlides active={tab1}>
         <StyledText>
-          <StyledH2>Shape Your Page</StyledH2>
-          <StyledP>
-            Docs, Kanbans, and Databases are all fully functional anywhere,
-            anytime. A truly what-you-see-is-what-you-get environment for your
-            data.
-          </StyledP>
-          <StyledP>
-            All pages come with a document (Paper Mode) and whiteboard (Edgeless
-            Mode) view.
-          </StyledP>
+          <StyledH2>{t("description2.part1")}</StyledH2>
+          <StyledP>{t("description2.part2")}</StyledP>
+          <StyledP>{t("description2.part3")}</StyledP>
         </StyledText>
         <StyledImage active={tab1}>
           <div>
@@ -57,15 +52,10 @@ const HomepageTabs = () => {
           </div>
         </StyledImage>
         <StyledText>
-          <StyledH2>Plan Your Task</StyledH2>
-          <StyledP>No more chaos managing multiple views.</StyledP>
-          <StyledP>
-            Set a TODO with Markdown, and seamlessly edit it within a Kanban.
-          </StyledP>
-          <StyledP>
-            Managing multi-dimensional tables should be this simple - and now it
-            is.
-          </StyledP>
+          <StyledH2> {t("description3.part1")}</StyledH2>
+          <StyledP>{t("description3.part2")}</StyledP>
+          <StyledP>{t("description3.part3")}</StyledP>
+          <StyledP>{t("description3.part4")}</StyledP>
         </StyledText>
       </StyledSlides>
     </StyledTabsPaper>
