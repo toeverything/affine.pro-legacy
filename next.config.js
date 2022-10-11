@@ -9,17 +9,32 @@ const withMDX = require("@next/mdx")({
   },
 });
 
+const withTM = require("next-transpile-modules")([
+  "@mui/material",
+  "@mui/system",
+  "@mui/icons-material", // If @mui/icons-material is being used
+]);
+
 /** @type {import('next').NextConfig} */
-const nextConfig = withMDX({
-  pageExtensions: ["jsx", "js", "ts", "tsx", "md", "mdx"],
-  reactStrictMode: true,
-  compiler: {
-    styledComponents: true,
-  },
-  swcMinify: true,
-  images: {
-    unoptimized: true,
-  },
-});
+const nextConfig = withMDX(
+  withTM({
+    pageExtensions: ["jsx", "js", "ts", "tsx", "md", "mdx"],
+    reactStrictMode: true,
+    compiler: {
+      styledComponents: true,
+    },
+    swcMinify: true,
+    images: {
+      unoptimized: true,
+    },
+    webpack: (config) => {
+      config.resolve.alias = {
+        ...config.resolve.alias,
+        "@mui/styled-engine": "@mui/styled-engine-sc",
+      };
+      return config;
+    },
+  })
+);
 
 module.exports = nextConfig;
