@@ -1,6 +1,8 @@
 import { useTranslation } from "next-i18next";
+
 import styled from "styled-components";
-import { LinkText } from "../LinkText";
+import { contactUsList } from "./config";
+import { ContactUsIconButton } from "./ContactUsIconButton";
 
 export const Footer = () => {
   const { t } = useTranslation();
@@ -10,17 +12,16 @@ export const Footer = () => {
         <JoinOur>{t("Join")}</JoinOur>
         <Content>
           <ContactUsContainer>
-            <LinkText
-              href="https://github.com/toeverything/AFFiNE/"
-              title="Github"
-            />
-            <LinkText href="https://www.reddit.com/r/Affine/" title="Reddit" />
-            <LinkText
-              href="https://twitter.com/AffineOfficial"
-              title="Twitter"
-            />
-            <LinkText href="https://t.me/affineworkos" title="Telegram" />
-            <LinkText href="https://discord.gg/yz6tGVsf5p" title="Discord" />
+            {contactUsList.map(({ icon, title, href }) => {
+              return (
+                <ContactUsIconButton
+                  key={title}
+                  icon={icon}
+                  title={title}
+                  href={href}
+                />
+              );
+            })}
           </ContactUsContainer>
           <div>
             <span>AFFiNE is an</span>
@@ -42,7 +43,7 @@ const Container = styled.div({
 });
 
 const Content = styled.div({
-  padding: "96px 32px",
+  padding: "64px 32px",
   margin: "0 auto",
   maxWidth: "1280px",
 });
@@ -67,9 +68,8 @@ const JoinOur = styled.div({
   flexDirection: "column",
   alignItems: "center",
   justifyContent: "center",
-  marginTop: "1em",
-
-  fontSize: "2.25rem",
+  marginTop: "64px",
+  fontSize: "36px",
   lineHeight: "1.25",
   fontWeight: "600",
 });
