@@ -1,18 +1,14 @@
-import GithubIcon from "@mui/icons-material/GitHub";
+import { useTranslation } from "next-i18next";
 import styled from "styled-components";
 import { LinkText } from "../LinkText";
 
-const Github = styled(GithubIcon)({
-  fontSize: "12px",
-});
-
 export const Footer = () => {
+  const { t } = useTranslation();
   return (
     <>
       <Container>
-        <JoinOur>Join Our Community</JoinOur>
+        <JoinOur>{t("Join")}</JoinOur>
         <Content>
-          <Github />
           <ContactUsContainer>
             <LinkText
               href="https://github.com/toeverything/AFFiNE/"
@@ -28,7 +24,7 @@ export const Footer = () => {
           </ContactUsContainer>
           <div>
             <span>AFFiNE is an</span>
-            <OpensourceTag>&nbsp;#OpenSource&nbsp;</OpensourceTag>
+            <OpenSourceTag>&nbsp;#OpenSource&nbsp;</OpenSourceTag>
             <span>company</span>
           </div>
           <Copyright>Copyright © 2022 AFFiNE.</Copyright>
@@ -59,7 +55,7 @@ const ContactUsContainer = styled.div({
   flexWrap: "wrap",
 });
 
-const OpensourceTag = styled.span({
+const OpenSourceTag = styled.span({
   color: "rgba(80, 133, 246, 0.8)",
 });
 
