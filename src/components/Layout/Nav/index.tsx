@@ -1,6 +1,6 @@
 import { useMatchMediaMaxWidth800 } from "@/libs/common/matchMedia";
-import NextLink from "next/link";
 import styled from "styled-components";
+import I18nLink from "../../Link";
 import AFFiNETextLogo from "./affine-text-logo.png";
 import githubSvg from "./github.svg";
 import { NormalHeader } from "./NormalHeader";
@@ -12,9 +12,9 @@ export const HeaderNav = () => {
     <>
       <Container>
         <Header>
-          <NextLink href={"/"}>
+          <I18nLink href={"/"}>
             <StyledImage src={AFFiNETextLogo.src} alt="affine" />
-          </NextLink>
+          </I18nLink>
           <HeaderRight>
             <a
               href="https://github.com/toeverything/AFFiNE"
