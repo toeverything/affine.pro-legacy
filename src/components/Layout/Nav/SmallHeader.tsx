@@ -67,7 +67,9 @@ export const SmallHeader = () => {
                   onClick={() => changeLanguage(locale.tag)}
                 >
                   <ListItemText primary={locale.originalName} />
-                  <Checkbox checked={false} />
+                  <Checkbox
+                    checked={i18n.language == locale.tag ? true : false}
+                  />
                 </ListItemButton>
               );
             })}
