@@ -1,12 +1,14 @@
+import { useTranslation } from "react-i18next";
 import styled from "styled-components";
 import { contactUsList } from "./config";
 import { ContactUsIconButton } from "./ContactUsIconButton";
 
 export const Footer = () => {
+  const { t } = useTranslation();
   return (
     <>
       <Container>
-        <JoinOur>Join Our Community</JoinOur>
+        <JoinOur>{t("Join")}</JoinOur>
         <Content>
           <ContactUsContainer>
             {contactUsList.map(({ icon, title, href }) => {
@@ -23,7 +25,14 @@ export const Footer = () => {
           <div>
             <span>AFFiNE is an</span>
             <OpensourceTag>&nbsp;#OpenSource&nbsp;</OpensourceTag>
-            <span>company</span>
+            <span>software, built with&nbsp;</span>
+            <StyledLink
+              href="https://block-suite.com"
+              target="_blank"
+              rel="noreferrer"
+            >
+              BlockSuite
+            </StyledLink>
           </div>
           <Copyright>Copyright © 2022 AFFiNE.</Copyright>
         </Content>
@@ -69,4 +78,13 @@ const JoinOur = styled.div({
   fontSize: "36px",
   lineHeight: "1.25",
   fontWeight: "600",
+});
+const StyledLink = styled("a")({
+  fontWeight: "900",
+  color: "#000",
+  textDecoration: "none",
+
+  "&:hover": {
+    textDecoration: "underline",
+  },
 });

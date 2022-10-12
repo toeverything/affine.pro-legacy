@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
+import { useTranslation } from "react-i18next";
 import styled from "styled-components";
 const _alternatives = ["Notion", "Miro", "Monday"];
 const Alternatives = () => {
@@ -21,13 +22,13 @@ const Alternatives = () => {
     }, 2000);
     return () => clearInterval(handle);
   }, []);
-
+  const { t } = useTranslation();
   return (
     <StyledTitle>
       <StyledScroll isActive={active}>
         <div>{current}</div>
       </StyledScroll>
-      <StyledText>Alternative</StyledText>
+      <StyledText>{t("Alternative")}</StyledText>
     </StyledTitle>
   );
 };

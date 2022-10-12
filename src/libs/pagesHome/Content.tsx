@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 import styled from "styled-components";
 import GithubSvg from "./GithubIcon";
 import CollaborationImage from "./images/collaboration.png";
@@ -6,6 +7,7 @@ import LogoImage from "./images/logo.png";
 import PageImage from "./images/page.png";
 import Tabs from "./Tabs";
 const Content = () => {
+  const { t } = useTranslation();
   return (
     <div>
       <StyledImage>
@@ -13,31 +15,15 @@ const Content = () => {
       </StyledImage>
 
       <StyledText>
-        <StyledH1>
-          It&apos;s not just a collection of Docs, whiteboard, and tables.
-        </StyledH1>
-        <StyledContent>Transform any building block as you like.</StyledContent>
-        <StyledContent>
-          Say goodbye to redundancy. Store your data once, and keep your data as
-          you like it.
-        </StyledContent>
+        <StyledH1>{t("description1.part2")}</StyledH1>
+        <StyledContent>{t("description1.part3")}</StyledContent>
+        <StyledContent>{t("description1.part4")}</StyledContent>
       </StyledText>
       <Tabs />
       <StyledText>
-        <StyledH2>
-          Privacy-first, and collaborative. No compromises whatsoever.
-        </StyledH2>
-        <StyledContent>
-          We don&apos;t like being locked-in, and neither should you. Privacy is
-          at the foundation of everything we do, but it should not limit us
-          that&apos;s why there are no compromises.
-        </StyledContent>
-        <StyledContent>
-          Your data is yours;it is always locally stored and secured - available
-          to you always. While still being able to enjoy collaboration features
-          such as real-time editing and sharing with others, without any cloud
-          setup.
-        </StyledContent>
+        <StyledH2>{t("description4.part1")}</StyledH2>
+        <StyledContent>{t("description4.part2")}</StyledContent>
+        <StyledContent>{t("description4.part3")}</StyledContent>
       </StyledText>
       <StyledPrivacyImage>
         <Image
@@ -49,9 +35,9 @@ const Content = () => {
         <Image src={LogoImage} alt="AFFiNE Logo" />
       </StyledLoge>
       <StyledFooter>
-        <StyledMessage>Build for an open and semantic future</StyledMessage>
+        <StyledMessage>{t("BuildFor")}</StyledMessage>
         <StyledKeepUpdate>
-          <StyledKeepUpdateContent>Keep Updated on</StyledKeepUpdateContent>
+          <StyledKeepUpdateContent>{t("KeepUpdated")}</StyledKeepUpdateContent>
           <StyledGithub>
             <a
               href="https://github.com/toeverything/AFFiNE"

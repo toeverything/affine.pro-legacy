@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import styled from "styled-components";
 import Alternatives from "./Alternatives";
@@ -6,20 +5,14 @@ import GithubSvg from "./GithubIcon";
 import Logo from "./Logo";
 
 const Title = () => {
-  const { t, i18n } = useTranslation();
-  useEffect(() => {
-    setInterval(() => {
-      console.log("change", i18n.language, i18n);
-      i18n?.changeLanguage?.(i18n.language === "en" ? "es" : "en");
-    }, 2000);
-  }, [i18n]);
-  console.log("ddd", t("description1.part1"), t("Open Source"));
+  const { t } = useTranslation();
+
   return (
     <>
       <StyledMain>
         <StyledTitle>
           <StyledH1>{t("Open Source")}</StyledH1>
-          <StyledH1>Privacy First</StyledH1>
+          <StyledH1>{t("Privacy First")}</StyledH1>
         </StyledTitle>
         <Alternatives />
         <StyledDes>{t("description1.part1")}</StyledDes>
@@ -32,7 +25,7 @@ const Title = () => {
             rel="noreferrer"
           >
             <GithubSvg fill="#fff" stroke="#fff" width="20" height="20" />
-            &nbsp;Check GitHub
+            &nbsp;{t("Check GitHub")}
           </a>
         </StyledGithub>
         <StyledLogo>
@@ -42,7 +35,7 @@ const Title = () => {
             rel="noreferrer"
           >
             <Logo fill="#fff" stroke="#fff" width="20" height="20" />
-            &nbsp;Try it Online
+            &nbsp;{t("Try it Online")}
           </a>
         </StyledLogo>
       </StyledButton>
