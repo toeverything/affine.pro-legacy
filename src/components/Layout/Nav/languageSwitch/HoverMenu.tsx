@@ -12,19 +12,6 @@ interface HoverMenuProps {
   target?: string;
 }
 
-// let href = rest.href || router.asPath;
-// let pName = router.pathname;
-// Object.keys(router.query).forEach((k) => {
-//   if (k === "locale") {
-//     pName = pName.replace(`[${k}]`, locale);
-//     return;
-//   }
-//   pName = pName.replace(`[${k}]`, router.query[k] as string);
-// });
-// if (locale) {
-//   href = rest.href ? `/${locale}${rest.href}` : pName;
-// }
-
 export function HoverMenu({
   title,
   options,
@@ -34,20 +21,33 @@ export function HoverMenu({
   target,
   ...rest
 }: HoverMenuProps) {
+  // const router = useRouter();
+  // options.map((option) => {
+  //   const locale = option.tag;
+  //   let href = rest.href || router.asPath;
+  //   let pName = router.pathname;
+  //   Object.keys(router.query).forEach((k) => {
+  //     if (k === "locale") {
+  //       pName = pName.replace(`[${k}]`, locale);
+  //       return;
+  //     }
+  //     pName = pName.replace(`[${k}]`, router.query[k] as string);
+  //   });
+  //   if (locale) {
+  //     href = rest.href ? `/${locale}${rest.href}` : pName;
+  //   }
+  //   return href;
+  // }
+  // );
   return (
     <StyledTooltip
       title={
         <>
           {options.map((option) => {
             return (
-              <Link
-                key={option.tag}
-                href={`/${option.tag}`}
-                target="_self"
-                rel="noreferrer"
-              >
+              <Link key={option.name} href={`/${option.tag}`} target="_self">
                 <ListItem
-                  title={option.name}
+                  title={option.tag}
                   onClick={() => {
                     onSelect(option.tag);
                   }}

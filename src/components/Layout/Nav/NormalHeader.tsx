@@ -1,6 +1,6 @@
 import { LinkText } from "../LinkText";
 import { navLinks } from "./config";
-import { LanguageMenu } from "./LanguageMenu";
+import { LanguageMenu } from "./languageSwitch/LanguageMenu";
 
 export const NormalHeader = () => {
   return (

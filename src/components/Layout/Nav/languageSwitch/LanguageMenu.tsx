@@ -1,7 +1,7 @@
 import UnfoldMoreIcon from "@mui/icons-material/UnfoldMore";
 import { styled } from "@mui/material";
 import { useTranslation } from "next-i18next";
-import { languageList } from "./config";
+import { languageList } from "../config";
 import { HoverMenu } from "./HoverMenu";
 
 export const LanguageMenu = () => {
