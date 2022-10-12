@@ -1,20 +1,28 @@
+import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import styled from "styled-components";
 import Alternatives from "./Alternatives";
 import GithubSvg from "./GithubIcon";
 import Logo from "./Logo";
+
 const Title = () => {
+  const { t, i18n } = useTranslation();
+  useEffect(() => {
+    setInterval(() => {
+      console.log("change", i18n.language, i18n);
+      i18n?.changeLanguage?.(i18n.language === "en" ? "es" : "en");
+    }, 2000);
+  }, [i18n]);
+  console.log("ddd", t("description1.part1"), t("Open Source"));
   return (
     <>
       <StyledMain>
         <StyledTitle>
-          <StyledH1>Open Source,</StyledH1>
+          <StyledH1>{t("Open Source")}</StyledH1>
           <StyledH1>Privacy First</StyledH1>
         </StyledTitle>
         <Alternatives />
-        <StyledDes>
-          Affine is the next-generation collaborative knowledge base for
-          professionals.
-        </StyledDes>
+        <StyledDes>{t("description1.part1")}</StyledDes>
       </StyledMain>
       <StyledButton>
         <StyledGithub>
