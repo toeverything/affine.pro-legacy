@@ -1,11 +1,10 @@
 import { styled } from "@mui/material";
-import { useTranslation } from "react-i18next";
 import { LinkText } from "../LinkText";
-import { navLinks } from "./config";
+import useNavLink from "./config";
 import { LanguageMenu } from "./LanguageMenu";
 
 export const NormalHeader = () => {
-  const { t } = useTranslation();
+  const navLinks = useNavLink();
   return (
     <>
       <StyledContainer>

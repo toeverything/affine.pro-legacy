@@ -1,7 +1,6 @@
 import { styled } from "@mui/material";
 import Button from "@mui/material/Button";
 import NextLink from "next/link";
-import { useTranslation } from "react-i18next";
 import styles from "./LinkText.module.css";
 
 interface LinkTextProps {
@@ -12,21 +11,20 @@ interface LinkTextProps {
 
 export const LinkText = ({ href, title, target = "_blank" }: LinkTextProps) => {
   const isExternalLink = href.startsWith("http");
-  const { t } = useTranslation();
   return (
     <span className={styles.link_text}>
       {isExternalLink ? (
         <Button>
           <StyledContainer>
             <a href={href} target={target}>
-              {t(title)}
+              {title}
             </a>
           </StyledContainer>
         </Button>
       ) : (
         <Button>
           <StyledContainer>
-            <NextLink href={href}>{t(title)}</NextLink>
+            <NextLink href={href}>{title}</NextLink>
           </StyledContainer>
         </Button>
       )}

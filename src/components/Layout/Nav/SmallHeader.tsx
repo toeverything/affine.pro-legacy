@@ -12,7 +12,7 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import styled from "styled-components";
 import { LinkText } from "../LinkText";
-import { navLinks } from "./config";
+import useNavLink from "./config";
 import menuClose from "./menu-close.svg";
 import menuHamburger from "./menu-hamburger.svg";
 
@@ -26,6 +26,7 @@ export const SmallHeader = () => {
   const changeLanguage = (event: string) => {
     i18n.changeLanguage(event);
   };
+  const navLinks = useNavLink();
   return (
     <>
       <StyledIconContainer onClick={() => setShowDrawer(!showDrawer)}>
@@ -41,7 +42,7 @@ export const SmallHeader = () => {
           {navLinks.map((nav) => {
             return (
               <StyledListItem key={nav.title}>
-                <LinkText href={nav.href} title={t(nav.title)} />
+                <LinkText href={nav.href} title={nav.title} />
               </StyledListItem>
             );
           })}
@@ -53,7 +54,7 @@ export const SmallHeader = () => {
           >
             <ListItemText
               primary={t("language")}
-              style={{ paddingLeft: "14px" }}
+              style={{ paddingLeft: "21px" }}
             />
             {languageCollapse ? <ExpandLess /> : <ExpandMore />}
           </ListItemButton>
