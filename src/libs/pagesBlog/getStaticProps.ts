@@ -46,7 +46,7 @@ async function getFiles(dir: string): Promise<ContentFileMeta[]> {
 
 export async function getStaticProps() {
   const blogMetas = (await getFiles(blogRootDir)).sort(
-    ({ updated: a }, { updated: b }) => {
+    ({ created: a }, { updated: b }) => {
       if (a! < b!) {
         return 1;
       } else if (a! > b!) {
