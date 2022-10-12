@@ -63,7 +63,7 @@ export default function Blog(props: { blogMetas: ContentFileMeta[] }) {
           </div>
           <div className={styles.body_right}>
             <ul className={styles.body_right_list}>
-              {filteredMetas.reverse().map((meta) => {
+              {filteredMetas.map((meta) => {
                 return (
                   <li
                     key={meta.cover}
