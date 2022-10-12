@@ -42,4 +42,4 @@ export const LOCALES = [
     originalName: "Deutsch",
     res: de,
   },
-] as const;
+];

@@ -1,3 +1,4 @@
+import { LOCALES } from "@/i18n/resources/index";
 import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";
 import {
@@ -11,7 +12,7 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import styled from "styled-components";
 import { LinkText } from "../LinkText";
-import { languageList, navLinks } from "./config";
+import { navLinks } from "./config";
 import menuClose from "./menu-close.svg";
 import menuHamburger from "./menu-hamburger.svg";
 
@@ -32,7 +33,11 @@ export const SmallHeader = () => {
       </StyledIconContainer>
       <StyledHeaderDrawer
         style={drawerStyle}
-        onClick={() => setShowDrawer(false)}
+        onClick={() => {
+          console.log("dot");
+
+          setShowDrawer(false);
+        }}
       >
         <StyledList>
           {navLinks.map((nav) => {
@@ -43,7 +48,10 @@ export const SmallHeader = () => {
             );
           })}
           <ListItemButton
-            onClick={() => setLanguageCollapse(!languageCollapse)}
+            onClick={(evt) => {
+              setLanguageCollapse(!languageCollapse);
+              evt.stopPropagation();
+            }}
           >
             <ListItemText
               primary={t("language")}
@@ -52,13 +60,13 @@ export const SmallHeader = () => {
             {languageCollapse ? <ExpandLess /> : <ExpandMore />}
           </ListItemButton>
           <Collapse in={languageCollapse} timeout="auto">
-            {languageList.map((language) => {
+            {LOCALES.map((locale) => {
               return (
                 <ListItemButton
-                  key={language.name}
-                  onClick={() => changeLanguage(language.tag)}
+                  key={locale.name}
+                  onClick={() => changeLanguage(locale.tag)}
                 >
-                  <ListItemText primary={language.originalName} />
+                  <ListItemText primary={locale.originalName} />
                   <Checkbox checked={false} />
                 </ListItemButton>
               );

@@ -2,7 +2,7 @@ import { styled } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import { LinkText } from "../LinkText";
 import { navLinks } from "./config";
-import { LanguageMenu } from "./LanguageSwitch/LanguageMenu";
+import { LanguageMenu } from "./LanguageMenu";
 
 export const NormalHeader = () => {
   const { t } = useTranslation();
