@@ -60,19 +60,21 @@ export const SmallHeader = () => {
             {languageCollapse ? <ExpandLess /> : <ExpandMore />}
           </ListItemButton>
           <Collapse in={languageCollapse} timeout="auto">
-            {LOCALES.map((locale) => {
-              return (
-                <ListItemButton
-                  key={locale.name}
-                  onClick={() => changeLanguage(locale.tag)}
-                >
-                  <ListItemText primary={locale.originalName} />
-                  <Checkbox
-                    checked={i18n.language == locale.tag ? true : false}
-                  />
-                </ListItemButton>
-              );
-            })}
+            <StyledLangList>
+              {LOCALES.map((locale) => {
+                return (
+                  <ListItemButton
+                    key={locale.name}
+                    onClick={() => changeLanguage(locale.tag)}
+                  >
+                    <ListItemText primary={locale.originalName} />
+                    <Checkbox
+                      checked={i18n.language == locale.tag ? true : false}
+                    />
+                  </ListItemButton>
+                );
+              })}
+            </StyledLangList>
           </Collapse>
         </StyledList>
       </StyledHeaderDrawer>
@@ -111,4 +113,12 @@ const StyledListItem = styled.div({
   boxSizing: "border-box",
   padding: "10px 14px 10px 30px",
   cursor: "pointer",
+});
+const StyledLangList = styled.div({
+  display: "flex",
+  flexDirection: "column",
+  backgroundColor: "#fff",
+  padding: "0",
+  paddingLeft: "36px",
+  borderTop: "1px #cfcccc solid",
 });

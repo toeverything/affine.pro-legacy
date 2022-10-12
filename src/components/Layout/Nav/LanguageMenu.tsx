@@ -58,6 +58,11 @@ const StyledContainer = styled("div")({
 const StyledText = styled("span")({
   marginRight: "4px",
   marginLeft: "16px",
+  fontFamily:
+    "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif",
+  fontSize: "16px",
+  fontWeight: "normal",
+  textTransform: "capitalize",
 });
 const StyledTooltip = styled(({ className, ...props }: TooltipProps) => (
   <Tooltip {...props} classes={{ popper: className }} />
