@@ -36,7 +36,7 @@ export const LanguageMenu = () => {
       <StyledTitleButton
         variant="text"
         onClick={() => {
-          setShow(true);
+          setShow(!show);
         }}
       >
         <StyledContainer>
@@ -58,8 +58,6 @@ const StyledContainer = styled("div")({
 const StyledText = styled("span")({
   marginRight: "4px",
   marginLeft: "16px",
-  fontFamily:
-    "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif",
   fontSize: "16px",
   fontWeight: "normal",
   textTransform: "capitalize",
