@@ -10,9 +10,7 @@ export const NormalHeader = () => {
     <>
       <StyledContainer>
         {navLinks.map((nav) => {
-          return (
-            <LinkText key={nav.title} href={nav.href} title={t(nav.title)} />
-          );
+          return <LinkText key={nav.title} href={nav.href} title={nav.title} />;
         })}
         <LanguageMenu />
       </StyledContainer>

@@ -76,9 +76,12 @@ const ListItem = styled(Button)({
   display: "block",
   width: "100%",
   color: "#262626",
-  fontWeight: "400",
+  fontWeight: "normal",
+  fontSize: "16px",
 });
 
 const StyledTitleButton = styled(Button)({
   color: "#262626",
+  fontWeight: "normal",
+  fontSize: "16px",
 });
