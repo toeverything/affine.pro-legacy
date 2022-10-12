@@ -60,7 +60,6 @@ const StyledText = styled("span")({
   marginLeft: "16px",
   fontSize: "16px",
   fontWeight: "normal",
-  textTransform: "capitalize",
 });
 const StyledTooltip = styled(({ className, ...props }: TooltipProps) => (
   <Tooltip {...props} classes={{ popper: className }} />

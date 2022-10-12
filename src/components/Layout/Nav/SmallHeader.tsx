@@ -34,8 +34,6 @@ export const SmallHeader = () => {
       <StyledHeaderDrawer
         style={drawerStyle}
         onClick={() => {
-          console.log("dot");
-
           setShowDrawer(false);
         }}
       >
