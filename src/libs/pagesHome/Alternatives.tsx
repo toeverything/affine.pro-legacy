@@ -28,7 +28,7 @@ const Alternatives = () => {
       <StyledScroll isActive={active}>
         <div>{current}</div>
       </StyledScroll>
-      <StyledText>{t("Alternative")}</StyledText>
+      <StyledText>&emsp;{t("Alternative")}</StyledText>
     </StyledTitle>
   );
 };
@@ -86,7 +86,7 @@ const StyledScroll = styled.div<TitleProps>`
   @media (max-width: 500px) {
     position: absolute;
     top: 30px;
-    left: 80px;
+    left: unset;
     justify-content: center;
     text-align: center;
     height: 64px;
@@ -106,21 +106,22 @@ const StyledScroll = styled.div<TitleProps>`
 `;
 
 const StyledText = styled.div`
-  margin-left: 440px;
+  margin-left: 400px;
   @media (max-width: 1300px) {
-    margin-left: 360px;
+    margin-left: 320px;
   }
   @media (max-width: 1100px) {
-    margin-left: 260px;
+    margin-left: 220px;
   }
   @media (max-width: 900px) {
-    margin-left: 150px;
+    margin-left: 120px;
   }
   @media (max-width: 600px) {
-    margin-left: 120px;
+    margin-left: 100px;
   }
   @media (max-width: 500px) {
     margin-left: 0;
+    margin-right: 50px;
     margin-top: 100px;
     padding: 0;
     display: flex;
