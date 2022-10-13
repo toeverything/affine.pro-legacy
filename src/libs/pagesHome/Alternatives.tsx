@@ -4,7 +4,7 @@ import styled from "styled-components";
 const _alternatives = ["Notion", "Miro", "Monday"];
 const Alternatives = () => {
   const [idx, setIdx] = useState(0);
-  const [current] = useMemo(
+  const [last, current] = useMemo(
     () => [
       _alternatives[idx],
       _alternatives[idx + 1] ? _alternatives[idx + 1] : _alternatives[0],
@@ -26,9 +26,12 @@ const Alternatives = () => {
   return (
     <StyledContainer>
       <StyledTitle>
-        <StyledScroll isActive={active}>
+        <StyledLastScroll isActive={active}>
+          <div>{last}</div>
+        </StyledLastScroll>
+        <StyledCurrentScroll isActive={active}>
           <div>{current}</div>
-        </StyledScroll>
+        </StyledCurrentScroll>
       </StyledTitle>
       <StyledText>{t("Alternative")}</StyledText>
     </StyledContainer>
@@ -45,7 +48,7 @@ const StyledContainer = styled.div`
   color: #06449d;
   font-size: 96px;
   font-weight: 900;
-  height: 250px;
+  height: 200px;
   @media (max-width: 1300px) {
     font-size: 80px;
   }
@@ -70,7 +73,7 @@ const StyledTitle = styled.div`
   justify-content: end;
   flex: 1;
   overflow-y: hidden;
-  height: 150px;
+  height: 100%;
   padding-right: 16px;
   @media (max-width: 600px) {
     width: 100%;
@@ -82,20 +85,62 @@ const StyledTitle = styled.div`
 interface TitleProps {
   isActive: boolean;
 }
-
-const StyledScroll = styled.div<TitleProps>`
+const StyledLastScroll = styled.div<TitleProps>`
   display: flex;
   position: absolute;
   line-height: 96px;
-  transition: 0.5s ease-in;
+  transition: 0.5s ease-in-out;
+  opacity: 1;
+
   animation: ${(props: { isActive: boolean }) =>
-    props.isActive ? "primary 400ms linear infinite" : "none"};
-  @keyframes primary {
+    props.isActive ? "primaryLast 500ms linear infinite" : "none"};
+  @keyframes primaryLast {
+    0% {
+      top: 25%;
+      opacity: 1;
+    }
+    20% {
+      top: 0%;
+      opacity: 0.8;
+    }
+    40% {
+      top: -20%;
+      opacity: 0.6;
+    }
+    60% {
+      top: -40%;
+      opacity: 0.4;
+    }
+    80% {
+      top: -60%;
+      opacity: 0.2;
+    }
+    100% {
+      top: -100%;
+      opacity: 0;
+    }
+  }
+`;
+const StyledCurrentScroll = styled.div<TitleProps>`
+  display: flex;
+  position: absolute;
+  line-height: 96px;
+  margin-top: 210px;
+  transition: 0.5s ease-in-out;
+  opacity: 0;
+  animation: ${(props: { isActive: boolean }) =>
+    props.isActive ? "primaryCurrent 500ms linear infinite" : "none"};
+  @media (max-width: 600px) {
+    margin-top: 36px;
+  }
+  @keyframes primaryCurrent {
     from {
       top: 0%;
+      opacity: 0;
     }
     to {
       top: -100%;
+      opacity: 1;
     }
   }
 `;
