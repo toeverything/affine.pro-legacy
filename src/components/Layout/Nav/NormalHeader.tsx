@@ -1,10 +1,22 @@
 import { styled } from "@mui/material";
 import { LinkText } from "../LinkText";
-import useNavLink from "./config";
+import { useLeftNavLink, useRightNavLink } from "./config";
 import { LanguageMenu } from "./LanguageMenu";
 
-export const NormalHeader = () => {
-  const navLinks = useNavLink();
+export const NormalLeftHeader = () => {
+  const navLinks = useLeftNavLink();
+  return (
+    <>
+      <StyledContainer>
+        {navLinks.map((nav) => {
+          return <LinkText key={nav.title} href={nav.href} title={nav.title} />;
+        })}
+      </StyledContainer>
+    </>
+  );
+};
+export const NormalRightHeader = () => {
+  const navLinks = useRightNavLink();
   return (
     <>
       <StyledContainer>

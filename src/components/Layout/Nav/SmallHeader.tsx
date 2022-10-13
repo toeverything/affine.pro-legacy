@@ -12,7 +12,7 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import styled from "styled-components";
 import { LinkText } from "../LinkText";
-import useNavLink from "./config";
+import { useNavLink } from "./config";
 import menuClose from "./menu-close.svg";
 import menuHamburger from "./menu-hamburger.svg";
 

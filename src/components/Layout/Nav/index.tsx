@@ -1,20 +1,23 @@
-import { useMatchMediaMaxWidth800 } from "@/libs/common/matchMedia";
+import { useMatchMediaMaxWidth1000 } from "@/libs/common/matchMedia";
 import NextLink from "next/link";
 import styled from "styled-components";
 import AFFiNETextLogo from "./affine-text-logo.png";
 import githubSvg from "./github.svg";
-import { NormalHeader } from "./NormalHeader";
+import { NormalLeftHeader, NormalRightHeader } from "./NormalHeader";
 import { SmallHeader } from "./SmallHeader";
 
 export const HeaderNav = () => {
-  const matchesMaxWidth800 = useMatchMediaMaxWidth800();
+  const matchesMaxWidth1000 = useMatchMediaMaxWidth1000();
   return (
     <>
       <Container>
         <Header>
-          <NextLink href={"/"}>
-            <StyledImage src={AFFiNETextLogo.src} alt="affine" />
-          </NextLink>
+          <HeaderLeft>
+            <NextLink href={"/"}>
+              <StyledImage src={AFFiNETextLogo.src} alt="affine" />
+            </NextLink>
+            {matchesMaxWidth1000 ? null : <NormalLeftHeader />}
+          </HeaderLeft>
           <HeaderRight>
             <a
               href="https://github.com/toeverything/AFFiNE"
@@ -23,7 +26,7 @@ export const HeaderNav = () => {
             >
               <StyledImage src={githubSvg.src} alt="Github" />
             </a>
-            {matchesMaxWidth800 ? <SmallHeader /> : <NormalHeader />}
+            {matchesMaxWidth1000 ? <SmallHeader /> : <NormalRightHeader />}
           </HeaderRight>
         </Header>
       </Container>
@@ -58,6 +61,11 @@ const Header = styled.div({
   alignItems: "center",
 });
 
+const HeaderLeft = styled.div({
+  display: "flex",
+  flexDirection: "row",
+  alignItems: "center",
+});
 const HeaderRight = styled.div({
   display: "flex",
   flexDirection: "row",
