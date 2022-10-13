@@ -1,3 +1,5 @@
+import { styled } from "@mui/material";
+import Button from "@mui/material/Button";
 import NextLink from "next/link";
 import styles from "./LinkText.module.css";
 
@@ -12,12 +14,26 @@ export const LinkText = ({ href, title, target = "_blank" }: LinkTextProps) => {
   return (
     <span className={styles.link_text}>
       {isExternalLink ? (
-        <a href={href} target={target}>
-          {title}
-        </a>
+        <Button>
+          <StyledContainer>
+            <a href={href} target={target}>
+              {title}
+            </a>
+          </StyledContainer>
+        </Button>
       ) : (
-        <NextLink href={href}>{title}</NextLink>
+        <Button>
+          <StyledContainer>
+            <NextLink href={href}>{title}</NextLink>
+          </StyledContainer>
+        </Button>
       )}
     </span>
   );
 };
+const StyledContainer = styled("div")({
+  color: "#262626",
+  padding: "2px 0",
+  fontWeight: "normal",
+  fontSize: "16px",
+});

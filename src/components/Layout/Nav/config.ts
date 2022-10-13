@@ -1,22 +1,29 @@
-export const navLinks = [
-  {
-    href: "/aboutUs",
-    title: "About Us",
-  },
-  {
-    href: "/blog",
-    title: "Blog",
-  },
-  {
-    href: "https://docs.affine.pro/",
-    title: "Docs",
-  },
-  {
-    href: "https://feedback.affine.pro/",
-    title: "Feedback",
-  },
-  {
-    href: "https://livedemo.affine.pro/",
-    title: "Try it Online",
-  },
-];
+import { useTranslation } from "react-i18next";
+
+const useNavLink = () => {
+  const { t } = useTranslation();
+  return [
+    {
+      href: "/aboutUs",
+      title: t("AboutUs"),
+    },
+    {
+      href: "/blog",
+      title: t("Blog"),
+    },
+    {
+      href: "https://docs.affine.pro/",
+      title: t("Docs"),
+    },
+    {
+      href: "https://feedback.affine.pro/",
+      title: t("Feedback"),
+    },
+    {
+      href: "https://livedemo.affine.pro/",
+      title: t("Try it Online"),
+    },
+  ];
+};
+
+export default useNavLink;

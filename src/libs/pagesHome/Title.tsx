@@ -1,20 +1,21 @@
+import { useTranslation } from "react-i18next";
 import styled from "styled-components";
 import Alternatives from "./Alternatives";
 import GithubSvg from "./GithubIcon";
 import Logo from "./Logo";
+
 const Title = () => {
+  const { t } = useTranslation();
+
   return (
     <>
       <StyledMain>
         <StyledTitle>
-          <StyledH1>Open Source,</StyledH1>
-          <StyledH1>Privacy First</StyledH1>
+          <StyledH1>{t("Open Source")}</StyledH1>
+          <StyledH1>{t("Privacy First")}</StyledH1>
         </StyledTitle>
         <Alternatives />
-        <StyledDes>
-          Affine is the next-generation collaborative knowledge base for
-          professionals.
-        </StyledDes>
+        <StyledDes>{t("description1.part1")}</StyledDes>
       </StyledMain>
       <StyledButton>
         <StyledGithub>
@@ -24,7 +25,7 @@ const Title = () => {
             rel="noreferrer"
           >
             <GithubSvg fill="#fff" stroke="#fff" width="20" height="20" />
-            &nbsp;Check GitHub
+            &nbsp;{t("Check GitHub")}
           </a>
         </StyledGithub>
         <StyledLogo>
@@ -34,7 +35,7 @@ const Title = () => {
             rel="noreferrer"
           >
             <Logo fill="#fff" stroke="#fff" width="20" height="20" />
-            &nbsp;Try it Online
+            &nbsp;{t("Try it Online")}
           </a>
         </StyledLogo>
       </StyledButton>
