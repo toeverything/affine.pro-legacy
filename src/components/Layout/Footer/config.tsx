@@ -18,7 +18,7 @@ const StyledTwitterIcon = styled(TwitterIcon)({
 });
 
 const StyledTelegramIcon = styled(TelegramIcon)({
-  fontSize: "36px",
+  fontSize: "36px !important",
 });
 
 const StyledDiscordIcon = styled(DiscordIcon)({
