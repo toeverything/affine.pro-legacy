@@ -24,33 +24,28 @@ const Alternatives = () => {
   }, []);
   const { t } = useTranslation();
   return (
-    <StyledTitle>
-      <StyledScroll isActive={active}>
-        <div>{current}</div>
-      </StyledScroll>
-      <StyledText>&emsp;{t("Alternative")}</StyledText>
-    </StyledTitle>
+    <StyledContainer>
+      <StyledTitle>
+        <StyledScroll isActive={active}>
+          <div>{current}</div>
+        </StyledScroll>
+      </StyledTitle>
+      <StyledText>{t("Alternative")}</StyledText>
+    </StyledContainer>
   );
 };
 
 export default Alternatives;
-
-const StyledTitle = styled.div`
-  position: relative;
+const StyledContainer = styled.div`
   max-width: 1440px;
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   flex-wrap: wrap;
-  justify-content: center;
+  align-items: center;
   color: #06449d;
   font-size: 96px;
   font-weight: 900;
-
-  width: 100%;
-  height: 128px;
-  overflow-y: hidden;
+  height: 250px;
   @media (max-width: 1300px) {
     font-size: 80px;
   }
@@ -59,11 +54,29 @@ const StyledTitle = styled.div`
   }
   @media (max-width: 900px) {
     font-size: 48px;
+    height: 200px;
   }
   @media (max-width: 600px) {
     font-size: 36px;
+    height: 150px;
+    flex-direction: column;
   }
-  height: 200px;
+`;
+
+const StyledTitle = styled.div`
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  flex: 1;
+  overflow-y: hidden;
+  height: 150px;
+  padding-right: 16px;
+  @media (max-width: 600px) {
+    width: 100%;
+    padding-right: 0px;
+    justify-content: center;
+  }
 `;
 
 interface TitleProps {
@@ -71,27 +84,9 @@ interface TitleProps {
 }
 
 const StyledScroll = styled.div<TitleProps>`
-  width: 50%;
   display: flex;
-  align-items: center;
-  justify-content: end;
-  height: 128px;
   position: absolute;
-  text-align: right;
   line-height: 96px;
-  left: -72px;
-  @media (max-width: 600px) {
-    left: -60px;
-  }
-  @media (max-width: 500px) {
-    position: absolute;
-    top: 30px;
-    left: unset;
-    justify-content: center;
-    text-align: center;
-    height: 64px;
-    line-height: 64px;
-  }
   transition: 0.5s ease-in;
   animation: ${(props: { isActive: boolean }) =>
     props.isActive ? "primary 400ms linear infinite" : "none"};
@@ -106,27 +101,8 @@ const StyledScroll = styled.div<TitleProps>`
 `;
 
 const StyledText = styled.div`
-  margin-left: 400px;
-  @media (max-width: 1300px) {
-    margin-left: 320px;
-  }
-  @media (max-width: 1100px) {
-    margin-left: 220px;
-  }
-  @media (max-width: 900px) {
-    margin-left: 120px;
-  }
-  @media (max-width: 600px) {
-    margin-left: 100px;
-  }
-  @media (max-width: 500px) {
-    margin-left: 0;
-    margin-right: 50px;
-    margin-top: 100px;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
+  display: flex;
+  flex: 1.3;
+  text-align: center;
+  align-items: center;
 `;
