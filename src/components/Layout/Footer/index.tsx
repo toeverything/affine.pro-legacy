@@ -34,7 +34,7 @@ export const Footer = () => {
               BlockSuite
             </StyledLink>
           </div>
-          <Copyright>Copyright © 2022 AFFiNE.</Copyright>
+          <Copyright>Copyright © 2022 Toeverything</Copyright>
         </Content>
       </Container>
     </>
