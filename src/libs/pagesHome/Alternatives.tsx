@@ -54,10 +54,11 @@ const StyledContainer = styled.div`
   }
   @media (max-width: 1100px) {
     font-size: 64px;
+    height: 180px;
   }
   @media (max-width: 900px) {
     font-size: 48px;
-    height: 200px;
+    height: 130px;
   }
   @media (max-width: 600px) {
     font-size: 36px;
@@ -130,6 +131,12 @@ const StyledCurrentScroll = styled.div<TitleProps>`
   opacity: 0;
   animation: ${(props: { isActive: boolean }) =>
     props.isActive ? "primaryCurrent 500ms linear infinite" : "none"};
+  @media (max-width: 1100px) {
+    margin-top: 192px;
+  }
+  @media (max-width: 900px) {
+    margin-top: 120px;
+  }
   @media (max-width: 600px) {
     margin-top: 36px;
   }
