@@ -25,7 +25,7 @@ export const Footer = () => {
             <OpensourceTag>&nbsp;#OpenSource&nbsp;</OpensourceTag>
             <span>company</span>
           </div>
-          <Copyright>Copyright © 2022 AFFiNE.</Copyright>
+          <Copyright>Copyright © 2022 Toeverything</Copyright>
         </Content>
       </Container>
     </>
