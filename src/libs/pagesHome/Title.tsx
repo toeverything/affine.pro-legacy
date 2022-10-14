@@ -1,9 +1,8 @@
+import styled from "@emotion/styled";
 import { useTranslation } from "react-i18next";
-import styled from "styled-components";
 import Alternatives from "./Alternatives";
 import GithubSvg from "./GithubIcon";
 import Logo from "./Logo";
-
 const Title = () => {
   const { t } = useTranslation();
 

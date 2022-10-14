@@ -1,6 +1,6 @@
+import styled from "@emotion/styled";
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
-import styled from "styled-components";
 import GithubSvg from "./GithubIcon";
 import CollaborationImage from "./images/collaboration.png";
 import LogoImage from "./images/logo.png";

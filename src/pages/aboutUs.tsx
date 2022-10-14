@@ -1,5 +1,5 @@
+import styled from "@emotion/styled";
 import Image from "next/image";
-import styled from "styled-components";
 import { Page } from "../components/Layout/Page";
 import ContactUs from "../libs/pageAboutUs/ContactUs";
 import keepUpdate from "../libs/pageAboutUs/keepUpdate.png";

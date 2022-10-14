@@ -1,4 +1,4 @@
-import { styled } from "@mui/material";
+import styled from "@emotion/styled";
 import Button from "@mui/material/Button";
 import NextLink from "next/link";
 import styles from "./LinkText.module.css";

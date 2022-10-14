@@ -1,5 +1,4 @@
-import styled from "styled-components";
-
+import styled from "@emotion/styled";
 type NameProps = {
   name: string;
   link: string;

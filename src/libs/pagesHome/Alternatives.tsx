@@ -1,6 +1,6 @@
+import styled from "@emotion/styled";
 import { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
-import styled from "styled-components";
 const _alternatives = ["Notion", "Miro", "Monday"];
 const Alternatives = () => {
   const [idx, setIdx] = useState(0);

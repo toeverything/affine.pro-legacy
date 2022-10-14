@@ -1,13 +1,14 @@
+import type { SvgIconProps } from "@mui/material";
 import { SvgIcon } from "@mui/material";
 
-const DiscordIcon = () => {
+const DiscordIcon = (props: SvgIconProps) => {
   return (
     <SvgIcon
       width="71"
       height="55"
       viewBox="0 0 71 55"
       fill="currentcolor"
-      style={{ fontSize: "36px" }}
+      {...props}
     >
       <g clipPath="url(#clip0)">
         <path

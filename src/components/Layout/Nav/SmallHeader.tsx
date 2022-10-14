@@ -1,4 +1,5 @@
 import { LOCALES } from "@/i18n/resources/index";
+import styled from "@emotion/styled";
 import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";
 import {
@@ -10,12 +11,10 @@ import {
 import NextImage from "next/image";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import styled from "styled-components";
 import { LinkText } from "../LinkText";
 import { useNavLink } from "./config";
 import menuClose from "./menu-close.svg";
 import menuHamburger from "./menu-hamburger.svg";
-
 export const SmallHeader = () => {
   const { i18n, t } = useTranslation();
   const [showDrawer, setShowDrawer] = useState(false);

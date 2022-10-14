@@ -1,8 +1,7 @@
+import styled from "@emotion/styled";
 import { useTranslation } from "react-i18next";
-import styled from "styled-components";
 import { contactUsList } from "./config";
 import { ContactUsIconButton } from "./ContactUsIconButton";
-
 export const Footer = () => {
   const { t } = useTranslation();
   return (
