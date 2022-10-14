@@ -48,4 +48,5 @@ const StyledTitle = styled.div({
 });
 const StyledContent = styled.div({
   marginBottom: "16px",
+  lineHeight: "1.5",
 });
