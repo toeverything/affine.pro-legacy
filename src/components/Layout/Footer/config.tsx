@@ -2,8 +2,8 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import RedditIcon from "@mui/icons-material/Reddit";
 import TelegramIcon from "@mui/icons-material/Telegram";
 import TwitterIcon from "@mui/icons-material/Twitter";
-import styled from "styled-components";
-import { DiscordIcon } from "./DiscordIcon";
+import { styled } from "@mui/system";
+import DiscordIcon from "./DiscordIcon";
 
 const StyledGithubIcon = styled(GitHubIcon)({
   fontSize: "36px",
