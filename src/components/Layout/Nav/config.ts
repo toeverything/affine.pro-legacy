@@ -1,6 +1,12 @@
 import { useTranslation } from "react-i18next";
 
-const useNavLink = () => {
+export const useNavLink = () => {
+  const leftNavLink = useLeftNavLink();
+  const rightNavLink = useRightNavLink();
+  const allNavLink = leftNavLink.concat(rightNavLink);
+  return allNavLink;
+};
+export const useLeftNavLink = () => {
   const { t } = useTranslation();
   return [
     {
@@ -15,6 +21,11 @@ const useNavLink = () => {
       href: "https://docs.affine.pro/",
       title: t("Docs"),
     },
+  ];
+};
+export const useRightNavLink = () => {
+  const { t } = useTranslation();
+  return [
     {
       href: "https://feedback.affine.pro/",
       title: t("Feedback"),
@@ -25,5 +36,3 @@ const useNavLink = () => {
     },
   ];
 };
-
-export default useNavLink;

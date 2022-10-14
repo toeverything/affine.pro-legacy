@@ -2,7 +2,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import RedditIcon from "@mui/icons-material/Reddit";
 import TelegramIcon from "@mui/icons-material/Telegram";
 import TwitterIcon from "@mui/icons-material/Twitter";
-import { styled } from "@mui/material";
+import styled from "styled-components";
 import { DiscordIcon } from "./DiscordIcon";
 
 const StyledGithubIcon = styled(GitHubIcon)({

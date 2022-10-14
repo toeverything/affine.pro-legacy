@@ -11,7 +11,7 @@ const Title = () => {
     <>
       <StyledMain>
         <StyledTitle>
-          <StyledH1>{t("Open Source")}</StyledH1>
+          <StyledH1>{t("Open Source")},</StyledH1>
           <StyledH1>{t("Privacy First")}</StyledH1>
         </StyledTitle>
         <Alternatives />
