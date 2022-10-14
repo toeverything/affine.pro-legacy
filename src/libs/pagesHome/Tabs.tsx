@@ -1,7 +1,7 @@
+import styled from "@emotion/styled";
 import Image from "next/image";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import styled from "styled-components";
 import ShapeImage from "./images/shape.png";
 import TaskImage from "./images/task.png";
 const HomepageTabs = () => {

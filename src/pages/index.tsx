@@ -1,9 +1,8 @@
+import styled from "@emotion/styled";
 import type { NextPage } from "next";
-import styled from "styled-components";
 import { Page } from "../components/Layout/Page";
 import Content from "../libs/pagesHome/Content";
 import Title from "../libs/pagesHome/Title";
-
 const Home: NextPage = () => {
   return (
     <Page>

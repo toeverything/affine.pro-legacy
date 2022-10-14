@@ -1,4 +1,4 @@
-import { styled } from "@mui/material";
+import styled from "@emotion/styled";
 import { LinkText } from "../LinkText";
 import { useLeftNavLink, useRightNavLink } from "./config";
 import { LanguageMenu } from "./LanguageMenu";

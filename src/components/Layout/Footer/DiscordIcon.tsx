@@ -1,7 +1,7 @@
 import type { SvgIconProps } from "@mui/material";
 import { SvgIcon } from "@mui/material";
 
-export const DiscordIcon = (props: SvgIconProps) => {
+const DiscordIcon = (props: SvgIconProps) => {
   return (
     <SvgIcon
       width="71"
@@ -24,3 +24,4 @@ export const DiscordIcon = (props: SvgIconProps) => {
     </SvgIcon>
   );
 };
+export default DiscordIcon;

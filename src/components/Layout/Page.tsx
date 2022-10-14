@@ -1,6 +1,7 @@
+import styled from "@emotion/styled";
+import { StyledEngineProvider } from "@mui/material/styles";
 import { useRouter } from "next/router";
 import type { ReactNode } from "react";
-import styled from "styled-components";
 import { AffineHead } from "../AffineHead";
 import { Footer } from "./Footer";
 import { HeaderNav } from "./Nav";
@@ -19,9 +20,8 @@ export function Page({ children }: PageProps) {
   const { asPath } = useRouter();
 
   return (
-    <>
+    <StyledEngineProvider injectFirst>
       <AffineHead />
-
       <Container>
         <HeaderNav />
         <main>
@@ -29,6 +29,6 @@ export function Page({ children }: PageProps) {
           <Footer />
         </main>
       </Container>
-    </>
+    </StyledEngineProvider>
   );
 }

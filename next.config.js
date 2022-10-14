@@ -20,9 +20,6 @@ const nextConfig = withMDX(
   withTM({
     pageExtensions: ["jsx", "js", "ts", "tsx", "md", "mdx"],
     reactStrictMode: true,
-    compiler: {
-      styledComponents: true,
-    },
     swcMinify: true,
     images: {
       unoptimized: true,
@@ -30,7 +27,6 @@ const nextConfig = withMDX(
     webpack: (config) => {
       config.resolve.alias = {
         ...config.resolve.alias,
-        "@mui/styled-engine": "@mui/styled-engine-sc",
       };
       return config;
     },

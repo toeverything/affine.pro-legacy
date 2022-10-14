@@ -1,8 +1,7 @@
 import { Page } from "@/components/Layout/Page";
-import styled from "styled-components";
+import styled from "@emotion/styled";
 import type { ContentFileMeta } from "../common/resolveContentFile";
 import USER_MAP from "./user";
-
 const LeftTitle = styled.h2`
   color: rgb(102, 112, 133);
   font-size: 16px;
