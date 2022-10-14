@@ -16,6 +16,6 @@ copyDir(
     },
   },
   (err, data) => {
-    console.log(err, data);
+    console.log("Copied", err, data);
   }
 );
