@@ -11,6 +11,7 @@ export const LanguageMenu = () => {
     i18n.changeLanguage(event);
   };
   const [show, setShow] = useState(false);
+  const [languageName, setLanguageName] = useState("English");
   return (
     <StyledTooltip
       title={
@@ -23,6 +24,7 @@ export const LanguageMenu = () => {
                 onClick={() => {
                   changeLanguage(option.tag);
                   setShow(false);
+                  setLanguageName(option.originalName);
                 }}
               >
                 {option.originalName}
@@ -40,7 +42,7 @@ export const LanguageMenu = () => {
         }}
       >
         <StyledContainer>
-          <StyledText>{t("language")}</StyledText>
+          <StyledText>{languageName}</StyledText>
           <UnfoldMoreIcon />
         </StyledContainer>
       </StyledTitleButton>
