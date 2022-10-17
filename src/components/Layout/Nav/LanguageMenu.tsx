@@ -11,7 +11,10 @@ export const LanguageMenu = () => {
     i18n.changeLanguage(event);
   };
   const [show, setShow] = useState(false);
-  const [languageName, setLanguageName] = useState("English");
+  const currentLanguage = LOCALES.find((item) => item.tag === i18n.language);
+  const [languageName, setLanguageName] = useState(
+    currentLanguage?.originalName
+  );
   return (
     <StyledTooltip
       title={
