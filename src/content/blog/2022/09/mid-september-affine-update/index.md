@@ -1,6 +1,6 @@
 ---
 title: Mid-September AFFiNE update!
-author: Fangyuan Zheng, Christopher Smolak, Fangyuan Zheng, Fanjing Zhang
+author: Fangyuan Zheng, Christopher Smolak, Fanjing Zhang
 tags: Release Note
 cover: ./cover.jpg
 description: Thank you very much for your interest in AFFiNE! Some exciting changes are as follows
