@@ -113,14 +113,5 @@ And for this live demo release, to help you better understand and use AFFiNE, we
 
 Please remember that the project is still under active development, so please do not store any important information or data. And we look forward to sharing more information in regards to our future development and roadmap next week. We welcome everyone who tries AFFiNE to get in touch with us. Whether you want to feedback on what your like, or don’t, whether you want to help out with improving the project or offer suggestions… let us know. From GitHub and pull requests, to DMing us on Twitter - we welcome you to be an active part of our community. Let’s build something special - together.
 
-Here are our social links:
-
-- Reddit:[https://www.reddit.com/r/Affine/](https://www.reddit.com/r/Affine/)
-- Discord: [https://discord.gg/Arn7TqJBvG]()
-- Telegram:[https://t.me/affineworkos](https://t.me/affineworkos)
-- Twitter:[https://twitter.com/AffineOfficial](https://twitter.com/AffineOfficial)
-- Medium：[https://medium.com/@affineworkos](https://medium.com/@affineworkos)
-- GitBook: [https://docs.affine.pro/affine/]()
-- Github: [https://github.com/toeverything/AFFiNE]()
 
 Hope you have a nice time with AFFiNE!
