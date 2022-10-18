@@ -27,6 +27,5 @@ If you endorse this open source project, please help us by clicking the GitHub s
 
 AFFiNE is very grateful to all open source contributors and will work to build a more positive open source ecosystem.
 
-We welcome every user to offer feedback and suggestions, please feel free to contact us on:
 
 Hope you have a nice time with AFFiNE!
