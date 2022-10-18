@@ -31,13 +31,4 @@ If you endorse this open source project, please help us by clicking the GitHub s
 
 AFFiNE is very grateful to all open source contributors and will work to build a more positive open source ecosystem.
 
-We welcome every user to offer feedback and suggestions. Please feel free to contact us on:
-
-- Reddit:[https://www.reddit.com/r/Affine/](https://www.reddit.com/r/Affine/)
-- Discord:[https://discord.gg/Arn7TqJBvG]()
-- Telegram:[https://t.me/affineworkos](https://t.me/affineworkos)
-- Twitter:[https://twitter.com/AffineOfficial](https://twitter.com/AffineOfficial)
-- Medium：[https://medium.com/@affineworkos](https://medium.com/@affineworkos)
-- GitBook: [https://docs.affine.pro/affine/]()
-
 Hope you have a nice time with AFFiNE !
