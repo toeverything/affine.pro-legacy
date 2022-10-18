@@ -65,8 +65,4 @@ We will focus on refactoring the design-level whiteboard pattern in the next rel
 
 We hope this gives you a better understanding of what the Edgeless (whiteboard) Mode is, some possible use cases, and what extra functionality it supports over similar existing systems. You're welcome to head over to our website and try it out for yourself in our demo, or deploy your own version. We invite you to offer any feedback you may have on this feature, or the product in general. We are always looking to improve, so any further questions or suggestions you have are all welcome.
 
-- Reddit: [https://www.reddit.com/r/Affine/]()
-- Discord: [https://discord.gg/Arn7TqJBvG]()
-- Telegram: [https://t.me/affineworkos]()
-- Twitter: [https://twitter.com/AffineOfficial]()
-- Medium：[https://medium.com/@affineworkos](https://medium.com/@affineworkos)
+
