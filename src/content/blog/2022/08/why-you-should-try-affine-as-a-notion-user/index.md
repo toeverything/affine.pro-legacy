@@ -48,5 +48,3 @@ And let’s not stop there. If you edit any items/data while in any of these mod
 I had originally planned to go with 10 points, but as I see the length of this article – maybe we can split this into 2 parts. So, if you found this interesting, look out for another article in the future. Hopefully this has got you interested in AFFiNE and what this product will become.
 
 You're welcome to head over to our website and try it out for yourself in our demo, or deploy your own version. We invite you to offer any feedback you may have on this feature, or the product in general. We are always looking to improve so any further questions or suggestions you have are all welcome.
-
-

@@ -44,5 +44,3 @@ In the tag-app, the data for attributes and values are stored in a separated for
 We hope this gives you a better understanding of what the tag-app is, some possible use cases and what extra functionality it supports over similar existing systems.
 
 You're welcome to head over to our website and try it out for yourself in our demo, or deploy your own version. We invite you to offer any feedback you may have on this feature, or the product in general. We are always looking to improve so any further questions or suggestions you have are all welcome.
-
-
