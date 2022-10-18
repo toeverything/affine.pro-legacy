@@ -45,11 +45,3 @@ This also means that **the current live demo development will be slower as we pr
 
 And once again a big thank you to our community. Please do come and join us, whether you have questions, feedback, would like to start a discussion, or even just to listen and see what we are doing. You are very much invited to come and join us.
 
-- Reddit: [https://www.reddit.com/r/Affine](https://www.reddit.com/r/Affine)
-- Discord: [https://discord.gg/Arn7TqJBvG](https://discord.gg/Arn7TqJBvG)
-- Telegram: [https://t.me/affineworkos](https://t.me/affineworkos)
-- Twitter: [https://twitter.com/AffineOfficial](https://twitter.com/AffineOfficial)
-- Medium: [https://medium.com/@affineworkos](https://medium.com/@affineworkos)
-- GitHub: [https://github.com/toeverything/AFFiNE](https://github.com/toeverything/AFFiNE)
-- Official Website: [https://affine.pro](https://affine.pro)
-- Feedback: [https://feedback.affine.pro](https://feedback.affine.pro)
