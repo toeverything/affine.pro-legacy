@@ -60,13 +60,4 @@ Let us know your interests, what you would like to do, and how we can help suppo
 
 AFFiNE is still in alpha, but we are continuing to build to a more feature-rich and stable build. Come and join us on our journey over on our media platforms.
 
-- Reddit: [https://www.reddit.com/r/Affine/](https://www.reddit.com/r/Affine/)
-- Discord: [https://discord.gg/Arn7TqJBvG](https://discord.gg/Arn7TqJBvG)
-- Telegram: [https://t.me/affineworkos](https://t.me/affineworkos)
-- Twitter: [https://twitter.com/AffineOfficial](https://twitter.com/AffineOfficial)
-- Medium: [https://medium.com/@affineworkos](https://medium.com/@affineworkos)
-- GitHub: [https://github.com/toeverything/AFFiNE]()
-- Official Website: [https://affine.pro/](https://affine.pro/)
-- Feedback: [https://feedback.affine.pro/boards/feature-requests]()
-
 We hope to release a more stable version in October, and we always welcome any advice/feedback about us!
