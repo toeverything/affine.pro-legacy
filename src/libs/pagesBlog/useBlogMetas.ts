@@ -19,8 +19,11 @@ export const useBlogMetas = (
   query?: { tag: string }
 ) => {
   const tags = getTags(blogMetas);
-  const filteredMetas = query?.tag
+  let filteredMetas = query?.tag
     ? blogMetas.filter((meta) => meta.tags?.includes(query.tag))
     : blogMetas;
+  if (filteredMetas.length > 3 && filteredMetas[0] === blogMetas[0]) {
+    filteredMetas = filteredMetas.slice(1);
+  }
   return { blogMetas, tags, filteredMetas };
 };

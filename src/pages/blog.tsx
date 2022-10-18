@@ -23,10 +23,23 @@ export default function Blog(props: { blogMetas: ContentFileMeta[] }) {
       <div>
         <div className={styles.header}>
           <div className={styles.header_content}>
-            <h1>News and Updates</h1>
-            <p>
-              The latest AFFiNE news, case studies, tutorials, and resources.
-            </p>
+            <div className={styles.header_content_left}>
+              <h1>News and Updates</h1>
+              <p>
+                The latest AFFiNE news, case studies, tutorials, and resources.
+              </p>
+            </div>
+            <div
+              className={styles.header_content_right}
+              onClick={() => router.push(blogMetas[0].href)}
+            >
+              <div>
+                <picture>
+                  <img src={blogMetas[0].cover || ""} alt="Page cover" />
+                  <h1>{blogMetas[0].title}</h1>
+                </picture>
+              </div>
+            </div>
           </div>
         </div>
         <div className={styles.body}>
