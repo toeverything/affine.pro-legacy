@@ -116,5 +116,4 @@ If you are interested in AFFiNE after reading this article, please click here to
 
 If you have any questions about productivity tools or AFFiNE products, please feel free to ask questions on Reddit: [https://www.reddit.com/r/AFFiNE/](https://www.reddit.com/r/Affine/)
 
-
 Hope you have a nice time with AFFiNE!

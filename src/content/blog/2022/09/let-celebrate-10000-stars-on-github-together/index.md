@@ -44,4 +44,3 @@ This also means that **the current live demo development will be slower as we pr
 ## Thanks again to everyone
 
 And once again a big thank you to our community. Please do come and join us, whether you have questions, feedback, would like to start a discussion, or even just to listen and see what we are doing. You are very much invited to come and join us.
-

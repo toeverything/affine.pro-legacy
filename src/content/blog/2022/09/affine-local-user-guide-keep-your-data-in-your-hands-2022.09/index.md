@@ -65,5 +65,3 @@ Currently, all editing of AFFiNE is based on JWT\[2\], and data processing does 
 \[1\] [Near Real-Time Peer-to-Peer Shared Editing on Extensible Data Types](https://www.researchgate.net/publication/310212186_Near_Real-Time_Peer-to-Peer_Shared_Editing_on_Extensible_Data_Types)
 
 \[2\] Our current version of the data backend is written in TypeScript and called JWT, and the next generation data backend is written in Rust and called JWST, both codenames inspired by [James Webb Space Telescope](https://en.wikipedia.org/wiki/James_Webb_Space_Telescope)
-
-

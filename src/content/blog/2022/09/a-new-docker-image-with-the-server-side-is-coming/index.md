@@ -78,4 +78,3 @@ A) No, unfortunately we do not fully support offline editing in this version. In
 **Q) Can I use SSL and my own domain?**
 
 A) Yes you can, we don't currently have any step-by-step guide but welcome our community to contribute one.
-

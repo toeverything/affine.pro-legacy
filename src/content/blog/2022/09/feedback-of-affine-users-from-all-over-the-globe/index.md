@@ -56,5 +56,3 @@ He is learning German and Latin, cognitive science, and metaphysics (with a spec
 **This is your space!**
 
 **Come join the AFFiNE community and give us your feedback!**
-
-
