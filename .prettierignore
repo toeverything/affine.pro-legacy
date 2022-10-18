@@ -2,3 +2,4 @@ pnpm-lock.yaml
 .next
 next-env.d.ts
 /out
+*.md
