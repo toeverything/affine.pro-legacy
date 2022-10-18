@@ -92,13 +92,6 @@ Markdown can help users to improve efficiency. We have also been improving the m
 - **Fixed: After selecting the block & group block in paper mode by Ctrl+A, the delete key can delete it directly;**
 - **Fixed: The cursor lost in the article was solved.**
 
-The recent changes of AFFiNE are to serve everyone better and to provide a foundation for the rapid development of AFFiNE. AFFiNE has received a lot of suggestions and encouragement from our users since its launch, and we are very grateful for your support. We welcome every user to offer feedback and suggestions. Please feel free to contact us on:
-
-- Reddit:[https://www.reddit.com/r/Affine/](https://www.reddit.com/r/Affine/)
-- Discord:[https://discord.gg/Arn7TqJBvG](https://discord.gg/Arn7TqJBvG)
-- Telegram:[https://t.me/affineworkos](https://t.me/affineworkos)
-- Twitter:[https://twitter.com/AffineOfficial](https://twitter.com/AffineOfficial)
-- Medium: [https://medium.com/@affineworkos](https://medium.com/@affineworkos)
-- Official Website: [https://affine.pro/](https://affine.pro/)
+The recent changes of AFFiNE are to serve everyone better and to provide a foundation for the rapid development of AFFiNE. AFFiNE has received a lot of suggestions and encouragement from our users since its launch, and we are very grateful for your support. We welcome every user to offer feedback and suggestions. Please feel free to contact us on.
 
 Hope you have a nice time with AFFiNE!
