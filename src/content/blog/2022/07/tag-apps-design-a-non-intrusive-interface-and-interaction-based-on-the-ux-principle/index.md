@@ -260,10 +260,4 @@ A coarse-grained prototype focusing on the non-intrusive design and the semantic
   - also, the apple reminder looks good
 - Shall we make groups less intrusive too?
 
-If any user would like to participate in the discussion of the above, we welcome every user to offer feedback and suggestions, please feel free to contact us on:
-
-- Reddit: [https://www.reddit.com/r/Affine/](https://www.reddit.com/r/Affine/)
-- Discord: [https://discord.gg/yz6tGVsf5p](https://discord.gg/yz6tGVsf5p)
-- Telegram: [https://t.me/affineworkos](https://t.me/affineworkos)
-
 Hope you have a nice time with AFFiNE !
