@@ -45,10 +45,4 @@ We hope this gives you a better understanding of what the tag-app is, some possi
 
 You're welcome to head over to our website and try it out for yourself in our demo, or deploy your own version. We invite you to offer any feedback you may have on this feature, or the product in general. We are always looking to improve so any further questions or suggestions you have are all welcome.
 
-Here are some useful links to learn more about AFFiNE or join our communities. Looking forward to seeing you over on:
 
-- Reddit: [https://www.reddit.com/r/Affine/](https://www.reddit.com/r/Affine/)
-- Discord: [https://discord.gg/Arn7TqJBvG](https://discord.gg/Arn7TqJBvG)
-- Telegram: [https://t.me/affineworkos](https://t.me/affineworkos)
-- Twitter: [https://twitter.com/AffineOfficial](https://twitter.com/AffineOfficial)
-- Medium：[https://medium.com/@affineworkos](https://medium.com/@affineworkos)
