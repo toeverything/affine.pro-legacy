@@ -74,11 +74,4 @@ AFFiNE is very grateful to all open source contributors and will work to build a
 
 We welcome every user to offer feedback and suggestions, please feel free to contact us on:
 
-- Reddit:[https://www.reddit.com/r/Affine/](https://www.reddit.com/r/Affine/)
-- Discord:[https://discord.gg/Arn7TqJBvG]()
-- Telegram:[https://t.me/affineworkos](https://t.me/affineworkos)
-- Twitter:[https://twitter.com/AffineOfficial](https://twitter.com/AffineOfficial)
-- Medium：[https://medium.com/@affineworkos](https://medium.com/@affineworkos)
-- GitBook: [https://docs.affine.pro/affine/]()
-
 Hope you have a nice time with AFFiNE!
