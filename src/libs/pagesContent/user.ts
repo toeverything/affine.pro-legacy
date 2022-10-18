@@ -60,6 +60,11 @@ const USER_MAP: Record<string, { name: string; avatar: string; dec: string }> =
       avatar: "/CankunYou.jpeg",
       dec: "Author, Operator of Community Support",
     },
+    AFFiNE: {
+      name: "AFFiNE",
+      avatar: "/favicon.ico",
+      dec: "Toeverything",
+    },
     "Xinglong Wang": {
       name: "Xinglong Wang",
       avatar: "/XinglongWang.png",

@@ -1,7 +1,7 @@
 ---
 title: A New Docker image with the server side is coming!
 author: Fangyuan Zheng, Christopher Smolak
-tags: USER GUIDE
+tags: User Guide
 cover: ./cover.jpg
 description: Hello, everybody! The long-awaited release of our server-side data storage feature is now here! With the latest version, you can deploy AFFiNE on your own server and your data can be stored on your client locally and on the server-side
 created: 2022-09-23

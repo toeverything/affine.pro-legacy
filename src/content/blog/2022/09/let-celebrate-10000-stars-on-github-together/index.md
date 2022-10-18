@@ -1,7 +1,7 @@
 ---
 title: Let’s celebrate 10,000+ stars on GitHub together!
 author: Fangyuan Zheng, Christopher Smolak
-tags: THE OPEN SOURCE ENGINEERING
+tags: The Open Source Engineering
 cover: ./star-history.jpg
 description: Together we celebrate the milestone of reaching 10,000 stars over on the AFFiNE GitHub.
 created: 2022-09-27
