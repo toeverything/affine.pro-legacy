@@ -57,11 +57,4 @@ He is learning German and Latin, cognitive science, and metaphysics (with a spec
 
 **Come join the AFFiNE community and give us your feedback!**
 
-We welcome every user to offer feedback and share user experience with us! Please feel free to contact us on:
 
-- Reddit: [https://www.reddit.com/r/Affine/](https://t.me/affineworkos)
-- Discord: [https://discord.gg/Arn7TqJBvG](https://t.me/affineworkos)
-- Telegram: [https://t.me/affineworkos](https://t.me/affineworkos)
-- Twitter: [https://twitter.com/AffineOfficial](https://twitter.com/AffineOfficial)
-- Medium：[https://medium.com/@affineworkos](https://medium.com/@affineworkos)
-- GitHub: [https://github.com/toeverything/AFFiNE](https://github.com/toeverything/AFFiNE)
