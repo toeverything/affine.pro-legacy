@@ -116,10 +116,5 @@ If you are interested in AFFiNE after reading this article, please click here to
 
 If you have any questions about productivity tools or AFFiNE products, please feel free to ask questions on Reddit: [https://www.reddit.com/r/AFFiNE/](https://www.reddit.com/r/Affine/)
 
-This is another way to contact AFFiNE:
-
-- Telegram: [https://t.me/AFFiNEworkos](https://t.me/affineworkos)
-- Twitter: [https://twitter.com/AFFiNEOfficial](https://twitter.com/AffineOfficial)
-- Medium：[https://medium.com/@AFFiNEworkos](https://medium.com/@affineworkos)
 
 Hope you have a nice time with AFFiNE!
