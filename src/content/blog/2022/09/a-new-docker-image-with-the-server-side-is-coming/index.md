@@ -79,13 +79,3 @@ A) No, unfortunately we do not fully support offline editing in this version. In
 
 A) Yes you can, we don't currently have any step-by-step guide but welcome our community to contribute one.
 
-Please feel free to contact AFFiNE Team if you have any questions or feedback or advice about us：
-
-- Reddit: [https://www.reddit.com/r/Affine/](https://www.reddit.com/r/Affine/)
-- Discord: [https://discord.gg/Arn7TqJBvG](https://discord.gg/Arn7TqJBvG)
-- Telegram: [https://t.me/affineworkos](https://t.me/affineworkos)
-- Twitter: [https://twitter.com/AffineOfficial](https://twitter.com/AffineOfficial)
-- Medium: [https://medium.com/@affineworkos](https://medium.com/@affineworkos)
-- GitHub: [https://github.com/toeverything/AFFiNE](https://github.com/toeverything/AFFiNE)
-- Official Website: [https://affine.pro/](https://affine.pro/)
-- Feedback: [https://feedback.affine.pro/boards/feature-requests](https://feedback.affine.pro/boards/feature-requests)
