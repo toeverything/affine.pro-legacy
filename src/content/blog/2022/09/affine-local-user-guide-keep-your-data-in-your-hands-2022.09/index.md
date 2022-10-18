@@ -66,13 +66,4 @@ Currently, all editing of AFFiNE is based on JWT\[2\], and data processing does 
 
 \[2\] Our current version of the data backend is written in TypeScript and called JWT, and the next generation data backend is written in Rust and called JWST, both codenames inspired by [James Webb Space Telescope](https://en.wikipedia.org/wiki/James_Webb_Space_Telescope)
 
-We welcome every user to offer feedback and suggestions. Please feel free to contact us on:
 
-- Reddit: [https://www.reddit.com/r/Affine/](https://www.reddit.com/r/Affine/)
-- Discord: [https://discord.gg/Arn7TqJBvG](https://discord.gg/Arn7TqJBvG)
-- Telegram: [https://t.me/affineworkos](https://t.me/affineworkos)
-- Twitter: [https://twitter.com/AffineOfficial](https://twitter.com/AffineOfficial)
-- Medium: [https://medium.com/@affineworkos](https://medium.com/@affineworkos)
-- GitHub: [https://github.com/toeverything/AFFiNE](https://github.com/toeverything/AFFiNE)
-- Official Website: [https://affine.pro/](https://affine.pro/)
-- Feedback: [https://feedback.affine.pro/boards/feature-requests](https://feedback.affine.pro/boards/feature-requests)
