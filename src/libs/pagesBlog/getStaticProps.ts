@@ -24,6 +24,7 @@ async function getFiles(dir: string): Promise<ContentFileMeta[]> {
       }
     })
   );
+
   return files.flat().filter((f) => !!f) as ContentFileMeta[];
 }
 
