@@ -64,7 +64,8 @@ const StyledText = styled("span")({
   marginRight: "4px",
   marginLeft: "16px",
   fontSize: "16px",
-  fontWeight: "normal",
+  fontWeight: "500",
+  textTransform: "capitalize",
 });
 const StyledTooltip = styled(({ className, ...props }: TooltipProps) => (
   <Tooltip {...props} classes={{ popper: className }} />
@@ -81,12 +82,13 @@ const ListItem = styled(Button)({
   display: "block",
   width: "100%",
   color: "#262626",
-  fontWeight: "normal",
+  fontWeight: "500",
   fontSize: "16px",
+  textTransform: "capitalize",
 });
 
 const StyledTitleButton = styled(Button)({
   color: "#262626",
-  fontWeight: "normal",
+  fontWeight: "500",
   fontSize: "16px",
 });

@@ -2,7 +2,6 @@ import { useMatchMediaMaxWidth1000 } from "@/libs/common/matchMedia";
 import styled from "@emotion/styled";
 import NextLink from "next/link";
 import AFFiNETextLogo from "./affine-text-logo.png";
-import githubSvg from "./github.svg";
 import { NormalLeftHeader, NormalRightHeader } from "./NormalHeader";
 import { SmallHeader } from "./SmallHeader";
 export const HeaderNav = () => {
@@ -18,13 +17,6 @@ export const HeaderNav = () => {
             {matchesMaxWidth1000 ? null : <NormalLeftHeader />}
           </HeaderLeft>
           <HeaderRight>
-            <a
-              href="https://github.com/toeverything/AFFiNE"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <StyledImage src={githubSvg.src} alt="Github" />
-            </a>
             {matchesMaxWidth1000 ? <SmallHeader /> : <NormalRightHeader />}
           </HeaderRight>
         </Header>
@@ -46,7 +38,7 @@ const Container = styled.div({
   margin: "auto",
   marginTop: "0 !important",
   padding: "12px 0",
-  borderBottom: "1px solid #e4e7ec",
+  fontFamily: `"Public Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"`,
 });
 
 const Header = styled.div({

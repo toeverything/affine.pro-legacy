@@ -34,6 +34,7 @@ export const LinkText = ({ href, title, target = "_blank" }: LinkTextProps) => {
 const StyledContainer = styled("div")({
   color: "#262626",
   padding: "2px 0",
-  fontWeight: "normal",
+  fontWeight: "500",
   fontSize: "16px",
+  textTransform: "capitalize",
 });
