@@ -10,13 +10,12 @@ export async function getStaticProps({
 }: {
   params: { contentPath: string[] };
 }) {
-  const paths = (await realPaths).paths.filter((paths) => {
-    if (params.contentPath.every((val) => paths.realPath.includes(val))) {
-      return paths.realPath;
-    }
+  const newFilePath = params.contentPath.join("/");
+
+  const filePath = await realPaths.then((val) => {
+    return val[newFilePath];
   });
 
-  const filePath = paths[0].realPath.join("/");
   const content = await resolveFile(path.resolve(rootDir, filePath + ".md"), {
     parseToHTML: true,
   });

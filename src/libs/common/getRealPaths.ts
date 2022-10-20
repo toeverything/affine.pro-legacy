@@ -21,20 +21,27 @@ async function getFiles(dir: string): Promise<string[]> {
 
 // 'foo/bar/baz.md' -> ['foo', 'bar', 'baz']
 // 'foo/bar/qux/index.md' -> ['foo', 'bar', 'qux', 'index']
-function getSegments(file: string) {
-  let segments = file.slice(0, -3).replace(/\\/g, "/").split("/");
+function getKeySegments(file: string) {
+  let segments = file
+    .slice(0, 5)
+    .replace(/\\/g, "/")
+    .concat(file.slice(13, -3).replace(/\\/g, "/"));
+  return segments;
+}
+function getValueSegments(file: string) {
+  let segments = file.slice(0, -3).replace(/\\/g, "/");
   return segments;
 }
 
 export async function getRealPaths() {
   const files = await getFiles(rootDir);
-  const paths = files.map((file) => {
-    return {
-      realPath: getSegments(file),
-    };
+  interface paths {
+    [key: string]: string;
+  }
+  const paths: paths = {};
+  files.map((file) => {
+    paths[getKeySegments(file)] = getValueSegments(file);
   });
 
-  return {
-    paths,
-  };
+  return paths;
 }
