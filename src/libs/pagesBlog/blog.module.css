@@ -162,6 +162,17 @@
 
   .header_content {
     padding: 52px 30px;
+    flex-direction: column;
+  }
+  .styles.header_content_left {
+    padding: 52px 30px;
+    flex-direction: column;
+  }
+  .header_content_left h1 {
+    text-align: center;
+  }
+  .header_content_left p {
+    text-align: center;
   }
 
   .body {
