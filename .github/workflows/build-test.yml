@@ -2,10 +2,11 @@ name: Build Test Version
 
 on:
   workflow_dispatch:
-    tag:
-      description: "Test scenario tags. nightly-latest for pro.affine.systems."
-      required: false
-      type: string
+    inputs:
+      tag:
+        description: "Test scenario tags. If not specify tag, it will use the branch name. nightly-latest for pro.affine.systems."
+        required: false
+        type: string
 
 jobs:
   build:
