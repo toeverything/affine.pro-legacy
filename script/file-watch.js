@@ -14,7 +14,7 @@ let rootDir = path.resolve(__dirname, "../src/content/blog");
 //to get year and month of the post createTime
 async function getDirName(dir) {
   const subDirs = await readdir(dir);
-  const files = await subDirs.map((subDir) => {
+  const files = subDirs.map((subDir) => {
     const res = path.resolve(dir, subDir);
     return res;
   });
@@ -24,7 +24,7 @@ mkdir(path.resolve(__dirname, "../public/content/blog"), { recursive: true });
 getDirName(rootDir).then((value) => {
   value.forEach(async (dir) => {
     const subDirs = await readdir(dir);
-    const files = await subDirs.map((subDir) => {
+    const files = subDirs.map((subDir) => {
       const res = path.resolve(dir, subDir);
       return res.slice(rootDir.length + 1);
     });
