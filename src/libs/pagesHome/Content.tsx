@@ -3,8 +3,8 @@ import Image from "next/image";
 import { useTranslation } from "react-i18next";
 import GithubSvg from "./GithubIcon";
 import CollaborationImage from "./images/collaboration.png";
-import LogoImage from "./images/logo.png";
 import PageImage from "./images/page.png";
+import { LogoIcon } from "./logo/logo";
 import Tabs from "./Tabs";
 const Content = () => {
   const { t } = useTranslation();
@@ -31,9 +31,9 @@ const Content = () => {
           alt="AFFiNE Privacy-first, and collaborative"
         />
       </StyledPrivacyImage>
-      <StyledLoge>
-        <Image src={LogoImage} alt="AFFiNE Logo" />
-      </StyledLoge>
+      <StyledLogo>
+        <LogoIcon style={{ fontSize: "160px" }} />
+      </StyledLogo>
       <StyledFooter>
         <StyledMessage>{t("BuildFor")}</StyledMessage>
         <StyledKeepUpdate>
@@ -88,11 +88,13 @@ const StyledImage = styled.div({
     boxShadow: "2px 2px 40px #0004",
   },
 });
-const StyledLoge = styled.div({
+const StyledLogo = styled.div({
   display: "flex",
   margin: "auto",
   justifyContent: "center",
   marginTop: "20vh",
+  color: "#3E6FDB",
+  marginBottom: "60px",
 });
 const StyledText = styled.div({
   display: "flex",
