@@ -9,6 +9,7 @@ import {
   ListItemText,
 } from "@mui/material";
 import NextImage from "next/image";
+import NextLink from "next/link";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { LinkText } from "../LinkText";
@@ -40,7 +41,7 @@ export const SmallHeader = () => {
         <StyledList>
           {navLinks.map((nav) => {
             return (
-              <StyledListItem key={nav.title}>
+              <StyledListItem key={nav.title} href={nav.href}>
                 <LinkText href={nav.href} title={nav.title} />
               </StyledListItem>
             );
@@ -50,11 +51,11 @@ export const SmallHeader = () => {
               setLanguageCollapse(!languageCollapse);
               evt.stopPropagation();
             }}
+            style={{ padding: "6px 8px" }}
           >
-            <ListItemText
-              primary={t("language")}
-              style={{ paddingLeft: "21px" }}
-            />
+            <ListItemText>
+              <StyledText>{t("language")}</StyledText>
+            </ListItemText>
             {languageCollapse ? <ExpandLess /> : <ExpandMore />}
           </ListItemButton>
           <Collapse in={languageCollapse} timeout="auto">
@@ -65,10 +66,14 @@ export const SmallHeader = () => {
                     key={locale.name}
                     onClick={() => changeLanguage(locale.tag)}
                   >
-                    <ListItemText primary={locale.originalName} />
-                    <Checkbox
-                      checked={i18n.language == locale.tag ? true : false}
-                    />
+                    <StyledLangListLeftContainer>
+                      <div>{locale.originalName}</div>
+                    </StyledLangListLeftContainer>
+                    <StyledLangListRightContainer>
+                      <Checkbox
+                        checked={i18n.language == locale.tag ? true : false}
+                      />
+                    </StyledLangListRightContainer>
                   </ListItemButton>
                 );
               })}
@@ -106,7 +111,7 @@ const StyledList = styled.div({
   padding: "20px 0",
 });
 
-const StyledListItem = styled.div({
+const StyledListItem = styled(NextLink)({
   height: "44px",
   boxSizing: "border-box",
   padding: "10px 14px 10px 30px",
@@ -117,6 +122,18 @@ const StyledLangList = styled.div({
   flexDirection: "column",
   backgroundColor: "#fff",
   padding: "0",
-  paddingLeft: "36px",
+  paddingLeft: "16px",
   borderTop: "1px #cfcccc solid",
+});
+const StyledText = styled.div({
+  fontWeight: "500",
+});
+const StyledLangListLeftContainer = styled.div({
+  fontWeight: "500",
+  width: "100%",
+});
+const StyledLangListRightContainer = styled.div({
+  fontWeight: "500",
+  width: "100%",
+  textAlign: "end",
 });
