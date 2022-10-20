@@ -116,9 +116,10 @@ function ExportedImage({
     }
     // otherwise use the generated image of 10px width as a blurDataURL
     return generateImageURL(_src, 10, useWebp);
-  }, [blurDataURL, src, unoptimized]);
+  }, [blurDataURL, src, unoptimized, useWebp]);
 
   return (
+    // eslint-disable-next-line jsx-a11y/alt-text
     <Image
       {...rest}
       {...(typeof src === "object" && src.width && { width: src.width })}
