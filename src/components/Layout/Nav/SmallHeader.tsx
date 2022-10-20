@@ -8,10 +8,10 @@ import {
   ListItemButton,
   ListItemText,
 } from "@mui/material";
-import NextImage from "next/image";
 import NextLink from "next/link";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import ExportedImage from "../../Image";
 import { LinkText } from "../LinkText";
 import { useNavLink } from "./config";
 import menuClose from "./menu-close.svg";
@@ -30,7 +30,11 @@ export const SmallHeader = () => {
   return (
     <>
       <StyledIconContainer onClick={() => setShowDrawer(!showDrawer)}>
-        <NextImage src={showDrawer ? menuClose : menuHamburger} layout="fill" />
+        <ExportedImage
+          src={showDrawer ? menuClose : menuHamburger}
+          layout="fill"
+          useWebp={!!process.env.nextImageExportOptimizer_storePicturesInWEBP}
+        />
       </StyledIconContainer>
       <StyledHeaderDrawer
         style={drawerStyle}

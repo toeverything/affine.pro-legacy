@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import Image from "next/image";
+import ExportedImage from "../components/Image";
 import { Page } from "../components/Layout/Page";
 import ContactUs from "../libs/pageAboutUs/ContactUs";
 import keepUpdate from "../libs/pageAboutUs/keepUpdate.png";
@@ -15,7 +15,7 @@ const aboutUs = () => {
         <TeamMember />
         <Philosophy />
         <div>
-          <Image
+          <ExportedImage
             src={keepUpdate}
             alt="AFFiNE keep update"
             onClick={() =>
@@ -23,6 +23,7 @@ const aboutUs = () => {
             }
             width="720px"
             height="400px"
+            useWebp={!!process.env.nextImageExportOptimizer_storePicturesInWEBP}
           />
         </div>
       </StyledMain>

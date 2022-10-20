@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
-import Image from "next/image";
 import { useTranslation } from "react-i18next";
+import ExportedImage from "../../components/Image";
 import GithubSvg from "./GithubIcon";
 import CollaborationImage from "./images/collaboration.png";
 import PageImage from "./images/page.png";
@@ -11,7 +11,11 @@ const Content = () => {
   return (
     <div>
       <StyledImage>
-        <Image src={PageImage} alt="AFFiNE main ui" />
+        <ExportedImage
+          src={PageImage}
+          alt="AFFiNE main ui"
+          useWebp={!!process.env.nextImageExportOptimizer_storePicturesInWEBP}
+        />
       </StyledImage>
 
       <StyledText>
@@ -26,9 +30,10 @@ const Content = () => {
         <StyledContent>{t("description4.part3")}</StyledContent>
       </StyledText>
       <StyledPrivacyImage>
-        <Image
+        <ExportedImage
           src={CollaborationImage}
           alt="AFFiNE Privacy-first, and collaborative"
+          useWebp={!!process.env.nextImageExportOptimizer_storePicturesInWEBP}
         />
       </StyledPrivacyImage>
       <StyledLogo>

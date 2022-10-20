@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
-import Image from "next/image";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import ExportedImage from "../../components/Image";
 import ShapeImage from "./images/shape.png";
 import TaskImage from "./images/task.png";
 const HomepageTabs = () => {
@@ -40,14 +40,26 @@ const HomepageTabs = () => {
         </StyledText>
         <StyledImage active={tab1}>
           <div>
-            <Image src={ShapeImage} alt="AFFiNE Shape Your Page" />
+            <ExportedImage
+              src={ShapeImage}
+              alt="AFFiNE Shape Your Page"
+              useWebp={
+                !!process.env.nextImageExportOptimizer_storePicturesInWEBP
+              }
+            />
           </div>
         </StyledImage>
       </StyledSlides>
       <StyledSlides active={tab2}>
         <StyledImage active={tab2}>
           <div>
-            <Image src={TaskImage} alt="AFFiNE Plan Your Task" />
+            <ExportedImage
+              src={TaskImage}
+              alt="AFFiNE Plan Your Task"
+              useWebp={
+                !!process.env.nextImageExportOptimizer_storePicturesInWEBP
+              }
+            />
           </div>
         </StyledImage>
         <StyledText>
