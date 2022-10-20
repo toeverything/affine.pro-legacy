@@ -63,13 +63,30 @@ const HomepageTabs = () => {
 
 export default HomepageTabs;
 
-const StyledTabsPaper = styled.div({
-  position: "relative",
-  height: "800px",
-  textAlign: "center",
-  margin: "96px auto",
-  padding: "10px",
-});
+// const StyledTabsPaper = styled.div({
+//   position: "relative",
+//   height: "700px",
+//   textAlign: "center",
+//   margin: "auto",
+//   padding: "10px",
+
+// });
+const StyledTabsPaper = styled.div`
+  position: relative;
+  height: 650px;
+  text-align: center;
+  margin: auto;
+  padding: 10px;
+  @media (max-width: 1100px) {
+    height: 550px;
+  }
+  @media (max-width: 1000px) {
+    height: 900px;
+  }
+  @media (max-width: 600px) {
+    height: 700px;
+  }
+`;
 const StyledTabsUl = styled.ul({
   margin: "0",
   padding: "0",
@@ -158,7 +175,8 @@ const StyledText = styled.div`
   flex-wrap: wrap;
   align-self: center;
   width: 100%;
-  flex: 1;
+  margin: 0 50px;
+  flex: 1.5;
   text-align: left;
   @media (max-width: 1000px) {
     align-items: center;
@@ -183,6 +201,7 @@ const StyledImage = styled.div<{ active?: number }>`
   max-width: 100%;
   object-fit: contain;
   display: flex;
+  flex: 1;
   justify-content: center;
   margin: 36px;
   transition: all 0.5s;
