@@ -1,7 +1,7 @@
+import { useMatchMediaMaxWidth1000 } from "@/libs/common/matchMedia";
 import styled from "@emotion/styled";
 import Button from "@mui/material/Button";
 import NextLink from "next/link";
-import styles from "./LinkText.module.css";
 
 interface LinkTextProps {
   href: string;
@@ -11,30 +11,30 @@ interface LinkTextProps {
 
 export const LinkText = ({ href, title, target = "_blank" }: LinkTextProps) => {
   const isExternalLink = href.startsWith("http");
+  const matchesMaxWidth1000 = useMatchMediaMaxWidth1000();
   return (
-    <span className={styles.link_text}>
+    <>
       {isExternalLink ? (
-        <Button>
-          <StyledContainer>
-            <a href={href} target={target}>
-              {title}
-            </a>
-          </StyledContainer>
-        </Button>
+        <a href={href} target={target}>
+          <Button style={matchesMaxWidth1000 ? { justifyContent: "left" } : {}}>
+            <StyledText>{title}</StyledText>
+          </Button>
+        </a>
       ) : (
-        <Button>
-          <StyledContainer>
-            <NextLink href={href}>{title}</NextLink>
-          </StyledContainer>
-        </Button>
+        <NextLink href={href}>
+          <Button style={matchesMaxWidth1000 ? { justifyContent: "left" } : {}}>
+            <StyledText>{title}</StyledText>
+          </Button>
+        </NextLink>
       )}
-    </span>
+    </>
   );
 };
-const StyledContainer = styled("div")({
+const StyledText = styled("div")({
   color: "#262626",
   padding: "2px 0",
   fontWeight: "500",
   fontSize: "16px",
   textTransform: "capitalize",
 });
+const StyledContainer = styled("div")({});
