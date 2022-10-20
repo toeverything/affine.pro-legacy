@@ -11,8 +11,7 @@
     "format:check": "prettier --check .",
     "format:fix": "prettier --write .",
     "typeCheck": "tsc --noEmit",
-    "prepare": "husky install",
-    "publish-blog": "sh ./git-publish.sh"
+    "prepare": "husky install"
   },
   "dependencies": {
     "@emotion/cache": "^11.10.3",
