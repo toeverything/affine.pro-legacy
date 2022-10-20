@@ -122,12 +122,17 @@ const StyledH2 = styled.h2`
     font-size: 26px;
   }
 `;
-const StyledContent = styled.p({
-  fontSize: "20px",
-  lineHeight: 1.5,
-  margin: "0",
-  textAlign: "center",
-});
+
+const StyledContent = styled.p`
+  font-size: 20px;
+  line-height: 1.5;
+  margin: 0;
+  text-align: center;
+  padding: 0 100px;
+  @media (max-width: 1000px) {
+    padding: 0;
+  }
+`;
 const StyledFooter = styled.div({
   display: "flex",
   flexDirection: "column",

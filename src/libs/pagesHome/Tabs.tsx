@@ -195,7 +195,7 @@ const StyledP = styled.p`
   margin-top: 0;
   font-size: 18px;
   line-height: 1.5;
-  margin-bottom: 0;
+  margin-bottom: 16px;
 `;
 const StyledImage = styled.div<{ active?: number }>`
   max-width: 100%;
