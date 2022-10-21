@@ -13,7 +13,7 @@ Hello, everybody! The long-awaited release of our **server-side data storage**fe
 
 So without further or do, let's see how we can deploy the latest version of AFFiNE on your own server.
 
-**Step 1:**You can find the [docker command](https://github.com/toeverything/AFFiNE/pkgs/container/affine/) from our GitHub packages page - the latest release currently uses the tag 'nightly-server-latest. Copy and run this command.
+**Step 1:** You can find the [docker command](https://github.com/toeverything/AFFiNE/pkgs/container/affine/) from our GitHub packages page - the latest release currently uses the tag 'nightly-server-latest. Copy and run this command.
 
 docker pull ghcr.io/toeverything/affine:nightly-server-latest
 
@@ -24,7 +24,8 @@ You'll receive a similar message, which indicates that **the latest Docker image
 
 ![](./f882a5c3bcecfb6c63eec3e90edb08f70f4766ea-1280x232.png)
 download image
-**Step 2:**After successfully updating the Docker image, we are now ready to run the docker run command.
+
+**Step 2:** After successfully updating the Docker image, we are now ready to run the docker run command.
 
 docker run -it --rm -p 3000:3000 -v YOUR_PATH:/app/data ghcr.io/toeverything/affine:nightly-server-latest
 
