@@ -14,6 +14,7 @@ async function getFiles(dir: string): Promise<ContentFileMeta[]> {
   const files = await Promise.all(
     subdirs.map(async (subdir) => {
       const res = path.resolve(dir, subdir);
+
       if ((await fsStat(res)).isDirectory()) {
         return await getFiles(res);
       } else {

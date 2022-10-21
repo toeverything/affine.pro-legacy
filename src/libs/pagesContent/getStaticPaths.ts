@@ -11,11 +11,12 @@ async function getFiles(dir: string): Promise<string[]> {
   const files = await Promise.all(
     subdirs.map(async (subdir) => {
       const res = path.resolve(dir, subdir);
+
       return (await fsStat(res)).isDirectory()
         ? await getFiles(res)
         : res
-            .slice(rootDir.length + 1, rootDir.length + 6)
-            .concat(res.slice(rootDir.length + 14));
+            .slice(rootDir.length - 4, rootDir.length + 1)
+            .concat(res.slice(rootDir.length + 9));
     })
   );
 
