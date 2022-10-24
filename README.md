@@ -52,6 +52,8 @@ pnpm start
 
 ### build
 
+Following command will generate static files in `out/`.
+
 ```
 pnpm build
 ```
