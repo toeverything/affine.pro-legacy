@@ -4,7 +4,7 @@ This repo is AFFiNE official website and blog source code.
 
 ## How to publish blog
 
-First, create a folder in `content/${year}/${month}`, the folder name will use in published website url.
+First, create a folder in `blog/${year}/${month}`, the folder name will use in published website url.
 
 Secondly, create `index.md` in the folder you created in previous step. Here is a example file:
 
