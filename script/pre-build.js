@@ -5,7 +5,7 @@ const fs = require("fs-extra");
 const copyDir = require("copy-dir");
 const mkdir = fs.mkdirSync;
 const readdir = fs.readdir;
-const rootDir = path.resolve(process.cwd(), "./src/content/blog");
+const rootDir = path.resolve(process.cwd(), "./src/blog");
 
 //to get year and month of the post createTime
 async function getDirName(dir) {
@@ -28,7 +28,7 @@ getDirName(rootDir).then((value) => {
 
     files.forEach((file) => {
       copyDir(
-        path.resolve(__dirname, `../src/content/blog/${file}`),
+        path.resolve(__dirname, `../src/blog/${file}`),
         path.resolve(__dirname, "../public/content/blog"),
         {
           filter: function (stat, filepath, filename) {

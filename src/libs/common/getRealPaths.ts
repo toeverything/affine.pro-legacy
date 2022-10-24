@@ -6,13 +6,13 @@ const readdir = fs.readdir;
 const fsStat = fs.stat;
 
 async function getFiles(dir: string): Promise<string[]> {
-  const subdirs = await readdir(dir);
+  const subDirs = await readdir(dir);
   const files = await Promise.all(
-    subdirs.map(async (subdir) => {
-      const res = path.resolve(dir, subdir);
+    subDirs.map(async (subDir) => {
+      const res = path.resolve(dir, subDir);
       return (await fsStat(res)).isDirectory()
         ? await getFiles(res)
-        : res.slice(rootDir.length + 1);
+        : res.slice(rootDir.length - 4);
     })
   );
 
@@ -29,7 +29,7 @@ function getKeySegments(file: string) {
   return segments;
 }
 function getValueSegments(file: string) {
-  let segments = file.slice(0, -3).replace(/\\/g, "/");
+  let segments = file.slice(5, -3).replace(/\\/g, "/");
   return segments;
 }
 

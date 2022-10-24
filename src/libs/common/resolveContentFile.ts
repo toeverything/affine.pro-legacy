@@ -35,8 +35,8 @@ export async function resolveFile(
   );
 
   const newFilepathRemovedProject = filepathRemovedProject
-    .slice(0, 14)
-    .concat(filepathRemovedProject.slice(22));
+    .slice(0, 6)
+    .concat(filepathRemovedProject.slice(14));
 
   const html = options?.parseToHTML
     ? (
@@ -51,14 +51,18 @@ export async function resolveFile(
     title: title || null,
     authors: author?.split(",").map((au) => au.trim()) || null,
     tags: tags?.split(",").map((tag) => tag.trim()) || null,
-    cover: cover ? path.resolve(newFilepathRemovedProject, "..", cover) : null,
+    cover: cover
+      ? "/content" + path.resolve(newFilepathRemovedProject, "..", cover)
+      : null,
     description: description || null,
     created: (created as unknown as Date)?.getTime() || null,
     updated: (updated as unknown as Date)?.getTime() || null,
-    href: newFilepathRemovedProject.replace(
-      path.extname(newFilepathRemovedProject),
-      ""
-    ),
+    href:
+      "/content" +
+      newFilepathRemovedProject.replace(
+        path.extname(newFilepathRemovedProject),
+        ""
+      ),
     html,
     layout: layout || null,
   };

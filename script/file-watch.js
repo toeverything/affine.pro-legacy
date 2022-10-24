@@ -9,7 +9,7 @@ const fs = require("fs-extra");
 const mkdir = fs.mkdirSync;
 const readdir = fs.readdir;
 
-let rootDir = path.resolve(__dirname, "../src/content/blog");
+let rootDir = path.resolve(__dirname, "../src/blog");
 
 //to get year and month of the post createTime
 async function getDirName(dir) {
@@ -31,7 +31,7 @@ getDirName(rootDir).then((value) => {
 
     files.forEach((file) => {
       copyDir(
-        path.resolve(__dirname, `../src/content/blog/${file}`),
+        path.resolve(__dirname, `../src/blog/${file}`),
         path.resolve(__dirname, "../public/content/blog"),
         {
           filter: function (stat, filepath, filename) {
@@ -60,7 +60,7 @@ chokidar.watch(rootDir).on("all", async (event, dir) => {
       path.resolve(
         __dirname,
         "../",
-        subDir.replace(rootDir, "./public/content")
+        subDir.replace(rootDir, "./public/content/blog")
       )
     );
     return;
