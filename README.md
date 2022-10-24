@@ -50,6 +50,12 @@ pnpm install
 pnpm start
 ```
 
+### build
+
+```
+pnpm build
+```
+
 Then you can open http://localhost:3000 in browser.
 
 ## Knowledge you should know
