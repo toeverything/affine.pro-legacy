@@ -65,6 +65,7 @@ const HeaderLeftContent = styled.div`
 `;
 const HeaderRightContent = styled.div`
   flex: 1.5;
+  padding: 16px;
 `;
 const HeaderRightImage = styled.img`
   width: 100%;
