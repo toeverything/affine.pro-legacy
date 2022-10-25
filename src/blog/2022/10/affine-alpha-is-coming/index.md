@@ -3,6 +3,7 @@ title: AFFiNE Alpha is coming! The first version is for the Markdown Editor!
 author: Chi Zhang, Yifeng Wang , Ran Chen, Fanjing Zhang
 tags: Release Note
 cover: ./cover.jpg
+description: AFFiNE Alpha is coming! The first version is for the Markdown Editor!
 created: 2022-10-25
 updated: 2022-10-25
 layout: blog
