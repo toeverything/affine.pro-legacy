@@ -30,7 +30,7 @@ export default function Blog(props: { blogMetas: ContentFileMeta[] }) {
     let tep = currentList.items;
     setCurrentList({
       items: tep.concat(filteredMetas.slice(tep.length, tep.length + 5)),
-      hasMore: true,
+      hasMore: currentList.items.length >= filteredMetas.length ? false : true,
     });
   };
 
