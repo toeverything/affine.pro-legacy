@@ -16,6 +16,7 @@ Since the launch of AFFiNE pre-Alpha, we have received many private messages and
 
   In order to be able to carry more complex functions in future development while **maintaining the stability of AFFiNE**, our development team decided to refactor the project and **standardise the code structure**. The new version of AFFiNE Alpha will provide a more stable experience for users and a more organised structure for developers.
   Secondly, the refactoring also saw a lot of changes to the design of pages. To a certain extent, a good UI design solution makes the user experience more fluid. In previous versions, users have been confused by the design of the pages. Our product and design teams have held many meetings and long conversations about these issues and have come up with a more user-focussed design for AFFiNE Alpha. The aim is to give users **a better visual effect and operating experience**.
+  ![](./home-page.png)
   
 ## 1. What are the advantages of AFFiNE Alpha?
 
@@ -27,6 +28,7 @@ Since the launch of AFFiNE pre-Alpha, we have received many private messages and
   To address the shortcomings of AFFiNE pre-Alpha, Alpha features the following optimisations to enhance the basic editing experience for users:
   - **Shortcut system**
     While we had previously provided various shortcut keys, there were issues with styling and even failure of certain operations. Now we ensure that the style is aesthetically pleasing and the shortcuts are smooth to use. Below we'll share with you some of the most popular operations and their keyboard shortcuts:
+      ![](./shortcuts.png)
 
   - **Select all**
     We would like to specifically introduce you to the shortcut `Ctrl + A (Win/Linux) / CMD + A (Mac)`. Users have previously commented that when using the Select All function, sometimes a paragraph was selected and sometimes the full text was selected. It was not clear what the intended effect was and how the select all feature should operate. **In this release, the select all feature directly selects the full text**.
@@ -34,6 +36,7 @@ Since the launch of AFFiNE pre-Alpha, we have received many private messages and
 ### 2.2 AFFiNE Editor for Markdown
   Markdown presents a fast, efficient and standardized way to edit and format text. You can evoke your required text style directly through a specific identifier, without the need to select function keys with the mouse. This way of editing can greatly increase the speed of the user's work and allows them to focus on the content.
   Markdown is actually quite simple to use, and in layman's terms, you can also think of Markdown syntax as a shortcut. The following list shows the Markdown syntax supported by AFFiNE Alpha.
+    ![](./markdown.png)
   
   **Note: Markdown syntax only supports inline code style in this version, block code style will be available in a future update.**
   
@@ -56,5 +59,6 @@ Since the launch of AFFiNE pre-Alpha, we have received many private messages and
 
 ## Thanks again to everyone
 Once again, a big thanks to our users and ambassadors. Please do come and join our groups, whether you have feedback, would like to start a discussion, or even just to listen and see what we are doing.
-**Please feel free to contact us if you encounter any bugs or have some new feature ideas**. Thank you sincerely for your support!
-- Feedback: https://github.com/toeverything/AFFiNE/issues/new/choose
+**Please feel free to contact us if you encounter bugs and have some new features**. Thank you sincerely for your support!
+- Bugs: https://github.com/toeverything/AFFiNE/issues/new/choose
+- Features: https://feedback.affine.pro/boards/ambassador
