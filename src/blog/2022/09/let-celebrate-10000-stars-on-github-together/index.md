@@ -9,7 +9,6 @@ updated: 2022-09-27
 layout: blog
 ---
 
-![](./star-history.jpg)
 
 # Together we celebrate the milestone of reaching 10,000 stars over on the AFFiNE GitHub.
 
