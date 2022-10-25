@@ -27,10 +27,15 @@ export default function Blog(props: { blogMetas: ContentFileMeta[] }) {
       setCurrentList({ items: filteredMetas, hasMore: false });
       return;
     }
-    let tep = currentList.items;
+    let tep = currentList.items.concat(
+      filteredMetas.slice(
+        currentList.items.length,
+        currentList.items.length + 5
+      )
+    );
     setCurrentList({
-      items: tep.concat(filteredMetas.slice(tep.length, tep.length + 5)),
-      hasMore: currentList.items.length >= filteredMetas.length ? false : true,
+      items: tep,
+      hasMore: tep.length < filteredMetas.length,
     });
   };
 
@@ -38,7 +43,7 @@ export default function Blog(props: { blogMetas: ContentFileMeta[] }) {
     if (router.query.tag) {
       setCurrentList({
         items: filteredMetas,
-        hasMore: filteredMetas.length > 5 ? true : false,
+        hasMore: filteredMetas.length > 5,
       });
     } else {
       setCurrentList({
