@@ -54,15 +54,32 @@ const Header = styled.div`
   border-bottom: 1px solid #e4e7ec;
   background-color: #fcfcfd;
 `;
+const HeaderLeftContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+  @media (max-width: 1000px) {
+    margin: 36px 0px;
+  }
+`;
+const HeaderRightContent = styled.div`
+  flex: 1.5;
+`;
+const HeaderRightImage = styled.img`
+  width: 100%;
+  height: 100%;
+`;
 
 const HeaderContent = styled.div`
   max-width: 1280px;
   padding: 128px 30px;
   margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
 
   h1 {
-    width: 60%;
-    margin-top: 0;
+    width: 100%;
     font-size: 48px;
     line-height: 58px;
     margin-bottom: 1rem;
@@ -71,7 +88,9 @@ const HeaderContent = styled.div`
     color: #4b32c3;
     font-size: 16px;
   }
-
+  @media (max-width: 1000px) {
+    flex-direction: column;
+  }
   @media (max-width: 800px) {
     padding: 52px 30px;
 
@@ -128,6 +147,7 @@ const Content = styled.div`
   }
   a {
     color: #4b32c3;
+    word-wrap: break-word;
   }
   h1,
   h2,
@@ -142,6 +162,7 @@ const Content = styled.div`
 export const BlogLayout = ({
   title,
   description,
+  cover,
   authors,
   tags,
   updated,
@@ -152,17 +173,22 @@ export const BlogLayout = ({
     <Page>
       <Header>
         <HeaderContent>
-          {updated ? (
-            <HeaderTime>{`Updated: ${new Date(
-              updated
-            ).toLocaleDateString()}`}</HeaderTime>
-          ) : created ? (
-            <HeaderTime>{`Created: ${new Date(
-              created!
-            ).toLocaleDateString()}`}</HeaderTime>
-          ) : null}
-          <h1>{title}</h1>
-          <HeaderDec>{description}</HeaderDec>
+          <HeaderLeftContent>
+            {updated ? (
+              <HeaderTime>{`Updated: ${new Date(
+                updated
+              ).toLocaleDateString()}`}</HeaderTime>
+            ) : created ? (
+              <HeaderTime>{`Created: ${new Date(
+                created!
+              ).toLocaleDateString()}`}</HeaderTime>
+            ) : null}
+            <h1>{title}</h1>
+            <HeaderDec>{description}</HeaderDec>
+          </HeaderLeftContent>
+          <HeaderRightContent>
+            <HeaderRightImage src={cover as string} alt="post cover" />
+          </HeaderRightContent>
         </HeaderContent>
       </Header>
       <Body>
