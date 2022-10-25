@@ -1,6 +1,6 @@
 ---
 title: AFFiNE Alpha is coming! The first version is for the Markdown Editor!
-author: Chi Zhang, Yifeng Wang , Ran Chen, Fanjing Zhang
+author:  Fangyuan Zheng, Christopher Smolak
 tags: Release Note
 cover: ./cover.png
 description: AFFiNE Alpha is coming! The first version is for the Markdown Editor!
@@ -61,4 +61,4 @@ Since the launch of AFFiNE pre-Alpha, we have received many private messages and
 ## Thanks again to everyone
 Once again, a big thanks to our users and ambassadors. Please do come and join our groups, whether you have feedback, would like to start a discussion, or even just to listen and see what we are doing.
 **Please feel free to contact us if you encounter any bugs or have some new feature ideas**. Thank you sincerely for your support!
-- Feedback: https://github.com/toeverything/AFFiNE/issues/new/choose
+- Feedback: [https://github.com/toeverything/AFFiNE/issues/new/choose](https://github.com/toeverything/AFFiNE/issues/new/choose)

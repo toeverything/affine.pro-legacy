@@ -1,64 +1,60 @@
 const USER_MAP: Record<string, { name: string; avatar: string; dec: string }> =
   {
     "Fanjing Zhang": {
-      name: "Fangyuan Zheng",
-      avatar: "/FanyuanZhen.png",
-      dec: "decigner, Head of Product decign",
+      name: "Fanjing Zhang",
+      avatar: "/FanjingZhang.jpg",
+      dec: "designer, Graphics & Branding Director",
     },
     "Christopher Smolak": {
-      name: "Fangyuan Zheng",
-      avatar: "/FanyuanZhen.png",
-      dec: "decigner, Head of Product decign",
+      name: "Christopher Smolak",
+      avatar: "/ChristopherSmolak.jpg",
+      dec: "Author, Overseas Operation Specialist",
     },
     "Chi Zhang": {
       name: "Chi Zhang",
       avatar: "/ChiZhang.jpeg",
-      dec: "Author, Operator of Community Support",
-    },
-    "Fanyuan Zhen": {
-      name: "Fanyuan Zhen",
-      avatar: "/FanyuanZhen.png",
-      dec: "Author, Operator of Community Support",
+      dec: "Cofounder & Head of Engineer",
     },
     "Fangyuan Zheng": {
-      name: "Fanyuan Zheng",
-      avatar: "/FanyuanZhen.png",
+      name: "Fangyuan Zheng",
+      avatar: "/FangyuanZhen.png",
       dec: "Author, Operator of Community Support",
     },
+
     "Yifeng Wang": {
       name: "Yifeng Wang",
       avatar: "/YifengWang.jpeg",
-      dec: "Author, Operator of Community Support",
+      dec: "Head of Graphics Architecture",
     },
     "Guozhu Liu": {
       name: "Guozhu Liu",
       avatar: "/GuozhuLiu.jpeg",
-      dec: "Author, Operator of Community Support",
+      dec: "Head of Product Design",
     },
     "Ran Chen": {
       name: "Ran Chen",
       avatar: "/RanChen.jpeg",
-      dec: "Author, Operator of Community Support",
+      dec: "Director of Community Content",
     },
     "Xiang Wang": {
       name: "Xiang Wang",
-      avatar: "XiangWang.jpeg",
-      dec: "Author, Operator of Community Support",
+      avatar: "/XiangWang.jpeg",
+      dec: "Head of Machine Learning",
     },
     "Xiaodong Zuo": {
       name: "Xiaodong Zuo",
       avatar: "/XiaodongZuo.jpeg",
-      dec: "Author, Operator of Community Support",
+      dec: "Head of Software Architecture",
     },
     "Haoxin Shang": {
       name: "Haoxin Shang",
       avatar: "/HaoxinShang.png",
-      dec: "Author, Operator of Community Support",
+      dec: "Full-stack Engineer",
     },
     "Cankun You": {
       name: "Cankun You",
       avatar: "/CankunYou.jpeg",
-      dec: "Author, Operator of Community Support",
+      dec: "Full-stack Engineer",
     },
     AFFiNE: {
       name: "AFFiNE",
@@ -68,43 +64,43 @@ const USER_MAP: Record<string, { name: string; avatar: string; dec: string }> =
     "Xinglong Wang": {
       name: "Xinglong Wang",
       avatar: "/XinglongWang.png",
-      dec: "Author, Operator of Community Support",
+      dec: "Head of Collaboration and Creativity",
     },
     "Sicong Shao": {
       name: "Sicong Shao",
       avatar: "/SicongShao.png",
-      dec: "Author, Operator of Community Support",
+      dec: "Full-stack Engineer",
     },
 
     "Yipei Wei": {
       name: "Yipei Wei",
       avatar: "/YipeiWei.jpeg",
-      dec: "Author, Operator of Community Support",
+      dec: "Cofounder & Head of Business Development",
     },
     "Wenhao Tan": {
       name: "Wenhao Tan",
       avatar: "/WenhaoTan.jpeg",
-      dec: "Author, Operator of Community Support",
+      dec: "Director of Performance and Security",
     },
     "Jiachen He": {
       name: "Jiachen He",
       avatar: "/JiachenHe.png",
-      dec: "Author, Operator of Community Support",
+      dec: "Founder & Product Director",
     },
     "Shaoxuan Qi": {
       name: "Shaoxuan Qi",
       avatar: "/ShaoxunQi.jpeg",
-      dec: "Author, Operator of Community Support",
+      dec: "Full-stack Engineer",
     },
     "Mingliang Wang": {
       name: "Mingliang Wang",
       avatar: "/MingliangWang.jpeg",
-      dec: "Author, Operator of Community Support",
+      dec: "Head of Structural Editing",
     },
     "Shiwen Shen": {
       name: "Shiwen Shen",
       avatar: "/ShiwenShen.jepg",
-      dec: "Author, Operator of Community Support",
+      dec: "UX Designer",
     },
   };
 export default USER_MAP;
