@@ -9,12 +9,12 @@ updated: 2022-10-25
 layout: blog
 ---
 
-AFFiNE Alpha will be launched soon! Thank you very much for your continued interest and trust in the AFFiNE team.
+[AFFiNE Alpha](https://pathfinder.affine.pro/) will be launched soon! Thank you very much for your continued interest and trust in the AFFiNE team.
 Since the launch of AFFiNE pre-Alpha, we have received many private messages and emails from our users, and they have given us lots of feedback. We realised that there were still many problems with AFFiNE pre-Alpha, whether that was user experience, page stability, or something else. After considering many aspects, we decided to refactor AFFiNE - start again from the ground up and we are now excited to announce AFFiNE Alpha.
 
 **Key words**：Markdown, Shortcuts, Dark Mode, Export, Page redesign, Export.
 
-## The Goal of AFFiNE Alpha
+## The Goal of [AFFiNE Alpha](https://pathfinder.affine.pro/)
 
   In order to be able to carry more complex functions in future development while **maintaining the stability of AFFiNE**, our development team decided to refactor the project and **standardise the code structure**. The new version of AFFiNE Alpha will provide a more stable experience for users and a more organised structure for developers.
   
@@ -22,7 +22,7 @@ Since the launch of AFFiNE pre-Alpha, we have received many private messages and
   
   ![](./home-page.png)
   
-## 1. What are the advantages of AFFiNE Alpha?
+## 1. What are the advantages of [AFFiNE Alpha](https://pathfinder.affine.pro/)?
 
   This rebuilt AFFiNE will provide users with **a smoother editing experience and a more stable system environment**. We will ensure a more focused creative environment for our users. **Markdown was also a key focus of this refactoring**. We have improved the Markdown system and overcome some previous typographical issues. For the Markdown syntax system, we also consider how 'deletion' and 'secondary editing' can be implemented, while ensuring that the style is aesthetically pleasing.
   
@@ -70,5 +70,7 @@ Since the launch of AFFiNE pre-Alpha, we have received many private messages and
 ## Thanks again to everyone
 Once again, a big thanks to our users and ambassadors. Please do come and join our groups, whether you have feedback, would like to start a discussion, or even just to listen and see what we are doing.
 
+
 **Please feel free to contact us if you encounter any bugs or have some new feature ideas**. Thank you sincerely for your support!
 - Feedback: [https://github.com/toeverything/AFFiNE/issues/new/choose](https://github.com/toeverything/AFFiNE/issues/new/choose)
+- AFFiNE Alpha: https://pathfinder.affine.pro/
