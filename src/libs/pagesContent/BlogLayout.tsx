@@ -57,14 +57,14 @@ const Header = styled.div`
 const HeaderLeftContent = styled.div`
   display: flex;
   flex-direction: column;
-  flex: 1;
+  flex: 1.5;
   justify-content: center;
   @media (max-width: 1000px) {
     margin: 36px 0px;
   }
 `;
 const HeaderRightContent = styled.div`
-  flex: 1.5;
+  flex: 1;
   padding: 16px;
 `;
 const HeaderRightImage = styled.img`
