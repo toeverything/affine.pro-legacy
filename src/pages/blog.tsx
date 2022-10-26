@@ -1,6 +1,7 @@
 import type { ContentFileMeta } from "@/libs/common/resolveContentFile";
 import styles from "@/libs/pagesBlog/blog.module.css";
 import { useBlogMetas } from "@/libs/pagesBlog/useBlogMetas";
+import algoliasearch from "algoliasearch";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import InfiniteScroll from "react-infinite-scroll-component";
@@ -9,9 +10,17 @@ export { getStaticProps } from "@/libs/pagesBlog/getStaticProps";
 
 export default function Blog(props: { blogMetas: ContentFileMeta[] }) {
   const router = useRouter();
+  const client = algoliasearch(
+    "C06ESJJU5I",
+    "b3347fab2ccb4f1d3c81eef3bf3de6d4"
+  );
+  const index = client.initIndex("test_blog");
 
   const { tags, blogMetas, filteredMetas } = useBlogMetas(props.blogMetas, {
     tag: router.query.tag as string,
+  });
+  index.saveObjects(blogMetas).then((e) => {
+    console.log(e);
   });
   const [currentList, setCurrentList] = useState({
     items: filteredMetas.slice(0, 5),
