@@ -26,10 +26,12 @@ export const useLeftNavLink = () => {
 export const useRightNavLink = () => {
   const { t } = useTranslation();
   return [
+    /*
     {
       href: "https://feedback.affine.pro/",
       title: t("Feedback"),
     },
+    */
     {
       href: "https://livedemo.affine.pro/",
       title: t("Try it Online"),
