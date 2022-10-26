@@ -147,7 +147,7 @@ const Content = styled.div`
     line-height: 24px;
   }
   a {
-    color: #4b32c3;
+    color: #5085f6cc;
     word-wrap: break-word;
   }
   h1,
