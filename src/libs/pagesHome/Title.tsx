@@ -7,16 +7,34 @@ import GithubSvg from "./GithubIcon";
 import Logo from "./Logo";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
+import makeStyles from "@material-ui/styles/makeStyles";
+
+const useStyles = makeStyles({
+  popOverRoot: {
+    pointerEvents: "none",
+  },
+});
 
 const Title = () => {
   const { t } = useTranslation();
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const anchorElRef = useRef<HTMLButtonElement>(null);
+  const styles = useStyles();
   const open = Boolean(anchorEl);
-
+  const isHover = useRef(false);
   const handleClose = () => {
-    setAnchorEl(null);
+    isHover.current = false;
+    setTimeout(() => {
+      if (!isHover.current) {
+        setAnchorEl(null);
+      }
+    }, 50);
   };
+  const handleOpen = () => {
+    isHover.current = true;
+    setAnchorEl(anchorElRef.current);
+  };
+
   return (
     <>
       <StyledMain>
@@ -40,18 +58,20 @@ const Title = () => {
         </StyledGithub>
         <StyledLogo
           ref={anchorElRef}
-          id="try-button"
-          onMouseEnter={(event: MouseEvent<HTMLButtonElement>) => {
-            setAnchorEl(anchorElRef.current);
-          }}
+          onMouseOver={handleOpen}
+          onMouseLeave={handleClose}
           aria-controls={open ? "basic-menu" : undefined}
           aria-haspopup="true"
           aria-expanded={open ? "true" : undefined}
         >
-          <div>
+          <a
+            href="https://livedemo.affine.pro/"
+            target="_blank"
+            rel="noreferrer"
+          >
             <Logo fill="#fff" stroke="#fff" width="20" height="20" />
             &nbsp;{t("Try it Online")}
-          </div>
+          </a>
         </StyledLogo>
       </StyledButton>
 
@@ -60,10 +80,14 @@ const Title = () => {
         anchorEl={anchorEl}
         open={open}
         MenuListProps={{
-          "aria-labelledby": "try-button",
           onMouseLeave: handleClose,
+          onMouseEnter: handleOpen,
+          style: { pointerEvents: "auto" },
         }}
         autoFocus={false}
+        PopoverClasses={{
+          root: styles.popOverRoot,
+        }}
       >
         <MenuItem onClick={handleClose}>
           <StyledLink
@@ -212,5 +236,5 @@ const StyledLink = styled.a({
 const StyledSubLink = styled.a({
   color: "#096bde",
   fontSize: "14px",
-  marginLeft: "5px",
+  marginLeft: "15px",
 });
