@@ -5,9 +5,9 @@
   "scripts": {
     "start": "node script/start-dev.js",
     "dev": "npm run start",
-    "build": "node script/pre-build.js && next build && next export && npm run build:optimage && npm run build:postBuild",
+    "build": "node script/pre-build.js && next build && next export && npm run build:optimage && npm run build:algolia",
     "build:optimage": "next-image-export-optimizer && mv out/nextImageExportOptimizer/* out/_next/static/media/ && rm -rf out/nextImageExportOptimizer",
-    "build:postBuild": "node script/build-algolia-search.js",
+    "build:algolia": "node script/build-algolia-search.js",
     "lint": "next lint",
     "lint:fix": "next lint --fix",
     "format:check": "prettier --check .",
