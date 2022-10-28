@@ -1,3 +1,4 @@
+import type { SearchClient } from "algoliasearch";
 import algoliasearch from "algoliasearch";
 import "instantsearch.css/themes/satellite.css";
 import { useRouter } from "next/router";
@@ -8,6 +9,10 @@ import {
   SearchBox,
 } from "react-instantsearch-hooks-web";
 
+type HitComponent = Parameters<
+  typeof Hits<Record<string, string>>
+>[0]["hitComponent"];
+
 const INDEX_NAME = process.env.NEXT_PUBLIC_ALGOLIA_INDEX_NAME as string;
 
 const algoliaClient = algoliasearch(
@@ -15,10 +20,10 @@ const algoliaClient = algoliasearch(
   process.env.NEXT_PUBLIC_ALGOLIA_SEARCH_KEY as string
 );
 
-const searchClient = {
+const searchClient: SearchClient = {
   ...algoliaClient,
-  search(requests: any) {
-    if (requests.every(({ params }: any) => !params.query)) {
+  search(requests) {
+    if (requests.every(({ params }) => !params?.query)) {
       return Promise.resolve({
         results: requests.map(() => ({
           hits: [],
@@ -37,7 +42,7 @@ const searchClient = {
   },
 };
 
-const Hit = ({ hit }: any) => {
+const Hit: HitComponent = ({ hit }) => {
   const router = useRouter();
   return (
     <div style={{ cursor: "pointer" }} onClick={() => router.push(hit.href)}>
@@ -54,7 +59,7 @@ const Hit = ({ hit }: any) => {
 
 export default function Search() {
   return (
-    <InstantSearch searchClient={searchClient as any} indexName={INDEX_NAME}>
+    <InstantSearch searchClient={searchClient} indexName={INDEX_NAME}>
       <SearchBox
         translations={{
           submitButtonTitle: "Submit your search query.",
