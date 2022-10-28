@@ -33,7 +33,7 @@ export const useRightNavLink = () => {
     },
     */
     {
-      href: "https://livedemo.affine.pro/",
+      href: "https://pathfinder.affine.pro/",
       title: t("Try it Online"),
     },
   ];
