@@ -50,6 +50,8 @@ pnpm install
 pnpm start
 ```
 
+Then you can open http://localhost:3000 in browser.
+
 ### build
 
 Following command will generate static files in `out/`.
@@ -57,8 +59,17 @@ Following command will generate static files in `out/`.
 ```
 pnpm build
 ```
+### algolia search api
 
-Then you can open http://localhost:3000 in browser.
+In Development environment, search is not working. It uses three environments:
+
+* `NEXT_PUBLIC_ALGOLIA_APP_ID`: Application ID
+* `ALGOLIA_SEARCH_KEY`: Search-Only API Key
+* `NEXT_PUBLIC_ALGOLIA_INDEX_NAME`: Index Name
+* `ALGOLIA_SEARCH_ADMIN_KEY`: Admin API Key
+
+You can create your own algolia account and index, then export the environments.
+[https://www.algolia.com/](https://www.algolia.com/)
 
 ## Knowledge you should know
 

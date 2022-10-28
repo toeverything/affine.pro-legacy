@@ -8,6 +8,8 @@ import {
   SearchBox,
 } from "react-instantsearch-hooks-web";
 
+const INDEX_NAME = process.env.NEXT_PUBLIC_ALGOLIA_INDEX_NAME as string;
+
 const algoliaClient = algoliasearch(
   process.env.NEXT_PUBLIC_ALGOLIA_APP_ID as string,
   process.env.NEXT_PUBLIC_ALGOLIA_SEARCH_KEY as string
@@ -52,7 +54,7 @@ const Hit = ({ hit }: any) => {
 
 export default function Search() {
   return (
-    <InstantSearch searchClient={searchClient as any} indexName="test_blog">
+    <InstantSearch searchClient={searchClient as any} indexName={INDEX_NAME}>
       <SearchBox
         translations={{
           submitButtonTitle: "Submit your search query.",
