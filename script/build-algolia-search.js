@@ -70,7 +70,6 @@ const blogRootDir = path.resolve(process.cwd(), "./src/blog");
 
 (async function () {
   // initialize environment variables
-  dotenv.config();
 
   try {
     // initialize the client with your environment variables
