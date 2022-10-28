@@ -1,12 +1,9 @@
-const dotenv = require("dotenv");
 const algoliasearch = require("algoliasearch");
 const fs = require("fs-extra");
 const path = require("path");
 const grayMatter = require("gray-matter");
 
 try {
-  dotenv.config();
-
   if (!process.env.NEXT_PUBLIC_ALGOLIA_APP_ID) {
     throw new Error("NEXT_PUBLIC_ALGOLIA_APP_ID is not defined");
   }

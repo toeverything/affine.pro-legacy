@@ -7,10 +7,12 @@ import {
   InstantSearch,
   SearchBox,
 } from "react-instantsearch-hooks-web";
+
 const algoliaClient = algoliasearch(
-  "C06ESJJU5I",
-  "b3347fab2ccb4f1d3c81eef3bf3de6d4"
+  process.env.NEXT_PUBLIC_ALGOLIA_APP_ID as string,
+  process.env.NEXT_PUBLIC_ALGOLIA_SEARCH_KEY as string
 );
+
 const searchClient = {
   ...algoliaClient,
   search(requests: any) {
