@@ -13,7 +13,9 @@ type HitComponent = Parameters<
   typeof Hits<Record<string, string>>
 >[0]["hitComponent"];
 
-const INDEX_NAME = process.env.NEXT_PUBLIC_ALGOLIA_INDEX_NAME as string;
+const INDEX_NAME =
+  (process.env.MODE === "test" ? "test_" : "prod_") +
+  process.env.NEXT_PUBLIC_ALGOLIA_INDEX_NAME;
 
 const algoliaClient = algoliasearch(
   process.env.NEXT_PUBLIC_ALGOLIA_APP_ID as string,

@@ -3,7 +3,9 @@ const fs = require("fs-extra");
 const path = require("path");
 const grayMatter = require("gray-matter");
 
-const INDEX_NAME = process.env.NEXT_PUBLIC_ALGOLIA_INDEX_NAME;
+const INDEX_NAME =
+  (process.env.MODE === "test" ? "test_" : "prod_") +
+  process.env.NEXT_PUBLIC_ALGOLIA_INDEX_NAME;
 const APP_ID = process.env.NEXT_PUBLIC_ALGOLIA_APP_ID;
 const ADMIN_KEY = process.env.ALGOLIA_SEARCH_ADMIN_KEY;
 
