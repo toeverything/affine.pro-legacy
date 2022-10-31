@@ -1,6 +1,5 @@
 import type { ContentFileMeta } from "@/libs/common/resolveContentFile";
 import styles from "@/libs/pagesBlog/blog.module.css";
-import Search from "@/libs/pagesBlog/search";
 import { useBlogMetas } from "@/libs/pagesBlog/useBlogMetas";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
@@ -80,7 +79,6 @@ export default function Blog(props: { blogMetas: ContentFileMeta[] }) {
         </div>
         <div className={styles.body}>
           <div className={styles.body_left}>
-            <Search />
             <h5>Tags</h5>
             <ul className={styles.body_left_list}>
               <li
