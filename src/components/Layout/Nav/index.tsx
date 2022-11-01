@@ -3,8 +3,9 @@ import styled from "@emotion/styled";
 import NextLink from "next/link";
 import AFFiNETextLogo from "./affine-text-logo.png";
 import { NormalLeftHeader, NormalRightHeader } from "./NormalHeader";
-import Search from "./search";
+import NormalSearch from "./NormalSearch";
 import { SmallHeader } from "./SmallHeader";
+import SmallSearch from "./SmallSearch";
 export const HeaderNav = () => {
   const matchesMaxWidth1000 = useMatchMediaMaxWidth1000();
   return (
@@ -16,9 +17,11 @@ export const HeaderNav = () => {
               <StyledImage src={AFFiNETextLogo.src} alt="affine" />
             </NextLink>
             {matchesMaxWidth1000 ? null : <NormalLeftHeader />}
-            <Search />
+            {matchesMaxWidth1000 ? null : <NormalSearch />}
           </HeaderLeft>
+
           <HeaderRight>
+            {matchesMaxWidth1000 ? <SmallSearch /> : null}
             {matchesMaxWidth1000 ? <SmallHeader /> : <NormalRightHeader />}
           </HeaderRight>
         </Header>

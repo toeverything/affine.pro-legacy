@@ -1,15 +1,16 @@
 import styled from "@emotion/styled";
+import SearchIcon from "@mui/icons-material/Search";
+import { Button } from "@mui/material";
+import IconButton from "@mui/material/IconButton";
 import type { SearchClient } from "algoliasearch";
 import algoliasearch from "algoliasearch";
 import "instantsearch.css/themes/satellite.css";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import {
-  Configure,
   Highlight,
   Hits,
   InstantSearch,
-  Pagination,
   SearchBox,
 } from "react-instantsearch-hooks-web";
 
@@ -64,64 +65,96 @@ const Hit: HitComponent = ({ hit }) => {
   );
 };
 
-export default function Search() {
+const SmallSearch = () => {
   const [show, setShow] = useState(false);
-  const [isPagination, setPagination] = useState(true);
+  const [Search, setSearch] = useState(false);
   const router = useRouter();
+
   useEffect(() => {
     router.asPath == "/blog" ? setShow(true) : setShow(false);
   }, [router.asPath]);
   return (
-    <InstantSearch searchClient={searchClient} indexName={INDEX_NAME}>
-      <StyledAlgolia isShow={show}>
-        <Configure hitsPerPage={5} />
-        <StyledSearch>
-          <SearchBox
-            translations={{
-              submitButtonTitle: "Submit your search query.",
-              resetButtonTitle: "Clear your search query.",
-            }}
-            placeholder="Search here..."
-          />
-        </StyledSearch>
-        <StyledHits>
-          <Hits hitComponent={Hit} />
-          <Pagination hidden={isPagination} />
-        </StyledHits>
-      </StyledAlgolia>
-    </InstantSearch>
+    <StyledContainer isShow={show}>
+      <IconButton
+        size="large"
+        aria-label="search"
+        color="inherit"
+        onClick={() => setSearch(true)}
+      >
+        <SearchIcon />
+      </IconButton>
+      <InstantSearch searchClient={searchClient} indexName={INDEX_NAME}>
+        <StyledAlgolia isSearch={Search}>
+          <StyledSearch>
+            <StyledSearchBox>
+              <SearchBox
+                translations={{
+                  submitButtonTitle: "Submit your search query.",
+                  resetButtonTitle: "Clear your search query.",
+                }}
+                placeholder="Search here..."
+              />
+            </StyledSearchBox>
+            <StyledButton>
+              <Button onClick={() => setSearch(false)}>Cancel</Button>
+            </StyledButton>
+          </StyledSearch>
+          <StyledHits>
+            <Hits hitComponent={Hit} />
+          </StyledHits>
+        </StyledAlgolia>
+      </InstantSearch>
+    </StyledContainer>
   );
-}
+};
+
+export default SmallSearch;
+
 type isShow = {
   isShow: boolean;
 };
-const StyledAlgolia = styled.div<isShow>`
-  width: 500px;
-  flex-direction: column;
-  position: relative;
+type isSearch = {
+  isSearch: boolean;
+};
+const StyledContainer = styled.div<isShow>`
   display: ${(props) => (props.isShow ? "flex" : "none")};
-  margin-left: 16px;
-  transition: 0.2s ease-in;
-  @media (max-width: 1200px) {
-    width: 400px;
-  }
-  @media (max-width: 1100px) {
-    width: 300px;
-  }
 `;
+const StyledAlgolia = styled.div<isSearch>`
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+  position: absolute;
+  display: ${(props) => (props.isSearch ? "flex" : "none")};
+  left: 0;
+  transition: 0.2s ease-in;
+  background-color: white;
+  z-index: 100;
+`;
+
 const StyledSearch = styled.div`
   width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+`;
+const StyledSearchBox = styled.div`
+  width: 85%;
+  padding: 16px;
+  padding-right: 0;
+`;
+const StyledButton = styled.div`
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
 `;
 const StyledHits = styled.div`
-  width: 500px;
+  width: 100%;
+  height: 100%;
   position: absolute;
-  opacity: 1;
+  overflow-y: scroll;
   z-index: 100;
-  margin-top: 50px;
-  @media (max-width: 1200px) {
-    width: 400px;
-  }
-  @media (max-width: 1100px) {
-    width: 300px;
-  }
+  margin-top: 10vh;
 `;
