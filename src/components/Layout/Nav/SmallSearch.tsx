@@ -67,12 +67,12 @@ const Hit: HitComponent = ({ hit }) => {
 
 const SmallSearch = () => {
   const [show, setShow] = useState(false);
-  const [Search, setSearch] = useState(false);
+  const [search, setSearch] = useState(false);
   const router = useRouter();
-
   useEffect(() => {
     router.asPath == "/blog" ? setShow(true) : setShow(false);
-  }, [router.asPath]);
+    document.body.style.overflow = search ? "hidden" : "visible";
+  }, [router.asPath, search]);
   return (
     <StyledContainer isShow={show}>
       <IconButton
@@ -84,7 +84,7 @@ const SmallSearch = () => {
         <SearchIcon />
       </IconButton>
       <InstantSearch searchClient={searchClient} indexName={INDEX_NAME}>
-        <StyledAlgolia isSearch={Search}>
+        <StyledAlgolia isSearch={search}>
           <StyledSearch>
             <StyledSearchBox>
               <SearchBox

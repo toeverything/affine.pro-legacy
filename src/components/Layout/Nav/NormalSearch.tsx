@@ -10,6 +10,7 @@ import {
   InstantSearch,
   SearchBox,
 } from "react-instantsearch-hooks-web";
+import CustomHits from "./SearchHits";
 
 type HitComponent = Parameters<
   typeof Hits<Record<string, any>>
@@ -64,6 +65,7 @@ const Hit: HitComponent = ({ hit }) => {
 
 export default function Search() {
   const [show, setShow] = useState(false);
+
   const router = useRouter();
   useEffect(() => {
     router.asPath == "/blog" ? setShow(true) : setShow(false);
@@ -81,9 +83,8 @@ export default function Search() {
             placeholder="Search here..."
           />
         </StyledSearch>
-        <StyledHits>
-          <Hits hitComponent={Hit} />
-        </StyledHits>
+        <CustomHits {...Hit} />
+        {/* <Hits hitComponent={Hit} /> */}
       </StyledAlgolia>
     </InstantSearch>
   );
@@ -107,17 +108,22 @@ const StyledAlgolia = styled.div<isShow>`
 `;
 const StyledSearch = styled.div`
   width: 100%;
-`;
-const StyledHits = styled.div`
-  width: 100%;
-  padding: 1px;
-  height: 500px;
-  overflow-y: scroll;
-  position: absolute;
-  opacity: 1;
-  z-index: 100;
-  margin-top: 50px;
-  ::-webkit-scrollbar {
-    display: none;
+  input[type="search"] {
+    -webkit-appearance: textfield;
+    -webkit-box-sizing: content-box;
+    font-family: inherit;
+    font-size: 100%;
+    box-shadow: none;
+    border-color: #bbbfc4;
+    transition: 0.2s ease-in;
+    ::placeholder {
+      opacity: 0.5;
+    }
+    :focus {
+      border-color: #096bde;
+    }
+    :hover {
+      border-color: #096bde;
+    }
   }
 `;
