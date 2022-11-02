@@ -37,7 +37,7 @@ export const useLiveDemoLink = () => {
   const { t } = useTranslation();
   return [
     {
-      href: "https://livedemo.affine.pro/",
+      href: "https://pathfinder.affine.pro/",
       title: t("Try it Online"),
     },
   ];

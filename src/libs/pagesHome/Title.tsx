@@ -63,7 +63,7 @@ const Title = () => {
           aria-expanded={open ? "true" : undefined}
         >
           <a
-            href="https://livedemo.affine.pro/"
+            href="https://pathfinder.affine.pro/"
             target="_blank"
             rel="noreferrer"
           >
