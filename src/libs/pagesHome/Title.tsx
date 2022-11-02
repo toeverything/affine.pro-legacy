@@ -1,4 +1,4 @@
-import Popper from "@/libs/common/Popper";
+import VersionLink from "@/libs/common/VersionLink";
 import styled from "@emotion/styled";
 import { useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
@@ -64,7 +64,7 @@ const Title = () => {
           </a>
         </StyledLogo>
       </StyledButton>
-      <Popper
+      <VersionLink
         anchorEl={anchorEl}
         open={open}
         handleClose={handleClose}

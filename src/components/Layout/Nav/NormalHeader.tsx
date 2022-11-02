@@ -1,4 +1,4 @@
-import Popper from "@/libs/common/Popper";
+import VersionLink from "@/libs/common/VersionLink";
 import styled from "@emotion/styled";
 import { useRef, useState } from "react";
 import { LinkText } from "../LinkText";
@@ -61,7 +61,7 @@ export const NormalRightHeader = () => {
             );
           })}
         </div>
-        <Popper
+        <VersionLink
           anchorEl={anchorEl}
           open={open}
           handleClose={handleClose}
