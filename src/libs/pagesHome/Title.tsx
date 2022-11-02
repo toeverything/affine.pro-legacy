@@ -1,33 +1,27 @@
-import type { MouseEvent } from "react";
-import { useState, useRef } from "react";
+import VersionLink from "@/libs/common/VersionLink";
 import styled from "@emotion/styled";
+import { useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import Alternatives from "./Alternatives";
 import GithubSvg from "./GithubIcon";
 import Logo from "./Logo";
 
-import Grow from "@mui/material/Grow";
-import Paper from "@mui/material/Paper";
-import Popper from "@mui/material/Popper";
-import MenuItem from "@mui/material/MenuItem";
-import MenuList from "@mui/material/MenuList";
-
 const Title = () => {
   const { t } = useTranslation();
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const anchorElRef = useRef<HTMLButtonElement>(null);
+
   const open = Boolean(anchorEl);
-  const isHover = useRef(false);
+  const hoverCloseDelay = 200;
+  const timeoutID = useRef<number | undefined>();
   const handleClose = () => {
-    isHover.current = false;
-    setTimeout(() => {
-      if (!isHover.current) {
-        setAnchorEl(null);
-      }
-    }, 50);
+    timeoutID.current = window.setTimeout(() => {
+      setAnchorEl(null);
+    }, hoverCloseDelay);
   };
+
   const handleOpen = () => {
-    isHover.current = true;
+    window.clearTimeout(timeoutID.current);
     setAnchorEl(anchorElRef.current);
   };
 
@@ -52,74 +46,21 @@ const Title = () => {
             &nbsp;{t("Check GitHub")}
           </a>
         </StyledGithub>
-        <StyledLogo
-          ref={anchorElRef}
-          onMouseOver={handleOpen}
-          onMouseLeave={handleClose}
-          aria-controls={open ? "basic-menu" : undefined}
-          aria-haspopup="true"
-          aria-expanded={open ? "true" : undefined}
-        >
-          <a
-            href="https://livedemo.affine.pro/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <Logo fill="#fff" stroke="#fff" width="20" height="20" />
-            &nbsp;{t("Try it Online")}
-          </a>
-        </StyledLogo>
+        <StyledVersionLink>
+          <VersionLink>
+            <a
+              href="https://pathfinder.affine.pro/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <StyledLogo>
+                <Logo fill="#fff" stroke="#fff" width="20" height="20" />
+                &nbsp;{t("Try it Online")}
+              </StyledLogo>
+            </a>
+          </VersionLink>
+        </StyledVersionLink>
       </StyledButton>
-      <Popper
-        open={open}
-        anchorEl={anchorEl}
-        placement="bottom-start"
-        transition
-      >
-        {({ TransitionProps, placement }) => (
-          <Grow
-            {...TransitionProps}
-            style={{
-              transformOrigin:
-                placement === "bottom-start" ? "left top" : "left bottom",
-            }}
-          >
-            <Paper>
-              <MenuList onMouseLeave={handleClose} onMouseEnter={handleOpen}>
-                <MenuItem onClick={handleClose}>
-                  <StyledLink
-                    href="https://livedemo.affine.pro/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    AFFINE Pre-Alpha
-                  </StyledLink>
-                </MenuItem>
-                <MenuItem onClick={handleClose} sx={{ cursor: "auto" }}>
-                  <div>
-                    <StyledLink
-                      href="https://pathfinder.affine.pro/"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      AFFINE Alpha
-                      <StyledBadge>New</StyledBadge>
-                    </StyledLink>
-
-                    <StyledSubLink
-                      href="https://affine.pro/content/blog/affine-alpha-is-coming/index"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      Why a new Version?
-                    </StyledSubLink>
-                  </div>
-                </MenuItem>
-              </MenuList>
-            </Paper>
-          </Grow>
-        )}
-      </Popper>
     </>
   );
 };
@@ -207,6 +148,7 @@ const StyledLogo = styled.button({
   display: "flex",
   flexWrap: "wrap",
   textAlign: "center",
+  alignItems: "center",
   fontSize: "inherit",
   lineHeight: 1,
   fontWeight: "bolder",
@@ -214,28 +156,9 @@ const StyledLogo = styled.button({
   backgroundColor: "#000",
   cursor: "pointer",
   border: "none",
-  margin: "auto 24px",
+  margin: "auto",
   padding: "16px 28px",
 });
-const StyledBadge = styled.div({
-  backgroundColor: "#ff1744",
-  color: "#fff",
-  transform: "translate(0,-50%)",
-  fontSize: "10px",
-  padding: "0 4px",
-  height: "16px",
-  display: "inline-flex",
-  justifyContent: "center",
-  alignItems: "center",
-  borderRadius: "4px 4px 4px 0",
-});
-const StyledLink = styled.a({
-  color: "#000",
-  fontSize: "18px",
-  fontWeight: "bold",
-});
-const StyledSubLink = styled.a({
-  color: "#096bde",
-  fontSize: "14px",
-  marginLeft: "15px",
+const StyledVersionLink = styled.div({
+  margin: "auto 24px",
 });
