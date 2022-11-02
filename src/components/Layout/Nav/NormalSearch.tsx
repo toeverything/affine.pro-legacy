@@ -99,11 +99,14 @@ const StyledAlgolia = styled.div<isShow>`
   display: ${(props) => (props.isShow ? "flex" : "none")};
   margin-left: 16px;
   transition: 0.2s ease-in;
+  @media (max-width: 1300px) {
+    width: 450px;
+  }
   @media (max-width: 1200px) {
-    width: 400px;
+    width: 350px;
   }
   @media (max-width: 1100px) {
-    width: 300px;
+    width: 250px;
   }
 `;
 const StyledSearch = styled.div`

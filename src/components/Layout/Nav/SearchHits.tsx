@@ -11,8 +11,6 @@ import { useHits, UseHitsProps } from "react-instantsearch-hooks-web";
 const CustomHits = (props: UseHitsProps) => {
   const { hits, results } = useHits(props);
   const [showResult, setShowResult] = useState(false);
-  console.log(hits);
-  console.log(results?.query);
   useEffect(() => {
     results?.query == "" ? setShowResult(false) : setShowResult(true);
   }, [results?.query]);
@@ -52,7 +50,7 @@ const StyledHits = styled.div<isShow>`
   display: ${(props) => (props.isShow ? "flex" : "none")};
   width: 100%;
   background-color: white;
-  border: 2px solid black;
+  border: 1px solid black;
   position: absolute;
   overflow-y: scroll;
   opacity: 1;
