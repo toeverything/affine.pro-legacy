@@ -10,18 +10,18 @@ const Title = () => {
   const { t } = useTranslation();
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const anchorElRef = useRef<HTMLButtonElement>(null);
+
   const open = Boolean(anchorEl);
-  const isHover = useRef(false);
+  const hoverCloseDelay = 200;
+  const timeoutID = useRef<number | undefined>();
   const handleClose = () => {
-    isHover.current = false;
-    setTimeout(() => {
-      if (!isHover.current) {
-        setAnchorEl(null);
-      }
-    }, 50);
+    timeoutID.current = window.setTimeout(() => {
+      setAnchorEl(null);
+    }, hoverCloseDelay);
   };
+
   const handleOpen = () => {
-    isHover.current = true;
+    window.clearTimeout(timeoutID.current);
     setAnchorEl(anchorElRef.current);
   };
 
@@ -46,30 +46,21 @@ const Title = () => {
             &nbsp;{t("Check GitHub")}
           </a>
         </StyledGithub>
-        <StyledLogo
-          ref={anchorElRef}
-          onMouseOver={handleOpen}
-          onMouseLeave={handleClose}
-          aria-controls={open ? "basic-menu" : undefined}
-          aria-haspopup="true"
-          aria-expanded={open ? "true" : undefined}
-        >
-          <a
-            href="https://pathfinder.affine.pro/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <Logo fill="#fff" stroke="#fff" width="20" height="20" />
-            &nbsp;{t("Try it Online")}
-          </a>
-        </StyledLogo>
+        <StyledVersionLink>
+          <VersionLink>
+            <a
+              href="https://pathfinder.affine.pro/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <StyledLogo>
+                <Logo fill="#fff" stroke="#fff" width="20" height="20" />
+                &nbsp;{t("Try it Online")}
+              </StyledLogo>
+            </a>
+          </VersionLink>
+        </StyledVersionLink>
       </StyledButton>
-      <VersionLink
-        anchorEl={anchorEl}
-        open={open}
-        handleClose={handleClose}
-        handleOpen={handleOpen}
-      />
     </>
   );
 };
@@ -157,6 +148,7 @@ const StyledLogo = styled.button({
   display: "flex",
   flexWrap: "wrap",
   textAlign: "center",
+  alignItems: "center",
   fontSize: "inherit",
   lineHeight: 1,
   fontWeight: "bolder",
@@ -164,28 +156,9 @@ const StyledLogo = styled.button({
   backgroundColor: "#000",
   cursor: "pointer",
   border: "none",
-  margin: "auto 24px",
+  margin: "auto",
   padding: "16px 28px",
 });
-const StyledBadge = styled.div({
-  backgroundColor: "#ff1744",
-  color: "#fff",
-  transform: "translate(0,-50%)",
-  fontSize: "10px",
-  padding: "0 4px",
-  height: "16px",
-  display: "inline-flex",
-  justifyContent: "center",
-  alignItems: "center",
-  borderRadius: "4px 4px 4px 0",
-});
-const StyledLink = styled.a({
-  color: "#000",
-  fontSize: "18px",
-  fontWeight: "bold",
-});
-const StyledSubLink = styled.a({
-  color: "#096bde",
-  fontSize: "14px",
-  marginLeft: "15px",
+const StyledVersionLink = styled.div({
+  margin: "auto 24px",
 });

@@ -28,13 +28,15 @@ export const NormalRightHeader = () => {
   const anchorElRef = useRef<HTMLDivElement>(null);
   const open = Boolean(anchorEl);
   const hoverCloseDelay = 200;
-  let timeoutID: ReturnType<typeof setTimeout>;
+  const timeoutID = useRef<number | undefined>();
   const handleClose = () => {
-    timeoutID = setTimeout(() => setAnchorEl(null), hoverCloseDelay);
+    timeoutID.current = window.setTimeout(() => {
+      setAnchorEl(null);
+    }, hoverCloseDelay);
   };
 
   const handleOpen = () => {
-    clearTimeout(timeoutID);
+    window.clearTimeout(timeoutID.current);
     setAnchorEl(anchorElRef.current);
   };
 
@@ -44,26 +46,13 @@ export const NormalRightHeader = () => {
         {feedbackLink.map((nav) => {
           return <LinkText key={nav.title} href={nav.href} title={nav.title} />;
         })}
-        <div
-          ref={anchorElRef}
-          onMouseOver={handleOpen}
-          onMouseLeave={handleClose}
-          aria-controls={open ? "basic-menu" : undefined}
-          aria-haspopup="true"
-          aria-expanded={open ? "true" : undefined}
-        >
+        <VersionLink>
           {liveDemoLink.map((nav) => {
             return (
               <LinkText key={nav.title} href={nav.href} title={nav.title} />
             );
           })}
-        </div>
-        <VersionLink
-          anchorEl={anchorEl}
-          open={open}
-          handleClose={handleClose}
-          handleOpen={handleOpen}
-        />
+        </VersionLink>
         <LanguageMenu />
       </StyledContainer>
     </>

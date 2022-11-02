@@ -5,68 +5,94 @@ import MenuItem from "@mui/material/MenuItem";
 import MenuList from "@mui/material/MenuList";
 import Paper from "@mui/material/Paper";
 import Popper from "@mui/material/Popper";
+import { useRef, useState } from "react";
 
-type LiveDemoLink = {
-  anchorEl: null | HTMLElement;
-  open: boolean;
-  handleClose: () => void;
-  handleOpen: () => void;
+type PopperComponent = {
+  children: React.ReactNode;
 };
 
-const PopperComponent = (props: LiveDemoLink) => {
-  const { open, anchorEl, handleClose, handleOpen } = props;
-  return (
-    <Popper
-      open={open}
-      anchorEl={anchorEl}
-      placement="bottom-start"
-      transition
-      style={{ zIndex: 2000 }}
-    >
-      {({ TransitionProps, placement }) => (
-        <Grow
-          {...TransitionProps}
-          style={{
-            transformOrigin:
-              placement === "bottom-start" ? "left top" : "left bottom",
-          }}
-        >
-          <Paper>
-            <MenuList onMouseLeave={handleClose} onMouseEnter={handleOpen}>
-              <MenuItem onClick={handleClose}>
-                <StyledLink
-                  href="https://livedemo.affine.pro/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  AFFINE Pre-Alpha
-                </StyledLink>
-              </MenuItem>
-              <MenuItem onClick={handleClose} sx={{ cursor: "auto" }}>
-                <div>
-                  <StyledLink
-                    href="https://pathfinder.affine.pro/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    AFFINE Alpha
-                    <StyledBadge>New</StyledBadge>
-                  </StyledLink>
+const PopperComponent = (props: PopperComponent) => {
+  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
+  const anchorElRef = useRef<HTMLDivElement>(null);
 
-                  <StyledSubLink
-                    href="https://affine.pro/content/blog/affine-alpha-is-coming/index"
+  const open = Boolean(anchorEl);
+  const hoverCloseDelay = 200;
+  const timeoutID = useRef<number | undefined>();
+  const handleClose = () => {
+    timeoutID.current = window.setTimeout(() => {
+      setAnchorEl(null);
+    }, hoverCloseDelay);
+  };
+
+  const handleOpen = () => {
+    window.clearTimeout(timeoutID.current);
+    setAnchorEl(anchorElRef.current);
+  };
+
+  return (
+    <>
+      <div
+        ref={anchorElRef}
+        onMouseOver={handleOpen}
+        onMouseLeave={handleClose}
+        aria-controls={open ? "basic-menu" : undefined}
+        aria-haspopup="true"
+        aria-expanded={open ? "true" : undefined}
+      >
+        {props.children}
+      </div>
+      <Popper
+        open={open}
+        anchorEl={anchorEl}
+        placement="bottom-start"
+        transition
+        style={{ zIndex: 2000 }}
+      >
+        {({ TransitionProps, placement }) => (
+          <Grow
+            {...TransitionProps}
+            style={{
+              transformOrigin:
+                placement === "bottom-start" ? "left top" : "left bottom",
+            }}
+          >
+            <Paper>
+              <MenuList onMouseLeave={handleClose} onMouseEnter={handleOpen}>
+                <MenuItem onClick={handleClose}>
+                  <StyledLink
+                    href="https://livedemo.affine.pro/"
                     target="_blank"
                     rel="noreferrer"
                   >
-                    Why a new Version?
-                  </StyledSubLink>
-                </div>
-              </MenuItem>
-            </MenuList>
-          </Paper>
-        </Grow>
-      )}
-    </Popper>
+                    AFFINE Pre-Alpha
+                  </StyledLink>
+                </MenuItem>
+                <MenuItem onClick={handleClose} sx={{ cursor: "auto" }}>
+                  <div>
+                    <StyledLink
+                      href="https://pathfinder.affine.pro/"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      AFFINE Alpha
+                      <StyledBadge>New</StyledBadge>
+                    </StyledLink>
+
+                    <StyledSubLink
+                      href="https://affine.pro/content/blog/affine-alpha-is-coming/index"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      Why a new Version?
+                    </StyledSubLink>
+                  </div>
+                </MenuItem>
+              </MenuList>
+            </Paper>
+          </Grow>
+        )}
+      </Popper>
+    </>
   );
 };
 
