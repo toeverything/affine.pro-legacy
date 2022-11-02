@@ -27,17 +27,14 @@ export const NormalRightHeader = () => {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const anchorElRef = useRef<HTMLDivElement>(null);
   const open = Boolean(anchorEl);
-  const isHover = useRef(false);
+  const hoverCloseDelay = 200;
+  let timeoutID: ReturnType<typeof setTimeout>;
   const handleClose = () => {
-    isHover.current = false;
-    setTimeout(() => {
-      if (!isHover.current) {
-        setAnchorEl(null);
-      }
-    }, 50);
+    timeoutID = setTimeout(() => setAnchorEl(null), hoverCloseDelay);
   };
+
   const handleOpen = () => {
-    isHover.current = true;
+    clearTimeout(timeoutID);
     setAnchorEl(anchorElRef.current);
   };
 
