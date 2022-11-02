@@ -1,10 +1,39 @@
+import type { MouseEvent } from "react";
+import { useState, useRef } from "react";
 import styled from "@emotion/styled";
 import { useTranslation } from "react-i18next";
 import Alternatives from "./Alternatives";
 import GithubSvg from "./GithubIcon";
 import Logo from "./Logo";
+import Menu from "@mui/material/Menu";
+import MenuItem from "@mui/material/MenuItem";
+import makeStyles from "@material-ui/styles/makeStyles";
+
+const useStyles = makeStyles({
+  popOverRoot: {
+    pointerEvents: "none",
+  },
+});
+
 const Title = () => {
   const { t } = useTranslation();
+  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
+  const anchorElRef = useRef<HTMLButtonElement>(null);
+  const styles = useStyles();
+  const open = Boolean(anchorEl);
+  const isHover = useRef(false);
+  const handleClose = () => {
+    isHover.current = false;
+    setTimeout(() => {
+      if (!isHover.current) {
+        setAnchorEl(null);
+      }
+    }, 50);
+  };
+  const handleOpen = () => {
+    isHover.current = true;
+    setAnchorEl(anchorElRef.current);
+  };
 
   return (
     <>
@@ -27,7 +56,14 @@ const Title = () => {
             &nbsp;{t("Check GitHub")}
           </a>
         </StyledGithub>
-        <StyledLogo>
+        <StyledLogo
+          ref={anchorElRef}
+          onMouseOver={handleOpen}
+          onMouseLeave={handleClose}
+          aria-controls={open ? "basic-menu" : undefined}
+          aria-haspopup="true"
+          aria-expanded={open ? "true" : undefined}
+        >
           <a
             href="https://livedemo.affine.pro/"
             target="_blank"
@@ -38,11 +74,57 @@ const Title = () => {
           </a>
         </StyledLogo>
       </StyledButton>
+
+      <Menu
+        id="basic-menu"
+        anchorEl={anchorEl}
+        open={open}
+        MenuListProps={{
+          onMouseLeave: handleClose,
+          onMouseEnter: handleOpen,
+          style: { pointerEvents: "auto" },
+        }}
+        autoFocus={false}
+        PopoverClasses={{
+          root: styles.popOverRoot,
+        }}
+      >
+        <MenuItem onClick={handleClose}>
+          <StyledLink
+            href="https://livedemo.affine.pro/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            AFFINE Pre-Alpha
+          </StyledLink>
+        </MenuItem>
+        <MenuItem onClick={handleClose} sx={{ cursor: "auto" }}>
+          <div>
+            <StyledLink
+              href="https://pathfinder.affine.pro/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              AFFINE Alpha
+              <StyledBadge>New</StyledBadge>
+            </StyledLink>
+
+            <StyledSubLink
+              href="https://affine.pro/content/blog/affine-alpha-is-coming/index"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Why a new Version?
+            </StyledSubLink>
+          </div>
+        </MenuItem>
+      </Menu>
     </>
   );
 };
 
 export default Title;
+
 const StyledMain = styled.div({
   display: "flex",
   flexDirection: "column",
@@ -133,4 +215,26 @@ const StyledLogo = styled.button({
   border: "none",
   margin: "auto 24px",
   padding: "16px 28px",
+});
+const StyledBadge = styled.div({
+  backgroundColor: "#ff1744",
+  color: "#fff",
+  transform: "translate(0,-50%)",
+  fontSize: "10px",
+  padding: "0 4px",
+  height: "16px",
+  display: "inline-flex",
+  justifyContent: "center",
+  alignItems: "center",
+  borderRadius: "4px 4px 4px 0",
+});
+const StyledLink = styled.a({
+  color: "#000",
+  fontSize: "18px",
+  fontWeight: "bold",
+});
+const StyledSubLink = styled.a({
+  color: "#096bde",
+  fontSize: "14px",
+  marginLeft: "15px",
 });

@@ -1,5 +1,13 @@
 export const routeList = [
   {
+    old: "let-s-celebrate-10-000-stars-on-github-together",
+    new: "/content/blog/let-celebrate-10000-stars-on-github-together/index",
+  },
+  {
+    old: "a-new-docker-image-with-the-server-side-is-coming",
+    new: "/content/blog/a-new-docker-image-with-the-server-side-is-coming/index",
+  },
+  {
     old: "affine-local-user-guide-keep-your-data-in-your-hands-2022-09",
     new: "/content/blog/affine-local-user-guide-keep-your-data-in-your-hands-2022.09/index",
   },
