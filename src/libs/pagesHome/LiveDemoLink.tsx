@@ -34,6 +34,8 @@ const LiveDemoLink = (props: LiveDemoLink) => {
         PopoverClasses={{
           root: styles.popOverRoot,
         }}
+        disableScrollLock={true}
+        style={{ zIndex: 2000 }}
       >
         <MenuItem onClick={handleClose}>
           <StyledLink

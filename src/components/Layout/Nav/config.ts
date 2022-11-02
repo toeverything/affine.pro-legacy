@@ -2,8 +2,9 @@ import { useTranslation } from "react-i18next";
 
 export const useNavLink = () => {
   const leftNavLink = useLeftNavLink();
-  const rightNavLink = useRightNavLink();
-  const allNavLink = leftNavLink.concat(rightNavLink);
+  const feedbackLink = useFeedbackLink();
+  const liveDemoLink = useLiveDemoLink();
+  const allNavLink = leftNavLink.concat(feedbackLink).concat(liveDemoLink);
   return allNavLink;
 };
 export const useLeftNavLink = () => {
@@ -23,13 +24,18 @@ export const useLeftNavLink = () => {
     },
   ];
 };
-export const useRightNavLink = () => {
+export const useFeedbackLink = () => {
   const { t } = useTranslation();
   return [
     {
       href: "/feedback",
       title: t("Feedback"),
     },
+  ];
+};
+export const useLiveDemoLink = () => {
+  const { t } = useTranslation();
+  return [
     {
       href: "https://livedemo.affine.pro/",
       title: t("Try it Online"),
