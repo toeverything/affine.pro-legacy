@@ -16,7 +16,13 @@ type LiveDemoLink = {
 const PopperComponent = (props: LiveDemoLink) => {
   const { open, anchorEl, handleClose, handleOpen } = props;
   return (
-    <Popper open={open} anchorEl={anchorEl} placement="bottom-start" transition>
+    <Popper
+      open={open}
+      anchorEl={anchorEl}
+      placement="bottom-start"
+      transition
+      style={{ zIndex: 2000 }}
+    >
       {({ TransitionProps, placement }) => (
         <Grow
           {...TransitionProps}

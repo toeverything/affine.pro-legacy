@@ -55,7 +55,7 @@ const Title = () => {
           aria-expanded={open ? "true" : undefined}
         >
           <a
-            href="https://livedemo.affine.pro/"
+            href="https://pathfinder.affine.pro/"
             target="_blank"
             rel="noreferrer"
           >
@@ -65,10 +65,10 @@ const Title = () => {
         </StyledLogo>
       </StyledButton>
       <Popper
-        anchorElRef={anchorElRef}
+        anchorEl={anchorEl}
         open={open}
-        handleOpen={handleOpen}
         handleClose={handleClose}
+        handleOpen={handleOpen}
       />
     </>
   );

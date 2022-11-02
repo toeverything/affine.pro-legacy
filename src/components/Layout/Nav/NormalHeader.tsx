@@ -1,6 +1,10 @@
 import styled from "@emotion/styled";
 import { LinkText } from "../LinkText";
-import { useLeftNavLink, useRightNavLink } from "./config";
+import {
+  useFeedbackNavLink,
+  useLeftNavLink,
+  useLiveDemoNavLink,
+} from "./config";
 import { LanguageMenu } from "./LanguageMenu";
 
 export const NormalLeftHeader = () => {
@@ -16,13 +20,21 @@ export const NormalLeftHeader = () => {
   );
 };
 export const NormalRightHeader = () => {
-  const navLinks = useRightNavLink();
+  const feedBackLink = useFeedbackNavLink();
+  const liveDemoLink = useLiveDemoNavLink();
   return (
     <>
       <StyledContainer>
-        {navLinks.map((nav) => {
+        {feedBackLink.map((nav) => {
           return <LinkText key={nav.title} href={nav.href} title={nav.title} />;
         })}
+        <div>
+          {liveDemoLink.map((nav) => {
+            return (
+              <LinkText key={nav.title} href={nav.href} title={nav.title} />
+            );
+          })}
+        </div>
         <LanguageMenu />
       </StyledContainer>
     </>
