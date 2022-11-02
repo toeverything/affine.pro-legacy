@@ -118,6 +118,7 @@ const StyledSearch = styled.div`
     font-size: 100%;
     box-shadow: none;
     border-color: #bbbfc4;
+    border-radius: 6px;
     transition: 0.2s ease-in;
     ::placeholder {
       opacity: 0.5;

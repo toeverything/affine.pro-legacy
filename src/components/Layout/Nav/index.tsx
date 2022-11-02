@@ -1,11 +1,11 @@
 import { useMatchMediaMaxWidth1000 } from "@/libs/common/matchMedia";
 import styled from "@emotion/styled";
 import NextLink from "next/link";
+import NormalSearch from "../SearchBar/NormalSearch";
+import SmallSearch from "../SearchBar/SmallSearch";
 import AFFiNETextLogo from "./affine-text-logo.png";
 import { NormalLeftHeader, NormalRightHeader } from "./NormalHeader";
-import NormalSearch from "./NormalSearch";
 import { SmallHeader } from "./SmallHeader";
-import SmallSearch from "./SmallSearch";
 export const HeaderNav = () => {
   const matchesMaxWidth1000 = useMatchMediaMaxWidth1000();
   return (

@@ -1,16 +1,20 @@
 import styled from "@emotion/styled";
 import Box from "@mui/material/Box";
-import Divider from "@mui/material/Divider";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
-import ListItemText from "@mui/material/ListItemText";
+import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-import { useHits, UseHitsProps } from "react-instantsearch-hooks-web";
+import {
+  Highlight,
+  useHits,
+  UseHitsProps,
+} from "react-instantsearch-hooks-web";
 
 const CustomHits = (props: UseHitsProps) => {
   const { hits, results } = useHits(props);
   const [showResult, setShowResult] = useState(false);
+  const router = useRouter();
   useEffect(() => {
     results?.query == "" ? setShowResult(false) : setShowResult(true);
   }, [results?.query]);
@@ -23,14 +27,35 @@ const CustomHits = (props: UseHitsProps) => {
           bgcolor: "background.paper",
         }}
       >
-        <Divider />
-
         <List>
           {hits.map((hit) => {
             return (
-              <ListItem disablePadding key={hit.objectID}>
-                <ListItemButton>
-                  <ListItemText primary={hit.title} />
+              <ListItem
+                disablePadding
+                key={hit.objectID}
+                onClick={() => router.push(hit.href!)}
+                sx={{
+                  padding: "0 8px",
+                }}
+              >
+                <ListItemButton
+                  sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                    borderRadius: "6px",
+                    padding: "8px",
+                    textAlign: "left",
+                  }}
+                >
+                  <StyledHitTittle>
+                    <Highlight attribute="title" hit={hit} />
+                  </StyledHitTittle>
+                  <StyledHitContent>
+                    <Highlight attribute="description" hit={hit} />
+                  </StyledHitContent>
+                  <StyledHitContent>
+                    <Highlight attribute="authors" hit={hit} />
+                  </StyledHitContent>
                 </ListItemButton>
               </ListItem>
             );
@@ -49,10 +74,13 @@ type isShow = {
 const StyledHits = styled.div<isShow>`
   display: ${(props) => (props.isShow ? "flex" : "none")};
   width: 100%;
+  max-height: 600px;
   background-color: white;
-  border: 1px solid black;
+  border: 1px solid;
   position: absolute;
   overflow-y: scroll;
+  border-color: #bbbfc4;
+  border-radius: 6px;
   opacity: 1;
   z-index: 100;
   margin-top: 48px;
@@ -62,7 +90,9 @@ const StyledHits = styled.div<isShow>`
     display: none; /* for Chrome, Safari, and Opera */
   }
 `;
-const StyledHit = styled.div`
-  display: flex;
-  flex-direction: column;
+const StyledHitTittle = styled.h3`
+  margin: 0;
+`;
+const StyledHitContent = styled.p`
+  margin: 0;
 `;
