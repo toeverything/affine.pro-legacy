@@ -3,7 +3,7 @@ import Box from "@mui/material/Box";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
-import { useRouter } from "next/router";
+import NextLink from "next/link";
 import { useEffect, useState } from "react";
 import {
   Highlight,
@@ -14,11 +14,9 @@ import {
 const CustomHits = (props: UseHitsProps) => {
   const { hits, results } = useHits(props);
   const [showResult, setShowResult] = useState(false);
-  const router = useRouter();
   useEffect(() => {
     results?.query == "" ? setShowResult(false) : setShowResult(true);
   }, [results?.query]);
-
   return (
     <StyledHits isShow={showResult}>
       <Box
@@ -37,41 +35,38 @@ const CustomHits = (props: UseHitsProps) => {
           <List>
             {hits.map((hit) => {
               return (
-                <a
-                  key={hit.objectID}
-                  href={hit.href as string}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <ListItem
-                    disablePadding
-                    sx={{
-                      padding: "0 8px",
-                    }}
-                  >
-                    <ListItemButton
+                <NextLink key={hit.objectID} href={hit.href as URL}>
+                  <a target="_blank" rel="noreferrer">
+                    <ListItem
+                      disablePadding
                       sx={{
-                        display: "flex",
-                        flexDirection: "column",
-                        alignItems: "start",
-                        borderRadius: "6px",
-                        padding: "8px",
-                        justifyContent: "start",
+                        padding: "0 8px",
                       }}
                     >
-                      <StyledHitTittle>
-                        <Highlight attribute="title" hit={hit} />
-                      </StyledHitTittle>
-                      <StyledHitContent>
-                        <Highlight attribute="description" hit={hit} />
-                      </StyledHitContent>
-                      <StyledHitContent>
-                        authors:&nbsp;
-                        <Highlight attribute="authors" hit={hit} />
-                      </StyledHitContent>
-                    </ListItemButton>
-                  </ListItem>
-                </a>
+                      <ListItemButton
+                        sx={{
+                          display: "flex",
+                          flexDirection: "column",
+                          alignItems: "start",
+                          borderRadius: "6px",
+                          padding: "8px",
+                          justifyContent: "start",
+                        }}
+                      >
+                        <StyledHitTittle>
+                          <Highlight attribute="title" hit={hit} />
+                        </StyledHitTittle>
+                        <StyledHitContent>
+                          <Highlight attribute="description" hit={hit} />
+                        </StyledHitContent>
+                        <StyledHitContent>
+                          authors:&nbsp;
+                          <Highlight attribute="authors" hit={hit} />
+                        </StyledHitContent>
+                      </ListItemButton>
+                    </ListItem>
+                  </a>
+                </NextLink>
               );
             })}
           </List>
