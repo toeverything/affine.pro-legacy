@@ -83,9 +83,9 @@ export default function Search(props: PageProps) {
     </InstantSearch>
   );
 }
-type isShow = {
+interface isShow {
   isShow: boolean | undefined;
-};
+}
 const StyledAlgolia = styled.div<isShow>`
   width: 500px;
   flex-direction: column;

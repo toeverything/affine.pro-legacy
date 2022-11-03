@@ -115,12 +115,12 @@ const SmallSearch = (props: PageProps) => {
 
 export default SmallSearch;
 
-type isShow = {
+interface isShow {
   isShow: boolean | undefined;
-};
-type isSearch = {
+}
+interface isSearch {
   isSearch: boolean;
-};
+}
 const StyledContainer = styled.div<isShow>`
   display: ${(props) => (props.isShow ? "flex" : "none")};
 `;

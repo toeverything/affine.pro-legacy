@@ -19,13 +19,7 @@ const CustomHits = (props: UseHitsProps) => {
   }, [results?.query]);
   return (
     <StyledHits isShow={showResult}>
-      <Box
-        sx={{
-          width: "100%",
-          bgcolor: "background.paper",
-          borderRadius: "6px",
-        }}
-      >
+      <StyledBox>
         <StyledResultsTitle>
           Showing {hits.length} results for &quot;
           <strong>{results?.query}</strong>
@@ -37,22 +31,8 @@ const CustomHits = (props: UseHitsProps) => {
               return (
                 <NextLink key={hit.objectID} href={hit.href as URL}>
                   <a target="_blank" rel="noreferrer">
-                    <ListItem
-                      disablePadding
-                      sx={{
-                        padding: "0 8px",
-                      }}
-                    >
-                      <ListItemButton
-                        sx={{
-                          display: "flex",
-                          flexDirection: "column",
-                          alignItems: "start",
-                          borderRadius: "6px",
-                          padding: "8px",
-                          justifyContent: "start",
-                        }}
-                      >
+                    <StyledListItem disablePadding>
+                      <StyledListItemButton>
                         <StyledHitTittle>
                           <Highlight attribute="title" hit={hit} />
                         </StyledHitTittle>
@@ -63,8 +43,8 @@ const CustomHits = (props: UseHitsProps) => {
                           authors:&nbsp;
                           <Highlight attribute="authors" hit={hit} />
                         </StyledHitContent>
-                      </ListItemButton>
-                    </ListItem>
+                      </StyledListItemButton>
+                    </StyledListItem>
                   </a>
                 </NextLink>
               );
@@ -74,16 +54,16 @@ const CustomHits = (props: UseHitsProps) => {
         <StyledAlgoliaLogo>
           <PoweredBy />
         </StyledAlgoliaLogo>
-      </Box>
+      </StyledBox>
     </StyledHits>
   );
 };
 
 export default CustomHits;
 
-type isShow = {
+interface isShow {
   isShow: boolean;
-};
+}
 const StyledHits = styled.div<isShow>`
   display: ${(props) => (props.isShow ? "flex" : "none")};
   width: 100%;
@@ -109,6 +89,22 @@ const StyledList = styled.div`
     display: none; /* for Chrome, Safari, and Opera */
   }
 `;
+const StyledBox = styled(Box)({
+  width: "100%",
+  bgcolor: "background.paper",
+  borderRadius: "6px",
+});
+const StyledListItem = styled(ListItem)({
+  padding: "0 8px",
+});
+const StyledListItemButton = styled(ListItemButton)({
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "start",
+  borderRadius: "6px",
+  padding: "8px",
+  justifyContent: "start",
+});
 const StyledHitTittle = styled.h3`
   width: 100%;
   margin: 0;
