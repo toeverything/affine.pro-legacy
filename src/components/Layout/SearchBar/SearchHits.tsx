@@ -3,7 +3,6 @@ import Box from "@mui/material/Box";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
-import NextLink from "next/link";
 import { useEffect, useState } from "react";
 import {
   Highlight,
@@ -29,24 +28,27 @@ const CustomHits = (props: UseHitsProps) => {
           <List>
             {hits.map((hit) => {
               return (
-                <NextLink key={hit.objectID} href={hit.href as URL}>
-                  <a target="_blank" rel="noreferrer">
-                    <StyledListItem disablePadding>
-                      <StyledListItemButton>
-                        <StyledHitTittle>
-                          <Highlight attribute="title" hit={hit} />
-                        </StyledHitTittle>
-                        <StyledHitContent>
-                          <Highlight attribute="description" hit={hit} />
-                        </StyledHitContent>
-                        <StyledHitContent>
-                          authors:&nbsp;
-                          <Highlight attribute="authors" hit={hit} />
-                        </StyledHitContent>
-                      </StyledListItemButton>
-                    </StyledListItem>
-                  </a>
-                </NextLink>
+                <a
+                  key={hit.objectID}
+                  href={hit.href as string}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <StyledListItem disablePadding>
+                    <StyledListItemButton>
+                      <StyledHitTittle>
+                        <Highlight attribute="title" hit={hit} />
+                      </StyledHitTittle>
+                      <StyledHitContent>
+                        <Highlight attribute="description" hit={hit} />
+                      </StyledHitContent>
+                      <StyledHitContent>
+                        authors:&nbsp;
+                        <Highlight attribute="authors" hit={hit} />
+                      </StyledHitContent>
+                    </StyledListItemButton>
+                  </StyledListItem>
+                </a>
               );
             })}
           </List>
