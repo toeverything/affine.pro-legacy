@@ -37,45 +37,45 @@ const CustomHits = (props: UseHitsProps) => {
           <List>
             {hits.map((hit) => {
               return (
-                <ListItem
-                  disablePadding
+                <a
                   key={hit.objectID}
-                  onClick={() => router.push(hit.href!)}
-                  sx={{
-                    padding: "0 8px",
-                  }}
+                  href={hit.href as string}
+                  target="_blank"
+                  rel="noreferrer"
                 >
-                  <ListItemButton
+                  <ListItem
+                    disablePadding
                     sx={{
-                      display: "flex",
-                      flexDirection: "column",
-                      alignItems: "start",
-                      borderRadius: "6px",
-                      padding: "8px",
-                      justifyContent: "start",
+                      padding: "0 8px",
                     }}
                   >
-                    <StyledHitTittle>
-                      <Highlight attribute="title" hit={hit} />
-                    </StyledHitTittle>
-                    <StyledHitContent>
-                      <Highlight attribute="description" hit={hit} />
-                    </StyledHitContent>
-                    <StyledHitContent>
-                      authors:&nbsp;
-                      <Highlight attribute="authors" hit={hit} />
-                    </StyledHitContent>
-                  </ListItemButton>
-                </ListItem>
+                    <ListItemButton
+                      sx={{
+                        display: "flex",
+                        flexDirection: "column",
+                        alignItems: "start",
+                        borderRadius: "6px",
+                        padding: "8px",
+                        justifyContent: "start",
+                      }}
+                    >
+                      <StyledHitTittle>
+                        <Highlight attribute="title" hit={hit} />
+                      </StyledHitTittle>
+                      <StyledHitContent>
+                        <Highlight attribute="description" hit={hit} />
+                      </StyledHitContent>
+                      <StyledHitContent>
+                        authors:&nbsp;
+                        <Highlight attribute="authors" hit={hit} />
+                      </StyledHitContent>
+                    </ListItemButton>
+                  </ListItem>
+                </a>
               );
             })}
           </List>
         </StyledList>
-        {hits.length == 0 ? (
-          <StyledNoFound>
-            <em>No results found. Maybe try different keywords.</em>
-          </StyledNoFound>
-        ) : null}
         <StyledAlgoliaLogo>
           <PoweredBy />
         </StyledAlgoliaLogo>
@@ -152,10 +152,4 @@ const StyledResultsTitle = styled.em`
   strong {
     opacity: 1;
   }
-`;
-const StyledNoFound = styled.div`
-  width: 100%;
-  padding: 0 16px 16px 16px;
-  opacity: 0.8;
-  font-size: 14px;
 `;

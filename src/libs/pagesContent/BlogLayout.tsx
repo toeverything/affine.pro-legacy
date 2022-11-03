@@ -176,7 +176,7 @@ export const BlogLayout = ({
   html,
 }: ContentFileMeta) => {
   return (
-    <Page>
+    <Page showSearchBar={true}>
       <Header>
         <HeaderContent>
           <HeaderLeftContent>

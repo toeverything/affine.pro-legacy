@@ -54,7 +54,7 @@ export default function Blog(props: { blogMetas: ContentFileMeta[] }) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [router.query.tag]);
   return (
-    <Page>
+    <Page showSearchBar={true}>
       <div>
         <div className={styles.header}>
           <div className={styles.header_content}>

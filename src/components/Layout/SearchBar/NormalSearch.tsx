@@ -3,7 +3,6 @@ import type { SearchClient } from "algoliasearch";
 import algoliasearch from "algoliasearch";
 import "instantsearch.css/themes/satellite.css";
 import { useRouter } from "next/router";
-import { useEffect, useState } from "react";
 import {
   Highlight,
   Hits,
@@ -62,18 +61,14 @@ const Hit: HitComponent = ({ hit }) => {
     </div>
   );
 };
+interface PageProps {
+  showSearchBar?: boolean;
+}
 
-export default function Search() {
-  const [show, setShow] = useState(false);
-
-  const router = useRouter();
-  useEffect(() => {
-    router.asPath == "/blog" ? setShow(true) : setShow(false);
-  }, [router.asPath]);
-
+export default function Search(props: PageProps) {
   return (
     <InstantSearch searchClient={searchClient} indexName={INDEX_NAME}>
-      <StyledAlgolia isShow={show}>
+      <StyledAlgolia isShow={props.showSearchBar}>
         <StyledSearch>
           <SearchBox
             translations={{
@@ -89,7 +84,7 @@ export default function Search() {
   );
 }
 type isShow = {
-  isShow: boolean;
+  isShow: boolean | undefined;
 };
 const StyledAlgolia = styled.div<isShow>`
   width: 500px;

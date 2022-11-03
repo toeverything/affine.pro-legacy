@@ -65,17 +65,18 @@ const Hit: HitComponent = ({ hit }) => {
     </div>
   );
 };
+interface PageProps {
+  showSearchBar?: boolean;
+}
 
-const SmallSearch = () => {
-  const [show, setShow] = useState(false);
+const SmallSearch = (props: PageProps) => {
   const [search, setSearch] = useState(false);
   const router = useRouter();
   useEffect(() => {
-    router.asPath == "/blog" ? setShow(true) : setShow(false);
     document.body.style.overflow = search ? "hidden" : "visible";
   }, [router.asPath, search]);
   return (
-    <StyledContainer isShow={show}>
+    <StyledContainer isShow={props.showSearchBar}>
       <IconButton
         size="large"
         aria-label="search"
@@ -115,7 +116,7 @@ const SmallSearch = () => {
 export default SmallSearch;
 
 type isShow = {
-  isShow: boolean;
+  isShow: boolean | undefined;
 };
 type isSearch = {
   isSearch: boolean;
