@@ -176,18 +176,18 @@ export const BlogLayout = ({
   html,
 }: ContentFileMeta) => {
   return (
-    <Page>
+    <Page showSearchBar={true}>
       <Header>
         <HeaderContent>
           <HeaderLeftContent>
             {updated ? (
-              <HeaderTime>{`Updated: ${new Date(
-                updated
-              ).toLocaleDateString()}`}</HeaderTime>
+              <HeaderTime>{`Updated: ${new Date(updated).toLocaleDateString(
+                "en-US"
+              )}`}</HeaderTime>
             ) : created ? (
-              <HeaderTime>{`Created: ${new Date(
-                created!
-              ).toLocaleDateString()}`}</HeaderTime>
+              <HeaderTime>{`Created: ${new Date(created!).toLocaleDateString(
+                "en-US"
+              )}`}</HeaderTime>
             ) : null}
             <h1>{title}</h1>
             <HeaderDec>{description}</HeaderDec>

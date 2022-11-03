@@ -6,6 +6,7 @@ import { Footer } from "./Footer";
 import { HeaderNav } from "./Nav";
 
 interface PageProps {
+  showSearchBar?: boolean;
   children: ReactNode;
 }
 
@@ -15,14 +16,16 @@ const Container = styled.div`
   font-size: 16px;
 `;
 
-export function Page({ children }: PageProps) {
+export function Page(props: PageProps) {
   const { asPath } = useRouter();
+  const { children } = props;
+  const showSearchBar = props.showSearchBar;
 
   return (
     <>
       <AffineHead />
       <Container>
-        <HeaderNav />
+        <HeaderNav showSearchBar={showSearchBar} />
         <main>
           <article key={asPath}>{children}</article>
           <Footer />
