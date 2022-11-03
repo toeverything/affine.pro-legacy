@@ -11,6 +11,7 @@ import {
   Highlight,
   Hits,
   InstantSearch,
+  PoweredBy,
   SearchBox,
 } from "react-instantsearch-hooks-web";
 
@@ -102,6 +103,9 @@ const SmallSearch = () => {
           <StyledHits>
             <Hits hitComponent={Hit} />
           </StyledHits>
+          <StyledAlgoliaLogo>
+            <PoweredBy />
+          </StyledAlgoliaLogo>
         </StyledAlgolia>
       </InstantSearch>
     </StyledContainer>
@@ -152,9 +156,17 @@ const StyledButton = styled.div`
 `;
 const StyledHits = styled.div`
   width: 100%;
-  height: 100%;
+  height: 80%;
   position: absolute;
   overflow-y: scroll;
   z-index: 100;
   margin-top: 10vh;
+`;
+const StyledAlgoliaLogo = styled.div`
+  display: flex;
+  width: 100%;
+  position: absolute;
+  bottom: 30px;
+  margin-top: 20px;
+  justify-content: center;
 `;

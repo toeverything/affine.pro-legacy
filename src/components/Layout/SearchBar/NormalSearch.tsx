@@ -84,7 +84,6 @@ export default function Search() {
           />
         </StyledSearch>
         <CustomHits {...Hit} />
-        {/* <Hits hitComponent={Hit} /> */}
       </StyledAlgolia>
     </InstantSearch>
   );
