@@ -4,8 +4,8 @@ author: Christopher Smolak
 tags: The Open Source Engineering
 cover: ./cover.png
 description: To Everyone, from Toeverything - AFFiNE, BlockSuite and JWST
-created: 2022-10-25
-updated: 2022-10-25
+created: 2022-11-18
+updated: 2022-11-18
 layout: blog
 ---
 
