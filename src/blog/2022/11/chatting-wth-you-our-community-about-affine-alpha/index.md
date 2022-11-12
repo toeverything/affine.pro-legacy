@@ -2,7 +2,7 @@
 title: Chatting with you, our community, about AFFiNE Alpha!
 author:  Fangyuan Zheng, Christopher Smolak
 tags: Feature request
-cover: ./cover.jpeng
+cover: ./cover.jpeg
 description: Chatting with you, our community, about AFFiNE Alpha!
 created: 2022-11-11
 updated: 2022-11-11
