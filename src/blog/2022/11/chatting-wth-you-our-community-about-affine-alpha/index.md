@@ -5,7 +5,7 @@ tags: Feature request
 cover: ./cover.jpeng
 description: Chatting with you, our community, about AFFiNE Alpha!
 created: 2022-11-11
-updated: 2022-11-1
+updated: 2022-11-11
 layout: blog
 ---
 
