@@ -22,29 +22,29 @@ Dark Mode is a brand-new feature. During the pre-Alpha stage, many users suggest
 
 **Ishaanrathod said:**
 
-![](./Ishaanrathod said.png)
+![](./Ishaanrathod-said.png)
 
 
 **Hioko said:**
 
-![](./Hioko said.png)
+![](./Hioko-said.png)
 
 
 **Enamul said:**
 
-![](./Enamul said.png)
+![](./Enamul-said.png)
 
 After the Dark mode feature went live, users loved the feature more as well. This makes us very excited, and we made the right decision in choosing to go live with Dark mode in the Alpha release.
 
 
 **Edenilson LR said:**
 
-![](./Edenilson LR said-.png)
+![](./Edenilson-LR-said.png)
 
 
 **Mathematti said:**
 
-![](./Mathematti said.png)
+![](./Mathematti-said.png)
 
 
 ## Shortcuts
@@ -52,14 +52,14 @@ In August, UlyssesZhan asked us if we could support shortcuts because he wanted 
 
 **UlyssesZhan said:**
 
-![](./UlyssesZhan said.png)
+![](./UlyssesZhan-said.png)
 
 
 In mid-October, the Shortcuts feature of Alpha went live. Our Alpha release aims to provide a basic editable product for users, so basically, all shortcuts are for text content. We were also very fortunate to receive encouragement and love from everyone after the product went live, and this is what motivates us to strive for a better version.
 
 **αβiδ said:**
 
-![](./αβiδ said.png)
+![](./αβiδ-said.png)
 
 
 ## Markdown
@@ -70,18 +70,18 @@ Markdown is one of the most popular suggestions from our users, 90% of them want
 
 **Jimmy W said:**
 
-![](./Jimmy W said.png)
+![](./Jimmy-W-said.png)
 
 
 There is still a strong demand for Markdown from users, as it does provide us with convenience.
 
 **Bryan said:**
 
-![](./Bryan said1.png)
+![](./Bryan-said-1.png)
 
-![](./Bryan said-2.png)
+![](./Bryan-said-2.png)
 
-![](./Bryan said-3.png)
+![](./Bryan-said-3.png)
 
 We also conducted a user poll to find out how familiar users are with Markdown, and will soon publish a Markdown user guide to help you make the most out of the Markdown syntax and use it inside of the latest AFFiNE.
 
