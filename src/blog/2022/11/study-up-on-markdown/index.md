@@ -4,8 +4,8 @@ author: Christopher Smolak
 tags: Guides and Tutorials
 cover: ./cover.png
 description: Learn Markdown and how you can use it in AFFiNE
-created: 2022-11-11
-updated: 2022-11-11
+created: 2022-11-17
+updated: 2022-11-17
 layout: blog
 ---
 
