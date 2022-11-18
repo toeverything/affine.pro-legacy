@@ -1,15 +1,15 @@
 ---
 title: Study up, on Markdown
 author: Christopher Smolak
-tags: Guides and Tutorials
-cover: ./cover.png
+tags: User Guide
+cover: ./cover.jpg
 description: Learn Markdown and how you can use it in AFFiNE
-created: 2022-11-17
-updated: 2022-11-17
+created: 2022-11-18
+updated: 2022-11-18
 layout: blog
 ---
 
-[AFFiNE Alpha](https://pathfinder.affine.pro/) will be launched soon! Thank you very much for your continued interest and trust in the AFFiNE team.
+[AFFiNE Alpha](https://pathfinder.affine.pro) will be launched soon! Thank you very much for your continued interest and trust in the AFFiNE team.
 Since the launch of AFFiNE pre-Alpha, we have received many private messages and emails from our users, and they have given us lots of feedback. We realised that there were still many problems with AFFiNE pre-Alpha, whether that was user experience, page stability, or something else. After considering many aspects, we decided to refactor AFFiNE - start again from the ground up and we are now excited to announce AFFiNE Alpha.
 
 **Key words**：Markdown, Shortcuts, Syntax
@@ -59,4 +59,4 @@ Markdown has great support across many different services and products so we mad
 ![](./export.png) 
 
 ### Try it out!
-Hope you've found this guide about Markdown and available syntax useful. What better way to solidify this knowledge then to try it out yourself over on the live AFFiNE Alpha demo: https://pathfinder.affine.pro/ and let us know how it goes.
+Hope you've found this guide about Markdown and available syntax useful. What better way to solidify this knowledge then to try it out yourself over on the live AFFiNE Alpha demo: [https://pathfinder.affine.pro](https://pathfinder.affine.pro) and let us know how it goes.

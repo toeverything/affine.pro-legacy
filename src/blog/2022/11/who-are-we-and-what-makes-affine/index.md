@@ -2,7 +2,7 @@
 title: Who are we and what makes AFFiNE?
 author: Christopher Smolak
 tags: The Open Source Engineering
-cover: ./cover.png
+cover: ./cover.jpg
 description: To Everyone, from Toeverything - AFFiNE, BlockSuite and JWST
 created: 2022-11-25
 updated: 2022-11-25
