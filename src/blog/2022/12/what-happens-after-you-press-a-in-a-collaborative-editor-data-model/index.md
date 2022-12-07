@@ -5,7 +5,7 @@ tags: The Open Source Engineering
 cover: ./cover.jpg
 description: Part 1 - The data model perspective
 created: 2022-12-02
-updated: 2022-12-02
+updated: 2022-12-07
 layout: blog
 ---
 
@@ -17,7 +17,7 @@ We will explore the narrative from two different perspectives:
 - From the **data model perspective**, we’ll explore how real-time collaboration techniques roughly modeling and updating their data structures, for basic operations such as inserting text. This will involve an introduction to the event sourcing design pattern, as well as a high-level overview of mainstream conflict resolution algorithms (ie OT and CRDT).
 - From the **platform IO perspective**, we will introduce how a collaborative web editor should integrate important IO capabilities such as selection, keyboard binding and data persistence, behind seemingly simple keystrokes.
 
-Today, we'll take a look the data model perspective (keep an eye out for the platform IO perspective next week).
+In this article we'll take a look the data model perspective, check out part 2 to learn more about the platform IO perspective. 
 
 ## Data model perspective
 
