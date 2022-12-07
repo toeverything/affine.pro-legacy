@@ -4,8 +4,8 @@ author: Yifeng Wang, Christopher Smolak
 tags: The Open Source Engineering
 cover: ./cover.jpg
 description: Part 2 - The platform IO perspective
-created: 2022-12-02
-updated: 2022-12-02
+created: 2022-12-07
+updated: 2022-12-07
 layout: blog
 ---
 
