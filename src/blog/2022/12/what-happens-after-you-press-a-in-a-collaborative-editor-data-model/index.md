@@ -5,7 +5,7 @@ tags: The Open Source Engineering
 cover: ./cover.jpg
 description: Part 1 - The data model perspective
 created: 2022-12-02
-updated: 2022-12-02
+updated: 2022-12-07
 layout: blog
 ---
 
