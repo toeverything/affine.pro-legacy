@@ -25,7 +25,7 @@ const TeamMember = () => {
         </StyledLink>
         &nbsp;| Co-founder & Head of Engineering
       </StyledContent>
-      <StyledDes>He builds AFFiNE.</StyledDes>
+      <StyledDes>He builds AFFiNE with great engineers.</StyledDes>
       <StyledContent>
         <StyledLink
           target="_blank"
