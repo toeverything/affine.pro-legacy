@@ -3,7 +3,7 @@ const TeamMember = () => {
   return (
     <>
       <StyledTitle>Team Member</StyledTitle>
-      <StyledTitle2>Founder & Co-founders</StyledTitle2>
+      <StyledTitle2>Founder & Co-Founders</StyledTitle2>
       <StyledContent>
         <StyledLink
           target="_blank"
