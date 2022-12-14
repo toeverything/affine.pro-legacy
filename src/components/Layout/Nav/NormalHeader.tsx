@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 import { useRef, useState } from "react";
 import { LinkText } from "../LinkText";
 import {
-  useFeedbackNavLink,
+  useCommunityNavLink,
   useLeftNavLink,
   useLiveDemoNavLink,
 } from "./config";
@@ -22,7 +22,7 @@ export const NormalLeftHeader = () => {
   );
 };
 export const NormalRightHeader = () => {
-  const feedbackLink = useFeedbackNavLink();
+  const communityLink = useCommunityNavLink();
   const liveDemoLink = useLiveDemoNavLink();
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const anchorElRef = useRef<HTMLDivElement>(null);
@@ -43,7 +43,7 @@ export const NormalRightHeader = () => {
   return (
     <>
       <StyledContainer>
-        {feedbackLink.map((nav) => {
+        {communityLink.map((nav) => {
           return <LinkText key={nav.title} href={nav.href} title={nav.title} />;
         })}
         <VersionLink>
