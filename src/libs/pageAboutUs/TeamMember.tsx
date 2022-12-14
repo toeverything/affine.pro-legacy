@@ -3,7 +3,7 @@ const TeamMember = () => {
   return (
     <>
       <StyledTitle>Team Member</StyledTitle>
-      <StyledTitle2>Founder & Co-founders</StyledTitle2>
+      <StyledTitle2>Founder &amp; Co-Founders</StyledTitle2>
       <StyledContent>
         <StyledLink
           target="_blank"
@@ -12,7 +12,7 @@ const TeamMember = () => {
         >
           Jiachen He
         </StyledLink>
-        &nbsp;| Founder & Product Owner
+        &nbsp;| Founder &amp; Product Owner
       </StyledContent>
       <StyledDes>The PM and CEO guy.</StyledDes>
       <StyledContent>
@@ -23,22 +23,9 @@ const TeamMember = () => {
         >
           Chi Zhang
         </StyledLink>
-        &nbsp;| Co-founder & Head of Engineering
+        &nbsp;| Co-founder &amp; Head of Engineering
       </StyledContent>
-      <StyledDes>He builds AFFiNE.</StyledDes>
-      <StyledContent>
-        <StyledLink
-          target="_blank"
-          href="https://github.com/xiangwang1223"
-          rel="noreferrer"
-        >
-          Xiang Wang
-        </StyledLink>
-        &nbsp;| Co-founder & Head of Machine Learning Algorithms
-      </StyledContent>
-      <StyledDes>
-        Making everyone&apos;s life easier by embracing the power of AI.
-      </StyledDes>
+      <StyledDes>He builds AFFiNE with great engineers.</StyledDes>
       <StyledContent>
         <StyledLink
           target="_blank"
@@ -47,12 +34,11 @@ const TeamMember = () => {
         >
           Yipei Wei
         </StyledLink>
-        &nbsp;| Co-founder & Head of Community Support
+        &nbsp;| Co-founder &amp; Head of Community Support
       </StyledContent>
       <StyledDes>
         She talks to people so that AFFiNE is something people want.
       </StyledDes>
-      <StyledTitle2>Architectural Developers</StyledTitle2>
       <StyledContent>
         <StyledLink
           target="_blank"
@@ -61,7 +47,32 @@ const TeamMember = () => {
         >
           Yifeng Wang
         </StyledLink>
-        &nbsp;| Head of Graphics Architecture
+        &nbsp;| General Architecture Lead
+      </StyledContent>
+      <StyledDes>Creator of Blocksuite.</StyledDes>
+      <StyledContent>
+        <StyledLink
+          target="_blank"
+          href="https://github.com/xiangwang1223"
+          rel="noreferrer"
+        >
+          Xiang Wang
+        </StyledLink>
+        &nbsp;| Co-founder &amp; Head of Machine Learning Algorithms
+      </StyledContent>
+      <StyledDes>
+        Making everyone&apos;s life easier by embracing the power of AI.
+      </StyledDes>
+      <StyledTitle2>Architectural Developers</StyledTitle2>
+      <StyledContent>
+        <StyledLink
+          target="_blank"
+          href="https://github.com/colelawrence"
+          rel="noreferrer"
+        >
+          Cole Lawrence
+        </StyledLink>
+        &nbsp;| Architecture Engineer
       </StyledContent>
       <StyledContent>
         <StyledLink
@@ -102,6 +113,109 @@ const TeamMember = () => {
           Mingliang Wang
         </StyledLink>
         &nbsp;| Head of Structural Editing
+      </StyledContent>
+      <StyledTitle2>Engineering Team</StyledTitle2>
+      <StyledContent>
+        <StyledLink
+          target="_blank"
+          href="https://github.com/linonetwo"
+          rel="noreferrer"
+        >
+          Dongwu Lin
+        </StyledLink>
+        &nbsp;| Full-stack Engineer
+      </StyledContent>
+      <StyledContent>
+        <StyledLink
+          target="_blank"
+          href="https://github.com/lawvs"
+          rel="noreferrer"
+        >
+          Cankun You
+        </StyledLink>
+        &nbsp;| Full-stack Engineer
+      </StyledContent>
+      <StyledContent>
+        <StyledLink
+          target="_blank"
+          href="https://github.com/QiSHaoXuan"
+          rel="noreferrer"
+        >
+          Shaoxuan Qi
+        </StyledLink>
+        &nbsp;| Full-stack Engineer
+      </StyledContent>
+      <StyledContent>
+        <StyledLink
+          target="_blank"
+          href="https://shockwave.me"
+          rel="noreferrer"
+        >
+          Sicong Shao
+        </StyledLink>
+        &nbsp;| Full-stack Engineer
+      </StyledContent>
+      <StyledContent>
+        <StyledLink
+          target="_blank"
+          href="https://github.com/DiamondThree"
+          rel="noreferrer"
+        >
+          Haoxing Shang
+        </StyledLink>
+        &nbsp;| Full-stack Engineer
+      </StyledContent>
+      <StyledContent>
+        <StyledLink
+          target="_blank"
+          href="https://github.com/Himself65"
+          rel="noreferrer"
+        >
+          Zeyu Yang
+        </StyledLink>
+        &nbsp;| Full-stack Engineer
+      </StyledContent>
+      <StyledTitle2>Community Team</StyledTitle2>
+      <StyledContent>
+        <StyledLink
+          target="_blank"
+          href="https://github.com/ShortCipher5"
+          rel="noreferrer"
+        >
+          Christopher Smolak
+        </StyledLink>
+        &nbsp;| Operations Specialist
+      </StyledContent>
+      <StyledContent>
+        <StyledLink
+          target="_blank"
+          href="https://github.com/fyZheng07"
+          rel="noreferrer"
+        >
+          Fangyuan Zheng
+        </StyledLink>
+        &nbsp;| Community Support Operator
+      </StyledContent>
+      <StyledTitle2>Design Team</StyledTitle2>
+      <StyledContent>
+        <StyledLink
+          target="_blank"
+          href="https://craft.do/s/jxEgkth6QpmxPs"
+          rel="noreferrer"
+        >
+          Qiao Hou
+        </StyledLink>
+        &nbsp;| UX Researcher
+      </StyledContent>
+      <StyledContent>
+        <StyledLink
+          target="_blank"
+          href="https://www.figma.com/file/QJMj6PBfmICHpQqPSEwznr/Portfolio-of-Velika?node-id=2052%3A59&t=QeWFdrAfB6hcukGp-1"
+          rel="noreferrer"
+        >
+          Haifang Li
+        </StyledLink>
+        &nbsp;| Director UI/UX
       </StyledContent>
     </>
   );
