@@ -49,7 +49,9 @@ const TeamMember = () => {
         </StyledLink>
         &nbsp;| General Architecture Lead
       </StyledContent>
-      <StyledDes>He ensures AFFiNE is built with the proper technology.</StyledDes>
+      <StyledDes>
+        He ensures AFFiNE is built with the proper technology.
+      </StyledDes>
       <StyledContent>
         <StyledLink
           target="_blank"
