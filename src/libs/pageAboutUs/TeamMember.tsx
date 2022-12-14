@@ -49,9 +49,7 @@ const TeamMember = () => {
         </StyledLink>
         &nbsp;| General Architecture Lead
       </StyledContent>
-      <StyledDes>
-        Creator of Blocksuite.
-      </StyledDes>
+      <StyledDes>Creator of Blocksuite.</StyledDes>
       <StyledContent>
         <StyledLink
           target="_blank"
@@ -163,7 +161,7 @@ const TeamMember = () => {
           href="https://github.com/DiamondThree"
           rel="noreferrer"
         >
-         Haoxing Shang
+          Haoxing Shang
         </StyledLink>
         &nbsp;| Full-stack Engineer
       </StyledContent>
@@ -210,11 +208,7 @@ const TeamMember = () => {
         &nbsp;| UX Researcher
       </StyledContent>
       <StyledContent>
-        <StyledLink
-          target="_blank"
-          href="#"
-          rel="noreferrer"
-        >
+        <StyledLink target="_blank" href="#" rel="noreferrer">
           Haifang Li
         </StyledLink>
         &nbsp;| Director UI/UX
