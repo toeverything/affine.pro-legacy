@@ -208,7 +208,11 @@ const TeamMember = () => {
         &nbsp;| UX Researcher
       </StyledContent>
       <StyledContent>
-        <StyledLink target="_blank" href="#" rel="noreferrer">
+        <StyledLink 
+          target="_blank" 
+          href="https://www.figma.com/file/QJMj6PBfmICHpQqPSEwznr/Portfolio-of-Velika?node-id=2052%3A59" 
+          rel="noreferrer"
+        >
           Haifang Li
         </StyledLink>
         &nbsp;| Director UI/UX
