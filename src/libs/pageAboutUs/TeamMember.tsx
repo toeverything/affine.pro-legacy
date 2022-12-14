@@ -195,6 +195,27 @@ const TeamMember = () => {
         </StyledLink>
         &nbsp;| Community Support Operator
       </StyledContent>
+      <StyledTitle2>Design Team</StyledTitle2>
+      <StyledContent>
+        <StyledLink
+          target="_blank"
+          href="https://craft.do/s/jxEgkth6QpmxPs"
+          rel="noreferrer"
+        >
+          Qiao Hou
+        </StyledLink>
+        &nbsp;| UX Researcher
+      </StyledContent>
+      <StyledContent>
+        <StyledLink
+          target="_blank"
+          href="#"
+          rel="noreferrer"
+        >
+          Haifang Li
+        </StyledLink>
+        &nbsp;| Director UI/UX
+      </StyledContent>
     </>
   );
 };
