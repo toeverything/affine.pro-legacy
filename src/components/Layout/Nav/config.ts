@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 
 export const useNavLink = () => {
   const leftNavLink = useLeftNavLink();
-  const rightNavLink = useFeedbackNavLink().concat(useLiveDemoNavLink());
+  const rightNavLink = useCommunityNavLink().concat(useLiveDemoNavLink());
   const allNavLink = leftNavLink.concat(rightNavLink);
   return allNavLink;
 };
@@ -23,12 +23,12 @@ export const useLeftNavLink = () => {
     },
   ];
 };
-export const useFeedbackNavLink = () => {
+export const useCommunityNavLink = () => {
   const { t } = useTranslation();
   return [
     {
-      href: "/feedback",
-      title: t("Feedback"),
+      href: "https://community.affine.pro",
+      title: t("Community"),
     },
   ];
 };
