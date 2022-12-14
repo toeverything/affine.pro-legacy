@@ -210,7 +210,7 @@ const TeamMember = () => {
       <StyledContent>
         <StyledLink 
           target="_blank" 
-          href="https://www.figma.com/file/QJMj6PBfmICHpQqPSEwznr/Portfolio-of-Velika?node-id=2052%3A59" 
+          href="https://www.figma.com/file/QJMj6PBfmICHpQqPSEwznr/Portfolio-of-Velika?node-id=2052%3A59&t=QeWFdrAfB6hcukGp-1" 
           rel="noreferrer"
         >
           Haifang Li
