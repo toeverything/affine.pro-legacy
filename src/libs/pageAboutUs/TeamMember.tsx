@@ -49,7 +49,9 @@ const TeamMember = () => {
         </StyledLink>
         &nbsp;| General Architecture Lead
       </StyledContent>
-      <StyledDes>Creator of Blocksuite.</StyledDes>
+      <StyledDes>
+        He ensures AFFiNE is built with the proper technology.
+      </StyledDes>
       <StyledContent>
         <StyledLink
           target="_blank"
@@ -179,7 +181,7 @@ const TeamMember = () => {
       <StyledContent>
         <StyledLink
           target="_blank"
-          href="https://github.com/ShortCipher5"
+          href="https://shortcipher.me"
           rel="noreferrer"
         >
           Christopher Smolak
@@ -216,6 +218,22 @@ const TeamMember = () => {
           Haifang Li
         </StyledLink>
         &nbsp;| Director UI/UX
+      </StyledContent>
+      <StyledContent>
+        <StyledLink
+          target="_blank"
+          href="https://github.com/Svaney-ssman"
+          rel="noreferrer"
+        >
+          Shiwen Shen
+        </StyledLink>
+        &nbsp;| UX Designer
+      </StyledContent>
+      <StyledContent>
+        <StyledLink target="_blank" href="https://xell.me" rel="noreferrer">
+          Guozhu Liu
+        </StyledLink>
+        &nbsp;| Head of Product Design
       </StyledContent>
     </>
   );
