@@ -113,6 +113,67 @@ const TeamMember = () => {
         </StyledLink>
         &nbsp;| Head of Structural Editing
       </StyledContent>
+      <StyledTitle2>Engineering Team</StyledTitle2>
+      <StyledContent>
+        <StyledLink
+          target="_blank"
+          href="https://github.com/linonetwo"
+          rel="noreferrer"
+        >
+          Dongwu Lin
+        </StyledLink>
+        &nbsp;| Full-stack Engineer
+      </StyledContent>
+      <StyledContent>
+        <StyledLink
+          target="_blank"
+          href="https://github.com/lawvs"
+          rel="noreferrer"
+        >
+          Cankun You
+        </StyledLink>
+        &nbsp;| Full-stack Engineer
+      </StyledContent>
+      <StyledContent>
+        <StyledLink
+          target="_blank"
+          href="https://github.com/QiSHaoXuan"
+          rel="noreferrer"
+        >
+          Shaoxuan Qi
+        </StyledLink>
+        &nbsp;| Full-stack Engineer
+      </StyledContent>
+      <StyledContent>
+        <StyledLink
+          target="_blank"
+          href="https://shockwave.me"
+          rel="noreferrer"
+        >
+          Sicong Shao
+        </StyledLink>
+        &nbsp;| Full-stack Engineer
+      </StyledContent>
+      <StyledContent>
+        <StyledLink
+          target="_blank"
+          href="https://github.com/DiamondThree"
+          rel="noreferrer"
+        >
+         Haoxing Shang
+        </StyledLink>
+        &nbsp;| Full-stack Engineer
+      </StyledContent>
+      <StyledContent>
+        <StyledLink
+          target="_blank"
+          href="https://github.com/Himself65"
+          rel="noreferrer"
+        >
+          Zeyu Yang
+        </StyledLink>
+        &nbsp;| Full-stack Engineer
+      </StyledContent>
     </>
   );
 };
