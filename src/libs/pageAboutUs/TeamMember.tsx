@@ -3,7 +3,7 @@ const TeamMember = () => {
   return (
     <>
       <StyledTitle>Team Member</StyledTitle>
-      <StyledTitle2>Founder & Co-Founders</StyledTitle2>
+      <StyledTitle2>Founder &amp; Co-Founders</StyledTitle2>
       <StyledContent>
         <StyledLink
           target="_blank"
@@ -12,7 +12,7 @@ const TeamMember = () => {
         >
           Jiachen He
         </StyledLink>
-        &nbsp;| Founder & Product Owner
+        &nbsp;| Founder &amp; Product Owner
       </StyledContent>
       <StyledDes>The PM and CEO guy.</StyledDes>
       <StyledContent>
@@ -23,7 +23,7 @@ const TeamMember = () => {
         >
           Chi Zhang
         </StyledLink>
-        &nbsp;| Co-founder & Head of Engineering
+        &nbsp;| Co-founder &amp; Head of Engineering
       </StyledContent>
       <StyledDes>He builds AFFiNE with great engineers.</StyledDes>
       <StyledContent>
@@ -34,7 +34,7 @@ const TeamMember = () => {
         >
           Yipei Wei
         </StyledLink>
-        &nbsp;| Co-founder & Head of Community Support
+        &nbsp;| Co-founder &amp; Head of Community Support
       </StyledContent>
       <StyledDes>
         She talks to people so that AFFiNE is something people want.
@@ -60,7 +60,7 @@ const TeamMember = () => {
         >
           Xiang Wang
         </StyledLink>
-        &nbsp;| Co-founder & Head of Machine Learning Algorithms
+        &nbsp;| Co-founder &amp; Head of Machine Learning Algorithms
       </StyledContent>
       <StyledDes>
         Making everyone&apos;s life easier by embracing the power of AI.
