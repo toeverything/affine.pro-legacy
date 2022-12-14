@@ -29,19 +29,6 @@ const TeamMember = () => {
       <StyledContent>
         <StyledLink
           target="_blank"
-          href="https://github.com/xiangwang1223"
-          rel="noreferrer"
-        >
-          Xiang Wang
-        </StyledLink>
-        &nbsp;| Co-founder & Head of Machine Learning Algorithms
-      </StyledContent>
-      <StyledDes>
-        Making everyone&apos;s life easier by embracing the power of AI.
-      </StyledDes>
-      <StyledContent>
-        <StyledLink
-          target="_blank"
           href="https://github.com/Yipei-Operation"
           rel="noreferrer"
         >
@@ -52,7 +39,6 @@ const TeamMember = () => {
       <StyledDes>
         She talks to people so that AFFiNE is something people want.
       </StyledDes>
-      <StyledTitle2>Architectural Developers</StyledTitle2>
       <StyledContent>
         <StyledLink
           target="_blank"
@@ -61,8 +47,25 @@ const TeamMember = () => {
         >
           Yifeng Wang
         </StyledLink>
-        &nbsp;| Head of Graphics Architecture
+        &nbsp;| General Architecture Lead
       </StyledContent>
+      <StyledDes>
+        Creator of Blocksuite.
+      </StyledDes>
+      <StyledContent>
+        <StyledLink
+          target="_blank"
+          href="https://github.com/xiangwang1223"
+          rel="noreferrer"
+        >
+          Xiang Wang
+        </StyledLink>
+        &nbsp;| Co-founder & Head of Machine Learning Algorithms
+      </StyledContent>
+      <StyledDes>
+        Making everyone&apos;s life easier by embracing the power of AI.
+      </StyledDes>
+      <StyledTitle2>Architectural Developers</StyledTitle2>
       <StyledContent>
         <StyledLink
           target="_blank"
