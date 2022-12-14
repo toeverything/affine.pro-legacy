@@ -174,6 +174,27 @@ const TeamMember = () => {
         </StyledLink>
         &nbsp;| Full-stack Engineer
       </StyledContent>
+      <StyledTitle2>Community Team</StyledTitle2>
+      <StyledContent>
+        <StyledLink
+          target="_blank"
+          href="https://github.com/ShortCipher5"
+          rel="noreferrer"
+        >
+          Christopher Smolak
+        </StyledLink>
+        &nbsp;| Operations Specialist
+      </StyledContent>
+      <StyledContent>
+        <StyledLink
+          target="_blank"
+          href="https://github.com/fyZheng07"
+          rel="noreferrer"
+        >
+          Fangyuan Zheng
+        </StyledLink>
+        &nbsp;| Community Support Operator
+      </StyledContent>
     </>
   );
 };
