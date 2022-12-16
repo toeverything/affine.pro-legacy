@@ -29,7 +29,7 @@ AFFiNE currently allows you to **sign in with your Google account**. You can cli
 
 AFFiNE currently allows you to **sign in with your Google account**. You can click on 'Continue with Social Connection', then the page will jump to the account login window, next click on the 'Google' button to login. If you would like us to support more social logins, please do let us know in the community and submit your post. We'd love to hear from you!
 
-![social media login](social media login.gif)
+![social media login](social-media-login.gif)
 
 
 ## Finding topics that you like
