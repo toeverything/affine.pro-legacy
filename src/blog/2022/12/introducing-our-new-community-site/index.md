@@ -1,3 +1,14 @@
+---
+title: Introducing our new community
+author: Fangyuan Zheng
+tags: User Guide
+cover: ./cover.jpg
+description: A Place for Connection and Discussion
+created: 2022-11-25
+updated: 2022-11-25
+layout: blog
+---
+
 [AFFiNE's community](https://community.affine.pro/) site is already online! We welcome everyone to find and share noteworthy information! 
 
 This is a place for AFFiNE lovers to focus. You can find all the news about AFFiNE and share what you want to say here. Next, I'll give a quick overview of how to use this community!
