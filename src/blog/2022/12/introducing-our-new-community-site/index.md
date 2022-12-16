@@ -3,7 +3,7 @@ title: Introducing our new community
 author: Fangyuan Zheng
 tags: User Guide
 cover: ./cover.png
-description: A Place for Connection and Discussion
+description: A place for connection and discussion
 created: 2022-12-16
 updated: 2022-12-16
 layout: blog
@@ -130,7 +130,6 @@ The Quick Search **filters out exactly what you want** and is a very useful func
 ![image](https://user-images.githubusercontent.com/63830919/207852446-768d896e-47e4-46db-94df-488ec6de1143.png)
 
 
-
 **Some final things to note:**
 
 1. Our community page has just been set up, and we welcome suggestions for optimization in all areas;
@@ -143,6 +142,3 @@ The Quick Search **filters out exactly what you want** and is a very useful func
 Thank you very much for your time. The above is an introduction to AFFiNE's new community site.
 
 We are looking forward to seeing all the wonderful ideas that come together here and to seeing the growth of AFFiNE with you.
-
-
-
