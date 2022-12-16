@@ -2,7 +2,7 @@
 title: Introducing our new community
 author: Fangyuan Zheng
 tags: User Guide
-cover: ./cover.jpg
+cover: ./cover.png
 description: A Place for Connection and Discussion
 created: 2022-11-25
 updated: 2022-11-25
