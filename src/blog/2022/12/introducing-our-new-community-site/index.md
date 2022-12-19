@@ -38,7 +38,7 @@ AFFiNE currently allows you to **sign in with your Google account**. You can cli
 
 ![image](https://user-images.githubusercontent.com/63830919/208030313-e2ecf896-763a-48bb-89e3-6e3fd65e0057.png)
 
-AFFiNE currently allows you to **sign in with your Google account**. You can click on 'Continue with Social Connection', then the page will jump to the account login window, next click on the 'Google' button to login. If you would like us to support more social logins, please do let us know in the community and submit your post. We'd love to hear from you!
+AFFiNE currently allows you to **sign in with your GitHub account**. You can click on 'Continue with Social Connection', then the page will jump to the select login window, next click on the 'Sign in with GitHub' to login. If you would like us to support more social logins, please do let us know in the community and submit your post. We'd love to hear from you!
 
 ![image](social-media-login.gif)
 
