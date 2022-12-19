@@ -7,7 +7,15 @@ export const Footer = () => {
   return (
     <>
       <Container>
-        <JoinOur>{t("Join")}</JoinOur>
+        <JoinOur>
+          <a
+            href="https://community.affine.pro"
+            target="_blank"
+            rel="https://affine.pro noreferrer"
+          >
+            {t("Join")}
+          </a>
+        </JoinOur>
         <Content>
           <ContactUsContainer>
             {contactUsList.map(({ icon, title, href }) => {
