@@ -34,11 +34,6 @@ Next, according to the tips of the registration table to obtain an account.
 
 ![image](https://user-images.githubusercontent.com/63830919/207845976-8de847f9-7742-4fd5-a299-1d236a203749.png)
 
-AFFiNE currently allows you to **sign in with your Google account**. You can click on 'Continue with Social Connection', then the page will jump to the account login window, next click on the 'Google' button to login. If you would like us to support more social logins, please do let us know in the community and submit your post. We'd love to hear from you!
-
-![image](https://user-images.githubusercontent.com/63830919/208030313-e2ecf896-763a-48bb-89e3-6e3fd65e0057.png)
-
-
 ## Finding topics that you like
 
 After **successful registration**, your website will be turned **to the main community page**. Next, you'll be able to find the content you're interested in here!
