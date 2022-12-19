@@ -1,21 +1,12 @@
 import styled from "@emotion/styled";
-import { useTranslation } from "react-i18next";
 import { contactUsList } from "./config";
 import { ContactUsIconButton } from "./ContactUsIconButton";
+import { JoinOurCommunityButton } from "./JoinOurCommunityButton";
 export const Footer = () => {
-  const { t } = useTranslation();
   return (
     <>
       <Container>
-        <JoinOur>
-          <a
-            href="https://community.affine.pro"
-            target="_blank"
-            rel="https://affine.pro noreferrer"
-          >
-            {t("Join")}
-          </a>
-        </JoinOur>
+        <JoinOurCommunityButton />
         <Content>
           <ContactUsContainer>
             {contactUsList.map(({ icon, title, href }) => {
@@ -76,16 +67,7 @@ const OpensourceTag = styled.span({
 const Copyright = styled.div({
   marginTop: "20px",
 });
-const JoinOur = styled.div({
-  display: "flex",
-  flexDirection: "column",
-  alignItems: "center",
-  justifyContent: "center",
-  marginTop: "64px",
-  fontSize: "36px",
-  lineHeight: "1.25",
-  fontWeight: "600",
-});
+
 const StyledLink = styled("a")({
   fontWeight: "900",
   color: "#000",
