@@ -3,12 +3,12 @@ import NextLink from "next/link";
 import { useTranslation } from "react-i18next";
 import { contactUsList } from "./config";
 import { ContactUsIconButton } from "./ContactUsIconButton";
+import { JoinOurCommunityButton } from "./JoinOurCommunityButton";
 export const Footer = () => {
-  const { t } = useTranslation();
   return (
     <>
       <Container>
-        <JoinOur>{t("Join")}</JoinOur>
+        <JoinOurCommunityButton />
         <Content>
           <ContactUsContainer>
             {contactUsList.map(({ icon, title, href }) => {
@@ -73,6 +73,7 @@ const OpensourceTag = styled.span({
 const Copyright = styled.div({
   marginTop: "20px",
 });
+
 const Privacy = styled.div({
   marginTop: "10px",
   fontSize: "12px",
@@ -94,6 +95,7 @@ const JoinOur = styled.div({
   lineHeight: "1.25",
   fontWeight: "600",
 });
+
 const StyledLink = styled("a")({
   fontWeight: "900",
   color: "#000",
