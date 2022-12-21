@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import NextLink from "next/link";
 import { useTranslation } from "react-i18next";
 import { contactUsList } from "./config";
 import { ContactUsIconButton } from "./ContactUsIconButton";
@@ -34,6 +35,10 @@ export const Footer = () => {
             </StyledLink>
           </div>
           <Copyright>Copyright © 2022 Toeverything</Copyright>
+          <Privacy>
+            <NextLink href="terms">Terms</NextLink>&nbsp;|&nbsp;
+            <NextLink href="privacy">Privacy</NextLink>
+          </Privacy>
         </Content>
       </Container>
     </>
@@ -67,6 +72,17 @@ const OpensourceTag = styled.span({
 
 const Copyright = styled.div({
   marginTop: "20px",
+});
+const Privacy = styled.div({
+  marginTop: "10px",
+  fontSize: "12px",
+  a: {
+    cursor: "pointer",
+    ":hover": {
+      color: "#5085F6CC",
+      cursor: "pointer",
+    },
+  },
 });
 const JoinOur = styled.div({
   display: "flex",
