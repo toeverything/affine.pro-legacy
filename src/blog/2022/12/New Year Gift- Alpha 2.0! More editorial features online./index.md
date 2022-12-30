@@ -1,9 +1,9 @@
 ---
-title: New Year Gift- Alpha 2.0! More editorial features online.
+title: New Year Gift - Alpha"Abbey Wood"! More editorial features online.
 author: Fangyuan Zheng
 tags: User Guide
 cover: ./images/cover.jpg
-description: Introduction for AFFiNE Alpha v2.0
+description: Introduction for AFFiNE Alpha:"Abbey Wood"
 created: 2022-12-30
 updated: 2022-12-30
 layout: blog
@@ -83,7 +83,7 @@ We have some more good news to share with you today 👏! **Our next release (AF
   - Personal and public workspace
   - More ways to share pages 
 
-If you would like to participate in the beta test or share your ideas about the AFFiNE cloud with us, head over to **[our community](https://community.affine.pro/c/build-in-public/) to discuss** the features of our new release. We have a dedicated 'Build in Public' channel to make our development progress available to the public! **Check out the Ambassador General channel for more information on how to get involved with Affine cloud!**
+If you would like to participate in the beta test or share your ideas about the AFFiNE cloud with us, head over to **[our community](https://community.affine.pro/c/build-in-public/) to discuss** the features of our new release. We have a dedicated 'Build in Public' channel to make our development progress available to the public! **Check out the [Ambassador General](https://community.affine.pro/c/ambassador-general/) channel for more information on how to get involved with Affine cloud!**
 
 ![community](./images/community.png)
 
