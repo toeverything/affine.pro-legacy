@@ -1,9 +1,9 @@
 ---
-title: New Year Gift- Alpha 2.0! More editorial features online.
+title: New Year Gift - Alpha"Abbey Wood"! More editorial features online.
 author: Fangyuan Zheng
 tags: User Guide
-cover: ./cover.png
-description: Introduction for AFFiNE Alpha v2.0
+cover: ./images/cover.jpg
+description: Introduction for AFFiNE Alpha:"Abbey Wood"
 created: 2022-12-30
 updated: 2022-12-30
 layout: blog
@@ -23,56 +23,56 @@ This is an fantastic feature compared to the previous version! **All page holds 
 
 **Note: The data in your document management space is currently stored in your browser. We will provide an accounting system to ensure the security of your data in the next version. To prevent the loss of your files, please be aware of where your files are stored when you use them! (Only the current device and browser are currently supported!)**
 
-[图片]
+![create](./images/create.gif)
 
 AFFiNE also provides a **Favorites workspace to put your important or frequently used files**. Of course, it is up to you to decide which files you want to move into this space. It is also straightforward to use. You **hover the file** you want to move into the Favorites space, and then an icon will appear after the title. **Click on the icon to see the file moved into the Favorites space.**
 
-[图片]
+![favourite](./images/favourite.gif)
 
 ### Delete & restore it
 If you want to **delete a document, open the `⋮` shortcut menu** in the document list, and **you can move the paper to the trash by clicking the 'Delete' button**. If you delete a file by mistake, don't worry. The files you delete are in the trash currently. **You can go to the trash and find the document you have deleted by mistake and restore it!**
 
-[图片]
+![delete_restore](./images/delete_restore.gif)
 
 ## Formatting Quickbar online! Content becomes artistic
 Formatting Quickbar allows you to **create richer formatting more conveniently**. When formatting text, **the cursor will select the content to be formatted, and a function bar will appear above the paragraph**, allowing you to choose the function to suit your needs.
 
-暂时无法在飞书文档外展示此内容
+![formatting](./images/formatting.gif)
 
 ## More features to help with creativity
 ### Quick Search
 In this version, we offer you a quick search function. You can see **the 'Quick search' button in the function list on the left**. When you use this function, **you enter a keyword in the search field, and AFFiNE will automatically search for the presence of that keyword in your article. The search results are then displayed in the list below.**
 
-[图片]
+![search](./images/search.gif)
 
 ### Image
 **You should note that AFFiNE currently only supports the use of copy & paste to insert images into documents. More convenient ways to add images will be refined in a later version.**
 
  As shown in the image, when you need to add an image to your article, just **copy the material you have prepared, and you're done**! Some images don't seem to be the right size when you paste them in. At this point, you **click on the image, and then an outer border will appear, drag and drop the frame with your mouse to resize the image at will. And when you hover over the image with your mouse, we provide you with several function buttons for adding captions, copying, downloading, and deleting**, which can also be convenient!
- 
-暂时无法在飞书文档外展示此内容
+
+![image](./images/image.gif)
 
 ### Divider
 The divider is a new feature that helps you format your documents to look more explicit and organized. **You can insert a divider directly using Markdown syntax; a space will call up the divider when you type `***` or `---`. And the divider format will be selected when you move the cursor using the keyboard up, down, left, and right keys after inserting the divider.**
 
 **Note: The only way to insert a divider that is currently supported by AFFiNE is via Markdown syntax. The divider use button will be available in the next release.**
 
-[图片]
+![divider](./images/divider.gif)
 
 ### Code block
 In the previous version, AFFiNE only offered you the inline block. We have added the code block in this version, which allows you to present your code blocks in a more independent form in the text, as this display will **distinguish the different function statements with a highlighting style**! We offer you **three insertion methods: Markdown, Shortcut and function buttons**. Whichever insertion method you choose, you have more freedom of choice.
 
 The Markdown syntax for inserting a code block is '``` + Space' and as you can see in the image, the block is successfully inserted! You are free to choose the language of your code, the mouse hover block will appear with the corresponding options. If I were inserting in JavaScript I would choose the 'JavaScript' option.
 
-[图片]
+![code_block_1](./images/code_block_1.gif)
 
 There are two other types of insertion that need to be introduced to you. **One is the function button insertion, which is applied by selecting 'Code Block' in the Formatting Quickbar. The other is via the Shortcut, which can be used by 'CMD + Option + C' for Mac users and 'Ctrl + Alt + C' for Windows users to wake up the code block style.**
 
-[图片]
+![code_block_hotkey](./images/code_block_hotkey.gif)
 
 When you edit your code in a code block, you may be confused. How can I jump out of the code block style? Don't worry! We've set up a convenient way for you to switch! **All you need to do is enter your mouse twice, and the cursor will jump out of the code block style.**
 
-[图片]
+![cursor_out](./images/cursor_out.gif)
 
 That's all the new features we've added in this released version! Thank you for your patience, and go to AFFiNE Alpha to refresh your memory! 😃
 
@@ -82,10 +82,10 @@ We have some more good news to share with you today 👏! **Our next release (AF
   - Multi-terminal synchronization
   - Personal and public workspace
   - More ways to share pages 
- 
-If you would like to participate in the beta test or share your ideas about the AFFiNE cloud with us, head over to **[our community](https://community.affine.pro/c/build-in-public/) to discuss** the features of our new release. We have a dedicated 'Build in Public' channel to make our development progress available to the public! **Check out the Ambassador General channel for more information on how to get involved with Affine cloud!**
 
-[图片]
+If you would like to participate in the beta test or share your ideas about the AFFiNE cloud with us, head over to **[our community](https://community.affine.pro/c/build-in-public/) to discuss** the features of our new release. We have a dedicated 'Build in Public' channel to make our development progress available to the public! **Check out the [Ambassador General](https://community.affine.pro/c/ambassador-general/) channel for more information on how to get involved with Affine cloud!**
+
+![community](./images/community.png)
 
 Finally, **next week we will release the current version of the Docker image to help you better localize your deployment and run AFFiNE**. Any questions, please feel free to contact us!
 
