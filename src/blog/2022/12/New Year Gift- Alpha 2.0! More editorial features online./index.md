@@ -11,7 +11,7 @@ layout: blog
 
 2023 is coming soon! Good luck, good health, good cheer. AFFiNE wishes you a happy New Year！
 
-Time passes! I can't believe that 2022 is over so soon. In 2022, AFFiNE is also growing fast and building strength to move forward. We are also continuously optimizing our products and hope to provide better products and services. Today, in this festive moment, AFFiNE brings you a little gift for the New Year. So please keep an eye out for it!
+Time passes! In 2022, AFFiNE is also growing fast and building strength to move forward. We are also continuously optimizing our products and hope to provide better products and services. Today, in this festive moment, AFFiNE brings you a little gift for the New Year. So please keep an eye out for it!
 
 
 You've all used the rebuilt [AFFiNE Alpha](https://pathfinder.affine.pro/)! We've **added even more rich features to Alpha that we hope will help you create and manage your documents**! The first thing we can't wait to share with you is - we support editing multiple files. It can manage your personal file space on your current device or browser! Then we've got support for **formatting quick bars, quick studies, images, dividers and code blocks to make your editing experience easier and more beautiful.**
@@ -91,14 +91,14 @@ Finally, **next week we will release the current version of the Docker image to 
 
 AFFiNE is always committed to helping and creating a thriving open-source ecosystem, and we welcome your continued suggestions and feedback.
 
-So, may AFFiNE continue to be with you in 2023 as well.
+So, may **AFFiNE** continue to be with you in 2023 as well.
 
-HAPPY NEW YEAR, 2023！
+**HAPPY NEW YEAR, 2023！**
 
 
-Here are the official media accounts operated by AFFiNE, thank you for your interest! 
+Here are the official media accounts operated by AFFiNE, thank you for your interest. 
 
-Please feel free to contact us if you have any questions. It'll be our honor! 
+Please feel free to contact us if you have any questions. It'll be our honor.
 
 Hope you have a nice day!
 
