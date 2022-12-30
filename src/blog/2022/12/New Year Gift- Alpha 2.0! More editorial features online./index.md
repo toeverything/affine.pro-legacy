@@ -19,7 +19,7 @@ You've all used the rebuilt [AFFiNE Alpha](https://pathfinder.affine.pro/)! We'v
 
 ## Multi-Document Management
 ### Create & Favourite it
-This is an fantastic feature compared to the previous version! **All page holds all the documents you have created**, and you can manage them here. Before you **manage these documents**, I will show you how to create a page. **In the bottom right-hand corner of this page, you will find the Create button; click on it to jump to a blank page and enter the name of your document to create it.**
+This is a fantastic feature compared to the previous version! **All page holds all the documents you have created**, and you can manage them here. Before you **manage these documents**, I will show you how to create a page. **In the bottom right-hand corner of this page, you will find the Create button; click on it to jump to a blank page and enter the name of your document to create it.**
 
 **Note: The data in your document management space is currently stored in your browser. We will provide an accounting system to ensure the security of your data in the next version. To prevent the loss of your files, please be aware of where your files are stored when you use them! (Only the current device and browser are currently supported!)**
 
