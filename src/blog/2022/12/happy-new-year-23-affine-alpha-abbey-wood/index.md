@@ -1,47 +1,47 @@
 ---
-title: New Year Gift - Alpha"Abbey Wood"! More editorial features online.
+title: New Year Gift - Alpha "Abbey Wood"!
 author: Fangyuan Zheng
 tags: User Guide
 cover: ./images/cover.jpg
-description: Introduction for AFFiNE Alpha:"Abbey Wood"
+description: New features online!
 created: 2022-12-30
 updated: 2022-12-30
 layout: blog
 ---
 
-2023 is coming soon! Good luck, good health, good cheer. AFFiNE wishes you a happy New Year！
+2023 is coming soon! Good luck, good health, good cheer. AFFiNE wishes you a Happy New Year！
 
-Time passes! In 2022, AFFiNE is also growing fast and building strength to move forward. We are also continuously optimizing our products and hope to provide better products and services. Today, in this festive moment, AFFiNE brings you a little gift for the New Year. So please keep an eye out for it!
+Time passes so quickly! In 2022, AFFiNE is also growing fast and building strength to move forward. We are also continuously optimizing our products and hope to provide better products and services. Today, in this festive moment, AFFiNE brings you a little gift for the New Year. So please keep an eye out for it!
 
 
-You've all used the rebuilt [AFFiNE Alpha](https://pathfinder.affine.pro/)! We've **added even more rich features to Alpha that we hope will help you create and manage your documents**! The first thing we can't wait to share with you is - we support editing multiple files. It can manage your personal file space on your current device or browser! Then we've got support for **formatting quick bars, quick studies, images, dividers and code blocks to make your editing experience easier and more beautiful.**
+You've likely already used the newer [AFFiNE Alpha](https://pathfinder.affine.pro/)! And now we've **added even more rich features to help you create and manage your documents**! The first thing we can't wait to share with you is support for editing multiple files. You can now manage your personal file space on your current device from the browser! Then we've also got support for **formatting quick bars, quick search, images, dividers and code blocks to make your editing experience easier and more beautiful.**
 
 
 ## Multi-Document Management
 ### Create & Favourite it
-This is a fantastic feature compared to the previous version! **All page holds all the documents you have created**, and you can manage them here. Before you **manage these documents**, I will show you how to create a page. **In the bottom right-hand corner of this page, you will find the Create button; click on it to jump to a blank page and enter the name of your document to create it.**
+This is a fantastic feature compared to the previous version! **All Pages lists all the documents you have created**, and you can manage them here. Before you **manage these documents**, I will show you how to create a page. **In the bottom left-hand corner of the page, you will find the New Page button; click on it to jump to a blank page, then begin editing your new document enter the name of your document to create it.**
 
-**Note: The data in your document management space is currently stored in your browser. We will provide an accounting system to ensure the security of your data in the next version. To prevent the loss of your files, please be aware of where your files are stored when you use them! (Only the current device and browser are currently supported!)**
+**Note: The data in your document management space is currently stored in your browser. We will provide an account system to ensure the security of your data in the next version. To prevent the loss of your files, you should export your data regularly and please be aware of where your files are stored when you use them! (Only the current device and browser are currently supported!)**
 
 ![create](./images/create.gif)
 
-AFFiNE also provides a **Favorites workspace to put your important or frequently used files**. Of course, it is up to you to decide which files you want to move into this space. It is also straightforward to use. You **hover the file** you want to move into the Favorites space, and then an icon will appear after the title. **Click on the icon to see the file moved into the Favorites space.**
+AFFiNE also provides a **Favorites list to put your important or frequently used files**. Of course, it is up to you to decide which files you want to move into this space. It is also straightforward to use. You **hover the file** you want to move into the Favorites space, and then an icon will appear after the title. **Click on the icon to see the file moved into the Favorites space.**
 
 ![favourite](./images/favourite.gif)
 
 ### Delete & restore it
-If you want to **delete a document, open the `⋮` shortcut menu** in the document list, and **you can move the paper to the trash by clicking the 'Delete' button**. If you delete a file by mistake, don't worry. The files you delete are in the trash currently. **You can go to the trash and find the document you have deleted by mistake and restore it!**
+If you want to **delete a document, open the `⋮` shortcut menu** in the document list, and **you can move the paper to the trash by clicking the 'Delete' button**. If you delete a file by mistake, don't worry. The files you delete are first sent to the trash. **You can go to the trash and find the document you have deleted by mistake and restore it!**
 
 ![delete_restore](./images/delete_restore.gif)
 
 ## Formatting Quickbar online! Content becomes artistic
-Formatting Quickbar allows you to **create richer formatting more conveniently**. When formatting text, **the cursor will select the content to be formatted, and a function bar will appear above the paragraph**, allowing you to choose the function to suit your needs.
+The formatting Quickbar allows you to **create richer formatting more conveniently**. When formatting text, **the cursor will select the content to be formatted, and a function bar will appear above the paragraph**, allowing you to choose the function to suit your needs.
 
 ![formatting](./images/formatting.gif)
 
 ## More features to help with creativity
 ### Quick Search
-In this version, we offer you a quick search function. You can see **the 'Quick search' button in the function list on the left**. When you use this function, **you enter a keyword in the search field, and AFFiNE will automatically search for the presence of that keyword in your article. The search results are then displayed in the list below.**
+In this version, we offer you a quick search function. You can see **the 'Quick Search' button in the function list on the left**. When you use this function, **you enter a keyword in the search field, and AFFiNE will automatically search for the presence of that keyword in your article. The search results are then displayed in the list below.**
 
 ![search](./images/search.gif)
 
@@ -66,15 +66,15 @@ The Markdown syntax for inserting a code block is '``` + Space' and as you can s
 
 ![code_block_1](./images/code_block_1.gif)
 
-There are two other types of insertion that need to be introduced to you. **One is the function button insertion, which is applied by selecting 'Code Block' in the Formatting Quickbar. The other is via the Shortcut, which can be used by 'CMD + Option + C' for Mac users and 'Ctrl + Alt + C' for Windows users to wake up the code block style.**
+There are two other types of insertion that need to be introduced to you. **One is the function button insertion, which is applied by selecting 'Code Block' in the Formatting Quickbar. The other is via the Shortcut, which can be used by 'CMD + Option + C' for Mac users and 'Ctrl + Alt + C' for Windows users to activate the code block style.**
 
 ![code_block_hotkey](./images/code_block_hotkey.gif)
 
-When you edit your code in a code block, you may be confused. How can I jump out of the code block style? Don't worry! We've set up a convenient way for you to switch! **All you need to do is enter your mouse twice, and the cursor will jump out of the code block style.**
+When you edit your code in a code block, you may be confused. How can I jump out of the code block style? Don't worry! We've set up a convenient way for you to switch! **All you need to do is enter your mouse twice, and the cursor will jump out of the code block.**
 
 ![cursor_out](./images/cursor_out.gif)
 
-That's all the new features we've added in this released version! Thank you for your patience, and go to AFFiNE Alpha to refresh your memory! 😃
+That's all the new features we've added in this released version! Thank you for your patience, and we invite you to head over to the AFFiNE Alpha and try them out for yourself! 😃
 
 We have some more good news to share with you today 👏! **Our next release (AFFiNE Cloud) will be available to you soon**, and you'll be wondering what we'll be bringing online in the next release! **Sharing/collaboration/workspace management has been the focus of AFFiNE's recent developments**, so we hope to bring back the following features in the next version.
 
@@ -109,4 +109,3 @@ Hope you have a nice day!
 - Medium: https://medium.com/@affineworkos
 - GitHub: https://github.com/toeverything/AFFiNE
 - AFFiNE Community: https://community.affine.pro/home
-
