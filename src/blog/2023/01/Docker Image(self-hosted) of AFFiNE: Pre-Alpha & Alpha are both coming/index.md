@@ -24,7 +24,7 @@ Does that sound exciting to you 😃? Let us explore your options through this a
 Once you have understood the above information, I will then show you how to configure Docker. All you need to do is **run the command line code shown below** from your terminal.
 
 ```
-docker pull ghcr.io/toeverything/affine-static:[pre-alpha-server]/[alpha-server]
+docker pull ghcr.io/toeverything/affine-self-hosted:latest
 ```
 
 You'll receive a similar message, which indicates that **the latest Docker image** has been downloaded.
@@ -34,7 +34,7 @@ You'll receive a similar message, which indicates that **the latest Docker image
 **Step 2:** After successfully updating the Docker image, we are now **ready to run the `docker run` command.**
 
 ```
-docker run -it --rm -p 3000:3000 YOUR_PATH:/app/data ghcr.io/toeverything/affine-static:[pre-alpha-server/alpha-server]
+docker run -it --rm -p 3000:3000 YOUR_PATH:/app/data ghcr.io/toeverything/affine-self-hosted:latest
 
 // docker run -it --rm -p [YOUR_PORT]:3000 [YOUR_PATH]:/app/data [image id]
 ```
