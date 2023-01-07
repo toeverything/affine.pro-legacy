@@ -17,13 +17,15 @@ Does that sound exciting to you 😃? Let us explore your options through this a
 
 ## How to use it?
 
-**Step 1:** You can find the **[Docker address(affine-static)](https://github.com/toeverything/AFFiNE/pkgs/container/affine-static)** from the affine package on GitHub. Here we provide you with both the Pre-Alpha and Alpha(live demo and pathfinder) of Docker support interface.
+**Step 1:** You can find the **[Docker address(affine-self-hosted)](https://github.com/toeverything/AFFiNE/pkgs/container/affine-self-hosted)** from the affine package on GitHub. Here we provide you with both the Pre-Alpha and Alpha(live demo and pathfinder) of Docker support interface.
 
-
+![](./show.png)
 
 Once you have understood the above information, I will then show you how to configure Docker. All you need to do is **run the command line code shown below** from your terminal.
 
-```docker pull ghcr.io/toeverything/affine-static:[pre-alpha-server]/[alpha-server]```
+```
+docker pull ghcr.io/toeverything/affine-static:[pre-alpha-server]/[alpha-server]
+```
 
 You'll receive a similar message, which indicates that **the latest Docker image** has been downloaded.
 
