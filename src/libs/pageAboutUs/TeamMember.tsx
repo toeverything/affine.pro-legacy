@@ -150,6 +150,16 @@ const TeamMember = () => {
       <StyledContent>
         <StyledLink
           target="_blank"
+          href="https://github.com/thorseraq"
+          rel="noreferrer"
+        >
+          Xiaotian Ma
+        </StyledLink>
+        &nbsp;| Full-stack Engineer
+      </StyledContent>
+      <StyledContent>
+        <StyledLink
+          target="_blank"
           href="https://github.com/DiamondThree"
           rel="noreferrer"
         >
