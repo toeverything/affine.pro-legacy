@@ -163,7 +163,7 @@ const TeamMember = () => {
           href="https://github.com/Himself65"
           rel="noreferrer"
         >
-          Zeyu Yang
+          Alex Yang
         </StyledLink>
         &nbsp;| Full-stack Engineer
       </StyledContent>
