@@ -163,6 +163,30 @@ const Content = styled.div`
   h6 {
     color: #000;
   }
+  pre {
+    border: 1px solid #dee0e3;
+    background: #f5f6f7;
+    border-radius: 5px;
+    line-height: 1.75;
+    margin: 0 0 1.75em;
+    max-width: 100%;
+    overflow: auto;
+    padding: 15px;
+    white-space: pre;
+    white-space: pre-wrap;
+    word-break: break-all;
+    code {
+      border: none;
+    }
+  }
+  code {
+    border: 1px solid #d1d1d1;
+    background: #f5f6f7;
+    color: #555;
+    margin: 0px 3px;
+    padding: 1px 2px;
+    border-radius: 5px;
+  }
 `;
 
 export const BlogLayout = ({
