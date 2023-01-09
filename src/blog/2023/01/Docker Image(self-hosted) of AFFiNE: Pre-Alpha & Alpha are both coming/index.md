@@ -1,11 +1,11 @@
 ---
 title: Self-host AFFiNE with Docker
 author: Fangyuan Zheng
-tags: The Open Source Engineering
+tags: User Guide
 cover: ./show.png
 description: Pre-Alpha and Alpha Local Setup User Guide
-created: 2023-01-06
-updated: 2023-01-06
+created: 2023-01-09
+updated: 2023-01-09
 layout: blog
 ---
 
