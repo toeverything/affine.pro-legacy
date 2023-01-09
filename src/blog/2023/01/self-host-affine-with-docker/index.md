@@ -44,7 +44,10 @@ docker run -it --name affine -d -v YOUR_PATH:/app/data -p 3000:3000 ghcr.io/toev
 ```
 
 **Notes:**
-The command takes the following format: `docker run -it --name affine -d -v [YOUR_PATH]:/app/data -p [YOUR_PORT]:3000 [image id]`
+The command takes the following format: 
+```
+docker run -it --name affine -d -v [YOUR_PATH]:/app/data -p [YOUR_PORT]:3000 [image id]
+```
 
 **Tips:**
 
