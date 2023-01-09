@@ -198,7 +198,7 @@ const TeamMember = () => {
         </StyledLink>
         &nbsp;| Community Support Operator
       </StyledContent>
-      <StyledTitle2>Design Team</StyledTitle2>
+      <StyledTitle2>Product Team</StyledTitle2>
       <StyledContent>
         <StyledLink
           target="_blank"
