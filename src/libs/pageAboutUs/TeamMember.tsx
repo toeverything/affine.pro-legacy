@@ -150,10 +150,10 @@ const TeamMember = () => {
       <StyledContent>
         <StyledLink
           target="_blank"
-          href="https://shockwave.me"
+          href="https://github.com/thorseraq"
           rel="noreferrer"
         >
-          Sicong Shao
+          Xiaotian Ma
         </StyledLink>
         &nbsp;| Full-stack Engineer
       </StyledContent>
@@ -163,7 +163,7 @@ const TeamMember = () => {
           href="https://github.com/DiamondThree"
           rel="noreferrer"
         >
-          Haoxing Shang
+          Haoxin Shang
         </StyledLink>
         &nbsp;| Full-stack Engineer
       </StyledContent>
@@ -173,7 +173,7 @@ const TeamMember = () => {
           href="https://github.com/Himself65"
           rel="noreferrer"
         >
-          Zeyu Yang
+          Alex Yang
         </StyledLink>
         &nbsp;| Full-stack Engineer
       </StyledContent>
