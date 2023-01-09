@@ -207,7 +207,7 @@ const TeamMember = () => {
         >
           Qiao Hou
         </StyledLink>
-        &nbsp;| UX Researcher
+        &nbsp;| Product Architect
       </StyledContent>
       <StyledContent>
         <StyledLink
