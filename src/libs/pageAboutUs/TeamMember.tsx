@@ -150,16 +150,6 @@ const TeamMember = () => {
       <StyledContent>
         <StyledLink
           target="_blank"
-          href="https://shockwave.me"
-          rel="noreferrer"
-        >
-          Sicong Shao
-        </StyledLink>
-        &nbsp;| Full-stack Engineer
-      </StyledContent>
-      <StyledContent>
-        <StyledLink
-          target="_blank"
           href="https://github.com/DiamondThree"
           rel="noreferrer"
         >
