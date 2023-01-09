@@ -1,13 +1,15 @@
 ---
-title: Docker Image(self-hosted) of AFFiNE:Pre-Alpha & Alpha are both coming
+title: Self-host AFFiNE with Docker
 author: Fangyuan Zheng
 tags: The Open Source Engineering
 cover: ./show.png
-description: Docker introduction. Tell you how to use it!
+description: Pre-Alpha and Alpha Local Setup User Guide
 created: 2023-01-06
 updated: 2023-01-06
 layout: blog
 ---
+
+## Pre-Alpha and Alpha Local Setup User Guide
 
 Hello everyone! We've recently updated our Docker images, and this guide will help you to understand the different versions available and how to deploy them. The main reason we offer these images, is as we are privacy focussed and local-first, you will always have the choice of how you wish to use and store your data, so you can choose how you want to use AFFiNE.
 
