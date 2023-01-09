@@ -153,7 +153,7 @@ const TeamMember = () => {
           href="https://github.com/DiamondThree"
           rel="noreferrer"
         >
-          Haoxing Shang
+          Haoxin Shang
         </StyledLink>
         &nbsp;| Full-stack Engineer
       </StyledContent>
