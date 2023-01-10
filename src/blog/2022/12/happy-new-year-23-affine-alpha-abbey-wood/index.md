@@ -74,6 +74,27 @@ When you edit your code in a code block, you may be confused. How can I jump out
 
 ![cursor_out](./images/cursor_out.gif)
 
+
+### Import Markdown
+Support for importing Markdown is also now live. As you can see in the picture below, you can **find the 'Import' button. Then click it, and a pop-up box will appear on your screen. Upload the markdown file you need to import.**
+import
+
+![import](./images/import.png)
+
+**Notes:** We have added **image and code block import support** in this version. When importing images through Markdown, bear in mind that the Markdown import currently **only supports a reference to an image - so if you have any issues, you may try manually copying any images into your document**. Please feel free to contact us if you are still not sure about this part. 
+
+For the **import of HTML**, which many of you are interested in, **we have put this project on our task list.** This feature will be published in the near future. Welcome to contact us in our community to discuss this part if you would like to talk to us more about importing HTML.
+
+![image-code](./images/image-code.png)
+
+### Export Markdown & HTML
+We have also provided an export portal for you to export Markdown and HTML files. The entry point for **this function can be found in the 'setting' menu in the top right corner. **
+
+**Notes: We're not supporting export of images now. For this question, we'll take into account the task list when we publish the personal space, and we will use TextBundle to package your files for easier management of your data.**
+
+![export](./images/export.png)
+
+
 That's all the new features we've added in this released version! Thank you for your patience, and we invite you to head over to the AFFiNE Alpha and try them out for yourself! 😃
 
 We have some more good news to share with you today 👏! **Our next release (AFFiNE Cloud) will be available to you soon**, and you'll be wondering what we'll be bringing online in the next release! **Sharing/collaboration/workspace management has been the focus of AFFiNE's recent developments**, so we hope to bring back the following features in the next version.
