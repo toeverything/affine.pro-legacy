@@ -1,10 +1,11 @@
 import styled from "@emotion/styled";
 import NextLink from "next/link";
-import { useTranslation } from "react-i18next";
 import { contactUsList } from "./config";
 import { ContactUsIconButton } from "./ContactUsIconButton";
 import { JoinOurCommunityButton } from "./JoinOurCommunityButton";
 export const Footer = () => {
+  const date = new Date();
+  const year = date.getFullYear();
   return (
     <>
       <Container>
@@ -34,7 +35,7 @@ export const Footer = () => {
               BlockSuite
             </StyledLink>
           </div>
-          <Copyright>Copyright © 2022 Toeverything</Copyright>
+          <Copyright>Copyright © {year} Toeverything</Copyright>
           <Privacy>
             <NextLink href="terms">Terms</NextLink>&nbsp;|&nbsp;
             <NextLink href="privacy">Privacy</NextLink>
