@@ -20,7 +20,7 @@ If you have followed the [AFFiNE repository](https://github.com/toeverything/aff
 
 The GitHub address for BlockSuite is: https://github.com/toeverything/blocksuite
 
-Please note that we still strongly recommend that when you are using AFFiNE and if you wish to use GitHub directly for issue commits, **you still need to choose the AFFiNE repository for commits. The bug submission link is:** https://github.com/toeverything/AFFiNE/issues/new/choose
+For most issues, bugs, feature requests and PRs we reconmmend you to still **continue to use AFFiNE as the main repository**. You can report issues (such as bugs and feature requests) via the following link: https://github.com/toeverything/AFFiNE/issues/new/choose
 
 AFFiNE team members will be responsible for moving BlockSuite-related bugs to the BlockSuite repository.
 
