@@ -1,3 +1,14 @@
+---
+title: Abbey Wood Release Notes
+author: Yipei Wei
+tags: Release Notes
+cover: ./cover.jpg
+description: Release Notes 2023-01-13
+created: 2023-01-13
+updated: 2023-01-13
+layout: blog
+---
+
 Thank you very much for your interest in AFFiNE! 
 Some new and exciting changes for both #AFFiNE and #BlockSuite are as follows:
 From BlockSuite
