@@ -1,7 +1,7 @@
 ---
 title: Abbey Wood Release Notes
-author: Yipei Wei
-tags: Release Notes
+author: Yipei Wei, Christopher Smolak
+tags: Release Note
 cover: ./cover.jpg
 description: Release Notes 23-01-13
 created: 2023-01-13
@@ -16,7 +16,7 @@ Some new and exciting changes for both #AFFiNE and #BlockSuite are as follows:
 
 **BlockSuite is the open-source collaborative editor project that powers the AFFiNE knowledge base.**
 
-If you have followed the [https://github.com/toeverything/affine](AFFiNE repository), you will find that most of the bugs related to the editing experience are fixed in the [https://github.com/toeverything/blocksuite](BlockSuite repository).
+If you have followed the [AFFiNE repository](https://github.com/toeverything/affine), you will find that most of the bugs related to the editing experience are fixed in the [BlockSuite repository](https://github.com/toeverything/blocksuite).
 
 The GitHub address for BlockSuite is: https://github.com/toeverything/blocksuite
 
@@ -73,8 +73,8 @@ Note: These features still need some time to be available in the AFFiNE Alpha (h
 Our AFFiNE GitHub address: https://github.com/toeverything/AFFiNE
 
 ### Features
-Recent features launched on Abbey Wood have been updated via our [https://community.affine.pro/c/release-notes/new-year-gift-alpha-abbey-wood](version introduction).
-The latest Docker version can be accessed via [https://github.com/orgs/toeverything/packages?repo_name=AFFiNE](GitHub), and we've created a new [https://community.affine.pro/c/user-guide/self-host-affine-with-docker-pre-alpha-and-alpha-local-setup-user-guide](Docker user guide) to help you.
+Recent features launched on Abbey Wood have been updated via our [version introduction](https://community.affine.pro/c/release-notes/new-year-gift-alpha-abbey-wood).
+The latest Docker version can be accessed via [GitHub](https://github.com/orgs/toeverything/packages?repo_name=AFFiNE), and we've created a new [Docker user guide](https://community.affine.pro/c/user-guide/self-host-affine-with-docker-pre-alpha-and-alpha-local-setup-user-guide) to help you.
 We are hoping to launch a major update around Feb 10th, 2023, which can cover around 80% of the features found in our Pre-Alpha version.
 
 Here are the official media accounts operated by AFFiNE, please feel free to contact us if you have any questions. 
