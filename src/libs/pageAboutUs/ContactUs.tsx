@@ -12,15 +12,9 @@ const ContactUs = () => {
       </ul>
       <StyledContact>
         <p>
-          General contact:&nbsp;
+          General contact (including resume):&nbsp;
           <StyledLink href="mailto:contact@toeverything.info">
             contact@toeverything.info
-          </StyledLink>
-        </p>
-        <p>
-          Send Resume to:&nbsp;
-          <StyledLink href="mailto:hr@toeverything.info">
-            hr@toeverything.info
           </StyledLink>
         </p>
       </StyledContact>
