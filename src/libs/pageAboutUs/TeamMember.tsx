@@ -47,7 +47,7 @@ const TeamMember = () => {
         >
           Yifeng Wang
         </StyledLink>
-        &nbsp;| General Architecture Lead
+        &nbsp;| Co-founder &amp; Chief Architect
       </StyledContent>
       <StyledDes>
         He ensures AFFiNE is built with the proper technology.
@@ -60,7 +60,7 @@ const TeamMember = () => {
         >
           Xiang Wang
         </StyledLink>
-        &nbsp;| Co-founder &amp; Head of Machine Learning Algorithms
+        &nbsp;| Chief AI Scientist
       </StyledContent>
       <StyledDes>
         Making everyone&apos;s life easier by embracing the power of AI.
@@ -187,16 +187,6 @@ const TeamMember = () => {
           Christopher Smolak
         </StyledLink>
         &nbsp;| Operations Specialist
-      </StyledContent>
-      <StyledContent>
-        <StyledLink
-          target="_blank"
-          href="https://github.com/fyZheng07"
-          rel="noreferrer"
-        >
-          Fangyuan Zheng
-        </StyledLink>
-        &nbsp;| Community Support Operator
       </StyledContent>
       <StyledTitle2>Product Team</StyledTitle2>
       <StyledContent>
