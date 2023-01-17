@@ -1,8 +1,8 @@
 ---
-title: What's coming after the Lunar New Year
+title: What's coming after the Lunar New Year?
 author: Christopher Smolak
 tags: User Guide
-cover: ./cover.jpg
+cover: ./images/cover.png
 description: Upcoming release and features
 created: 2023-01-17
 updated: 2023-01-18
@@ -25,7 +25,7 @@ We are super excited to announce a wide range of features that will take your ex
 
 The best place to get the latest information and sneak previews is on our community site. We have a specific space available for [Build in Public](https://community.affine.pro/c/build-in-public/) - where we highlight some key developments and various new interesting features.
 
-### Feature list
+### Feature List
 
 If you are looking for a quick overview of what's coming up this graphic may be what you are looking for. There are a wide-range of updates - from **quality of life changes to new feature implementations**. In fact, with these latest updates, the newest Alpha version will surpass the Pre-Alpha in several aspects, and nearly completely encompasses all functionality from the older version.
 
@@ -68,11 +68,15 @@ For AFFiNE we have recently updated the Docker images:
 - You can find the packages directly on our GitHub: https://github.com/toeverything/AFFiNE/pkgs/container/affine-self-hosted
 - And here is a user guide discussing the Docker deployment: https://community.affine.pro/c/user-guide/self-host-affine-with-docker-pre-alpha-and-alpha-local-setup-user-guide
 
-If you'd like to have a try of some of these newer features that are yet to be released and get a technical preview of what's to come, we invite you to check out BlockSuite - the open-source collaborative editor project that powers AFFiNE. You can check out their GitHub: https://github.com/toeverything/blocksuite and deploy your own playground or directly play with the live demo deployment. There's also a newer unlisted demo that features the Block Hub enhancement:  https://blocksuite-git-fork-thorseraq-0111-feat-blockhub-toeverything.vercel.app/?init (please note this is a temporary link and will not work in the future, the GitHub page would have the latest available and working demo).
+If you'd like to have a try of some of these newer features that are yet to be released and get a technical preview of what's to come, we invite you to check out BlockSuite - the open-source collaborative editor project that powers AFFiNE. You can check out their GitHub: https://github.com/toeverything/blocksuite and deploy your own playground or directly play with the live demo deployment. 
+
+There's also a newer unlisted demo that features the Block Hub enhancement:  https://blocksuite-git-fork-thorseraq-0111-feat-blockhub-toeverything.vercel.app/?init (please note this is a temporary link and will not work in the future, the GitHub page would have the latest available and working demo).
 
 ## Conclusion
 
-So, whether you celebrate the Lunar New Year and/or the calendar New Year - Happy New Year to you! A new year marks a new milestone for AFFiNE as we continue to develop new features and improve on existing ones. We look forward to continuing the journey with you through next year and we continue to value your opinions and feedback.
+So, whether you celebrate the Lunar New Year and/or the calendar New Year - Happy New Year to you! 
+
+A new year marks a new milestone for AFFiNE as we continue to develop new features and improve on existing ones. We look forward to continuing the journey with you through next year and we continue to value your opinions and feedback.
 
 As usual don't be afraid to reach out with any ideas, opinions, features, bugs, feedback or anything else...
 
