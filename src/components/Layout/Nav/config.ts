@@ -2,7 +2,8 @@ import { useTranslation } from "react-i18next";
 
 export const useNavLink = () => {
   const leftNavLink = useLeftNavLink();
-  const rightNavLink = useCommunityNavLink().concat(useLiveDemoNavLink());
+  // const rightNavLink = useCommunityNavLink().concat(useLiveDemoNavLink());
+  const rightNavLink = useLiveDemoNavLink();
   const allNavLink = leftNavLink.concat(rightNavLink);
   return allNavLink;
 };
@@ -27,15 +28,15 @@ export const useLeftNavLink = () => {
     },
   ];
 };
-export const useCommunityNavLink = () => {
-  // const { t } = useTranslation();
-  return [
-    // {
-    //   href: "https://community.affine.pro",
-    //   title: t("Community"),
-    // },
-  ];
-};
+// export const useCommunityNavLink = () => {
+//   const { t } = useTranslation();
+//   return [
+//     {
+//       href: "https://community.affine.pro",
+//       title: t("Community"),
+//     },
+//   ];
+// };
 export const useLiveDemoNavLink = () => {
   const { t } = useTranslation();
   return [
