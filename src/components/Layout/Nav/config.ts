@@ -17,19 +17,23 @@ export const useLeftNavLink = () => {
       href: "/blog",
       title: t("Blog"),
     },
-    {
-      href: "https://docs.affine.pro/",
-      title: t("Docs"),
-    },
-  ];
-};
-export const useCommunityNavLink = () => {
-  const { t } = useTranslation();
-  return [
+    // {
+    //   href: "https://docs.affine.pro/",
+    //   title: t("Docs"),
+    // },
     {
       href: "https://community.affine.pro",
       title: t("Community"),
     },
+  ];
+};
+export const useCommunityNavLink = () => {
+  // const { t } = useTranslation();
+  return [
+    // {
+    //   href: "https://community.affine.pro",
+    //   title: t("Community"),
+    // },
   ];
 };
 export const useLiveDemoNavLink = () => {
