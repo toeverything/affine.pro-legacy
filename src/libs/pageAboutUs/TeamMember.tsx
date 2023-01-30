@@ -106,16 +106,6 @@ const TeamMember = () => {
         </StyledLink>
         &nbsp;| Architecture Engineer
       </StyledContent>
-      <StyledContent>
-        <StyledLink
-          target="_blank"
-          href="https://github.com/SaikaSakura"
-          rel="noreferrer"
-        >
-          Mingliang Wang
-        </StyledLink>
-        &nbsp;| Architecture Engineer
-      </StyledContent>
       <StyledTitle2>Engineering Team</StyledTitle2>
       <StyledContent>
         <StyledLink
