@@ -84,7 +84,7 @@ const TeamMember = () => {
         >
           Xiaodong Zuo
         </StyledLink>
-        &nbsp;| Head of Software Architecture
+        &nbsp;| Architecture Engineer
       </StyledContent>
       <StyledContent>
         <StyledLink
@@ -94,7 +94,7 @@ const TeamMember = () => {
         >
           Wenhao Tan
         </StyledLink>
-        &nbsp;| Director of Performance and Security
+        &nbsp;| Architecture Engineer
       </StyledContent>
       <StyledContent>
         <StyledLink
@@ -104,17 +104,7 @@ const TeamMember = () => {
         >
           Xinglong Wang
         </StyledLink>
-        &nbsp;| Head of Collaboration and Creativity
-      </StyledContent>
-      <StyledContent>
-        <StyledLink
-          target="_blank"
-          href="https://github.com/SaikaSakura"
-          rel="noreferrer"
-        >
-          Mingliang Wang
-        </StyledLink>
-        &nbsp;| Head of Structural Editing
+        &nbsp;| Architecture Engineer
       </StyledContent>
       <StyledTitle2>Engineering Team</StyledTitle2>
       <StyledContent>
