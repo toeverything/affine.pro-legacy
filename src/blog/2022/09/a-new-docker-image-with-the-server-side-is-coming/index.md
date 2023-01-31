@@ -5,17 +5,19 @@ tags: User Guide
 cover: ./cover.jpg
 description: Hello, everybody! The long-awaited release of our server-side data storage feature is now here! With the latest version, you can deploy AFFiNE on your own server and your data can be stored on your client locally and on the server-side
 created: 2022-09-23
-updated: 2022-09-23
+updated: 2023-01-31
 layout: blog
 ---
 
-Hello, everybody! The long-awaited release of our **server-side data storage**feature is now here! With the latest version, you can deploy AFFiNE on your own server and your data can be stored on your client locally and on the server-side. This greatly reduces the difficulty of using AFFiNE to store data, and allows users to have more customization options. The GitHub link for AFFiNE is [https://github.com/toeverything/AFFiNE](https://github.com/toeverything/AFFiNE).
+This article refers to a previously released version which is now out-dated, you may want to refer to the latest [AFFiNE Docker guide](https://affine.pro/content/blog/self-host-affine-with-docker/index).
+
+Hello, everybody! The long-awaited release of our **server-side data storage** feature is now here! With the latest version, you can deploy AFFiNE on your own server and your data can be stored on your client locally and on the server-side. This greatly reduces the difficulty of using AFFiNE to store data, and allows users to have more customization options. The GitHub link for AFFiNE is [https://github.com/toeverything/AFFiNE](https://github.com/toeverything/AFFiNE).
 
 So without further or do, let's see how we can deploy the latest version of AFFiNE on your own server.
 
-**Step 1:** You can find the [docker command](https://github.com/toeverything/AFFiNE/pkgs/container/affine/) from our GitHub packages page - the latest release currently uses the tag 'nightly-server-latest. Copy and run this command.
+**Step 1:** You can find the [docker command](https://github.com/toeverything/AFFiNE/pkgs/container/affine/) from our GitHub packages page - the latest release at the time of writing uses the tag `nightly-server-latest`. Please check the link above for the latest tags available. You can then pull the image, replacing the image name `nightly-server-latest` as necessary:
 
-docker pull ghcr.io/toeverything/affine:nightly-server-latest
+`docker pull ghcr.io/toeverything/affine:nightly-server-latest`
 
 ![](./1246e406fa87e88ab9b882bed1833c00d222b326-1280x584.png)
 docker pull
@@ -27,7 +29,7 @@ download image
 
 **Step 2:** After successfully updating the Docker image, we are now ready to run the docker run command.
 
-docker run -it --rm -p 3000:3000 -v YOUR_PATH:/app/data ghcr.io/toeverything/affine:nightly-server-latest
+`docker run -it --rm -p 3000:3000 -v YOUR_PATH:/app/data ghcr.io/toeverything/affine:nightly-server-latest`
 
 **Notes**:
 
@@ -35,7 +37,7 @@ The command should take the following format docker run -it --rm -p -v YOUR_PATH
 
 Alternatively, you can directly run the following command:
 
-docker run -it --rm -p 3000:3000 ghcr.io/toeverything/affine:nightly-server-latest
+`docker run -it --rm -p 3000:3000 ghcr.io/toeverything/affine:nightly-server-latest`
 
 If there are no issues, your AFFiNE deployment should be up and running, you'll receive a similar response as to the image below.
 
@@ -46,7 +48,7 @@ If there are no issues, your AFFiNE deployment should be up and running, you'll 
 ![](./053f5beaa7c0098628d027974fdf8a65dd71a937-1280x789.png)
 localhost address
 
-This update provides you with a brand new Docker container. Docker is a lightweight virtualization platform based on Linux kernel isolation implementation. It allows us to provide you with a unified system environment, which ensures that you'll receive the same smooth feature-rich experience no matter which platform or operating system you deploy on.
+At the time of writing this update, `nightly-server-latest`, provides you with a brand new Docker container. Docker is a lightweight virtualization platform based on Linux kernel isolation implementation. It allows us to provide you with a unified system environment, which ensures that you'll receive the same smooth feature-rich experience no matter which platform or operating system you deploy on.
 
 With this update, the self-hosted version of the live demo will automatically synchronize data to the server and store it in the /app/data directory in the container.
 
