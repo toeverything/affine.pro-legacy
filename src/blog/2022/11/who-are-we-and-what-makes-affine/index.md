@@ -3,13 +3,13 @@ title: Who are we and what makes AFFiNE?
 author: Christopher Smolak
 tags: The Open Source Engineering
 cover: ./cover.jpg
-description: To Everyone, from Toeverything - AFFiNE, BlockSuite and JWST
+description: To Everyone, from Toeverything - AFFiNE, BlockSuite and OctoBase
 created: 2022-11-25
-updated: 2022-11-25
+updated: 2023-02-01
 layout: blog
 ---
 
-AFFiNE, Toeverything, BlockSuite, JWST. Have you heard these names or seen then around our websites?
+AFFiNE, Toeverything, BlockSuite, OctoBase. Have you heard these names or seen then around our websites?
 We've been asked a few times about what's the relationship between these different names so today we're going to give you a quick overview of who we are and what all these different names represent.
 
 ### Toeverything
@@ -24,10 +24,10 @@ To make AFFiNE we require various bits of code that operate different services a
 One of the newer names you may have heard us mention is BlockSuite. AFFiNE is built with BlockSuite and in the future we hope that other developers and projects will also look to integrate BlockSuite into their solutions.
 What exactly is BlockSuite? Well it's a suite of blocks (get it?). Our goal with AFFiNE was to make sure everything was a block - something that could be edited and transformed freely. As we were building this solution we considered the reusability of this functionality and that we could create something that others may benefit from using and that's how BlockSuite was born. We decided to isolate the functionality of AFFiNE that allows you to create, edit, view and transform blocks into a standalone package. Something we knew we just just had to share with everyone. 
 
-### JWST
-Last, but at no means least we have JWST. JWST is our collaborative backend and database which is implemented based on CRDT.
+### OctoBase
+Last, but at no means least we have OctoBase (previously known as JWST). OctoBase is our collaborative backend and database which is implemented based on CRDT.
 As a summary, this component is critically in resolving conflicts between the duplication of data and managing the databases so that real-time collaboration and local-first storage is possible. And support is being built for decentralized storage too.
-We're also working hard on building up general purpose APIs so that JWST  can be utilized in other projects and is more developer friendly.
+We're also working hard on building up general purpose APIs so that OctoBase can be utilized in other projects and is more developer friendly.
 
 ### Find out more
 We hope now you have a much better idea of what all these names mean and what they represent.
