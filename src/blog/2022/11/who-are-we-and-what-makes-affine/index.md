@@ -33,7 +33,7 @@ We're also working hard on building up general purpose APIs so that OctoBase can
 We hope now you have a much better idea of what all these names mean and what they represent.
 If you'd like to learn more about any of our projects you are welcome to reach out to us and visit our GitHub repos.
 
-**toEverything** (GitHub Organization): https://github.com/toeverything  
+**Toeverything** (GitHub Organisation): https://github.com/toeverything  
 **AFFiNE** - https://github.com/toeverything/AFFiNE  
-**BlockSuite** - https://github.com/toeverything/blocksuite/  
-**JWST** - ETA early 2023
+**BlockSuite** - https://github.com/toeverything/BlockSuite  
+**OctoBase** - https://github.com/toeverything/OctoBase
