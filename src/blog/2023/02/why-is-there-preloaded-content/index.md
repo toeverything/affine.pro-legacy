@@ -1,5 +1,5 @@
 ---
-title: Why is there preloaded content?
+title: Why is there pre-loaded content?
 author: Christopher Smolak
 tags: User Guide
 cover: ./images/cover.png
@@ -17,14 +17,14 @@ When you open AFFiNE you will notice that there is often a page pre-loaded with 
 
 Firstly, we should tackle why. As AFFiNE is experiencing rather rapid development, it means that there are often new features and functionalities being added. How can we effectively communicate these changes and allow for all of our community to better understand them and explore their uses?
 
-If we added a new feature right now, how would you know about it? Maybe you might stumble across it in a menu. For a simple feature maybe that's enough - but for more advanced features, how can we help communicate the capabilities and possible configuarations.
+If we added a new feature right now, how would you know about it? Maybe you might stumble across it in a menu. For a simple feature maybe that's enough - but for more advanced features, how can we help communicate the capabilities and possible configurations.
 One way is through blog posts such as this one. We take the time to write instructions on how to perform operations and utilise features, supported with lots of images and gifs. That's a great way to communicate with our existing users and community, as well as those who may visit the blog. But what happens if someone visits the demo directly? How do they know where to begin?
 
 ## The troubles of a clean look
 
-Aesthetics and consiitency are important to us. We've gone for a more modest approach, with the idea being to keep things somewhat minimal, giving you more space to write with less distractions across the user interface. In fact, we continue to add functions and features that can be utilised via the keyboard to further improve your editing experience and maximise your efficiency.
+Aesthetics and consistency are important to us. We've gone for a more modest approach, with the idea being to keep things somewhat minimal, giving you more space to write with less distractions across the user interface. In fact, we continue to add functions and features that can be utilised via the keyboard to further improve your editing experience and maximise your efficiency.
 
-So when you open AFFiNE on a new, clean page, you might be forgiven for believing it's just another content editor. For those coming from more traditional software, such as Word - where are the toolbars? But AFFiNE is feature rich and capable of much more... so, with a clean design, how can we help communicate the capabilities and possibilities AFFiNE offers? How can we help you explore and learn AFFiNE without clogging up and filling your workspace with lots of tools and menus?
+So, when you open AFFiNE on a new, clean page, you might be forgiven for believing it's just another content editor. For those coming from more traditional software, such as Word - where are the toolbars? But AFFiNE is feature rich and capable of much more... so, with a clean design, how can we help communicate the capabilities and possibilities AFFiNE offers? How can we help you explore and learn AFFiNE without clogging up and filling your workspace with lots of tools and menus?
 
 ## The pre-load content
 
