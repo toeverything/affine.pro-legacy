@@ -1,11 +1,11 @@
 ---
-title: Downhills release-Cloud sync, Workspaces, and more Blocks
+title: Why is there pre-loaded content?
 author: Christopher Smolak
 tags: User Guide
 cover: ./images/cover.png
-description: AFFiNE introduces Downhills, the next version of AFFiNE with multi-collaboration support that still prioritises the local-first experience.
-created: 2023-02-16
-updated: 2023-02-17
+description: Improving user experience
+created: 2023-02-13
+updated: 2023-02-14
 layout: blog
 ---
 
