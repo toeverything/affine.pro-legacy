@@ -95,6 +95,8 @@ const blogRootDir = path.resolve(process.cwd(), "./src/blog");
         }
       });
     }
+    // clean up historical data
+    await index.clearObjects();
     // add the data to the index
     await getFiles(blogRootDir);
     console.log("success to update algolia-search");
