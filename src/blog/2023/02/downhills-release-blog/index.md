@@ -2,7 +2,7 @@
 title: Downhills release-Cloud sync, Workspaces, and more Blocks
 author: Jackie Peng, Christopher Smolak
 tags: Release Note
-cover: ./cover.jpg
+cover: ./affinebg2.jpg
 description: AFFiNE introduces Downhills, the next version of AFFiNE with multi-collaboration support that still prioritises the local-first experience.
 created: 2023-02-16
 updated: 2023-02-17
