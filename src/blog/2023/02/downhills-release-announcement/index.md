@@ -9,7 +9,6 @@ updated: 2023-02-17
 layout: blog
 ---
 
-# Downhills release-Cloud sync, Workspaces, and more Blocks
 # Preface
 Everything we do from start to finish is **with the goal of creating a tool that provides positive real-life value to our community**. Whether you are writing a document, or getting creative in the Edgeless Mode (whiteboard). Whether you are working solo, with friends, or with colleagues. AFFiNE should work for you, so here are some of our latest updates:
 ## 1) A local-first, offline support, and privacy-focused workspace
