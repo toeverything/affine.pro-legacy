@@ -67,19 +67,28 @@ const PopperComponent = (props: PopperComponent) => {
                     AFFINE Pre-Alpha
                   </StyledLink>
                 </MenuItem>
+                <MenuItem onClick={handleClose}>
+                  <StyledLink
+                    href="https://pathfinder.affine.pro/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    AFFINE Alpha - Abbey Wood
+                  </StyledLink>
+                </MenuItem>
                 <MenuItem onClick={handleClose} sx={{ cursor: "auto" }}>
                   <div>
                     <StyledLink
-                      href="https://pathfinder.affine.pro/"
+                      href="https://app.affine.pro/"
                       target="_blank"
                       rel="noreferrer"
                     >
-                      AFFINE Alpha
+                      AFFINE Alpha - Downhills
                       <StyledBadge>New</StyledBadge>
                     </StyledLink>
 
                     <StyledSubLink
-                      href="https://affine.pro/content/blog/affine-alpha-is-coming/index"
+                      href="https://affine.pro/content/blog/downhills-release-announcement/index"
                       target="_blank"
                       rel="noreferrer"
                     >
