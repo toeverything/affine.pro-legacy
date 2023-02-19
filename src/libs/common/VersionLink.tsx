@@ -70,7 +70,7 @@ const PopperComponent = (props: PopperComponent) => {
                 <MenuItem onClick={handleClose} sx={{ cursor: "auto" }}>
                   <div>
                     <StyledLink
-                      href="https://pathfinder.affine.pro/"
+                      href="https://app.affine.pro/"
                       target="_blank"
                       rel="noreferrer"
                     >
