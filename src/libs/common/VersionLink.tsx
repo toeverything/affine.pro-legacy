@@ -74,7 +74,7 @@ const PopperComponent = (props: PopperComponent) => {
                       target="_blank"
                       rel="noreferrer"
                     >
-                      Why a new Version?
+                      Why a new version?
                     </StyledSubLink>
                   </div>
                 </MenuItem>
@@ -84,7 +84,7 @@ const PopperComponent = (props: PopperComponent) => {
                     href="https://pathfinder.affine.pro/"
                     target="_blank"
                     rel="noreferrer"
-                    style={{ fontSize: "16px" }}
+                    style={{ fontSize: "16px", fontWeight: "normal" }}
                   >
                     AFFINE Alpha - Abbey Wood
                   </StyledLink>
@@ -94,7 +94,7 @@ const PopperComponent = (props: PopperComponent) => {
                     href="https://livedemo.affine.pro/"
                     target="_blank"
                     rel="noreferrer"
-                    style={{ fontSize: "14px" }}
+                    style={{ fontSize: "14px", fontWeight: "normal" }}
                   >
                     AFFINE Pre-Alpha
                   </StyledLink>
