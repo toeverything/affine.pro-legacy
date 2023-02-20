@@ -36,7 +36,7 @@ Please do remember we are in active development, and still in Alpha. We do not a
 
 ### Pathfinder
 
-An important announcement is the [pathfinder.affine.pro](https://pathfinder.affine.pro) address is being retired. The new app address replaces this one, and builds upon the previous release. We have kept this version up to give you time to transfer your data, as any browser-stored data would be lost in the transfer to the latest app address. Simply use the export function to export your content as HTML or Markdown and save these to your local device. You could also copy and paste your data as required, to your new workspace over on [app.affine.pro](https://app.affine.pro).
+An important announcement is the [pathfinder.affine.pro](https://pathfinder.affine.pro) address is being retired on 28th February. The new app address replaces this one, and builds upon the previous release. So after this date you will no longer be able to access this old version of AFFiNE. We have kept this version up to give you time to transfer your data, as any browser-stored data would be lost in the transfer to the latest app address. Simply use the export function to export your content as HTML or Markdown and save these to your local device. You could also copy and paste your data as required, to your new workspace over on [app.affine.pro](https://app.affine.pro).
 
 ![](./images/pathfinder-export.gif)
 
