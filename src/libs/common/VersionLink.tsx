@@ -58,24 +58,6 @@ const PopperComponent = (props: PopperComponent) => {
           >
             <Paper>
               <MenuList onMouseLeave={handleClose} onMouseEnter={handleOpen}>
-                <MenuItem onClick={handleClose}>
-                  <StyledLink
-                    href="https://livedemo.affine.pro/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    AFFINE Pre-Alpha
-                  </StyledLink>
-                </MenuItem>
-                <MenuItem onClick={handleClose}>
-                  <StyledLink
-                    href="https://pathfinder.affine.pro/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    AFFINE Alpha - Abbey Wood
-                  </StyledLink>
-                </MenuItem>
                 <MenuItem onClick={handleClose} sx={{ cursor: "auto" }}>
                   <div>
                     <StyledLink
@@ -88,13 +70,34 @@ const PopperComponent = (props: PopperComponent) => {
                     </StyledLink>
 
                     <StyledSubLink
-                      href="https://affine.pro/content/blog/downhills-release-announcement/index"
+                      href="https://affine.pro/content/blog/moving-to-app-affine-pro/index"
                       target="_blank"
                       rel="noreferrer"
                     >
-                      Why a new Version?
+                      Why a new version?
                     </StyledSubLink>
                   </div>
+                </MenuItem>
+
+                <MenuItem onClick={handleClose}>
+                  <StyledLink
+                    href="https://pathfinder.affine.pro/"
+                    target="_blank"
+                    rel="noreferrer"
+                    style={{ fontSize: "16px", fontWeight: "normal" }}
+                  >
+                    AFFINE Alpha - Abbey Wood
+                  </StyledLink>
+                </MenuItem>
+                <MenuItem onClick={handleClose}>
+                  <StyledLink
+                    href="https://livedemo.affine.pro/"
+                    target="_blank"
+                    rel="noreferrer"
+                    style={{ fontSize: "14px", fontWeight: "normal" }}
+                  >
+                    AFFINE Pre-Alpha
+                  </StyledLink>
                 </MenuItem>
               </MenuList>
             </Paper>
