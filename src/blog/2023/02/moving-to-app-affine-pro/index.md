@@ -2,7 +2,7 @@
 title: Moving to app.affine.pro
 author: Christopher Smolak
 tags: User Guide
-cover: ./images/cover.png
+cover: ./images/cover.jpg
 description: A big step forward for AFFiNE
 created: 2023-02-20
 updated: 2023-02-20
