@@ -48,11 +48,7 @@ const Title = () => {
         </StyledGithub>
         <StyledVersionLink>
           <VersionLink>
-            <a
-              href="https://pathfinder.affine.pro/"
-              target="_blank"
-              rel="noreferrer"
-            >
+            <a href="https://app.affine.pro/" target="_blank" rel="noreferrer">
               <StyledLogo>
                 <Logo fill="#fff" stroke="#fff" width="20" height="20" />
                 &nbsp;{t("Try it Online")}
