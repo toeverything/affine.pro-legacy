@@ -41,7 +41,7 @@ export const useLiveDemoNavLink = () => {
   const { t } = useTranslation();
   return [
     {
-      href: "https://pathfinder.affine.pro/",
+      href: "https://app.affine.pro/",
       title: t("Try it Online"),
     },
   ];
