@@ -1,5 +1,5 @@
 ---
-title: Faq about Downhills
+title: FAQ about Downhills
 author: Jackie Peng
 tags: User guide
 cover: ./cover.jpg
