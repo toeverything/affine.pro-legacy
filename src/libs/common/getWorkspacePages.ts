@@ -12,6 +12,8 @@ export async function getWorkspacePages() {
   if (!_pages$ || lastFetch < Date.now() - 1000 * 30) {
     _pages$ = reader.getWorkspacePages(true);
     lastFetch = Date.now();
+  } else {
+    console.log("Using cached pages");
   }
   const pages = await _pages$;
   return pages;

@@ -19,6 +19,6 @@ export async function getStaticPaths() {
 
   return {
     paths: isProduction ? paths : [],
-    fallback: isProduction ? false : "blocking",
+    fallback: "blocking",
   };
 }
