@@ -1,22 +1,21 @@
-import path from "path";
-import { getRealPaths } from "../common/getRealPaths";
-import { resolveFile } from "../common/resolveContentFile";
-import { rootDir } from "./constants";
-
-const realPaths = getRealPaths();
+import { getWorkspacePages } from "../common/getWorkspacePages";
+import { parseWorkspacePage } from "../common/resolveContentFile";
 
 export async function getStaticProps({
   params,
 }: {
-  params: { contentPath: string[] };
+  params: { pageId: string };
 }) {
-  const newFilePath = params.contentPath.join("/");
+  const pages = await getWorkspacePages();
+  const page = pages?.find((p) => p.id === params.pageId);
 
-  const filePath = await realPaths.then((val) => {
-    return val[newFilePath];
-  });
+  if (!page) {
+    return {
+      notFound: true,
+    };
+  }
 
-  const content = await resolveFile(path.resolve(rootDir, filePath + ".md"), {
+  const content = await parseWorkspacePage(page, {
     parseToHTML: true,
   });
   return {

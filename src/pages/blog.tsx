@@ -53,6 +53,7 @@ export default function Blog(props: { blogMetas: ContentFileMeta[] }) {
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [router.query.tag]);
+
   return (
     <Page showSearchBar={true}>
       <div>
@@ -66,12 +67,12 @@ export default function Blog(props: { blogMetas: ContentFileMeta[] }) {
             </div>
             <div
               className={styles.header_content_right}
-              onClick={() => router.push(blogMetas[0].href)}
+              onClick={() => router.push(blogMetas[0]?.href)}
             >
               <div>
                 <picture>
-                  <img src={blogMetas[0].cover || ""} alt="Page cover" />
-                  <h1>{blogMetas[0].title}</h1>
+                  <img src={blogMetas[0]?.cover || ""} alt="Page cover" />
+                  <h1>{blogMetas[0]?.title}</h1>
                 </picture>
               </div>
             </div>
@@ -125,7 +126,7 @@ export default function Blog(props: { blogMetas: ContentFileMeta[] }) {
                 {currentList.items.map((meta) => {
                   return (
                     <li
-                      key={meta.cover}
+                      key={meta.id}
                       className={styles.body_right_list_item}
                       onClick={() => router.push(meta.href)}
                     >
