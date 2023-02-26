@@ -41,6 +41,6 @@ export async function getStaticProps() {
     props: {
       blogMetas,
     },
-    revalidate: 30,
+    revalidate: 60,
   };
 }
