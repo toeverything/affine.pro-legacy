@@ -13,7 +13,7 @@ export async function getWorkspacePages() {
     _pages$ = reader.getWorkspacePages(true);
     lastFetch = Date.now();
   } else {
-    console.log("Using cached pages");
+    console.log("Using cached pages.");
   }
   const pages = await _pages$;
   return pages;
