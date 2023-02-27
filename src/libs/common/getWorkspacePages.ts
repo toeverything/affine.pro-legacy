@@ -1,7 +1,7 @@
 import { getBlocksuiteReader, WorkspacePage } from "blocksuite-reader";
 
 const reader = getBlocksuiteReader({
-  workspaceId: `K07aPDNVDsT1jmeGMmeFP`,
+  workspaceId: `1MCi2U4DnOMqpFVWYztfj`,
 });
 
 let lastFetch = 0;
