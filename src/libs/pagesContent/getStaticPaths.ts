@@ -12,7 +12,7 @@ export async function getStaticPaths() {
   const paths = pages.map((file) => {
     return {
       params: {
-        pageId: file.id,
+        slug: file.slug,
       },
     };
   });

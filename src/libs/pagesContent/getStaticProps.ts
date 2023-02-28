@@ -1,13 +1,11 @@
 import { getWorkspacePages } from "../common/getWorkspacePages";
-import { parseWorkspacePage } from "../common/resolveContentFile";
+import { renderHTML } from "../common/resolveContentFile";
 
-export async function getStaticProps({
-  params,
-}: {
-  params: { pageId: string };
-}) {
+export async function getStaticProps({ params }: { params: { slug: string } }) {
   const pages = await getWorkspacePages();
-  const page = pages?.find((p) => p.id === params.pageId);
+  const page = pages?.find(
+    (p) => p.slug === params.slug || p.id === params.slug
+  );
 
   if (!page) {
     return {
@@ -15,12 +13,11 @@ export async function getStaticProps({
     };
   }
 
-  const content = await parseWorkspacePage(page, {
-    parseToHTML: true,
-  });
+  const content = await renderHTML(page.md);
   return {
     props: {
-      ...content,
+      ...page,
+      html: content,
     },
     revalidate: 10,
   };

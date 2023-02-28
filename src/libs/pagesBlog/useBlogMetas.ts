@@ -1,3 +1,4 @@
+import React from "react";
 import type { ContentFileMeta } from "../common/resolveContentFile";
 
 function getTags(blogMetas: ContentFileMeta[]) {
@@ -18,12 +19,15 @@ export const useBlogMetas = (
   blogMetas: ContentFileMeta[],
   query?: { tag: string }
 ) => {
-  const tags = getTags(blogMetas);
-  let filteredMetas = query?.tag
-    ? blogMetas.filter((meta) => meta.tags?.includes(query.tag))
-    : blogMetas;
-  if (filteredMetas.length > 3 && filteredMetas[0] === blogMetas[0]) {
-    filteredMetas = filteredMetas.slice(1);
-  }
-  return { blogMetas, tags, filteredMetas };
+  return React.useMemo(() => {
+    const tags = getTags(blogMetas);
+    const publishedMetas = blogMetas.filter((meta) => meta.publish);
+    let filteredMetas = query?.tag
+      ? publishedMetas.filter((meta) => meta.tags?.includes(query.tag))
+      : publishedMetas;
+    if (filteredMetas.length > 3 && filteredMetas[0] === publishedMetas[0]) {
+      filteredMetas = filteredMetas.slice(1);
+    }
+    return { blogMetas: publishedMetas, tags, filteredMetas };
+  }, [blogMetas, query?.tag]);
 };

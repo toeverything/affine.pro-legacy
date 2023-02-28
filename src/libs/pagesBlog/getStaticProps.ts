@@ -1,8 +1,5 @@
 import { getWorkspacePages } from "../common/getWorkspacePages";
-import {
-  ContentFileMeta,
-  parseWorkspacePage,
-} from "../common/resolveContentFile";
+import type { ContentFileMeta } from "../common/resolveContentFile";
 
 async function getFiles(): Promise<ContentFileMeta[]> {
   const pages = await getWorkspacePages();
@@ -11,13 +8,7 @@ async function getFiles(): Promise<ContentFileMeta[]> {
     return [];
   }
 
-  const files = await Promise.all(
-    pages.map(async (page) => {
-      return parseWorkspacePage(page);
-    })
-  );
-
-  return files.flat().filter((f) => !!f) as ContentFileMeta[];
+  return pages.flat().filter((f) => !!f) as ContentFileMeta[];
 }
 
 export async function getStaticProps() {
