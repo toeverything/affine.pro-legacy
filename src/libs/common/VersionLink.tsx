@@ -68,7 +68,7 @@ const PopperComponent = (props: PopperComponent) => {
                       AFFINE Alpha - Downhills
                       <StyledBadge>New</StyledBadge>
                     </StyledLink>
-
+<!--
                     <StyledSubLink
                       href="https://affine.pro/content/blog/moving-to-app-affine-pro/index"
                       target="_blank"
@@ -76,19 +76,10 @@ const PopperComponent = (props: PopperComponent) => {
                     >
                       Why a new version?
                     </StyledSubLink>
+-->
                   </div>
                 </MenuItem>
 
-                <MenuItem onClick={handleClose}>
-                  <StyledLink
-                    href="https://pathfinder.affine.pro/"
-                    target="_blank"
-                    rel="noreferrer"
-                    style={{ fontSize: "16px", fontWeight: "normal" }}
-                  >
-                    AFFINE Alpha - Abbey Wood
-                  </StyledLink>
-                </MenuItem>
                 <MenuItem onClick={handleClose}>
                   <StyledLink
                     href="https://livedemo.affine.pro/"
