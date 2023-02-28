@@ -6,7 +6,7 @@
     "start": "node script/start-dev.js",
     "dev": "next dev",
     "build": "next build",
-    "build:server": "next telemetry disable && pnpm build && pnpx @cloudflare/next-on-pages --skip-build --experimental-minify",
+    "build:server": "next telemetry disable && vercel build && pnpx @cloudflare/next-on-pages --skip-build --experimental-minify",
     "build:optimage": "next-image-export-optimizer && mv out/nextImageExportOptimizer/* out/_next/static/media/ && rm -rf out/nextImageExportOptimizer",
     "build:algolia": "node script/build-algolia-search.js",
     "lint": "next lint",
@@ -62,7 +62,8 @@
     "prettier": "^2.7.1",
     "typescript": "^4.8.4",
     "unified": "^10.1.2",
-    "unist-util-visit": "^4.1.2"
+    "unist-util-visit": "^4.1.2",
+    "vercel": "^28.16.7"
   },
   "engines": {
     "node": ">=16",
