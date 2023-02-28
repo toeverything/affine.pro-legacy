@@ -126,40 +126,36 @@ export default function Blog(props: { blogMetas: ContentFileMeta[] }) {
                   </p>
                 }
               >
-                {currentList.items.map((meta) => {
-                  return (
-                    <Link href={"/content/" + meta.slug} key={meta.id}>
-                      <a className={styles.body_right_list_item}>
-                        <div className={styles.body_right_list_item_left}>
-                          <picture>
-                            <img src={meta.cover || ""} alt="Page cover" />
-                          </picture>
-                        </div>
-                        <div className={styles.body_right_list_item_right}>
-                          <h2>{meta.title}</h2>
-                          <p>
-                            {new Date(
-                              meta.updated ? meta.updated : meta.created ?? ""
-                            ).toLocaleDateString("en-US")}
-                          </p>
-                          <p>{meta.authors?.join(", ")}</p>
-                          <p>
-                            {meta.tags?.map((item) => {
-                              return (
-                                <span key={item} className={styles.tag}>
-                                  {item}
-                                </span>
-                              );
-                            })}
-                          </p>
-                          <p className={styles.description}>
-                            {meta.description}
-                          </p>
-                        </div>
-                      </a>
-                    </Link>
-                  );
-                })}
+                {currentList.items.map((meta) => (
+                  <Link href={"/content/" + meta.slug} key={meta.id}>
+                    <a className={styles.body_right_list_item}>
+                      <div className={styles.body_right_list_item_left}>
+                        <picture>
+                          <img src={meta.cover || ""} alt="Page cover" />
+                        </picture>
+                      </div>
+                      <div className={styles.body_right_list_item_right}>
+                        <h2>{meta.title}</h2>
+                        <p>
+                          {new Date(
+                            meta.updated ? meta.updated : meta.created ?? ""
+                          ).toLocaleDateString("en-US")}
+                        </p>
+                        <p>{meta.authors?.join(", ")}</p>
+                        <p>
+                          {meta.tags?.map((item) => {
+                            return (
+                              <span key={item} className={styles.tag}>
+                                {item}
+                              </span>
+                            );
+                          })}
+                        </p>
+                        <p className={styles.description}>{meta.description}</p>
+                      </div>
+                    </a>
+                  </Link>
+                ))}
               </InfiniteScroll>
             </ul>
           </div>
