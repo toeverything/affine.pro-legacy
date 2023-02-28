@@ -6,6 +6,7 @@
     "start": "node script/start-dev.js",
     "dev": "next dev",
     "build": "next build",
+    "build:server": "next telemetry disable && pnpm build && pnpx @cloudflare/next-on-pages --skip-build --experimental-minify",
     "build:optimage": "next-image-export-optimizer && mv out/nextImageExportOptimizer/* out/_next/static/media/ && rm -rf out/nextImageExportOptimizer",
     "build:algolia": "node script/build-algolia-search.js",
     "lint": "next lint",
@@ -68,5 +69,11 @@
     "npm": "please-use-pnpm",
     "pnpm": ">=7",
     "yarn": "please-use-pnpm"
+  },
+  "prettier": {
+    "singleQuote": false,
+    "trailingComma": "es5",
+    "tabWidth": 2,
+    "arrowParens": "avoid"
   }
 }

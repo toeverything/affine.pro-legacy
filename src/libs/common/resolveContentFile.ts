@@ -18,6 +18,7 @@ export interface ContentFileMeta {
   md: string;
   layout: string | null;
   publish?: boolean;
+  html?: string;
 }
 
 export function parseWorkspacePageMeta(page: WorkspacePage): ContentFileMeta {
@@ -39,11 +40,10 @@ export function parseWorkspacePageMeta(page: WorkspacePage): ContentFileMeta {
   return {
     title: title || null,
     authors:
-      (typeof author === "string" &&
-        author?.split(",").map((au) => au.trim())) ||
+      (typeof author === "string" && author?.split(",").map(au => au.trim())) ||
       null,
     tags:
-      (typeof tags === "string" && tags?.split(",").map((tag) => tag.trim())) ||
+      (typeof tags === "string" && tags?.split(",").map(tag => tag.trim())) ||
       null,
     description: description || null,
     created: (created as unknown as Date)?.getTime() || null,

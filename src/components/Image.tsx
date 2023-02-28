@@ -86,7 +86,7 @@ function ExportedImage({
   src,
   priority = false,
   loading,
-  lazyRoot = null,
+  lazyRoot,
   lazyBoundary = "200px",
   className,
   width,
@@ -140,15 +140,15 @@ function ExportedImage({
       loader={
         imageError || unoptimized === true
           ? fallbackLoader
-          : (e) => optimizedLoader({ src, width: e.width, useWebp })
+          : e => optimizedLoader({ src, width: e.width, useWebp })
       }
       blurDataURL={automaticallyCalculatedBlurDataURL}
-      onError={(error) => {
+      onError={error => {
         setImageError(true);
         // execute the onError function if provided
         onError && onError(error);
       }}
-      onLoadingComplete={(result) => {
+      onLoadingComplete={result => {
         // for some configurations, the onError handler is not called on an error occurrence
         // so we need to check if the image is loaded correctly
         if (result.naturalWidth === 0) {
