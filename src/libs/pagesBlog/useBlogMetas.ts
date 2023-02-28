@@ -20,8 +20,8 @@ export const useBlogMetas = (
   query?: { tag: string }
 ) => {
   return React.useMemo(() => {
-    const tags = getTags(blogMetas);
     const publishedMetas = blogMetas.filter((meta) => meta.publish);
+    const tags = getTags(publishedMetas);
     let filteredMetas = query?.tag
       ? publishedMetas.filter((meta) => meta.tags?.includes(query.tag))
       : publishedMetas;
