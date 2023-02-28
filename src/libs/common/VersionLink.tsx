@@ -68,15 +68,6 @@ const PopperComponent = (props: PopperComponent) => {
                       AFFINE Alpha - Downhills
                       <StyledBadge>New</StyledBadge>
                     </StyledLink>
-<!--
-                    <StyledSubLink
-                      href="https://affine.pro/content/blog/moving-to-app-affine-pro/index"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      Why a new version?
-                    </StyledSubLink>
--->
                   </div>
                 </MenuItem>
 
