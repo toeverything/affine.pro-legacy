@@ -1,7 +1,7 @@
 ---
 title: FAQ about Downhills
 author: Jackie Peng
-tags: User guide
+tags: User Guide
 cover: ./cover.jpg
 description: Here's an article to have the most frequently asked questions adequately answered. And a few of them are being fixed in the coming updated version.
 created: 2023-02-24
