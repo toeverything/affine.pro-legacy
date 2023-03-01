@@ -70,7 +70,7 @@ export default function Blog(props: { blogMetas: ContentFileMeta[] }) {
               </p>
             </div>
             <div className={styles.header_content_right}>
-              <Link href={"/content/" + firstPublished?.slug}>
+              <Link href={"/blog/" + firstPublished?.slug}>
                 <a>
                   <picture>
                     <img src={firstPublished?.cover || ""} alt="Page cover" />
@@ -126,8 +126,8 @@ export default function Blog(props: { blogMetas: ContentFileMeta[] }) {
                   </p>
                 }
               >
-                {currentList.items.map((meta) => (
-                  <Link href={"/content/" + meta.slug} key={meta.id}>
+                {currentList.items.map(meta => (
+                  <Link href={"/blog/" + meta.slug} key={meta.id}>
                     <a className={styles.body_right_list_item}>
                       <div className={styles.body_right_list_item_left}>
                         <picture>
@@ -143,7 +143,7 @@ export default function Blog(props: { blogMetas: ContentFileMeta[] }) {
                         </p>
                         <p>{meta.authors?.join(", ")}</p>
                         <p>
-                          {meta.tags?.map((item) => {
+                          {meta.tags?.map(item => {
                             return (
                               <span key={item} className={styles.tag}>
                                 {item}
