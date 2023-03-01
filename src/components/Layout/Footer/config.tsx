@@ -1,33 +1,35 @@
+import {
+  DiscordIcon,
+  GithubIcon,
+  RedditIcon,
+  TelegramIcon,
+  TwitterIcon,
+} from "@BlockSuite/icons";
 import styled from "@emotion/styled";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import RedditIcon from "@mui/icons-material/Reddit";
-import TelegramIcon from "@mui/icons-material/Telegram";
-import TwitterIcon from "@mui/icons-material/Twitter";
-import DiscordIcon from "./DiscordIcon";
 
-const StyledGithubIcon = styled(GitHubIcon)({
-  color: "#096bde",
-  fontSize: "36px",
+const StyledGithubIcon = styled(GithubIcon)({
+  color: "#6880ff",
+  fontSize: "24px",
 });
 
 const StyledRedditIcon = styled(RedditIcon)({
-  color: "#096bde",
-  fontSize: "36px",
+  color: "#6880ff",
+  fontSize: "24px",
 });
 
 const StyledTwitterIcon = styled(TwitterIcon)({
-  color: "#096bde",
-  fontSize: "36px",
+  color: "#6880ff",
+  fontSize: "24px",
 });
 
 const StyledTelegramIcon = styled(TelegramIcon)({
-  color: "#096bde",
-  fontSize: "36px",
+  color: "#6880ff",
+  fontSize: "24px",
 });
 
 const StyledDiscordIcon = styled(DiscordIcon)({
-  color: "#096bde",
-  fontSize: "36px",
+  color: "#6880ff",
+  fontSize: "24px",
 });
 
 export const contactUsList = [

@@ -54,8 +54,9 @@ const Container = styled.div({
 });
 
 const Content = styled.div({
-  padding: "64px 32px",
+  padding: "20px",
   margin: "0 auto",
+  marginBottom: "20px",
   maxWidth: "1280px",
 });
 
@@ -76,12 +77,13 @@ const Copyright = styled.div({
 });
 
 const Privacy = styled.div({
-  marginTop: "10px",
-  fontSize: "12px",
+  marginTop: "20px",
+  fontSize: "14px",
+  color: "#77757D",
   a: {
     cursor: "pointer",
     ":hover": {
-      color: "#5085F6CC",
+      color: "#424149",
       cursor: "pointer",
     },
   },
