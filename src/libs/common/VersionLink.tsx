@@ -1,11 +1,12 @@
 import styled from "@emotion/styled";
+import Badge from "@mui/material/Badge";
 
 import Grow from "@mui/material/Grow";
 import MenuItem from "@mui/material/MenuItem";
 import MenuList from "@mui/material/MenuList";
 import Paper from "@mui/material/Paper";
 import Popper from "@mui/material/Popper";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 type PopperComponent = {
   children: React.ReactNode;
@@ -14,7 +15,7 @@ type PopperComponent = {
 const PopperComponent = (props: PopperComponent) => {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const anchorElRef = useRef<HTMLDivElement>(null);
-
+  const [invisible, setInvisible] = useState(false);
   const open = Boolean(anchorEl);
   const hoverCloseDelay = 200;
   const timeoutID = useRef<number | undefined>();
@@ -29,6 +30,20 @@ const PopperComponent = (props: PopperComponent) => {
     setAnchorEl(anchorElRef.current);
   };
 
+  const setLocalStorageState = (state: string) => {
+    if (typeof window !== "undefined")
+      localStorage.setItem("Questionnaire_clicked", state);
+  };
+
+  const getLocalStorageState = () => {
+    if (typeof window !== "undefined")
+      return localStorage.getItem("Questionnaire_clicked");
+  };
+  useEffect(() => {
+    if (getLocalStorageState() === "true") {
+      setInvisible(true);
+    }
+  }, []);
   return (
     <>
       <div
@@ -65,7 +80,7 @@ const PopperComponent = (props: PopperComponent) => {
                       target="_blank"
                       rel="noreferrer"
                     >
-                      AFFINE Alpha - Downhills
+                      AFFiNE Alpha - Downhills
                       <StyledBadge>New</StyledBadge>
                     </StyledLink>
                   </div>
@@ -76,9 +91,33 @@ const PopperComponent = (props: PopperComponent) => {
                     href="https://livedemo.affine.pro/"
                     target="_blank"
                     rel="noreferrer"
-                    style={{ fontSize: "14px", fontWeight: "normal" }}
+                    style={{
+                      fontSize: "14px",
+                      fontWeight: "normal",
+                      width: "100%",
+                    }}
                   >
-                    AFFINE Pre-Alpha
+                    AFFiNE Pre-Alpha
+                  </StyledLink>
+                </MenuItem>
+                <MenuItem onClick={handleClose}>
+                  <StyledLink
+                    href="https://6dxre9ihosp.typeform.com/to/AL0uvvCw"
+                    target="_blank"
+                    rel="noreferrer"
+                    style={{
+                      fontSize: "14px",
+                      fontWeight: "normal",
+                      width: "100%",
+                    }}
+                    onClick={() => {
+                      setInvisible(true);
+                      setLocalStorageState("true");
+                    }}
+                  >
+                    <Badge color="error" variant="dot" invisible={invisible}>
+                      AFFiNE user survey
+                    </Badge>
                   </StyledLink>
                 </MenuItem>
               </MenuList>
@@ -108,6 +147,9 @@ const StyledLink = styled.a({
   color: "#000",
   fontSize: "18px",
   fontWeight: "bold",
+  ".MuiBadge-badge": {
+    transform: "translate(200%,0)",
+  },
 });
 const StyledSubLink = styled.a({
   color: "#096bde",
