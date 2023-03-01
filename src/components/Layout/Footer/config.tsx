@@ -8,28 +8,28 @@ import {
 import styled from "@emotion/styled";
 
 const StyledGithubIcon = styled(GithubIcon)({
-  color: "#6880ff",
-  fontSize: "24px",
+  color: "#096bde",
+  fontSize: "36px",
 });
 
 const StyledRedditIcon = styled(RedditIcon)({
-  color: "#6880ff",
-  fontSize: "24px",
+  color: "#096bde",
+  fontSize: "36px",
 });
 
 const StyledTwitterIcon = styled(TwitterIcon)({
-  color: "#6880ff",
-  fontSize: "24px",
+  color: "#096bde",
+  fontSize: "36px",
 });
 
 const StyledTelegramIcon = styled(TelegramIcon)({
-  color: "#6880ff",
-  fontSize: "24px",
+  color: "#096bde",
+  fontSize: "36px",
 });
 
 const StyledDiscordIcon = styled(DiscordIcon)({
-  color: "#6880ff",
-  fontSize: "24px",
+  color: "#096bde",
+  fontSize: "36px",
 });
 
 export const contactUsList = [

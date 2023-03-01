@@ -77,7 +77,7 @@ const Copyright = styled.div({
 });
 
 const Privacy = styled.div({
-  marginTop: "20px",
+  marginTop: "4px",
   fontSize: "14px",
   color: "#77757D",
   a: {
