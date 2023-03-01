@@ -25,6 +25,8 @@ const StyledButton = styled(Button)({
 });
 
 const StyledText = styled("div")({
-  color: "#262626",
-  fontSize: "14px",
+  color: "#424149",
+  fontSize: "16px",
+  lineHeight: "24px",
+  letterSpacing: "1px",
 });

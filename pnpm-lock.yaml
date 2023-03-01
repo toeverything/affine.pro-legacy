@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@blocksuite/icons': ^2.0.18
   '@emotion/cache': ^11.10.3
   '@emotion/react': ^11.10.4
   '@emotion/server': ^11.10.0
@@ -44,6 +45,7 @@ specifiers:
   typescript: ^4.8.4
 
 dependencies:
+  '@blocksuite/icons': 2.0.18_iapumuv4e6jcjznwuxpf4tt22e
   '@emotion/cache': 11.10.3
   '@emotion/react': 11.10.4_iapumuv4e6jcjznwuxpf4tt22e
   '@emotion/server': 11.10.0
@@ -263,6 +265,16 @@ packages:
       '@babel/helper-string-parser': 7.19.4
       '@babel/helper-validator-identifier': 7.19.1
       to-fast-properties: 2.0.0
+    dev: false
+
+  /@blocksuite/icons/2.0.18_iapumuv4e6jcjznwuxpf4tt22e:
+    resolution: {integrity: sha512-ltypxszSSX0UQ2dauAslROpMOOAwsa3vC1r4YwVJXj+1pqjroScooZjORSkiyy7qizYn7ROFGa1g13ZIbfq6lw==}
+    peerDependencies:
+      '@types/react': ^18.0.25
+      react: ^18.2.0
+    dependencies:
+      '@types/react': 18.0.21
+      react: 18.2.0
     dev: false
 
   /@emotion/babel-plugin/11.10.2:
