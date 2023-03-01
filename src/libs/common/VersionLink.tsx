@@ -116,7 +116,7 @@ const PopperComponent = (props: PopperComponent) => {
                     }}
                   >
                     <Badge color="error" variant="dot" invisible={invisible}>
-                      AFFiNE user survey
+                      AFFiNE User Survey
                     </Badge>
                   </StyledLink>
                 </MenuItem>
