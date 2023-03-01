@@ -12,8 +12,10 @@ let _pages$: Promise<ContentFileMeta[] | undefined> | null = null;
 
 export async function getWorkspacePages() {
   if (!_pages$ || lastFetch < Date.now() - 1000 * 10) {
-    _pages$ = reader.getWorkspacePages(true).then((pages) => {
-      return pages?.map((page) => parseWorkspacePageMeta(page));
+    _pages$ = reader.getWorkspacePages(true).then(pages => {
+      return pages
+        ?.filter(p => !p.trash)
+        .map(page => parseWorkspacePageMeta(page));
     });
     lastFetch = Date.now();
   } else {
