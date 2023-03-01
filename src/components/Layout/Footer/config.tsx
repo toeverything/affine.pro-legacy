@@ -4,7 +4,7 @@ import {
   RedditIcon,
   TelegramIcon,
   TwitterIcon,
-} from "@BlockSuite/icons";
+} from "@blockSuite/icons";
 import styled from "@emotion/styled";
 
 const StyledGithubIcon = styled(GithubIcon)({
