@@ -97,6 +97,16 @@ const TeamMember = () => {
         &nbsp;| Architecture Engineer
       </StyledContent>
       <StyledContent>
+        <StyledLink
+          target="_blank"
+          href="https://github.com/Himself65"
+          rel="noreferrer"
+        >
+          Alex Yang
+        </StyledLink>
+        &nbsp;| Architecture Engineer
+      </StyledContent>
+      <StyledContent>
         <StyledLink target="_blank" href="https://mirone.me/" rel="noreferrer">
           Xiao Pengfei
         </StyledLink>
@@ -150,16 +160,6 @@ const TeamMember = () => {
           rel="noreferrer"
         >
           Haoxin Shang
-        </StyledLink>
-        &nbsp;| Full-stack Engineer
-      </StyledContent>
-      <StyledContent>
-        <StyledLink
-          target="_blank"
-          href="https://github.com/Himself65"
-          rel="noreferrer"
-        >
-          Alex Yang
         </StyledLink>
         &nbsp;| Full-stack Engineer
       </StyledContent>
