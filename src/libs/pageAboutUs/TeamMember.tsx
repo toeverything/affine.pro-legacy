@@ -69,16 +69,6 @@ const TeamMember = () => {
       <StyledContent>
         <StyledLink
           target="_blank"
-          href="https://github.com/colelawrence"
-          rel="noreferrer"
-        >
-          Cole Lawrence
-        </StyledLink>
-        &nbsp;| Architecture Engineer
-      </StyledContent>
-      <StyledContent>
-        <StyledLink
-          target="_blank"
           href="https://github.com/zuoxiaodong0815"
           rel="noreferrer"
         >
@@ -106,17 +96,33 @@ const TeamMember = () => {
         </StyledLink>
         &nbsp;| Architecture Engineer
       </StyledContent>
-      <StyledTitle2>Engineering Team</StyledTitle2>
       <StyledContent>
         <StyledLink
           target="_blank"
-          href="https://github.com/linonetwo"
+          href="https://github.com/Himself65"
           rel="noreferrer"
         >
-          Dongwu Lin
+          Alex Yang
         </StyledLink>
-        &nbsp;| Full-stack Engineer
+        &nbsp;| Architecture Engineer
       </StyledContent>
+      <StyledContent>
+        <StyledLink target="_blank" href="https://mirone.me/" rel="noreferrer">
+          Xiao Pengfei
+        </StyledLink>
+        &nbsp;| Architecture Engineer
+      </StyledContent>
+      <StyledContent>
+        <StyledLink
+          target="_blank"
+          href="https://pengx17.vercel.app/"
+          rel="noreferrer"
+        >
+          Xiao Peng
+        </StyledLink>
+        &nbsp;| Architecture Engineer
+      </StyledContent>
+      <StyledTitle2>Engineering Team</StyledTitle2>
       <StyledContent>
         <StyledLink
           target="_blank"
@@ -160,10 +166,10 @@ const TeamMember = () => {
       <StyledContent>
         <StyledLink
           target="_blank"
-          href="https://github.com/Himself65"
+          href="https://github.com/JimmFly"
           rel="noreferrer"
         >
-          Alex Yang
+          Yang Jinfei
         </StyledLink>
         &nbsp;| Full-stack Engineer
       </StyledContent>
@@ -177,6 +183,16 @@ const TeamMember = () => {
           Christopher Smolak
         </StyledLink>
         &nbsp;| Operations Specialist
+      </StyledContent>
+      <StyledContent>
+        <StyledLink
+          target="_blank"
+          href="https://github.com/JackiePengp"
+          rel="noreferrer"
+        >
+          Yang Peng
+        </StyledLink>
+        &nbsp;| Community Operator &amp; Data Analyst
       </StyledContent>
       <StyledTitle2>Product Team</StyledTitle2>
       <StyledContent>
