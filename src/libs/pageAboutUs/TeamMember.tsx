@@ -184,6 +184,16 @@ const TeamMember = () => {
         </StyledLink>
         &nbsp;| Operations Specialist
       </StyledContent>
+      <StyledContent>
+        <StyledLink
+          target="_blank"
+          href="https://github.com/JackiePengp"
+          rel="noreferrer"
+        >
+          Yang Peng
+        </StyledLink>
+        &nbsp;| Community Operator &amp; Data Analyst
+      </StyledContent>
       <StyledTitle2>Product Team</StyledTitle2>
       <StyledContent>
         <StyledLink
