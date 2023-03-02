@@ -110,16 +110,6 @@ const TeamMember = () => {
       <StyledContent>
         <StyledLink
           target="_blank"
-          href="https://github.com/linonetwo"
-          rel="noreferrer"
-        >
-          Dongwu Lin
-        </StyledLink>
-        &nbsp;| Full-stack Engineer
-      </StyledContent>
-      <StyledContent>
-        <StyledLink
-          target="_blank"
           href="https://github.com/lawvs"
           rel="noreferrer"
         >
