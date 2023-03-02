@@ -95,6 +95,16 @@ const TeamMember = () => {
       <StyledContent>
         <StyledLink
           target="_blank"
+          href="https://pengx17.vercel.app/"
+          rel="noreferrer"
+        >
+          Xiao Peng
+        </StyledLink>
+        &nbsp;| Architecture Engineer
+      </StyledContent>
+      <StyledContent>
+        <StyledLink
+          target="_blank"
           href="https://github.com/alt1o"
           rel="noreferrer"
         >
