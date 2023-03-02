@@ -69,16 +69,6 @@ const TeamMember = () => {
       <StyledContent>
         <StyledLink
           target="_blank"
-          href="https://github.com/colelawrence"
-          rel="noreferrer"
-        >
-          Cole Lawrence
-        </StyledLink>
-        &nbsp;| Architecture Engineer
-      </StyledContent>
-      <StyledContent>
-        <StyledLink
-          target="_blank"
           href="https://github.com/zuoxiaodong0815"
           rel="noreferrer"
         >
