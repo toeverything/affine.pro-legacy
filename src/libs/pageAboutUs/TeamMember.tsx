@@ -87,6 +87,12 @@ const TeamMember = () => {
         &nbsp;| Architecture Engineer
       </StyledContent>
       <StyledContent>
+        <StyledLink target="_blank" href="https://mirone.me/" rel="noreferrer">
+          Xiao Pengfei
+        </StyledLink>
+        &nbsp;| Architecture Engineer
+      </StyledContent>
+      <StyledContent>
         <StyledLink
           target="_blank"
           href="https://github.com/alt1o"
