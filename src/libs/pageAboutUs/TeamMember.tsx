@@ -163,6 +163,16 @@ const TeamMember = () => {
         </StyledLink>
         &nbsp;| Full-stack Engineer
       </StyledContent>
+      <StyledContent>
+        <StyledLink
+          target="_blank"
+          href="https://github.com/JimmFly"
+          rel="noreferrer"
+        >
+          Yang Jinfei
+        </StyledLink>
+        &nbsp;| Full-stack Engineer
+      </StyledContent>
       <StyledTitle2>Community Team</StyledTitle2>
       <StyledContent>
         <StyledLink
