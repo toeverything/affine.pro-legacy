@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "node script/start-dev.js",
+    "start": "next start",
     "dev": "next dev",
     "build": "next build",
     "build:server": "next telemetry disable && vercel build && pnpx @cloudflare/next-on-pages --skip-build --experimental-minify",

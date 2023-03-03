@@ -32,6 +32,7 @@ const nextConfig = withMDX({
     };
     return config;
   },
+  output: "standalone",
 });
 
 module.exports = nextConfig;
