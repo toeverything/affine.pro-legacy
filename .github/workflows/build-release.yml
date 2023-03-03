@@ -49,10 +49,10 @@ jobs:
           NEXT_PUBLIC_ALGOLIA_SEARCH_KEY: ${{secrets.NEXT_PUBLIC_ALGOLIA_SEARCH_KEY}}
           NEXT_PUBLIC_ALGOLIA_INDEX_NAME: ${{secrets.NEXT_PUBLIC_ALGOLIA_INDEX_NAME}}
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
-        with:
-          path: ./out
+      # - name: Upload artifact
+      #   uses: actions/upload-pages-artifact@v1
+      #   with:
+      #     path: ./out
 
   push_to_registry:
     # See https://docs.github.com/en/actions/publishing-packages/publishing-docker-images
