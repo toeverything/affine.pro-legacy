@@ -1436,6 +1436,16 @@ packages:
       to-fast-properties: 2.0.0
     dev: true
 
+  /@blocksuite/icons/2.0.18_iapumuv4e6jcjznwuxpf4tt22e:
+    resolution: {integrity: sha512-ltypxszSSX0UQ2dauAslROpMOOAwsa3vC1r4YwVJXj+1pqjroScooZjORSkiyy7qizYn7ROFGa1g13ZIbfq6lw==}
+    peerDependencies:
+      '@types/react': ^18.0.25
+      react: ^18.2.0
+    dependencies:
+      '@types/react': 18.0.21
+      react: 18.2.0
+    dev: false
+
   /@cspotcode/source-map-support/0.8.1:
     resolution: {integrity: sha512-IchNf6dN4tHoMFIn/7OE8LWZ19Y6q/67Bmf6vnGREv8RSbBVb9LPJxEcnwrcwX6ixSvaiGoomAUvu4YSxXrVgw==}
     engines: {node: '>=12'}
@@ -1456,16 +1466,6 @@ packages:
     dependencies:
       '@edge-runtime/primitives': 2.0.0
     dev: true
-
-  /@blocksuite/icons/2.0.18_iapumuv4e6jcjznwuxpf4tt22e:
-    resolution: {integrity: sha512-ltypxszSSX0UQ2dauAslROpMOOAwsa3vC1r4YwVJXj+1pqjroScooZjORSkiyy7qizYn7ROFGa1g13ZIbfq6lw==}
-    peerDependencies:
-      '@types/react': ^18.0.25
-      react: ^18.2.0
-    dependencies:
-      '@types/react': 18.0.21
-      react: 18.2.0
-    dev: false
 
   /@emotion/babel-plugin/11.10.2:
     resolution: {integrity: sha512-xNQ57njWTFVfPAc3cjfuaPdsgLp5QOSuRsj9MA6ndEhH/AzuZM86qIQzt6rq+aGBwj3n5/TkLmU5lhAfdRmogA==}

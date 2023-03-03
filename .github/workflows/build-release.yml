@@ -41,13 +41,13 @@ jobs:
       # - name: Test
       #   run: pnpm test:ci
 
-      - name: Build
-        run: pnpm build
-        env:
-          NEXT_PUBLIC_ALGOLIA_APP_ID: ${{secrets.NEXT_PUBLIC_ALGOLIA_APP_ID}}
-          ALGOLIA_SEARCH_ADMIN_KEY: ${{secrets.ALGOLIA_SEARCH_ADMIN_KEY}}
-          NEXT_PUBLIC_ALGOLIA_SEARCH_KEY: ${{secrets.NEXT_PUBLIC_ALGOLIA_SEARCH_KEY}}
-          NEXT_PUBLIC_ALGOLIA_INDEX_NAME: ${{secrets.NEXT_PUBLIC_ALGOLIA_INDEX_NAME}}
+      # - name: Build
+      #   run: pnpm build
+      #   env:
+      #     NEXT_PUBLIC_ALGOLIA_APP_ID: ${{secrets.NEXT_PUBLIC_ALGOLIA_APP_ID}}
+      #     ALGOLIA_SEARCH_ADMIN_KEY: ${{secrets.ALGOLIA_SEARCH_ADMIN_KEY}}
+      #     NEXT_PUBLIC_ALGOLIA_SEARCH_KEY: ${{secrets.NEXT_PUBLIC_ALGOLIA_SEARCH_KEY}}
+      #     NEXT_PUBLIC_ALGOLIA_INDEX_NAME: ${{secrets.NEXT_PUBLIC_ALGOLIA_INDEX_NAME}}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
