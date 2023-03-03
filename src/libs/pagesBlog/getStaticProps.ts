@@ -8,7 +8,7 @@ async function getFiles(): Promise<ContentFileMeta[]> {
     return [];
   }
 
-  return pages.flat().filter((f) => !!f) as ContentFileMeta[];
+  return pages.flat().filter(f => !!f) as ContentFileMeta[];
 }
 
 export async function getStaticProps() {

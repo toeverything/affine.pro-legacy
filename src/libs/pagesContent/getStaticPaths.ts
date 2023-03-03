@@ -9,7 +9,7 @@ export async function getStaticPaths() {
       fallback: "blocking",
     };
   }
-  const paths = pages.map((file) => {
+  const paths = pages.map(file => {
     return {
       params: {
         slug: file.slug,

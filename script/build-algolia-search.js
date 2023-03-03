@@ -49,8 +49,8 @@ async function resolveFile(filepath) {
   return {
     objectID: title,
     title: title || null,
-    authors: author?.split(",").map((au) => au.trim()) || null,
-    tags: tags?.split(",").map((tag) => tag.trim()) || null,
+    authors: author?.split(",").map(au => au.trim()) || null,
+    tags: tags?.split(",").map(tag => tag.trim()) || null,
     cover: cover
       ? "/content" + path.resolve(newFilepathRemovedProject, "..", cover)
       : null,
@@ -80,14 +80,14 @@ const blogRootDir = path.resolve(process.cwd(), "./src/blog");
 
     async function getFiles(dir) {
       const subDirs = readdir(dir);
-      const files = subDirs.map(async (subDir) => {
+      const files = subDirs.map(async subDir => {
         const res = path.resolve(dir, subDir);
 
         if (fsStat(res).isDirectory()) {
           return await getFiles(res);
         } else {
           if (res.endsWith(".md")) {
-            return await resolveFile(res).then((e) => {
+            return await resolveFile(res).then(e => {
               index.saveObject(e);
             });
           }

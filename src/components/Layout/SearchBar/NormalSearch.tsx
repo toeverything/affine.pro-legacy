@@ -90,7 +90,7 @@ const StyledAlgolia = styled.div<isShow>`
   width: 500px;
   flex-direction: column;
   position: relative;
-  display: ${(props) => (props.isShow ? "flex" : "none")};
+  display: ${props => (props.isShow ? "flex" : "none")};
   margin-left: 16px;
   transition: 0.2s ease-in;
   @media (max-width: 1300px) {

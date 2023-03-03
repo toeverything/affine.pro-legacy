@@ -10,7 +10,7 @@ const rootDir = path.resolve(process.cwd(), "./src/blog");
 //to get year and month of the post createTime
 async function getDirName(dir) {
   const subDirs = await readdir(dir);
-  const files = subDirs.map((subDir) => {
+  const files = subDirs.map(subDir => {
     const res = path.resolve(dir, subDir);
     return res;
   });
@@ -18,15 +18,15 @@ async function getDirName(dir) {
   return files;
 }
 mkdir(path.resolve(__dirname, "../public/content/blog"), { recursive: true });
-getDirName(rootDir).then((value) => {
-  value.forEach(async (dir) => {
+getDirName(rootDir).then(value => {
+  value.forEach(async dir => {
     const subDirs = await readdir(dir);
-    const files = subDirs.map((subDir) => {
+    const files = subDirs.map(subDir => {
       const res = path.resolve(dir, subDir);
       return res.slice(rootDir.length + 1);
     });
 
-    files.forEach((file) => {
+    files.forEach(file => {
       copyDir(
         path.resolve(__dirname, `../src/blog/${file}`),
         path.resolve(__dirname, "../public/content/blog"),

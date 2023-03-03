@@ -2,26 +2,26 @@ const { spawn } = require("node:child_process");
 const fileWatch = spawn("node", ["script/file-watch.js"]);
 const projectStart = spawn("npx", ["next", "dev"]);
 
-fileWatch.stderr.on("data", (data) => {
+fileWatch.stderr.on("data", data => {
   console.error(`fileWatch stderr: ${data}`);
 });
 
-fileWatch.on("close", (code) => {
+fileWatch.on("close", code => {
   if (code !== 0) {
     console.log(`fileWatch process exited with code ${code}`);
   }
   projectStart.stdin.end();
 });
 
-projectStart.stdout.on("data", (data) => {
+projectStart.stdout.on("data", data => {
   console.log(data.toString());
 });
 
-projectStart.stderr.on("data", (data) => {
+projectStart.stderr.on("data", data => {
   console.error(`projectStart stderr: ${data}`);
 });
 
-projectStart.on("close", (code) => {
+projectStart.on("close", code => {
   if (code !== 0) {
     console.log(`projectStart process exited with code ${code}`);
   }

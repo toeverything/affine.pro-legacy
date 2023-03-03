@@ -122,14 +122,14 @@ interface isSearch {
   isSearch: boolean;
 }
 const StyledContainer = styled.div<isShow>`
-  display: ${(props) => (props.isShow ? "flex" : "none")};
+  display: ${props => (props.isShow ? "flex" : "none")};
 `;
 const StyledAlgolia = styled.div<isSearch>`
   width: 100vw;
   height: 100vh;
   flex-direction: column;
   position: absolute;
-  display: ${(props) => (props.isSearch ? "flex" : "none")};
+  display: ${props => (props.isSearch ? "flex" : "none")};
   left: 0;
   transition: 0.2s ease-in;
   background-color: white;

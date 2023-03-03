@@ -26,7 +26,7 @@ const nextConfig = withMDX({
     nextImageExportOptimizer_storePicturesInWEBP: true,
     nextImageExportOptimizer_generateAndUseBlurImages: true,
   },
-  webpack: (config) => {
+  webpack: config => {
     config.resolve.alias = {
       ...config.resolve.alias,
     };

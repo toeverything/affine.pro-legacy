@@ -21,7 +21,7 @@ export async function copyFiles(
 ) {
   const subFiles = await readdir(sourceDir);
   await Promise.all(
-    subFiles.map(async (subFile) => {
+    subFiles.map(async subFile => {
       const filepath = path.resolve(sourceDir, subFile);
       const filterRes = await filter(filepath);
       if (!filterRes) {

@@ -11,7 +11,7 @@ export const LanguageMenu = () => {
     i18n.changeLanguage(event);
   };
   const [show, setShow] = useState(false);
-  const currentLanguage = LOCALES.find((item) => item.tag === i18n.language);
+  const currentLanguage = LOCALES.find(item => item.tag === i18n.language);
   const [languageName, setLanguageName] = useState(
     currentLanguage?.originalName
   );
@@ -19,7 +19,7 @@ export const LanguageMenu = () => {
     <StyledTooltip
       title={
         <>
-          {LOCALES.map((option) => {
+          {LOCALES.map(option => {
             return (
               <ListItem
                 key={option.name}
