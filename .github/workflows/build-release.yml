@@ -75,13 +75,13 @@ jobs:
       - name: Check out the repo
         uses: actions/checkout@v2
 
-      - name: Download artifact
-        uses: actions/download-artifact@v3
-        with:
-          name: github-pages
+      # - name: Download artifact
+      #   uses: actions/download-artifact@v3
+      #   with:
+      #     name: github-pages
 
-      - name: Unarchive
-        run: mkdir out && tar xvf artifact.tar -C out
+      # - name: Unarchive
+      #   run: mkdir out && tar xvf artifact.tar -C out
 
       - name: Log in to Docker Hub
         uses: docker/login-action@v2
