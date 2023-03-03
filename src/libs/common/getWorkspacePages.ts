@@ -10,8 +10,8 @@ let lastFetch = 0;
 
 let _pages$: Promise<ContentFileMeta[] | undefined> | null = null;
 
-export async function getWorkspacePages() {
-  if (!_pages$ || lastFetch < Date.now() - 1000 * 10) {
+export async function getWorkspacePages(invalidateCache = false) {
+  if (!_pages$ || lastFetch < Date.now() - 1000 * 10 || invalidateCache) {
     _pages$ = reader.getWorkspacePages(true).then(pages => {
       return pages
         ?.filter(p => !p.trash)
@@ -23,4 +23,18 @@ export async function getWorkspacePages() {
   }
   const pages = await _pages$;
   return pages;
+}
+
+export async function getWorkspacePage(
+  slug: string,
+  invalidateCache = true
+): Promise<ContentFileMeta | undefined> {
+  const pages = await getWorkspacePages();
+  const page = pages?.find(p => p.slug === slug || p.id === slug);
+  if (page) {
+    return page;
+  }
+  if (invalidateCache) {
+    return getWorkspacePage(slug, false);
+  }
 }
