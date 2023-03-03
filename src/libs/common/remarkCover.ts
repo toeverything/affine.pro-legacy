@@ -5,7 +5,7 @@ import type { Node } from "unist-util-visit/lib";
 
 export const remarkRemoveCover: Plugin = () => (tree, file) => {
   let hasCover = false;
-  visit(tree, "paragraph", (root) => {
+  visit(tree, "paragraph", root => {
     if (root.children.length === 1 && !hasCover) {
       const child = root.children[0];
       if (child.type === "image") {
@@ -21,7 +21,7 @@ export const remarkRemoveCover: Plugin = () => (tree, file) => {
  */
 export const getCoverImage = (tree: Node): string | null => {
   let coverImage: string | null = null;
-  visit(tree, "paragraph", (root) => {
+  visit(tree, "paragraph", root => {
     if (root.children.length === 1 && !coverImage) {
       const child = root.children[0];
       if (child.type === "image") {

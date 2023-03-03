@@ -8,7 +8,7 @@ const fsStat = fs.stat;
 async function getFiles(dir: string): Promise<string[]> {
   const subDirs = await readdir(dir);
   const files = await Promise.all(
-    subDirs.map(async (subDir) => {
+    subDirs.map(async subDir => {
       const res = path.resolve(dir, subDir);
       return (await fsStat(res)).isDirectory()
         ? await getFiles(res)
@@ -16,7 +16,7 @@ async function getFiles(dir: string): Promise<string[]> {
     })
   );
 
-  return files.flat().filter((file) => file.endsWith(".md"));
+  return files.flat().filter(file => file.endsWith(".md"));
 }
 
 // 'foo/bar/baz.md' -> ['foo', 'bar', 'baz']
@@ -39,7 +39,7 @@ export async function getRealPaths() {
     [key: string]: string;
   }
   const paths: paths = {};
-  files.map((file) => {
+  files.map(file => {
     paths[getKeySegments(file)] = getValueSegments(file);
   });
 

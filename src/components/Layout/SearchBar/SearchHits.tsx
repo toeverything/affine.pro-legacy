@@ -26,7 +26,7 @@ const CustomHits = (props: UseHitsProps) => {
         </StyledResultsTitle>
         <StyledList>
           <List>
-            {hits.map((hit) => {
+            {hits.map(hit => {
               return (
                 <a
                   key={hit.objectID}
@@ -67,7 +67,7 @@ interface isShow {
   isShow: boolean;
 }
 const StyledHits = styled.div<isShow>`
-  display: ${(props) => (props.isShow ? "flex" : "none")};
+  display: ${props => (props.isShow ? "flex" : "none")};
   width: 100%;
   max-height: 600px;
   background-color: white;

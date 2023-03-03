@@ -27,7 +27,7 @@ export function getStaticProps({ params }: { params: { postId: string } }) {
 
 export function getStaticPaths() {
   return {
-    paths: routeList.map((r) => {
+    paths: routeList.map(r => {
       return {
         params: {
           postId: r.old,

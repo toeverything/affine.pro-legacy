@@ -16,7 +16,7 @@ const Alternatives = () => {
     const handle = setInterval(() => {
       setActive(true);
       setTimeout(() => {
-        setIdx((idx) => (_alternatives[idx + 1] ? idx + 1 : 0));
+        setIdx(idx => (_alternatives[idx + 1] ? idx + 1 : 0));
         setActive(false);
       }, 380);
     }, 2000);

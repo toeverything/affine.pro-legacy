@@ -10,7 +10,7 @@ export const NormalLeftHeader = () => {
   return (
     <>
       <StyledContainer>
-        {navLinks.map((nav) => {
+        {navLinks.map(nav => {
           return <LinkText key={nav.title} href={nav.href} title={nav.title} />;
         })}
       </StyledContainer>
@@ -43,7 +43,7 @@ export const NormalRightHeader = () => {
           return <LinkText key={nav.title} href={nav.href} title={nav.title} />;
         })} */}
         <VersionLink>
-          {liveDemoLink.map((nav) => {
+          {liveDemoLink.map(nav => {
             return (
               <LinkText key={nav.title} href={nav.href} title={nav.title} />
             );

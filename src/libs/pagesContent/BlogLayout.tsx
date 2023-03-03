@@ -244,7 +244,7 @@ export const BlogLayout = ({
           <SliderModule>
             <LeftTitle>Tags</LeftTitle>
             <div>
-              {tags?.map((tagName) => {
+              {tags?.map(tagName => {
                 return <Tag key={tagName}>{tagName}</Tag>;
               }) || "Empty"}
             </div>

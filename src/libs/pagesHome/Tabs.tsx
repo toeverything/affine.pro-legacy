@@ -137,14 +137,14 @@ const StyledTabs = styled.li<{ active?: number }>`
   flex-direction: column;
   z-index: 100;
 
-  color: ${(props) => (props.active === 0 ? "#000" : "#1976d2")};
+  color: ${props => (props.active === 0 ? "#000" : "#1976d2")};
   &::after {
     content: "";
-    width: ${(props) => (props.active === 0 ? "0" : "100%")};
+    width: ${props => (props.active === 0 ? "0" : "100%")};
     height: 2px;
     background-color: #1976d2;
     position: absolute;
-    left: ${(props) => (props.active === 0 ? "100%" : "0")};
+    left: ${props => (props.active === 0 ? "100%" : "0")};
     bottom: 0;
     transition: all 0.4s;
   }
@@ -174,9 +174,9 @@ const StyledSlides = styled.div<{ active?: number }>`
   top: 100px;
   left: 0px;
   width: 100%;
-  transition: ${(props) =>
+  transition: ${props =>
     props.active === 0 ? "all 0.2s ease" : "all 0.5s ease-in"};
-  opacity: ${(props) => (props.active === 0 ? "0" : "1")};
+  opacity: ${props => (props.active === 0 ? "0" : "1")};
   @media (max-width: 1000px) {
     flex-direction: column;
   }
@@ -230,5 +230,5 @@ const StyledImage = styled.div<{ active?: number }>`
   display: flex;
   width: 100%;
   flex: 2.5;
-  z-index: ${(props) => (props.active === 0 ? "0" : "1000")};
+  z-index: ${props => (props.active === 0 ? "0" : "1000")};
 `;
