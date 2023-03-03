@@ -32,6 +32,7 @@ export const SmallHeader = () => {
       <StyledIconContainer onClick={() => setShowDrawer(!showDrawer)}>
         <ExportedImage
           src={showDrawer ? menuClose : menuHamburger}
+          alt="header"
           layout="fill"
           useWebp={!!process.env.nextImageExportOptimizer_storePicturesInWEBP}
         />
@@ -43,7 +44,7 @@ export const SmallHeader = () => {
         }}
       >
         <StyledList>
-          {navLinks.map((nav) => {
+          {navLinks.map(nav => {
             return (
               <StyledListItem key={nav.title} href={nav.href}>
                 <LinkText href={nav.href} title={nav.title} />
@@ -51,7 +52,7 @@ export const SmallHeader = () => {
             );
           })}
           <ListItemButton
-            onClick={(evt) => {
+            onClick={evt => {
               setLanguageCollapse(!languageCollapse);
               evt.stopPropagation();
             }}
@@ -64,7 +65,7 @@ export const SmallHeader = () => {
           </ListItemButton>
           <Collapse in={languageCollapse} timeout="auto">
             <StyledLangList>
-              {LOCALES.map((locale) => {
+              {LOCALES.map(locale => {
                 return (
                   <ListItemButton
                     key={locale.name}

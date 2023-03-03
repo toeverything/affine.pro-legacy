@@ -21,8 +21,8 @@ const aboutUs = () => {
             onClick={() =>
               window.open("https://github.com/toeverything/AFFiNE")
             }
-            width="720px"
-            height="400px"
+            width="720"
+            height="400"
             useWebp={!!process.env.nextImageExportOptimizer_storePicturesInWEBP}
           />
         </div>

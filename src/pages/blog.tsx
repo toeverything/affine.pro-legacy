@@ -1,6 +1,7 @@
 import type { ContentFileMeta } from "@/libs/common/resolveContentFile";
 import styles from "@/libs/pagesBlog/blog.module.css";
 import { useBlogMetas } from "@/libs/pagesBlog/useBlogMetas";
+import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import InfiniteScroll from "react-infinite-scroll-component";
@@ -13,6 +14,7 @@ export default function Blog(props: { blogMetas: ContentFileMeta[] }) {
   const { tags, blogMetas, filteredMetas } = useBlogMetas(props.blogMetas, {
     tag: router.query.tag as string,
   });
+
   const [currentList, setCurrentList] = useState({
     items: filteredMetas.slice(0, 5),
     hasMore: true,
@@ -53,6 +55,9 @@ export default function Blog(props: { blogMetas: ContentFileMeta[] }) {
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [router.query.tag]);
+
+  const firstPublished = blogMetas[0];
+
   return (
     <Page showSearchBar={true}>
       <div>
@@ -64,16 +69,15 @@ export default function Blog(props: { blogMetas: ContentFileMeta[] }) {
                 The latest AFFiNE news, case studies, tutorials, and resources.
               </p>
             </div>
-            <div
-              className={styles.header_content_right}
-              onClick={() => router.push(blogMetas[0].href)}
-            >
-              <div>
-                <picture>
-                  <img src={blogMetas[0].cover || ""} alt="Page cover" />
-                  <h1>{blogMetas[0].title}</h1>
-                </picture>
-              </div>
+            <div className={styles.header_content_right}>
+              <Link href={"/blog/" + firstPublished?.slug}>
+                <a>
+                  <picture>
+                    <img src={firstPublished?.cover || ""} alt="Page cover" />
+                    <h1>{firstPublished?.title}</h1>
+                  </picture>
+                </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -122,13 +126,9 @@ export default function Blog(props: { blogMetas: ContentFileMeta[] }) {
                   </p>
                 }
               >
-                {currentList.items.map((meta) => {
-                  return (
-                    <li
-                      key={meta.cover}
-                      className={styles.body_right_list_item}
-                      onClick={() => router.push(meta.href)}
-                    >
+                {currentList.items.map(meta => (
+                  <Link href={"/blog/" + meta.slug} key={meta.id}>
+                    <a className={styles.body_right_list_item}>
                       <div className={styles.body_right_list_item_left}>
                         <picture>
                           <img src={meta.cover || ""} alt="Page cover" />
@@ -143,7 +143,7 @@ export default function Blog(props: { blogMetas: ContentFileMeta[] }) {
                         </p>
                         <p>{meta.authors?.join(", ")}</p>
                         <p>
-                          {meta.tags?.map((item) => {
+                          {meta.tags?.map(item => {
                             return (
                               <span key={item} className={styles.tag}>
                                 {item}
@@ -153,9 +153,9 @@ export default function Blog(props: { blogMetas: ContentFileMeta[] }) {
                         </p>
                         <p className={styles.description}>{meta.description}</p>
                       </div>
-                    </li>
-                  );
-                })}
+                    </a>
+                  </Link>
+                ))}
               </InfiniteScroll>
             </ul>
           </div>
