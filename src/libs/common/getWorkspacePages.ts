@@ -3,7 +3,7 @@ import { ContentFileMeta, parseWorkspacePageMeta } from "./resolveContentFile";
 
 const reader = getBlocksuiteReader({
   // public workspace id for affine.pro
-  workspaceId: `1MCi2U4DnOMqpFVWYztfj`,
+  workspaceId: `H6vffRmJbCfA-r3kq_36_`,
 });
 
 let lastFetch = 0;
