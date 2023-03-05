@@ -11,9 +11,17 @@ let lastFetch = 0;
 let _pages$: Promise<ContentFileMeta[] | undefined> | null = null;
 
 export async function getWorkspacePages(invalidateCache = false) {
-  if (!_pages$ || lastFetch < Date.now() - 1000 * 10 || invalidateCache) {
+  if (!_pages$ || lastFetch < Date.now() - 1000 * 30 || invalidateCache) {
+    const start = performance.now();
+    if (lastFetch) {
+      console.log(
+        "Fetching pages again, last fetch is " + lastFetch + "ms ago."
+      );
+    }
     _pages$ = reader.getWorkspacePages(true).then(pages => {
-      console.log("Fetched pages again.");
+      console.log(
+        "Pages fetched in " + (performance.now() - start).toFixed(1) + "ms"
+      );
       return pages
         ?.filter(p => !p.trash)
         .map(page => parseWorkspacePageMeta(page));
@@ -32,12 +40,12 @@ export async function getWorkspacePage(
 ): Promise<ContentFileMeta | undefined> {
   const pages = await getWorkspacePages(invalidateCache);
   const _slug = slug.toLowerCase().trim();
-  const page = pages?.find(p => p.slug === _slug || p.id === _slug);
+  let page = pages?.find(p => p.slug === _slug || p.id === _slug);
+  if (!page && !invalidateCache) {
+    page = await getWorkspacePage(slug, true);
+  }
   if (page) {
     return page;
-  }
-  if (!invalidateCache) {
-    return getWorkspacePage(slug, true);
   }
   console.error(
     "cannot find " + slug + "in ",
