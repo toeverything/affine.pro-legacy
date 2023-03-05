@@ -15,7 +15,9 @@ export async function getWorkspacePages(invalidateCache = false) {
     const start = performance.now();
     if (lastFetch) {
       console.log(
-        "Fetching pages again, last fetch is " + lastFetch + "ms ago."
+        "Fetching pages again, last fetch is " +
+          (Date.now() - lastFetch) +
+          "ms ago."
       );
     }
     _pages$ = reader.getWorkspacePages(true).then(pages => {
