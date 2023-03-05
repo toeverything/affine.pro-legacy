@@ -32,9 +32,7 @@ export async function getWorkspacePage(
 ): Promise<ContentFileMeta | undefined> {
   const pages = await getWorkspacePages(invalidateCache);
   const _slug = slug.toLowerCase().trim();
-  const page = pages?.find(
-    p => p.slug?.toLowerCase().trim() === _slug || p.id === _slug
-  );
+  const page = pages?.find(p => p.slug === _slug || p.id === _slug);
   if (page) {
     return page;
   }
