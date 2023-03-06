@@ -1,8 +1,6 @@
 import { useMatchMediaMaxWidth1000 } from "@/libs/common/matchMedia";
 import styled from "@emotion/styled";
 import NextLink from "next/link";
-import NormalSearch from "../SearchBar/NormalSearch";
-import SmallSearch from "../SearchBar/SmallSearch";
 import AFFiNETextLogo from "./affine-text-logo.png";
 import { NormalLeftHeader, NormalRightHeader } from "./NormalHeader";
 import { SmallHeader } from "./SmallHeader";
@@ -12,6 +10,7 @@ interface PageProps {
 }
 export const HeaderNav = (props: PageProps) => {
   const matchesMaxWidth1000 = useMatchMediaMaxWidth1000();
+  // FIXME: add back search bar
   return (
     <>
       <Container>
@@ -21,15 +20,9 @@ export const HeaderNav = (props: PageProps) => {
               <StyledImage src={AFFiNETextLogo.src} alt="affine" />
             </NextLink>
             {matchesMaxWidth1000 ? null : <NormalLeftHeader />}
-            {matchesMaxWidth1000 ? null : (
-              <NormalSearch showSearchBar={props.showSearchBar} />
-            )}
           </HeaderLeft>
 
           <HeaderRight>
-            {matchesMaxWidth1000 ? (
-              <SmallSearch showSearchBar={props.showSearchBar} />
-            ) : null}
             {matchesMaxWidth1000 ? <SmallHeader /> : <NormalRightHeader />}
           </HeaderRight>
         </Header>
