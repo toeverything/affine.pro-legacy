@@ -31,7 +31,7 @@ pulish: false
 
 `tags` the tag, or rather categorey, of the article
 
-`slug` the unique url for the article `https://affine.pro/blog/{slug}` - do not use special characters and replaces ` ` (spaces) with `-`
+`slug` the unique url for the article `https://affine.pro/blog/{slug}` - do not use special characters and replace ` ` (spaces) with `-`
 
 `description` a small description to the article, no more than 2 sentences
 
