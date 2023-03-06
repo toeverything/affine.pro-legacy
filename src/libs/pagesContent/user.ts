@@ -107,5 +107,10 @@ const USER_MAP: Record<string, { name: string; avatar: string; dec: string }> =
       avatar: "/JackiePeng.jpg",
       dec: "Author",
     },
+    "Peng Xiao": {
+      name: "Peng Xiao",
+      avatar: "/pengx17.jpeg",
+      dec: "Full-Stack Engineer",
+    },
   };
 export default USER_MAP;
