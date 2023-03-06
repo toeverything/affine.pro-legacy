@@ -83,11 +83,10 @@ export interface ExportedImageProps
 }
 
 function ExportedImage({
+  alt,
   src,
   priority = false,
   loading,
-  lazyRoot,
-  lazyBoundary = "200px",
   className,
   width,
   height,
@@ -119,16 +118,15 @@ function ExportedImage({
   }, [blurDataURL, src, unoptimized, useWebp]);
 
   return (
-    // eslint-disable-next-line jsx-a11y/alt-text
     <Image
+      alt={alt}
+      loading="lazy"
       {...rest}
       {...(typeof src === "object" && src.width && { width: src.width })}
       {...(typeof src === "object" && src.height && { height: src.height })}
       {...(width && { width })}
       {...(height && { height })}
       {...(loading && { loading })}
-      {...(lazyRoot && { lazyRoot })}
-      {...(lazyBoundary && { lazyBoundary })}
       {...(className && { className })}
       {...(objectFit && { objectFit })}
       {...(objectPosition && { objectPosition })}
@@ -159,6 +157,10 @@ function ExportedImage({
         onLoadingComplete && onLoadingComplete(result);
       }}
       src={typeof src === "object" ? src.src : src}
+      style={{
+        maxWidth: "100%",
+        height: "auto",
+      }}
     />
   );
 }

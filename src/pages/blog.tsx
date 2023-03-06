@@ -53,8 +53,7 @@ export default function Blog(props: { blogMetas: ContentFileMeta[] }) {
         hasMore: true,
       });
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [router.query.tag]);
+  }, [filteredMetas, router.query.tag]);
 
   const firstPublished = blogMetas[0];
 
@@ -71,12 +70,10 @@ export default function Blog(props: { blogMetas: ContentFileMeta[] }) {
             </div>
             <div className={styles.header_content_right}>
               <Link href={"/blog/" + firstPublished?.slug}>
-                <a>
-                  <picture>
-                    <img src={firstPublished?.cover || ""} alt="Page cover" />
-                    <h1>{firstPublished?.title}</h1>
-                  </picture>
-                </a>
+                <picture>
+                  <img src={firstPublished?.cover || ""} alt="Page cover" />
+                  <h1>{firstPublished?.title}</h1>
+                </picture>
               </Link>
             </div>
           </div>
@@ -127,33 +124,35 @@ export default function Blog(props: { blogMetas: ContentFileMeta[] }) {
                 }
               >
                 {currentList.items.map(meta => (
-                  <Link href={"/blog/" + meta.slug} key={meta.id}>
-                    <a className={styles.body_right_list_item}>
-                      <div className={styles.body_right_list_item_left}>
-                        <picture>
-                          <img src={meta.cover || ""} alt="Page cover" />
-                        </picture>
-                      </div>
-                      <div className={styles.body_right_list_item_right}>
-                        <h2>{meta.title}</h2>
-                        <p>
-                          {new Date(
-                            meta.updated ? meta.updated : meta.created ?? ""
-                          ).toLocaleDateString("en-US")}
-                        </p>
-                        <p>{meta.authors?.join(", ")}</p>
-                        <p>
-                          {meta.tags?.map(item => {
-                            return (
-                              <span key={item} className={styles.tag}>
-                                {item}
-                              </span>
-                            );
-                          })}
-                        </p>
-                        <p className={styles.description}>{meta.description}</p>
-                      </div>
-                    </a>
+                  <Link
+                    className={styles.body_right_list_item}
+                    href={"/blog/" + meta.slug}
+                    key={meta.id}
+                  >
+                    <div className={styles.body_right_list_item_left}>
+                      <picture>
+                        <img src={meta.cover || ""} alt="Page cover" />
+                      </picture>
+                    </div>
+                    <div className={styles.body_right_list_item_right}>
+                      <h2>{meta.title}</h2>
+                      <p>
+                        {new Date(
+                          meta.updated ? meta.updated : meta.created ?? ""
+                        ).toLocaleDateString("en-US")}
+                      </p>
+                      <p>{meta.authors?.join(", ")}</p>
+                      <p>
+                        {meta.tags?.map(item => {
+                          return (
+                            <span key={item} className={styles.tag}>
+                              {item}
+                            </span>
+                          );
+                        })}
+                      </p>
+                      <p className={styles.description}>{meta.description}</p>
+                    </div>
                   </Link>
                 ))}
               </InfiniteScroll>

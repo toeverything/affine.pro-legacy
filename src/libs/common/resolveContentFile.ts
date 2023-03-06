@@ -1,8 +1,12 @@
 import type { WorkspacePage } from "blocksuite-reader";
 import grayMatter from "gray-matter";
+import rehypePrism from "rehype-prism-plus";
+import rehypeStringify from "rehype-stringify";
 import { remark } from "remark";
 import remarkGfm from "remark-gfm";
-import remarkHtml from "remark-html";
+import remarkParse from "remark-parse";
+import remarkRehype from "remark-rehype";
+import { unified } from "unified";
 import { getCoverImage, remarkRemoveCover } from "./remarkCover";
 
 export interface ContentFileMeta {
@@ -40,17 +44,17 @@ export function parseWorkspacePageMeta(page: WorkspacePage): ContentFileMeta {
   return {
     title: title || null,
     authors:
-      (typeof author === "string" && author?.split(",").map(au => au.trim())) ||
+      (typeof author === "string" && author.split(",").map(au => au.trim())) ||
       null,
     tags:
-      (typeof tags === "string" && tags?.split(",").map(tag => tag.trim())) ||
+      (typeof tags === "string" && tags.split(",").map(tag => tag.trim())) ||
       null,
     description: description || null,
     created: (created as unknown as Date)?.getTime() || null,
     updated: (updated as unknown as Date)?.getTime() || null,
     layout: layout || null,
     id: page.id,
-    slug: (slug || page.id).toLowerCase().trim(),
+    slug: slug || page.id,
     cover: coverImage,
     md: page.md ?? "",
     publish: !!publish,
@@ -60,10 +64,13 @@ export function parseWorkspacePageMeta(page: WorkspacePage): ContentFileMeta {
 export async function renderHTML(md: string): Promise<string> {
   const { content } = grayMatter(md);
   const html = (
-    await remark()
+    await unified()
+      .use(remarkParse)
       .use(remarkGfm)
       .use(remarkRemoveCover)
-      .use(remarkHtml)
+      .use(remarkRehype)
+      .use(rehypePrism)
+      .use(rehypeStringify)
       .process(content)
   ).toString();
   return html;
