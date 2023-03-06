@@ -50,7 +50,7 @@ export function parseWorkspacePageMeta(page: WorkspacePage): ContentFileMeta {
     updated: (updated as unknown as Date)?.getTime() || null,
     layout: layout || null,
     id: page.id,
-    slug: slug || page.id,
+    slug: (slug || page.id).toLowerCase().trim(),
     cover: coverImage,
     md: page.md ?? "",
     publish: !!publish,
