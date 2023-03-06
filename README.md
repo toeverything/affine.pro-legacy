@@ -4,33 +4,38 @@ This repo is AFFiNE official website and blog source code.
 
 ## How to publish blog
 
-First, create a folder in `blog/${year}/${month}`, the folder name will use in published website url.
+The new blog source uses AFFiNE - public workspace: https://app.affine.pro/public-workspace/H6vffRmJbCfA-r3kq_36_
 
-Secondly, create `index.md` in the folder you created in previous step. Here is a example file:
+You can use AFFiNE to write your article, contact [ShortCipher](https://github.com/ShortCipher5) for permissions.
 
+Each blog should abide by the following format:
 ```
 ---
 title: How AFFiNE Classifies Editors
 author: Chi Zhang, Yifeng Wang , Ran Chen, Fanjing Zhang
 tags: Let’s make XXX
-cover: ./cover.jpg
+slug: how-affine-classifies-editors
 description: There are so many editors today that users may find it difficult to select
 created: 2022-06-27
 updated: 2022-06-27
 layout: blog
+pulish: false
 ---
-
-Here is the real blog content.
-
-The content you write needs to conform to [the github markdown specification(GFM)](https://github.github.com/gfm/).
-
+[cover image]
+[article content]
 ```
 
-You can add relative images/videos in the same folder. Then you can use it in `index.md` like `./${your file name}`.
+`title` the title of the article
+`author` the author/authors of the article in a comma sepeareted list (they must be defined, see below)
+`tags` the tag, or rather categorey, of the article
+`slug` the unique url for the article `https://affine.pro/blog/{slug}` - do not use special characters and replaces ` ` (spaces) with `-`
+`description` a small description to the article, no more than 2 sentences
+`created` this should be the publish date
+`updated` this should be set as the publish date, and only this date is updated when edits are made
+`layout` should generally stay as `blog`
+`publish` set to false to ensure this article is not public, only set to `true` when the article is ready for publishing (will be published as soon as set to true)
 
-Once you finish the blog, you can use github action -- Build Test Version building the blog for reviewing.
-
-Finally, after assurance to publish, you can create a pull request to branch main. After your branch merged to main, it will automatically publish to the world (after about 3-5 minutes).
+For authors - users are listed here [src/libs/pagesContent/user.ts](src/libs/pagesContent/user.ts) and images are taken from the [public](public) folder.
 
 ## How to develop
 
