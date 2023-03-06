@@ -7,6 +7,7 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
   if (!page) {
     return {
       notFound: true,
+      revalidate: 10,
     };
   }
 
@@ -16,6 +17,6 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
       ...page,
       html: content,
     },
-    revalidate: 10,
+    revalidate: 60,
   };
 }
