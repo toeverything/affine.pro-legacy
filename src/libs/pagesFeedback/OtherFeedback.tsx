@@ -39,7 +39,7 @@ const OtherFeedback = () => {
           If you have any questions, please feel free to reach out to our team
           and/or contact us via email, you&apos;ll find these details over on
           our&nbsp;
-          <StyledLink href="/aboutUs">about us</StyledLink>
+          <StyledLink href="/about-us">about us</StyledLink>
           &nbsp;page.
         </StyledContent>
       </StyledDiv>

@@ -11,7 +11,7 @@ export const useLeftNavLink = () => {
   const { t } = useTranslation();
   return [
     {
-      href: "/aboutUs",
+      href: "/about-us",
       title: t("AboutUs"),
     },
     {
