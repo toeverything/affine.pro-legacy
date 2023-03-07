@@ -1,5 +1,6 @@
 import { Page } from "@/components/Layout/Page";
 import styled from "@emotion/styled";
+import Head from "next/head";
 import type { ContentFileMeta } from "../common/resolveContentFile";
 import USER_MAP from "./user";
 const LeftTitle = styled.h2`
@@ -198,64 +199,93 @@ export const BlogLayout = ({
   updated,
   created,
   html,
+  slug,
 }: ContentFileMeta) => {
+  const metaTitle = title
+    ? title + " | AFFiNE"
+    : "Blog | AFFiNE - All In One Workos"; // should always have a title
+  const metaUrl = "https://affine.pro/" + slug;
+  const metaDescription =
+    description ??
+    "There can be more than Notion and Miro. AFFiNE is a next-gen knowledge base that brings planning, sorting and creating all together.";
+  const metaImage = cover ?? "https://affine.pro/og.jpeg";
   return (
-    <Page showSearchBar={true}>
-      <Header>
-        <HeaderContent>
-          <HeaderLeftContent>
-            {updated ? (
-              <HeaderTime>{`Updated: ${new Date(updated).toLocaleDateString(
-                "en-US"
-              )}`}</HeaderTime>
-            ) : created ? (
-              <HeaderTime>{`Created: ${new Date(created!).toLocaleDateString(
-                "en-US"
-              )}`}</HeaderTime>
-            ) : null}
-            <h1>{title}</h1>
-            <HeaderDec>{description}</HeaderDec>
-          </HeaderLeftContent>
-          <HeaderRightContent>
-            <HeaderRightImage src={cover as string} alt="post cover" />
-          </HeaderRightContent>
-        </HeaderContent>
-      </Header>
-      <Body>
-        <Slider>
-          <SliderModule>
-            <LeftTitle>Contributors</LeftTitle>
-            <div>
-              {authors?.map((item: string) => {
-                return (
-                  <Author key={item}>
-                    <picture>
-                      <img src={USER_MAP[item]?.avatar} alt="avatar" />
-                    </picture>
-                    <div>
-                      <p className="name">{item}</p>
-                      {/* <div className='dec'>{item}</div> */}
-                    </div>
-                  </Author>
-                );
-              }) || "Someone"}
-            </div>
-          </SliderModule>
-          <SliderModule>
-            <LeftTitle>Tags</LeftTitle>
-            <div>
-              {tags?.map(tagName => {
-                return <Tag key={tagName}>{tagName}</Tag>;
-              }) || "Empty"}
-            </div>
-          </SliderModule>
-          {/* <LastSliderModule>
+    <>
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title key="page-title">{title}</title>
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content={metaUrl} />
+        <meta name="twitter:title" content={metaTitle} />
+        <meta name="twitter:description" content={metaDescription} />
+        <meta name="twitter:site" content="@AffineOfficial" />
+        <meta name="twitter:image" content={metaImage} />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={metaTitle} />
+        <meta property="og:site_name" content="AFFiNE" />
+        <meta property="og:url" content={metaUrl} />
+        <meta property="og:image" content={metaImage} />
+        <meta property="og:description" content={metaDescription} />
+      </Head>
+      <Page showSearchBar={true}>
+        <Header>
+          <HeaderContent>
+            <HeaderLeftContent>
+              {updated ? (
+                <HeaderTime>{`Updated: ${new Date(updated).toLocaleDateString(
+                  "en-US"
+                )}`}</HeaderTime>
+              ) : created ? (
+                <HeaderTime>{`Created: ${new Date(created!).toLocaleDateString(
+                  "en-US"
+                )}`}</HeaderTime>
+              ) : null}
+              <h1>{title}</h1>
+              <HeaderDec>{description}</HeaderDec>
+            </HeaderLeftContent>
+            <HeaderRightContent>
+              <HeaderRightImage src={cover as string} alt="post cover" />
+            </HeaderRightContent>
+          </HeaderContent>
+        </Header>
+        <Body>
+          <Slider>
+            <SliderModule>
+              <LeftTitle>Contributors</LeftTitle>
+              <div>
+                {authors?.map((item: string) => {
+                  return (
+                    <Author key={item}>
+                      <picture>
+                        <img src={USER_MAP[item]?.avatar} alt="avatar" />
+                      </picture>
+                      <div>
+                        <p className="name">{item}</p>
+                        {/* <div className='dec'>{item}</div> */}
+                      </div>
+                    </Author>
+                  );
+                }) || "Someone"}
+              </div>
+            </SliderModule>
+            <SliderModule>
+              <LeftTitle>Tags</LeftTitle>
+              <div>
+                {tags?.map(tagName => {
+                  return <Tag key={tagName}>{tagName}</Tag>;
+                }) || "Empty"}
+              </div>
+            </SliderModule>
+            {/* <LastSliderModule>
             <LeftTitle>Share</LeftTitle>
           </LastSliderModule> */}
-          <div></div>
-        </Slider>
-        <Content dangerouslySetInnerHTML={{ __html: html || "" }} />
-      </Body>
-    </Page>
+            <div></div>
+          </Slider>
+          <Content dangerouslySetInnerHTML={{ __html: html || "" }} />
+        </Body>
+      </Page>
+    </>
   );
 };
