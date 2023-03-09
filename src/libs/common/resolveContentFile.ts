@@ -68,10 +68,15 @@ export async function renderHTML(md: string): Promise<string> {
       .use(remarkParse)
       .use(remarkGfm)
       .use(remarkRemoveCover)
-      .use(remarkRehype)
+      .use(remarkRehype, {
+        allowDangerousHtml: true,
+      })
       .use(rehypePrism)
-      .use(rehypeStringify)
+      .use(rehypeStringify, {
+        allowDangerousHtml: true,
+      })
       .process(content)
   ).toString();
+
   return html;
 }
