@@ -1,4 +1,4 @@
-import type { WorkspacePage } from "blocksuite-reader";
+import type { WorkspacePage } from "affine-reader";
 import grayMatter from "gray-matter";
 import rehypePrism from "rehype-prism-plus";
 import rehypeStringify from "rehype-stringify";
@@ -25,40 +25,48 @@ export interface ContentFileMeta {
   html?: string;
 }
 
-export function parseWorkspacePageMeta(page: WorkspacePage): ContentFileMeta {
-  const fileMetaRaw = grayMatter(page.md!);
-  const {
-    title,
-    author,
-    tags,
-    publish,
-    description,
-    updated,
-    created,
-    layout,
-    slug,
-  } = fileMetaRaw.data;
+export function parseWorkspacePageMeta(
+  page: WorkspacePage
+): ContentFileMeta | undefined {
+  try {
+    const fileMetaRaw = grayMatter(page.md!);
+    const {
+      title,
+      author,
+      tags,
+      publish,
+      description,
+      updated,
+      created,
+      layout,
+      slug,
+    } = fileMetaRaw.data;
 
-  const coverImage = getCoverImage(remark().parse(fileMetaRaw.content));
+    const coverImage = getCoverImage(remark().parse(fileMetaRaw.content));
 
-  return {
-    title: title || null,
-    authors:
-      (typeof author === "string" && author.split(",").map(au => au.trim())) ||
-      null,
-    tags:
-      (typeof tags === "string" && tags.split(",").map(tag => tag.trim())) ||
-      null,
-    description: description || null,
-    created: (created as unknown as Date)?.getTime() || null,
-    updated: (updated as unknown as Date)?.getTime() || null,
-    layout: layout || null,
-    id: page.id,
-    slug: slug || page.id,
-    cover: coverImage,
-    md: page.md ?? "",
-    publish: !!publish,
-  };
+    return {
+      title: title || null,
+      authors:
+        (typeof author === "string" &&
+          author.split(",").map(au => au.trim())) ||
+        null,
+      tags:
+        (typeof tags === "string" && tags.split(",").map(tag => tag.trim())) ||
+        null,
+      description: description || null,
+      created: (created as unknown as Date)?.getTime() || null,
+      updated: (updated as unknown as Date)?.getTime() || null,
+      layout: layout || null,
+      id: page.id,
+      slug: slug || page.id,
+      cover: coverImage,
+      md: page.md ?? "",
+      publish: !!publish,
+    };
+  } catch (err) {
+    console.error("failed to parse frontmatter", err);
+    return undefined;
+  }
 }
 
 export async function renderHTML(md: string): Promise<string> {
