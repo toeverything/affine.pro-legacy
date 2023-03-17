@@ -20,7 +20,6 @@ const USER_MAP: Record<string, { name: string; avatar: string; dec: string }> =
       avatar: "/FangyuanZhen.png",
       dec: "Author, Operator of Community Support",
     },
-
     "Yifeng Wang": {
       name: "Yifeng Wang",
       avatar: "/YifengWang.jpeg",
@@ -71,7 +70,6 @@ const USER_MAP: Record<string, { name: string; avatar: string; dec: string }> =
       avatar: "/SicongShao.png",
       dec: "Full-stack Engineer",
     },
-
     "Yipei Wei": {
       name: "Yipei Wei",
       avatar: "/YipeiWei.jpeg",
@@ -111,6 +109,11 @@ const USER_MAP: Record<string, { name: string; avatar: string; dec: string }> =
       name: "Peng Xiao",
       avatar: "/pengx17.jpeg",
       dec: "Full-Stack Engineer",
+    },
+    "Joe Hou": {
+      name: "Joe Hou",
+      avatar: "/JoeHou.jpeg",
+      dec: "Product Architect",
     },
   };
 export default USER_MAP;
