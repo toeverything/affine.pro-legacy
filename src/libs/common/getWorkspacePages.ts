@@ -1,4 +1,4 @@
-import { getBlocksuiteReader } from "blocksuite-reader";
+import { getBlocksuiteReader } from "affine-reader";
 import { ContentFileMeta, parseWorkspacePageMeta } from "./resolveContentFile";
 
 const reader = getBlocksuiteReader({
@@ -26,7 +26,8 @@ export async function getWorkspacePages(invalidateCache = false) {
       );
       return pages
         ?.filter(p => !p.trash)
-        .map(page => parseWorkspacePageMeta(page));
+        .map(page => parseWorkspacePageMeta(page))
+        .filter((p): p is ContentFileMeta => !!p);
     });
     lastFetch = Date.now();
   } else {
