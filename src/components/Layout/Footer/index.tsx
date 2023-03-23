@@ -37,8 +37,8 @@ export const Footer = () => {
           </div>
           <Copyright>Copyright © {year} Toeverything</Copyright>
           <Privacy>
-            <NextLink href="terms">Terms</NextLink>&nbsp;|&nbsp;
-            <NextLink href="privacy">Privacy</NextLink>
+            <NextLink href="/terms">Terms</NextLink>&nbsp;|&nbsp;
+            <NextLink href="/privacy">Privacy</NextLink>
           </Privacy>
         </Content>
       </Container>
