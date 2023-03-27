@@ -203,7 +203,7 @@ export const BlogLayout = ({
 }: ContentFileMeta) => {
   const metaTitle = title
     ? title + " | AFFiNE"
-    : "Blog | AFFiNE - All In One Workos"; // should always have a title
+    : "Blog | AFFiNE - All In One KnowledgeOS"; // should always have a title
   const metaUrl = "https://affine.pro/" + slug;
   const metaDescription =
     description ??

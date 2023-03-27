@@ -9,12 +9,12 @@ export interface HeadProps {
 function generateTitle(t: TFunction, path: string) {
   switch (path) {
     case "/about-us":
-      return `${t("AboutUs")} | AFFiNE - All In One Workos`;
+      return `${t("AboutUs")} | AFFiNE - All In One KnowledgeOS`;
     case "/blog":
-      return `${t("Blog")} | AFFiNE - All In One Workos`;
+      return `${t("Blog")} | AFFiNE - All In One KnowledgeOS`;
     default:
       // Default to the homepage
-      return "AFFiNE - All In One Workos";
+      return "AFFiNE - All In One KnowledgeOS";
   }
 }
 
