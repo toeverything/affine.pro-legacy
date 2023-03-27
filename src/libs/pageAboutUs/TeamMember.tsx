@@ -23,7 +23,7 @@ const TeamMember = () => {
         >
           Chi Zhang
         </StyledLink>
-        &nbsp;| Co-founder &amp; Head of Engineering
+        &nbsp;| Co-founder &amp; CTO
       </StyledContent>
       <StyledDes>He builds AFFiNE with great engineers.</StyledDes>
       <StyledContent>
