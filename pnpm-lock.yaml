@@ -16,7 +16,7 @@ specifiers:
   '@types/node': ^18.11.3
   '@types/react': ^18.0.21
   '@types/react-dom': ^18.0.6
-  affine-reader: ^0.1.0
+  affine-reader: ^0.1.3
   algoliasearch: ^4.14.2
   chokidar: ^3.5.3
   copy-dir: ^1.3.0
@@ -62,7 +62,7 @@ dependencies:
   '@mui/material': 5.10.10_ul75gqgl24mhtsmr7b3kosiy6u
   '@mui/system': 5.10.10_7msjqpzyqnias22424jxt65oyu
   '@next/mdx': 12.3.1_wuv4qx5dshjptmdbtsqqkih5iu
-  affine-reader: 0.1.1
+  affine-reader: 0.1.3
   algoliasearch: 4.14.2
   chokidar: 3.5.3
   copy-dir: 1.3.0
@@ -2891,8 +2891,8 @@ packages:
     hasBin: true
     dev: true
 
-  /affine-reader/0.1.1:
-    resolution: {integrity: sha512-dFxVfwzSmVXp8s/UhLX8v5QUYxrcjLpCY2zee1uoORqN4Ht3ti1Y6khOi/2BEPHONS/u89uF5wPRbllZZH9NOA==}
+  /affine-reader/0.1.3:
+    resolution: {integrity: sha512-Ti6a20CmvEUqSBRFYDnTvBlkPFZ5G8QuGyvY75WV2qmVqXvoNTtvsEkX4Ez+IGUwqKxM0XsRQUZOmf1Pfd1qGQ==}
     dev: false
 
   /agent-base/6.0.2:
