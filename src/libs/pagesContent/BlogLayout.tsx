@@ -67,10 +67,12 @@ const HeaderLeftContent = styled.div`
 const HeaderRightContent = styled.div`
   flex: 1;
   padding: 16px;
+  display: flex;
+  align-items: center;
 `;
 const HeaderRightImage = styled.img`
   width: 100%;
-  height: 100%;
+  max-height: 100%;
 `;
 
 const HeaderContent = styled.div`
@@ -187,6 +189,9 @@ const Content = styled.div`
     margin: 0px 3px;
     padding: 1px 2px;
     border-radius: 5px;
+  }
+  iframe {
+    max-width: 100%;
   }
 `;
 

@@ -33,7 +33,6 @@ export const SmallHeader = () => {
         <ExportedImage
           src={showDrawer ? menuClose : menuHamburger}
           alt="header"
-          layout="fill"
           useWebp={!!process.env.nextImageExportOptimizer_storePicturesInWEBP}
         />
       </StyledIconContainer>
