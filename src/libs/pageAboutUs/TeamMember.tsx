@@ -108,7 +108,7 @@ const TeamMember = () => {
       </StyledContent>
       <StyledContent>
         <StyledLink target="_blank" href="https://mirone.me/" rel="noreferrer">
-          Xiao Pengfei
+          Mirone Saul
         </StyledLink>
         &nbsp;| Architecture Engineer
       </StyledContent>
